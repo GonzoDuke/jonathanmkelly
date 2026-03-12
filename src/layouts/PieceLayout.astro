@@ -1,0 +1,77 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { piece } = Astro.props;
+const pageTitle = `${piece.title} — Jonathan M. Kelly`;
+const ogUrl = `https://jonathanmkelly.com/${piece.id}`;
+---
+
+<BaseLayout title={pageTitle} description={piece.subtitle || ''} ogUrl={ogUrl}>
+  <div style="background: var(--bg); min-height: 100vh;">
+    <!-- Top nav -->
+    <nav style={`
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(250,248,245,0.92);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+      padding: 0 var(--page-pad);
+      display: flex; align-items: center; justify-content: space-between;
+      height: 48px;
+    `}>
+      <a href="/" style={`
+        font-family: var(--mono); font-size: 11px; font-weight: 400;
+        letter-spacing: 0.04em; color: var(--ghost);
+        text-decoration: none; transition: color 0.2s ease;
+      `}>&larr; Jonathan M. Kelly</a>
+      <span style={`
+        font-family: var(--mono); font-size: 10px; font-weight: 300;
+        color: var(--ghost); letter-spacing: 0.02em;
+      `}>{piece.type}{piece.date ? ` · ${piece.date}` : ''}</span>
+    </nav>
+
+    <!-- Piece header -->
+    <header style={`
+      max-width: var(--max-content); margin: 0 auto;
+      padding: 80px var(--page-pad) 0;
+    `}>
+      <h1 style={`
+        font-family: var(--serif); font-size: clamp(28px, 4.5vw, 38px);
+        font-weight: 400; line-height: 1.15; color: var(--text);
+        letter-spacing: -0.015em; margin: 0 0 6px;
+      `}>{piece.title}</h1>
+      {piece.subtitle && (
+        <p style={`
+          font-family: var(--serif); font-size: 17px; font-weight: 300;
+          font-style: italic; color: var(--dim); line-height: 1.4;
+          margin: 0 0 12px;
+        `}>{piece.subtitle}</p>
+      )}
+      <div style={`
+        font-family: var(--mono); font-size: 10px; font-weight: 300;
+        color: var(--ghost); letter-spacing: 0.02em; margin-bottom: 24px;
+      `}>{piece.type}{piece.date ? ` · ${piece.date}` : ''}</div>
+      <div style="height: 1px; background: var(--rule);"></div>
+    </header>
+
+    <!-- Content -->
+    <main style={`
+      max-width: var(--max-content); margin: 0 auto;
+      padding: 32px var(--page-pad) 0;
+    `}>
+      <slot />
+    </main>
+
+    <!-- Return footer -->
+    <footer style={`
+      max-width: var(--max-content); margin: 0 auto;
+      padding: 64px var(--page-pad) 120px; text-align: center;
+    `}>
+      <div style="height: 1px; background: var(--rule); margin-bottom: 32px;"></div>
+      <a href="/" style={`
+        font-family: var(--mono); font-size: 11px; font-weight: 400;
+        letter-spacing: 0.04em; color: var(--ghost);
+        text-decoration: none; transition: color 0.2s ease;
+      `}>&larr; Back</a>
+    </footer>
+  </div>
+</BaseLayout>
