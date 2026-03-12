@@ -38,6 +38,26 @@ function Navbar() {
         <a href="/projects" style={ls}>Projects</a>
         <a href="/agency-artifact" style={ls}>A&amp;A</a>
         <a href="/about" style={ls}>About</a>
+        <button
+          onClick={async () => {
+            const data = { title: 'Jonathan M. Kelly', text: 'Poet. Essayist. Writer.', url: 'https://jonathanmkelly.com' };
+            if (navigator.share) {
+              try { await navigator.share(data); } catch {}
+            } else {
+              await navigator.clipboard.writeText(data.url);
+              const btn = document.querySelector('.home-share-btn');
+              btn.textContent = 'Copied';
+              setTimeout(() => { btn.textContent = 'Share'; }, 1500);
+            }
+          }}
+          className="home-share-btn"
+          style={{
+            background: 'none', border: '1px solid rgba(240,236,228,0.12)',
+            borderRadius: '3px', padding: '5px 12px', cursor: 'pointer',
+            fontFamily: 'var(--mono)', fontSize: '10px', fontWeight: 400,
+            letterSpacing: '0.06em', textTransform: 'uppercase',
+            color: 'rgba(240,236,228,0.35)', transition: 'all 0.2s ease',
+          }}>Share</button>
       </div>
     </nav>
   );
