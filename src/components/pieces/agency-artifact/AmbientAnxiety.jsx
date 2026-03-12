@@ -2,13 +2,13 @@ export default function AmbientAnxiety() {
   return (
     <div style={{
       fontFamily: "var(--body)",
-      fontSize: "17px",
+      fontSize: "18px",
       lineHeight: 1.7,
       color: "#1a1d28",
     }}>
       <p style={{ margin: "0 0 20px" }}>How adult fear and misunderstanding of AI shapes student experience</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The adult/teacher/admin fear of AI, as encountered by students, rarely registers as reasoned critique or pedagogical care. It is received as a mood: an ambient signal that saturates the environment with anxiety, suspicion, and arbitrary control. When administrators block ChatGPT, when teachers sermonize about “real thinking” and decry cognitive offloading as a moral failing, students do not absorb an argument. They absorb affect: distrust, restriction, a sense that the adults are fighting ghosts with rules.</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The adult/teacher/admin fear of AI, as encountered by students, rarely registers as reasoned critique or pedagogical care. It is received as a mood: an ambient signal that saturates the environment with anxiety, suspicion, and arbitrary control. When administrators block ChatGPT, when teachers sermonize about “real thinking” and decry cognitive offloading as a moral failing, students do not absorb an argument. They absorb affect: distrust, restriction, a sense that the adults are fighting ghosts with rules.</h2>
 
       <p style={{ margin: "0 0 20px" }}>The message is clear, but the meaning is obscure. What students perceive is not intellectual engagement, but bureaucratic panic dressed up as virtue.</p>
 
@@ -20,7 +20,7 @@ export default function AmbientAnxiety() {
 
       <p style={{ margin: "0 0 20px" }}>The practical consequence is not reflection, but tactical evasion. Students learn not to engage deeply with AI, but to game the system, to mask or reframe their use so as not to trigger adult suspicion. Fear, in this context, does not cultivate discernment. It cultivates subterfuge, a cat-and-mouse game that hollows out any shared sense of purpose.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The affective register matters here. The panic over AI’s effects does not read to students as principled concern for intellectual integrity. It reads as generational anxiety: the latest iteration of calculator panic, Google panic, Wikipedia panic, each repeating the same cycle of prohibition, concession, and belated integration. The mood is one of institutional self-defense, not curiosity. The tone is familiar because it is always the same:</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The affective register matters here. The panic over AI’s effects does not read to students as principled concern for intellectual integrity. It reads as generational anxiety: the latest iteration of calculator panic, Google panic, Wikipedia panic, each repeating the same cycle of prohibition, concession, and belated integration. The mood is one of institutional self-defense, not curiosity. The tone is familiar because it is always the same:</h2>
 
       <p style={{ margin: "0 0 20px" }}>“Don’t use the tool, it will ruin you.” “Use the tool, but only this way, and only if you acknowledge its dangers.”</p>
 

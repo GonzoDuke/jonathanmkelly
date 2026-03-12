@@ -1,13 +1,11 @@
 /* ═══════════════════════════════════════
    JONATHAN M. KELLY — DESIGN SYSTEM
-   Light, bookish, confident.
+   Bold. Wide. Present.
    ═══════════════════════════════════════ */
 
-/* ── Fonts ── */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
 
 :root {
-  /* Colors */
   --bg: #faf8f5;
   --surface: #ffffff;
   --text: #1a1a1a;
@@ -16,67 +14,47 @@
   --rule: rgba(0,0,0,0.08);
   --rule-strong: rgba(0,0,0,0.15);
 
-  /* Typography */
   --serif: 'Cormorant Garamond', 'Georgia', serif;
   --body: 'Newsreader', 'Georgia', serif;
   --mono: 'DM Mono', 'Menlo', monospace;
 
-  /* Spacing */
-  --max-content: 720px;
-  --max-wide: 960px;
-  --page-pad: 40px;
+  --max-content: 900px;
+  --max-wide: 1200px;
+  --page-pad: 48px;
 }
 
-/* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
   background: var(--bg);
   color: var(--text);
   font-family: var(--body);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-body {
-  min-height: 100vh;
-  background: var(--bg);
-}
+body { min-height: 100vh; background: var(--bg); }
 
-/* Prevent white flash during navigation */
-html, body { background: var(--bg); }
-
-/* ── Links ── */
 a {
   color: var(--text);
   text-decoration-color: var(--rule-strong);
   text-underline-offset: 3px;
   transition: text-decoration-color 0.2s ease;
 }
-a:hover {
-  text-decoration-color: var(--text);
-}
+a:hover { text-decoration-color: var(--text); }
 
-/* ── Selection ── */
-::selection {
-  background: rgba(26,26,26,0.12);
-  color: var(--text);
-}
+::selection { background: rgba(26,26,26,0.12); color: var(--text); }
 
-/* ── Scrollbar (subtle) ── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--rule-strong); border-radius: 3px; }
 
-/* ── Mobile ── */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   :root {
-    --page-pad: 20px;
+    --page-pad: 24px;
   }
-  html {
-    font-size: 16px;
-  }
+  html { font-size: 17px; }
 }

@@ -2,7 +2,7 @@ export default function Unclassified() {
   return (
     <div style={{
       fontFamily: "var(--body)",
-      fontSize: "17px",
+      fontSize: "18px",
       lineHeight: 1.7,
       color: "#1a1d28",
     }}>
@@ -22,7 +22,7 @@ export default function Unclassified() {
 
       <p style={{ margin: "0 0 20px" }}>To describe the place of the librarian is to describe an institutional contradiction. The library’s workers are held responsible for knowledge, but denied the standing to defend it on their own terms. Until that contradiction is addressed (that is, until power and responsibility are aligned) “collaboration” will remain a euphemism, “status” a negotiation, and “freedom” a conditional privilege. The library will persist, but the people who make it matter will continue to do so as tolerated guests in their own house.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>References</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>References</h2>
 
       <p style={{ margin: "0 0 20px" }}>Fleming-May, Rachel A., and Kimberly Douglass. “Framing Librarianship in the Academy: An Analysis Using Bolman and Deal’s Model of Organizations.” College &amp; Research Libraries 75, no. 3 (2014): 389-415.</p>
 
@@ -34,9 +34,9 @@ export default function Unclassified() {
 
       <p style={{ margin: "0 0 20px" }}>Whitchurch, Celia. “Shifting Identities and Blurring Boundaries: The Emergence of Third Space Professionals in UK Higher Education.” Higher Education Quarterly 62, no. 4 (2008): 377–96.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Casual Version</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Casual Version</h2>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Unclassified: Dispatches from the Professional Gray Zone</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Unclassified: Dispatches from the Professional Gray Zone</h2>
 
       <p style={{ margin: "0 0 20px" }}>Call it what you want, librarian, library media specialist, faculty adjacent. The title is just a nametag. The real story is the diagnosis. In the machinery of schools and universities, the librarian lives in what bureaucrats like to call “the third space”: credentialed and accountable for the intellectual life of a campus, yet locked out of the status and protections that come with fields the institution understands.</p>
 

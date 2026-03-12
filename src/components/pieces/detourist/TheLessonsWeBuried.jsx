@@ -2,11 +2,11 @@ export default function TheLessonsWeBuried() {
   return (
     <div style={{
       fontFamily: "var(--body)",
-      fontSize: "17px",
+      fontSize: "18px",
       lineHeight: 1.7,
       color: "rgba(255,255,255,0.85)",
     }}>
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>Bronx, New York. October 30, 2001.</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>Bronx, New York. October 30, 2001.</h2>
 
       <p style={{ margin: "0 0 20px" }}>Game 3 of the World Series, Yankees against the Diamondbacks, and George W. Bush was about to step into history. Not with policy, not with words, but with a baseball.</p>
 
@@ -20,7 +20,7 @@ export default function TheLessonsWeBuried() {
 
       <p style={{ margin: "0 0 20px" }}>But to understand why that mattered, why that transformation would reshape not just our grief but our nation, you have to rewind seven weeks.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>Sarasota, Florida. September 11, 2001.</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>Sarasota, Florida. September 11, 2001.</h2>
 
       <p style={{ margin: "0 0 20px" }}>The president sat in a second-grade classroom at Emma E. Booker Elementary School, a grown man perched absurdly on a child's chair, holding a copy of The Pet Goat. He smiled stiffly as the children stumbled through their reading, their voices high and uncertain. The scene was crafted for cameras: the president as educator, as father figure, as man of the people. Then Andrew Card leaned down and whispered sixteen words that would divide history: "A second plane hit the second tower. America is under attack." The footage is infamous, scrutinized frame by frame like the Zapruder film. Bush's eyes flick once, twice, then fix forward on nothing. His jaw clenches. For seven long minutes he does nothing. He sits. He stares. He holds the book like a life raft.</p>
 

@@ -2,11 +2,11 @@ export default function GrendelsRevenge() {
   return (
     <div style={{
       fontFamily: "var(--body)",
-      fontSize: "17px",
+      fontSize: "18px",
       lineHeight: 1.7,
       color: "#1a1d28",
     }}>
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Critical Beast</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Critical Beast</h2>
 
       <p style={{ margin: "0 0 20px" }}>John Gardner’s Grendel appears regularly in contemporary English curricula, typically framed as a postmodern inversion of epic heroism or an existential meditation on meaning and monstrosity. Students dutifully analyze its narrative techniques, chart its philosophical influences, and decode its symbolic apparatus. What they rarely recognize is that Gardner has created something more unsettling than a literary experiment: a diagnostic portrait of what happens when lived experience is ceaselessly converted into analysis, when the act of encountering the world becomes indistinguishable from theorizing it.</p>
 
@@ -16,7 +16,7 @@ export default function GrendelsRevenge() {
 
       <p style={{ margin: "0 0 20px" }}>In this sense, Gardner’s novel functions as an inadvertent mirror for contemporary literary education. The monster who stalks the mead-halls of Denmark bears an uncomfortable resemblance to the students we train: critically fluent, interpretively sophisticated, and fundamentally alienated from the very experiences that make literature transformative. Grendel embodies the risk that lurks within our most successful pedagogical practices. He is what we produce when we teach students to think about literature so thoroughly that they forget how to be affected by it.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Monster of Critical Consciousness</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Monster of Critical Consciousness</h2>
 
       <p style={{ margin: "0 0 20px" }}>Gardner’s Grendel is not a monster in any conventional sense. He is an interpreter, a relentless processor of the world around him, a creature who cannot stop turning experience into philosophy. He does not study philosophy; he lives into it. Every encounter forces him into reflection. He listens to the Shaper and sees ideology beneath beauty. He argues with the Dragon and absorbs the void of absolute doubt. His tragedy is not exclusion from human community but entanglement in its deepest discourses, which he reconstructs through his own encounters. He understands the Shaper’s songs well enough to dismantle them, and this understanding renders him incapable of being moved by them.</p>
 
@@ -26,7 +26,7 @@ export default function GrendelsRevenge() {
 
       <p style={{ margin: "0 0 20px" }}>This passage captures what happens when the student becomes more fluent in the language of interpretation than in the language of experience. The “pale walls of dreams” that words construct are not substantial barriers but spectral ones, seeming to offer access to reality while actually preventing it. Contemporary literary education risks producing exactly this condition: minds capable of sophisticated analysis but unable to sustain the kind of direct engagement that makes analysis meaningful in the first place.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Architecture of Critical Compliance
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Architecture of Critical Compliance
 	Contemporary literary education constructs elaborate institutional mechanisms designed to produce interpretive uniformity while maintaining the fiction of intellectual diversity. The syllabus becomes a blueprint for acceptable thought, determining not only which texts will be read but how they will be approached, what questions will be asked, what forms of response will be valued. Assessment rubrics translate subjective aesthetic experience into quantifiable analytical performance, creating measurable standards for inherently unmeasurable encounters.</h2>
 
       <p style={{ margin: "0 0 20px" }}>Consider the standard essay assignment prompts:</p>
@@ -43,7 +43,7 @@ export default function GrendelsRevenge() {
 
       <p style={{ margin: "0 0 20px" }}>Students quickly learn to navigate this architecture, developing sophisticated strategies for producing acceptable interpretive performances while minimizing genuine intellectual risk. They master the art of saying what they think the teacher wants to hear while avoiding the vulnerability of authentic response. The result is a form of educational theater where everyone participates in maintaining the fiction that learning is occurring when what is actually happening is the reproduction of institutional orthodoxy.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Fetishization of Critical Apparatus
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Fetishization of Critical Apparatus
 	Contemporary literary education organizes itself around the promise of interpretive multiplicity. Students receive an arsenal of critical lenses (Marxist, psychoanalytic, postcolonial, feminist, structuralist), each one presented as a tool for unlocking textual secrets. The rhetoric emphasizes openness, pluralism, the democratic expansion of interpretive possibility. In practice, these lenses function as mechanisms of constraint, establishing parameters of acceptable insight while marginalizing forms of engagement that cannot be rendered in approved critical vocabularies.</h2>
 
       <p style={{ margin: "0 0 20px" }}>The critical lens becomes a fetish object, endowed with powers it cannot possess.</p>
@@ -56,7 +56,7 @@ export default function GrendelsRevenge() {
 
       <p style={{ margin: "0 0 20px" }}>The theoretical apparatus begins to function autonomously, generating interpretations that have little connection to actual textual experience. Students learn to produce sophisticated analyses of texts they have never genuinely encountered, applying methodological frameworks with technical competence while remaining fundamentally alienated from the works they are ostensibly studying. The interpretation becomes more real than the text, the framework more compelling than the phenomenon it was designed to illuminate.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Reading as Appeasement: The Anxiety of Authorized Interpretation
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Reading as Appeasement: The Anxiety of Authorized Interpretation
 	When students approach literary texts in contemporary classroom settings, they rarely engage in acts of reading as traditionally understood. Instead, they perform elaborate rituals of interpretive legitimacy, translating their experiences of texts into forms that align with institutional expectations. The student who admits confusion, who lingers on seemingly irrelevant textual details, who asks questions that do not advance toward predetermined interpretive goals, quickly learns to redirect their attention toward more acceptable forms of engagement.</h2>
 
       <p style={{ margin: "0 0 20px" }}>This transformation of reading into performance creates a particular form of anxiety that pervades contemporary literary education. Students fear misreading not because they care about understanding texts accurately, but because misreading exposes them to institutional judgment.</p>
@@ -71,7 +71,7 @@ export default function GrendelsRevenge() {
 
       <p style={{ margin: "0 0 20px" }}>They develop sophisticated mechanisms for avoiding the kind of genuine encounter that might challenge their interpretive frameworks or expose them to experiences they cannot immediately categorize. The retreat “like a crab” becomes the characteristic movement of minds trained to prioritize analytical control over aesthetic vulnerability.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Historical Amnesia of Critical Practice
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Historical Amnesia of Critical Practice
 	Contemporary literary pedagogy suffers from a form of institutional amnesia that prevents it from recognizing how its own practices have evolved and what has been lost in that evolution. The current emphasis on theoretical sophistication and interpretive methodology represents a relatively recent development in the history of literary education, emerging primarily from the professionalization of literary studies in the mid-twentieth century. Earlier approaches to literary education, while certainly problematic in their own ways, maintained a connection to reading as a form of aesthetic and moral cultivation that current practice has largely abandoned.</h2>
 
       <p style={{ margin: "0 0 20px" }}>The transformation of literary studies from a humanistic discipline focused on cultural transmission and personal formation into a social science focused on analytical methodology and theoretical innovation has had profound consequences for how texts are encountered in educational settings.</p>
@@ -82,7 +82,7 @@ export default function GrendelsRevenge() {
 
       <p style={{ margin: "0 0 20px" }}>Students learn to analyze texts with considerable sophistication but graduate with little sense of why such analysis might matter beyond its utility in academic and professional contexts.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Grendel as Pedagogical Diagnostic
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Grendel as Pedagogical Diagnostic
 	In this context, Gardner’s Grendel functions as more than a literary character. He serves as a diagnostic tool, revealing what happens when interpretive sophistication becomes a substitute for experiential engagement. His condition mirrors that of the contemporary student who has learned to analyze literature so thoroughly that the capacity for direct aesthetic response has been systematically diminished.</h2>
 
       <p style={{ margin: "0 0 20px" }}>Grendel cannot love the Shaper’s poetry because love requires the kind of presence that critical consciousness makes impossible.</p>
@@ -99,7 +99,7 @@ export default function GrendelsRevenge() {
 
       <p style={{ margin: "0 0 20px" }}>Grendel’s isolation stems from his inability to suspend interpretive dominance long enough to experience mystery, confusion, or awe. His experiential philosophy equips him with tools for dismantling meaning but not for sustaining the kind of attention that allows meaning to emerge. This is the tragedy that contemporary literary pedagogy risks reproducing: the creation of critically sophisticated readers who have lost access to the experiences that make reading worth pursuing.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Ecology of Attention and the Restoration of Wonder
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Ecology of Attention and the Restoration of Wonder
 	The critique of interpretive orthodoxy should not be mistaken for a defense of anti-intellectualism or a call to return to some imagined state of pre-theoretical innocence. The goal is not to eliminate interpretation but to restore its proper function as a means of deepening rather than replacing direct engagement with literary works. Interpretation at its best is a form of sustained attention that opens texts rather than closing them, that multiplies rather than reduces the possibilities for meaningful encounter.</h2>
 
       <p style={{ margin: "0 0 20px" }}>What is needed is an ecology of attention that can sustain both analytical rigor and aesthetic receptivity, that treats interpretation as one mode of engagement among others rather than as the privileged form of literary response.</p>
@@ -112,7 +112,7 @@ export default function GrendelsRevenge() {
 
       <p style={{ margin: "0 0 20px" }}>The capacity to sustain attention to aesthetic complexity, to remain present to linguistic particularity, and to allow oneself to be affected by textual experience are sophisticated intellectual achievements that current educational practice systematically undermines rather than cultivates.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Conclusion: The Monster in the Mirror
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Conclusion: The Monster in the Mirror
 	Grendel’s condition suggests what happens when this possibility is foreclosed. He possesses all the tools necessary for sophisticated literary analysis, but he has lost access to the fundamental receptivity that makes such analysis meaningful. His tragedy is not that he lacks interpretive skill but that his interpretive skill has become a barrier to the kinds of experience that give interpretation its purpose.</h2>
 
       <p style={{ margin: "0 0 20px" }}>Contemporary literary education faces the same risk: the production of critically fluent readers who can analyze anything but can no longer be moved by what they read.</p>

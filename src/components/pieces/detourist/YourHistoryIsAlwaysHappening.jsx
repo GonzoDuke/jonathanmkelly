@@ -2,7 +2,7 @@ export default function YourHistoryIsAlwaysHappening() {
   return (
     <div style={{
       fontFamily: "var(--body)",
-      fontSize: "17px",
+      fontSize: "18px",
       lineHeight: 1.7,
       color: "rgba(255,255,255,0.85)",
     }}>
@@ -10,7 +10,7 @@ export default function YourHistoryIsAlwaysHappening() {
 
       <p style={{ margin: "0 0 20px" }}>For that collision between individual psychology and historical force, we need sharper instruments than demographic analysis can provide. We need to understand what happens when someone stands at the threshold of adulthood as the world shifts beneath their feet. We need questions that pierce through generational abstraction to reach the precise developmental moment when private experience becomes inseparable from public catastrophe. We need, in other words, the insight I first encountered in Juan Gabriel Vásquez’s novel The Shape of the Ruins, where a character observes that “Napoleon said that to understand the man you have to understand what was happening in the world when he was twenty.”</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Misattributed Insight</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Misattributed Insight</h2>
 
       <p style={{ margin: "0 0 20px" }}>The statement lodged in my memory with the authority of Napoleon’s military genius behind it, carrying the weight of someone who had reshaped European history before his twenty-fifth birthday. Only later did I discover that this insight about the formative power of the twenty-year-old moment belongs not to the French emperor but to the British historian G. M. Young, a scholar of Victorian England who understood something crucial about how historical consciousness forms in individual experience. The misattribution seemed like a simple error until I recognized it as a perfect demonstration of the very phenomenon under examination: how historical insights layer themselves through transmission, distortion, and literary encounter. Vásquez’s Napoleon articulates the principle; Young’s scholarship provides the precise formulation. The truth emerges through accumulated error rather than direct access.</p>
 
@@ -20,7 +20,7 @@ export default function YourHistoryIsAlwaysHappening() {
 
       <p style={{ margin: "0 0 20px" }}>The power of this insight, whether attributed to Napoleon or Young, lies in its recognition that historical events impact individuals differently depending on their developmental moment of encounter. A forty-year-old experiencing economic collapse brings established frameworks for processing uncertainty. A twenty-year-old experiences the same collapse as ontological rupture, a revelation that stability itself was illusory. The event becomes constitutive rather than merely disruptive, embedded in the formation of adult identity rather than challenging an already-formed worldview.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Shape of Historical Ruins</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Shape of Historical Ruins</h2>
 
       <p style={{ margin: "0 0 20px" }}>Vásquez’s novel, where I first encountered the question in its Napoleonic disguise, provides the theoretical framework for understanding how this embedding process operates. The Shape of the Ruins explores how political violence in Colombia creates palimpsests of meaning, where new traumas don’t replace old ones but write themselves over previous inscriptions, creating texts that can only be read through their accumulated layers of damage and repair.</p>
 
@@ -32,7 +32,7 @@ export default function YourHistoryIsAlwaysHappening() {
 
       <p style={{ margin: "0 0 20px" }}>This palimpsest model offers a more nuanced understanding of how formative historical moments operate than simple cause-and-effect narratives. September 11th didn’t simply cause changes in American political and cultural life; it became embedded in the unconscious structure of American experience, creating new parameters for what counts as normal, possible, or thinkable. The event layers itself over previous historical consciousness, creating composite meanings that can only be understood through archaeological excavation of accumulated meaning.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>September 11, 2001: Personal Rupture as Historical Threshold</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>September 11, 2001: Personal Rupture as Historical Threshold</h2>
 
       <p style={{ margin: "0 0 20px" }}>I turned twenty on September 11, 2001. The coincidence of personal milestone and national catastrophe created a temporal compression that collapsed private celebration into public mourning, individual transition into collective trauma. The day that should have marked my passage into full adulthood instead marked the end of the historical moment that had shaped my adolescence: the post-Cold War interval of American triumphalism and technological optimism that characterized the late 1990s.</p>
 
@@ -46,7 +46,7 @@ export default function YourHistoryIsAlwaysHappening() {
 
       <p style={{ margin: "0 0 20px" }}>The experience also demonstrated Vásquez’s insight about how historical events layer themselves into personal consciousness. September 11th didn’t erase my previous understanding of American power and safety; it wrote itself over those understandings, creating a palimpsest where optimism and catastrophe exist simultaneously. Every subsequent assessment of political stability or cultural progress carries traces of both the pre-9/11 worldview and its violent interruption.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>Nostalgia as Cultural Archaeology</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>Nostalgia as Cultural Archaeology</h2>
 
       <p style={{ margin: "0 0 20px" }}>The late 1990s now occupy a peculiar position in cultural memory, simultaneously close enough to feel personally familiar and distant enough to seem historically foreign. Nostalgia for this period operates differently from conventional longing for lost innocence; it represents an active negotiation with a specific form of cultural optimism that September 11th revealed as unsustainable.</p>
 
@@ -60,7 +60,7 @@ export default function YourHistoryIsAlwaysHappening() {
 
       <p style={{ margin: "0 0 20px" }}>This form of nostalgia differs from simple escapism because it acknowledges the historical contingency of the mourned period. The late 1990s appear attractive not as a timeless ideal but as a specific historical configuration that allowed particular forms of cultural and intellectual exploration. The mourning involves recognition that those forms of exploration depended on conditions that no longer exist and may not return.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>Memory as Ongoing Formation</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>Memory as Ongoing Formation</h2>
 
       <p style={{ margin: "0 0 20px" }}>Young’s question persists because it captures something essential about how historical consciousness forms in individual experience. We don’t simply live through historical events; we become historical beings through our encounter with moments that exceed our capacity for private interpretation. These encounters create permanent alterations in how we understand the relationship between personal choice and historical determination, individual agency and collective fate.</p>
 

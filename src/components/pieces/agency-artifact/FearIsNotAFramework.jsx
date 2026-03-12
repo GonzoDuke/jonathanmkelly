@@ -2,13 +2,13 @@ export default function FearIsNotAFramework() {
   return (
     <div style={{
       fontFamily: "var(--body)",
-      fontSize: "17px",
+      fontSize: "18px",
       lineHeight: 1.7,
       color: "#1a1d28",
     }}>
       <p style={{ margin: "0 0 20px" }}>Recent research from MIT triggered a familiar media frenzy: “ChatGPT is changing your brain,” headlines declared, as if that fact alone were cause for alarm. It is changing your brain, but so did writing, arithmetic, Google, and the invention of the index card. The capacity for cognitive change is not a flaw. It is the signature of human intelligence.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Study and the Panic</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Study and the Panic</h2>
 
       <p style={{ margin: "0 0 20px" }}>The MIT study, led by Nataliya Kosmyna, used EEG to measure brain activity as 149 participants completed writing tasks in three modes: unaided, assisted by Google Search, and assisted by ChatGPT. When using ChatGPT, participants showed a sharp drop in neural activity, especially in the frontal and parietal lobes. These areas are tied to memory, semantic processing, and executive control. This was not just a momentary lull. Even after writing stopped, the brain remained quiet. Kosmyna and her team called this “cognitive debt.”</p>
 
@@ -16,7 +16,7 @@ export default function FearIsNotAFramework() {
 
       <p style={{ margin: "0 0 20px" }}>The nuance here matters. The same MIT data showed that when participants drafted ideas first and used ChatGPT later, neural engagement remained robust. The brain only grew quiet when users began by outsourcing the hard part. In other words, it is not the tool that is the problem. It is the timing.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>What Thinking Actually Looks Like</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>What Thinking Actually Looks Like</h2>
 
       <p style={{ margin: "0 0 20px" }}>This insight echoes a century of cognitive theory. Lev Vygotsky argued that higher mental functions are shaped by tools: cultural, social, and technological. Offloading is not an error. It is how we evolve. But that evolution depends on how, when, and why we integrate new tools into our thinking. If we use AI as scaffolding, we build stronger minds. If we use it as a substitute, we risk mental flattening.</p>
 
@@ -28,7 +28,7 @@ export default function FearIsNotAFramework() {
 
       <p style={{ margin: "0 0 20px" }}>This is why the MIT findings should not spark panic. They should spark pedagogy.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>AI in the Classroom: A Better Approach</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>AI in the Classroom: A Better Approach</h2>
 
       <p style={{ margin: "0 0 20px" }}>If students rely on ChatGPT to write entire essays without reflection or revision, the failure is not just theirs. It is ours. It means we are assigning tasks that reward passivity instead of judgment. It means we have built systems that measure outputs instead of thinking.</p>
 
@@ -58,21 +58,21 @@ export default function FearIsNotAFramework() {
 
       <p style={{ margin: "0 0 20px" }}>That wisdom is what we must teach.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Five Principles for AI-Era Pedagogy</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Five Principles for AI-Era Pedagogy</h2>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Separate process from product. If we continue assessing only final outputs, students will always look for the fastest way to generate them. Instead, build assessments that reward iteration, revision, and critical engagement. Make thinking visible.</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Separate process from product. If we continue assessing only final outputs, students will always look for the fastest way to generate them. Instead, build assessments that reward iteration, revision, and critical engagement. Make thinking visible.</h2>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Scaffold AI use explicitly. Do not just say “AI is allowed.” Model how to use it well. Provide examples of strong prompts, side-by-side comparisons of AI drafts and human revisions, and annotated feedback that shows what improvement looks like.</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Scaffold AI use explicitly. Do not just say “AI is allowed.” Model how to use it well. Provide examples of strong prompts, side-by-side comparisons of AI drafts and human revisions, and annotated feedback that shows what improvement looks like.</h2>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Center reflection. Require students to articulate what the AI got right, what it missed, and what choices they made during revision. This reinforces metacognition and helps students develop ownership over AI-assisted work.</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Center reflection. Require students to articulate what the AI got right, what it missed, and what choices they made during revision. This reinforces metacognition and helps students develop ownership over AI-assisted work.</h2>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Differentiate tool roles. AI is useful for brainstorming, tone smoothing, and early drafting, but not for fact-checking or original argumentation. Build rubrics that reflect those boundaries and teach students to evaluate AI’s role accordingly.</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Differentiate tool roles. AI is useful for brainstorming, tone smoothing, and early drafting, but not for fact-checking or original argumentation. Build rubrics that reflect those boundaries and teach students to evaluate AI’s role accordingly.</h2>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Modernize honesty policies. Blanket bans prevent transparency, not cheating. Create clear, realistic guidelines for appropriate AI use and explain the rationale. Trust students enough to give them rules worth respecting.</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Modernize honesty policies. Blanket bans prevent transparency, not cheating. Create clear, realistic guidelines for appropriate AI use and explain the rationale. Trust students enough to give them rules worth respecting.</h2>
 
       <p style={{ margin: "0 0 20px" }}>None of this requires a total curricular overhaul. It requires intentionality. The same principles that apply to good teaching, such as transparency, scaffolding, reflection, and iteration, also apply to AI. The challenge is not to reinvent education from scratch. It is to stop pretending the landscape has not changed.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Real Question</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Real Question</h2>
 
       <p style={{ margin: "0 0 20px" }}>Cognitive offloading is not an intellectual failure. It is a feature of how we grow. We write to remember. We draw diagrams to understand. We use metaphors to think abstractly. We are always extending the mind into the world.</p>
 

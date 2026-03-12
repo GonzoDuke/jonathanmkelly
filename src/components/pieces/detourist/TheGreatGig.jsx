@@ -2,7 +2,7 @@ export default function TheGreatGig() {
   return (
     <div style={{
       fontFamily: "var(--body)",
-      fontSize: "17px",
+      fontSize: "18px",
       lineHeight: 1.7,
       color: "rgba(255,255,255,0.85)",
     }}>
@@ -32,7 +32,7 @@ export default function TheGreatGig() {
 
       <p style={{ margin: "0 0 20px" }}>The last truth is the gentlest one. To make something this complete is to accept a sacrifice that is almost holy. You will never be the person who discovers it. You will never hear the heartbeat as a summons that finds you unprepared. You will never be surprised by the clocks. You will never become aware of your life inside that total chord at the end as if it had been written to trap only you. That privilege belongs to the listeners, and it renews itself each day. Somewhere right now a young person or an older person or someone who never thought this music was for them is pressing play. The room is about to tilt. The same record that feels like biography to its makers will feel like a message smuggled out of the future to its new listener. The miracle repeats. The heartbeat continues.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>Tab 2</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>Tab 2</h2>
 
       <p style={{ margin: "0 0 20px" }}>There are two ways to know The Dark Side of the Moon. One belongs to the people who built it. The other belongs to everyone who arrives inside it. Roger Waters knows the album like an architect knows a cathedral. He knows what each arch carries, which stones are purely structural, which passages are there to move the body where the mind must go. David Gilmour knows it like a master of light knows stained glass. He knows which panes turn sunrise into a sermon, which angle to strike so the room changes temperature. Both kinds of knowledge are complete in their way. Neither allows the thing that keeps happening to strangers. They will never stand in the nave and feel the first shock of the ceiling opening above them.</p>
 

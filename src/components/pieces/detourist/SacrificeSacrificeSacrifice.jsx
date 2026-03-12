@@ -2,11 +2,11 @@ export default function SacrificeSacrificeSacrifice() {
   return (
     <div style={{
       fontFamily: "var(--body)",
-      fontSize: "17px",
+      fontSize: "18px",
       lineHeight: 1.7,
       color: "rgba(255,255,255,0.85)",
     }}>
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>1. The Incantation</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>1. The Incantation</h2>
 
       <p style={{ margin: "0 0 20px" }}>1969--1971</p>
 
@@ -22,7 +22,7 @@ export default function SacrificeSacrificeSacrifice() {
 
       <p style={{ margin: "0 0 20px" }}>The spell demands renewal. Every subsequent administration will find its own version of the ritual, its own way of redeploying the incantation in the service of selective burden and cyclical relief. The logic will persist: exemption becomes virtue, virtue becomes the currency of power, sacrifice is redefined as the obligation of someone else. What Thompson saw through the haze of chemicals was not simply a hallucination, but a diagnosis. The incantation he witnessed in 1971 is still the organizing principle of American public life, repeated endlessly, always promising that the highest form of participation is the power to insist that someone else take your place at the altar.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>2. The Architecture of Abdication</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>2. The Architecture of Abdication</h2>
 
       <p style={{ margin: "0 0 20px" }}>1969 to the late 1970s</p>
 
@@ -44,7 +44,7 @@ export default function SacrificeSacrificeSacrifice() {
 
       <p style={{ margin: "0 0 20px" }}>The architecture of abdication is more than a collection of policies or a map of demographic changes. It is an education in selective attention and an ongoing pedagogy of silence. What is truly handed down from one generation to the next is not a set of opinions or positions, but a disciplined sense of what cannot be seen, what must not be asked, and what will never be said. The work of sustaining comfort by avoiding responsibility continues not through grand declarations, but through the small, daily negotiations of attention and memory. This is not simply unfinished business, but the persistent mechanism by which innocence is inherited and the difficult work of reckoning is indefinitely deferred.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>3. The Inheritors</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>3. The Inheritors</h2>
 
       <p style={{ margin: "0 0 20px" }}>Late 1970s to 1980</p>
 
@@ -66,7 +66,7 @@ export default function SacrificeSacrificeSacrifice() {
 
       <p style={{ margin: "0 0 20px" }}>This is the final genius of Proposition 13. It transforms theft into tradition, exclusion into common sense, and memory into a private archive accessible only to those who wrote themselves in while the doors were still open.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>4. The Diagnostic</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>4. The Diagnostic</h2>
 
       <p style={{ margin: "0 0 20px" }}>1980–1999</p>
 
@@ -92,7 +92,7 @@ export default function SacrificeSacrificeSacrifice() {
 
       <p style={{ margin: "0 0 20px" }}>By 1999, the oldest Millennials were graduating high school into a world that looked like prosperity but felt like quicksand. The NASDAQ hit 5,000 while college costs had tripled since their parents’ time, but everyone insisted this was the path. They signed the loan papers at eighteen, too young to understand they were volunteering for a new form of sacrifice: mortgaging their futures for the chance to compete in a game already rigged against them. The spell had evolved again. Not “someone else should sacrifice” but “sacrifice your future for entry into a game already rigged against you.”</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>5. The Bifurcation</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>5. The Bifurcation</h2>
 
       <p style={{ margin: "0 0 20px" }}>2000–2019</p>
 
@@ -114,7 +114,7 @@ export default function SacrificeSacrificeSacrifice() {
 
       <p style={{ margin: "0 0 20px" }}>By 2019, the split is complete but meaningless. Two wings of the same generational project, arguing about tone while agreeing on substance. The loud ones demand sacrifice through cruelty. The quiet ones demand it through systems. Both ensure that someone else always pays the bill, that the generation that inherited the greatest shared prosperity in human history will pass on nothing but debt and degraded systems and a burning planet they’ll be dead before it fully ignites.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>6. The Revolution as Lifestyle Brand</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>6. The Revolution as Lifestyle Brand</h2>
 
       <p style={{ margin: "0 0 20px" }}>2020–present</p>
 
@@ -132,7 +132,7 @@ export default function SacrificeSacrificeSacrifice() {
 
       <p style={{ margin: "0 0 20px" }}>The architecture of performance is now total. Every form of engagement risks being metabolized by the machine it claims to oppose. Every call for sacrifice is translated into ritual, every ritual rendered safe by the absence of actual cost. The word “sacrifice” still echoes through public life, demanded constantly, always extracted from those with the least margin, always justified by those whose comfort is secured in advance. The promise of transformation becomes indistinguishable from its simulation. The performance endures, feeding on its own exposure, exhausting the energies that once might have produced change. The revolution has become a mirror, and the image reflected is always someone else’s problem, someone else’s loss, someone else’s duty to endure.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>7. The Persistence of the Spell</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>7. The Persistence of the Spell</h2>
 
       <p style={{ margin: "0 0 20px" }}>1969–2025</p>
 

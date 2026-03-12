@@ -2,11 +2,11 @@ export default function GoodKidYellowJersey() {
   return (
     <div style={{
       fontFamily: "var(--body)",
-      fontSize: "17px",
+      fontSize: "18px",
       lineHeight: 1.7,
       color: "rgba(255,255,255,0.85)",
     }}>
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Mathematics of Surprise</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Mathematics of Surprise</h2>
 
       <p style={{ margin: "0 0 20px" }}>Victory belongs to those who control sequence, not strength. This sounds like mystical bullshit until you watch Tadej Pogačar ride a bicycle. Then it becomes physics. Tadej Pogačar understands this mathematics better than anyone currently racing. His signature move arrives not during the obvious moments of tactical aggression, but in the spaces between aggression and rest, when competitors assume the hardest work is finished and recovery has begun.</p>
 
@@ -16,7 +16,7 @@ export default function GoodKidYellowJersey() {
 
       <p style={{ margin: "0 0 20px" }}>Both examples reveal something crucial about strategic timing: the most powerful moves happen when opponents have psychologically transitioned from active competition to recovery mode. The attack succeeds not because it is stronger than expected defenses, but because those defenses have been temporarily abandoned. Victory belongs to whoever maintains offensive readiness during periods when everyone else assumes offense is impossible or unnecessary.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Temporal Advantage</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Temporal Advantage</h2>
 
       <p style={{ margin: "0 0 20px" }}>Professional sports provide the clearest laboratory for understanding how tempo operates as a strategic weapon because the rules are explicit and the outcomes measurable. In cycling, the mathematics are particularly brutal: once a significant gap opens, it compounds through aerodynamic advantage and psychological demoralization. The rider who creates separation doesn't just gain distance; they gain exponential advantage as those behind must work progressively harder to maintain contact while dealing with the mental burden of being left behind.</p>
 
@@ -26,7 +26,7 @@ export default function GoodKidYellowJersey() {
 
       <p style={{ margin: "0 0 20px" }}>The psychological component of this strategy cannot be overstated. Once opponents realize they cannot predict when the decisive moments will arrive, they face a choice between exhausting hypervigilance and vulnerable relaxation. Either state creates opportunity for someone operating by different rules. Hypervigilance burns energy and attention. Relaxation creates windows for exploitation. The strategic advantage belongs to whoever can sustain readiness while appearing to operate within conventional patterns.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>Lyrical Architecture and the Control of Information</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>Lyrical Architecture and the Control of Information</h2>
 
       <p style={{ margin: "0 0 20px" }}>Kendrick Lamar's 2024 campaign against Drake demonstrated identical principles operating in cultural rather than athletic competition. The conflict's most devastating moments arrived not through direct confrontation but through careful manipulation of information flow and response timing. Lamar's strategic genius lay in understanding that cultural battles, like cycling races, are won through sequence control rather than maximum effort applied at predictable moments.</p>
 
@@ -40,7 +40,7 @@ export default function GoodKidYellowJersey() {
 
       <p style={{ margin: "0 0 20px" }}>The strategy succeeded because it exploited a fundamental asymmetry in how cultural conflicts unfold. The initial aggressor sets the terms of engagement and can choose the timing of escalation. The target must respond to maintain credibility but cannot control when responses will become necessary. This creates a scenario where the aggressor operates proactively while the target operates reactively, a dynamic that compounds over time into decisive advantage.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Failure of Conventional Timing</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Failure of Conventional Timing</h2>
 
       <p style={{ margin: "0 0 20px" }}>Thibaut Pinot's career provides a perfect counterpoint to Pogačar's strategic mastery, demonstrating how adherence to conventional tactical wisdom can neutralize superior physical ability. Pinot possessed the climbing ability to win Grand Tours and the tactical intelligence to position himself correctly for final mountain stages. His failures came not from lack of strength or awareness but from operating entirely within predictable temporal patterns that allowed competitors to prepare specifically for his attacks. He was the cycling equivalent of a boxer who only throws haymakers in the final round: devastating power, terrible timing. Or like Meek Mill going at Drake with pure aggression but no strategic sophistication: all force and no finesse.</p>
 
@@ -52,7 +52,7 @@ export default function GoodKidYellowJersey() {
 
       <p style={{ margin: "0 0 20px" }}>Pinot's career demonstrates how tactical orthodoxy can function as strategic limitation. Following established patterns feels rational and reduces immediate risk, but it also eliminates the element of surprise that transforms physical ability into competitive advantage. The safest tactical choices often prove to be the most dangerous strategic positions because they allow competitors to prepare comprehensive defensive responses.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Architecture of Disruption</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Architecture of Disruption</h2>
 
       <p style={{ margin: "0 0 20px" }}>The most effective strategic disruption operates by making conventional preparation impossible rather than by overwhelming conventional defenses. Both Pogačar and Lamar succeeded by creating scenarios where opponents could not develop effective defensive strategies because the rules of engagement remained fundamentally unpredictable. This represents a more sophisticated approach than simply attacking harder or more frequently. It involves restructuring the competitive environment so that traditional defensive advantages become irrelevant.</p>
 
@@ -64,7 +64,7 @@ export default function GoodKidYellowJersey() {
 
       <p style={{ margin: "0 0 20px" }}>This approach requires accepting higher moment-to-moment risk in exchange for superior overall strategic positioning. Attacking on flat terrain means risking energy expenditure without the guaranteed advantage that steep climbs provide. Expanding cultural conflicts beyond purely musical territory means risking exposure in areas where artistic superiority provides less protection. But these risks become acceptable when they force opponents into even more disadvantageous positions.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Compound Mathematics of Advantage</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Compound Mathematics of Advantage</h2>
 
       <p style={{ margin: "0 0 20px" }}>Strategic asymmetry creates exponential rather than linear advantage because each successful disruption makes subsequent disruptions more difficult to defend against. In cycling, once competitors realize they cannot predict when attacks will arrive, they face an impossible resource allocation problem. Maintaining constant readiness burns energy reserves. Lowering defenses creates vulnerability windows. Neither choice provides sustainable long-term positioning, which means the advantage compounds over time.</p>
 
@@ -76,7 +76,7 @@ export default function GoodKidYellowJersey() {
 
       <p style={{ margin: "0 0 20px" }}>This compounding effect reveals why conventional defensive strategies prove inadequate against sophisticated temporal manipulation. Traditional defenses assume predictable attack patterns that allow for efficient resource allocation. When attacks arrive according to different logic, those defenses become not just ineffective but counterproductive, burning resources without providing protection while creating new vulnerabilities.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>Recovery as Offensive Weapon</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>Recovery as Offensive Weapon</h2>
 
       <p style={{ margin: "0 0 20px" }}>The most sophisticated aspect of both Pogačar's and Lamar's strategic approaches involves their understanding of recovery as an active tactical element rather than passive necessity. In conventional competitive thinking, recovery represents time when offensive capability is temporarily reduced in exchange for restored energy reserves. Both competitors learned to weaponize these periods, maintaining offensive readiness precisely when opponents assumed safety.</p>
 
@@ -88,7 +88,7 @@ export default function GoodKidYellowJersey() {
 
       <p style={{ margin: "0 0 20px" }}>The strategic insight underlying both approaches involves recognizing that opponents' recovery needs create predictable vulnerability windows. Physical recovery requires reduced competitive readiness. Psychological recovery requires reduced threat assessment. Cultural recovery requires shifting attention to other topics and conflicts. These necessities create opportunities for someone capable of maintaining offensive readiness during periods when such readiness appears impossible or irrational.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Invisible Preparation</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Invisible Preparation</h2>
 
       <p style={{ margin: "0 0 20px" }}>What separates truly sophisticated strategic thinking from mere tactical opportunism is the extent of invisible preparation required to make apparently spontaneous moves possible. Both Pogačar's racing and Lamar's cultural campaign revealed levels of advance planning that remained hidden until the strategic advantages became undeniable. This preparation operates not just in terms of physical conditioning or lyrical development but in terms of comprehensive scenario modeling that allows for optimal decision-making under unpredictable competitive pressure.</p>
 
@@ -100,7 +100,7 @@ export default function GoodKidYellowJersey() {
 
       <p style={{ margin: "0 0 20px" }}>This invisible preparation explains why neither strategic approach can be easily replicated through tactical imitation. The visible moves represent only the final expression of comprehensive preparation that remains largely hidden from competitors and observers. Attempting to copy specific tactics without underlying preparation results in superficial mimicry that lacks the strategic depth necessary for sustained competitive advantage.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Future of Asymmetric Strategy</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Future of Asymmetric Strategy</h2>
 
       <p style={{ margin: "0 0 20px" }}>Understanding tempo as a strategic weapon rather than tactical tool changes everything. In a world where every conventional move has been studied, defended against, and neutralized, the only remaining advantage belongs to those who refuse to play by established rhythms. Both Pogačar and Lamar succeeded by maintaining offensive readiness when everyone else had mentally shifted to recovery mode. This isn't about working harder or being more talented. It's about being psychologically prepared to capitalize on moments when your competitors have temporarily abandoned the possibility that anything significant might happen.</p>
 

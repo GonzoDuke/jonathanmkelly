@@ -2,13 +2,13 @@ export default function TheChatLeftMeFirst() {
   return (
     <div style={{
       fontFamily: "var(--body)",
-      fontSize: "17px",
+      fontSize: "18px",
       lineHeight: 1.7,
       color: "#1a1d28",
     }}>
       <p style={{ margin: "0 0 20px" }}>How group chats model distributed minds, ambient presence, and the failure of formal thought.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Missed Message</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Missed Message</h2>
 
       <p style={{ margin: "0 0 20px" }}>Earlier, three of my coworkers brought it up in the hallway. They were smiling when they said it, the kind of smiling that’s half-bit, half-real.</p>
 
@@ -28,7 +28,7 @@ export default function TheChatLeftMeFirst() {
 
       <p style={{ margin: "0 0 20px" }}>I hadn’t left a group chat. I’d fallen out of a shared mind.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Message as Medium</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Message as Medium</h2>
 
       <p style={{ margin: "0 0 20px" }}>We think of group chats as disposable. But they’re not. They’re architectural. They organize how attention moves, how thought happens, how presence is felt or withheld.</p>
 
@@ -38,7 +38,7 @@ export default function TheChatLeftMeFirst() {
 
       <p style={{ margin: "0 0 20px" }}>Because a group chat isn’t a tool for communication. It’s a space of shared cognition. Not just what people say, but what they track. What they care about. What they forget together.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Ambient Intimacy</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Ambient Intimacy</h2>
 
       <p style={{ margin: "0 0 20px" }}>That’s the real work of a group chat. Not information. Not coordination. Presence.</p>
 
@@ -48,7 +48,7 @@ export default function TheChatLeftMeFirst() {
 
       <p style={{ margin: "0 0 20px" }}>And when that pulse stops (or is perceived to stop) it registers.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Some Chats Fade, Some Snap</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Some Chats Fade, Some Snap</h2>
 
       <p style={{ margin: "0 0 20px" }}>Before Sushi Fam, there was another group: the Knucklehead Gang.</p>
 
@@ -62,7 +62,7 @@ export default function TheChatLeftMeFirst() {
 
       <p style={{ margin: "0 0 20px" }}>The thread is still there. But there’s no thread left in it.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Post-Linear Thought</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Post-Linear Thought</h2>
 
       <p style={{ margin: "0 0 20px" }}>Group chats don’t think in straight lines. And maybe that’s why they feel so natural.</p>
 
@@ -74,7 +74,7 @@ export default function TheChatLeftMeFirst() {
 
       <p style={{ margin: "0 0 20px" }}>Group chats give that noise structure. Just enough.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>When the Thread Breaks</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>When the Thread Breaks</h2>
 
       <p style={{ margin: "0 0 20px" }}>Leaving a group chat unintentionally isn’t like ghosting. It’s like waking up to find you’ve been written out of the dream.</p>
 
@@ -84,7 +84,7 @@ export default function TheChatLeftMeFirst() {
 
       <p style={{ margin: "0 0 20px" }}>No ceremony. No rehash. Just a link. Just a click. Just presence, again.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Mind Is a Chat</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Mind Is a Chat</h2>
 
       <p style={{ margin: "0 0 20px" }}>We keep pretending that intelligence is clean and solo. That thinking means clarity. That thought moves from point A to point B. But maybe intelligence is messier. Maybe it loops. Maybe it forgets. Maybe it depends on other people to finish its sentences. Maybe the group chat is the closest thing we have to a real-time map of distributed cognition.</p>
 

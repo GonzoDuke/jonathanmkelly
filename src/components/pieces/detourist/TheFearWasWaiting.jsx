@@ -2,7 +2,7 @@ export default function TheFearWasWaiting() {
   return (
     <div style={{
       fontFamily: "var(--body)",
-      fontSize: "17px",
+      fontSize: "18px",
       lineHeight: 1.7,
       color: "rgba(255,255,255,0.85)",
     }}>
@@ -53,7 +53,7 @@ My phone glows face-up on the side table, something probably owned by Zuck beggi
 
       <p style={{ margin: "0 0 20px" }}>There’s a quote I can’t quite remember (and I don’t feel like looking up). Something about how we’ve built a culture designed to help us avoid the fundamental questions of existence. It was Huxley or McLuhan (I think), or one of those other prophets who saw our current moment coming from decades away. But they had it backwards. We haven’t built a culture to avoid existential questions; we’ve built a culture because we can’t avoid them. Every notification, every update, every algorithmic recommendation is a tiny prayer against the void. Please, we’re saying, please give me something to look at besides the inside of my own skull.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The blue light is supposed to be bad for you. It disrupts your circadian rhythms, suppresses melatonin production, tricks your brain into thinking it’s still daytime. But there are apps now that shift your screen’s color temperature as night falls, turning everything amber and soft. I tried one for a while, but the warm glow felt like a lie. If I’m going to be awake at 3 a.m., I want the honesty of cold fluorescence. I want my eyes to burn a little. I want to feel the unnaturalness of it, the way this isn’t how humans are supposed to live. The discomfort is part of the ritual, part of the price.</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The blue light is supposed to be bad for you. It disrupts your circadian rhythms, suppresses melatonin production, tricks your brain into thinking it’s still daytime. But there are apps now that shift your screen’s color temperature as night falls, turning everything amber and soft. I tried one for a while, but the warm glow felt like a lie. If I’m going to be awake at 3 a.m., I want the honesty of cold fluorescence. I want my eyes to burn a little. I want to feel the unnaturalness of it, the way this isn’t how humans are supposed to live. The discomfort is part of the ritual, part of the price.</h2>
 
       <p style={{ margin: "0 0 20px" }}>Sometimes I think about what it was like before all this. Not just before smartphones and social media, but before electric light, before the possibility of banishing darkness whenever it became inconvenient. People must have made their peace with the night differently then. Or maybe they just had different fears, more concrete ones: wolves and weather and whether the harvest would come in. Maybe The Fear is what happens when all the other fears get solved, when you’re safe and fed and climate-controlled but still fundamentally mortal, still fundamentally alone in your own consciousness.</p>
 

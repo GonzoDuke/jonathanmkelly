@@ -2,11 +2,11 @@ export default function SelfInflictedGonzo() {
   return (
     <div style={{
       fontFamily: "var(--body)",
-      fontSize: "17px",
+      fontSize: "18px",
       lineHeight: 1.7,
       color: "rgba(255,255,255,0.85)",
     }}>
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Wish</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Wish</h2>
 
       <p style={{ margin: "0 0 20px" }}>I want Hunter S. Thompson to walk through the door right now, LL Bean patchwork barn coat draped over himself, typewriter under one arm, whiskey bottle in the other hand, eyes wide with that particular combination of terror and amusement that made him the only journalist who could look directly at American madness without flinching.</p>
 
@@ -18,7 +18,7 @@ export default function SelfInflictedGonzo() {
 
       <p style={{ margin: "0 0 20px" }}>He’s been dead for twenty years. The wish itself reveals what’s missing from the current moment: someone willing to risk being wrong, excessive, inappropriate, offensive to the very people who need to hear what they don’t want to hear. I’m stuck with the admission that I need a partner who can’t arrive, craving a form of discourse that died with its last practitioner.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Recognition</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Recognition</h2>
 
       <p style={{ margin: "0 0 20px" }}>You know the feeling. You’re scrolling through another day of managed outrage, algorithmic fury, and professional concern, and something inside you starts screaming for an adult to enter the room.</p>
 
@@ -36,7 +36,7 @@ export default function SelfInflictedGonzo() {
 
       <p style={{ margin: "0 0 20px" }}>And you’re complicit. Every click, every share, every moment of engagement feeds the machine you claim to oppose. You tell yourself you’re staying informed, but really you’re just staying entertained by your own outrage, consuming critique like any other product, building a personal brand around your sophisticated disappointment with how things work.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Trap</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Trap</h2>
 
       <p style={{ margin: "0 0 20px" }}>The writer sits with the recognition that wanting Thompson reveals the absence of exactly what’s needed to fill the absence.</p>
 
@@ -51,7 +51,7 @@ He was genuinely unable to perform conformity.</p>
 
       <p style={{ margin: "0 0 20px" }}>The contemporary writer faces a different challenge: how to generate discourse that feels necessary without the psychological equipment that made Thompson’s approach possible. How to diagnose systematic horror while remaining functional enough to navigate the professional contexts that provide platforms for saying anything at all. The writer discovers that the most important observations are precisely the ones that can’t be said within professional contexts; that honesty about certain subjects requires institutional independence that takes years to develop and might never become sustainable; that pushing discourse beyond current boundaries might reveal those boundaries exist for reasons more substantial than convention or cowardice.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Substitution</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Substitution</h2>
 
       <p style={{ margin: "0 0 20px" }}>I keep writing anyway.</p>
 
@@ -69,7 +69,7 @@ He was genuinely unable to perform conformity.</p>
 
       <p style={{ margin: "0 0 20px" }}>And I’m probably the wrong person to do it.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Confession</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Confession</h2>
 
       <p style={{ margin: "0 0 20px" }}>I start to realize that this entire exercise might be elaborate procrastination. Wishing for Thompson becomes just another way of avoiding the work actually available to me. The fantasy of radical discourse might be preventing me from engaging with the less dramatic but more sustainable forms of cultural criticism in forms that don’t require personality disorders or professional suicide.</p>
 
@@ -81,7 +81,7 @@ He was genuinely unable to perform conformity.</p>
 
       <p style={{ margin: "0 0 20px" }}>I find myself writing sentences and then deleting them, not because they’re inaccurate, but because they feel performative. Honesty about my own motivations turns out to be harder than honesty about systematic corruption. The most important work might require admitting that I don’t know what the most important work actually is. The confession becomes recursive. Even admitting the confession might be a performance, self-awareness as another form of evasion, recognizing my own complicity without any meaningful change in behavior.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Persistence</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Persistence</h2>
 
       <p style={{ margin: "0 0 20px" }}>The wish for Thompson’s return doesn’t go away. He isn’t coming through any door, and there’s no institution left that could even authorize a substitute. What remains is the choice: keep wishing, or begin acting without adequate preparation. Something about this moment feels terminal in ways that demand responses I may not be capable of, while still demanding that someone attempt them anyway.</p>
 
@@ -89,7 +89,7 @@ He was genuinely unable to perform conformity.</p>
 
       <p style={{ margin: "0 0 20px" }}>And yet, something in me insists that this recognition matters, that seeing the system clearly might be the beginning of something other than more sophisticated participation in its operations. The persistence of the wish suggests that something in this cultural moment genuinely requires what Thompson provided: unmediated encounter with systematic absurdity, a willingness to risk everything on the accuracy of perception, a refusal to moderate insight for the sake of professional acceptability.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "24px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Act</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "28px", fontWeight: 500, color: "#d4822a", margin: "40px 0 16px", lineHeight: 1.3 }}>The Act</h2>
 
       <p style={{ margin: "0 0 20px" }}>I’m writing this at 1:16 AM, which feels appropriately Thompson-like, though probably for the wrong reasons.</p>
 

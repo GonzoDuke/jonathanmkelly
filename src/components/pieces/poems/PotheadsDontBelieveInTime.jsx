@@ -2,7 +2,7 @@ export default function PotheadsDontBelieveInTime() {
   return (
     <div style={{
       fontFamily: "var(--serif)",
-      fontSize: "17px",
+      fontSize: "19px",
       lineHeight: 1.65,
       color: "#e8e4dc",
     }}>

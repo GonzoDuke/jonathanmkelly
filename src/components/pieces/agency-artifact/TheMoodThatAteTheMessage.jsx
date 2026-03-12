@@ -2,7 +2,7 @@ export default function TheMoodThatAteTheMessage() {
   return (
     <div style={{
       fontFamily: "var(--body)",
-      fontSize: "17px",
+      fontSize: "18px",
       lineHeight: 1.7,
       color: "#1a1d28",
     }}>
@@ -34,7 +34,7 @@ export default function TheMoodThatAteTheMessage() {
 
       <p style={{ margin: "0 0 20px" }}>Because while sarcasm offers cover, it does not offer orientation. It can dismantle, but it cannot reimagine. It is safe but sterile. Aesthetically pleasing, but epistemically empty. It is a mood, not a mode.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "22px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>What does this mean, practically?</h2>
+      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>What does this mean, practically?</h2>
 
       <p style={{ margin: "0 0 20px" }}>It means conversations collapse before they begin. It means difficult truths are reframed as jokes to avoid consequence. It means that those who cannot or will not adopt the tone — immigrants, neurodivergent speakers, younger generations with different affective norms — are subtly excluded.</p>
 
