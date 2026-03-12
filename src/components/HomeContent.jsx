@@ -37,6 +37,7 @@ function Navbar() {
         <a href="/poetry" style={ls}>Poetry</a>
         <a href="/projects" style={ls}>Projects</a>
         <a href="/agency-artifact" style={ls}>A&amp;A</a>
+        <a href="mailto:contact@jonathanmkelly.com" style={ls}>Contact</a>
         <a href="/about" style={ls}>About</a>
         <button
           onClick={async () => {
@@ -87,11 +88,14 @@ function Hero({ mounted }) {
           transition: 'opacity 0.8s ease, transform 1s cubic-bezier(0.16, 1, 0.3, 1)',
         }}>
           <div style={{ width: 'fit-content' }}>
-            <h1 style={{
-              fontFamily: 'var(--serif)', fontSize: 'clamp(44px, 8vw, 100px)',
-              fontWeight: 600, lineHeight: 0.95, color: '#f0ece4',
-              letterSpacing: '-0.04em', margin: '0 0 16px',
-            }}>Jonathan M. Kelly</h1>
+            <a href="/about" style={{ textDecoration: 'none' }}>
+              <h1 style={{
+                fontFamily: 'var(--serif)', fontSize: 'clamp(44px, 8vw, 100px)',
+                fontWeight: 600, lineHeight: 0.95, color: '#f0ece4',
+                letterSpacing: '-0.04em', margin: '0 0 16px',
+                transition: 'color 0.3s ease', cursor: 'pointer',
+              }}>Jonathan M. Kelly</h1>
+            </a>
             <p style={{
               fontFamily: 'var(--serif)', fontSize: 'clamp(18px, 2.5vw, 26px)',
               fontWeight: 300, fontStyle: 'italic',
@@ -303,18 +307,24 @@ function Footer() {
     <footer style={{
       background: '#0c0c0c',
       borderTop: '1px solid rgba(240,236,228,0.06)',
-      padding: '40px var(--page-pad) 60px',
+      padding: '48px var(--page-pad) 64px',
     }}>
       <div style={{
         maxWidth: '1400px', margin: '0 auto',
-        display: 'flex', justifyContent: 'space-between',
-        alignItems: 'baseline', flexWrap: 'wrap', gap: '16px',
+        textAlign: 'center',
       }}>
-        <div style={{ display: 'flex', gap: '32px' }}>
-          <a href="/about" style={{ fontFamily: 'var(--mono)', fontSize: '12px', color: 'rgba(240,236,228,0.4)', textDecoration: 'none' }}>About</a>
-          <a href="mailto:contact@jonathanmkelly.com" style={{ fontFamily: 'var(--mono)', fontSize: '12px', color: 'rgba(240,236,228,0.4)', textDecoration: 'none' }}>Contact</a>
+        <p style={{
+          fontFamily: 'var(--serif)', fontSize: '17px',
+          fontWeight: 300, fontStyle: 'italic',
+          color: 'rgba(240,236,228,0.2)', margin: '0 0 6px',
+        }}>"Buy the ticket, take the ride."</p>
+        <span style={{
+          fontFamily: 'var(--mono)', fontSize: '11px',
+          color: 'rgba(240,236,228,0.12)', letterSpacing: '0.06em',
+        }}>HST</span>
+        <div style={{ margin: '24px 0 0' }}>
+          <span style={{ fontFamily: 'var(--mono)', fontSize: '14px', color: 'rgba(240,236,228,0.2)' }}>&copy; {new Date().getFullYear()} Jonathan M. Kelly</span>
         </div>
-        <span style={{ fontFamily: 'var(--mono)', fontSize: '11px', color: 'rgba(240,236,228,0.2)' }}>&copy; {new Date().getFullYear()} Jonathan M. Kelly</span>
       </div>
     </footer>
   );
