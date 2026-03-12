@@ -1,0 +1,11 @@
+---
+import DetouristLayout from '../../layouts/DetouristLayout.astro';
+import { DET_PIECES } from '../../data/pieces.js';
+import AHintOfFootballParadise from '../../components/pieces/detourist/AHintOfFootballParadise.jsx';
+
+const piece = DET_PIECES.find(p => p.id === 'a-hint-of-football-paradise');
+---
+
+<DetouristLayout piece={piece}>
+  <AHintOfFootballParadise client:load />
+</DetouristLayout>

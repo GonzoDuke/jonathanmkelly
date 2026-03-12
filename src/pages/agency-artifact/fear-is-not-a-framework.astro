@@ -1,0 +1,11 @@
+---
+import AALayout from '../../layouts/AALayout.astro';
+import { AA_PIECES } from '../../data/pieces.js';
+import FearIsNotAFramework from '../../components/pieces/agency-artifact/FearIsNotAFramework.jsx';
+
+const piece = AA_PIECES.find(p => p.id === 'fear-is-not-a-framework');
+---
+
+<AALayout piece={piece}>
+  <FearIsNotAFramework client:load />
+</AALayout>

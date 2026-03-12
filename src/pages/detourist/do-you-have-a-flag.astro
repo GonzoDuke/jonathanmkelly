@@ -1,0 +1,11 @@
+---
+import DetouristLayout from '../../layouts/DetouristLayout.astro';
+import { DET_PIECES } from '../../data/pieces.js';
+import DoYouHaveAFlag from '../../components/pieces/detourist/DoYouHaveAFlag.jsx';
+
+const piece = DET_PIECES.find(p => p.id === 'do-you-have-a-flag');
+---
+
+<DetouristLayout piece={piece}>
+  <DoYouHaveAFlag client:load />
+</DetouristLayout>

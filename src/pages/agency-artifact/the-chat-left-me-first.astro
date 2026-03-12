@@ -1,0 +1,11 @@
+---
+import AALayout from '../../layouts/AALayout.astro';
+import { AA_PIECES } from '../../data/pieces.js';
+import TheChatLeftMeFirst from '../../components/pieces/agency-artifact/TheChatLeftMeFirst.jsx';
+
+const piece = AA_PIECES.find(p => p.id === 'the-chat-left-me-first');
+---
+
+<AALayout piece={piece}>
+  <TheChatLeftMeFirst client:load />
+</AALayout>

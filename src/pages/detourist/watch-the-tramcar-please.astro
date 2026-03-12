@@ -1,0 +1,11 @@
+---
+import DetouristLayout from '../../layouts/DetouristLayout.astro';
+import { DET_PIECES } from '../../data/pieces.js';
+import WatchTheTramcarPlease from '../../components/pieces/detourist/WatchTheTramcarPlease.jsx';
+
+const piece = DET_PIECES.find(p => p.id === 'watch-the-tramcar-please');
+---
+
+<DetouristLayout piece={piece}>
+  <WatchTheTramcarPlease client:load />
+</DetouristLayout>

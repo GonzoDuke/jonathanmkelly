@@ -1,0 +1,11 @@
+---
+import PieceLayout from '../layouts/PieceLayout.astro';
+import { PIECES } from '../data/pieces.js';
+import BrakeCheckThisMotherfucker from '../components/pieces/poems/BrakeCheckThisMotherfucker.jsx';
+
+const piece = PIECES.find(p => p.id === 'brake-check-this-motherfucker');
+---
+
+<PieceLayout piece={piece}>
+  <BrakeCheckThisMotherfucker client:load />
+</PieceLayout>

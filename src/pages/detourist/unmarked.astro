@@ -1,0 +1,11 @@
+---
+import DetouristLayout from '../../layouts/DetouristLayout.astro';
+import { DET_PIECES } from '../../data/pieces.js';
+import Unmarked from '../../components/pieces/detourist/Unmarked.jsx';
+
+const piece = DET_PIECES.find(p => p.id === 'unmarked');
+---
+
+<DetouristLayout piece={piece}>
+  <Unmarked client:load />
+</DetouristLayout>

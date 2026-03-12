@@ -1,0 +1,11 @@
+---
+import PieceLayout from '../layouts/PieceLayout.astro';
+import { PIECES } from '../data/pieces.js';
+import WisdomTeeth from '../components/pieces/poems/WisdomTeeth.jsx';
+
+const piece = PIECES.find(p => p.id === 'wisdom-teeth');
+---
+
+<PieceLayout piece={piece}>
+  <WisdomTeeth client:load />
+</PieceLayout>

@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { DET_PIECES } from '../../data/pieces.js';
+
+const livePieces = DET_PIECES.filter(p => p.status === 'live');
+---
+
+<BaseLayout title="detourist — Jonathan M. Kelly" description="Deviation as discipline. Digression as method." ogUrl="https://jonathanmkelly.com/detourist">
+  <div style="background: #0a0a0a; min-height: 100vh;">
+    <!-- Nav -->
+    <nav style={`
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 0 var(--page-pad);
+      display: flex; align-items: center; justify-content: space-between;
+      height: 48px;
+    `}>
+      <a href="/" style={`
+        font-family: var(--mono); font-size: 11px; font-weight: 400;
+        letter-spacing: 0.04em; color: rgba(255,255,255,0.35);
+        text-decoration: none;
+      `}>&larr; Jonathan M. Kelly</a>
+      <span style={`
+        font-family: var(--serif); font-size: 15px; font-weight: 500;
+        letter-spacing: -0.01em;
+      `}><span style="color: #d4822a;">de</span><span style="color: rgba(255,255,255,0.7);">tourist</span></span>
+    </nav>
+
+    <!-- Header -->
+    <header style="max-width: 780px; margin: 0 auto; padding: 88px var(--page-pad) 0;">
+      <h1 style={`
+        font-family: var(--serif); font-size: clamp(48px, 8vw, 80px);
+        font-weight: 500; line-height: 1.0;
+        letter-spacing: -0.03em; margin: 0 0 20px;
+      `}><span style="color: #d4822a;">de</span><span style="color: #ffffff;">tourist</span></h1>
+      <p style={`
+        font-family: var(--body); font-size: 17px;
+        color: rgba(255,255,255,0.45); line-height: 1.6;
+        margin: 0 0 36px; max-width: 520px;
+      `}>Deviation as discipline. Digression as method. Each tangent is a turnstile, each sidetrack a form of research.</p>
+      <div style="height: 2px; background: #d4822a; width: 60px;"></div>
+    </header>
+
+    <!-- Piece list -->
+    <main style="max-width: 780px; margin: 0 auto; padding: 36px var(--page-pad) 0;">
+      {livePieces.map((piece) => (
+        <a href={`/detourist/${piece.id}`} style={`
+          display: block;
+          padding: 22px 0;
+          border-bottom: 1px solid rgba(255,255,255,0.06);
+          text-decoration: none;
+        `}>
+          <div style={`
+            font-family: var(--serif); font-size: 22px; font-weight: 400;
+            color: #ffffff; line-height: 1.25; margin-bottom: 4px;
+          `}>{piece.title}</div>
+          {piece.subtitle && (
+            <div style={`
+              font-family: var(--serif); font-size: 15px; font-weight: 300;
+              font-style: italic; color: rgba(255,255,255,0.35); line-height: 1.45;
+            `}>{piece.subtitle}</div>
+          )}
+        </a>
+      ))}
+    </main>
+
+    <!-- Footer -->
+    <footer style="max-width: 780px; margin: 0 auto; padding: 80px var(--page-pad) 120px; text-align: center;">
+      <div style="height: 2px; background: rgba(212,130,42,0.3); width: 60px; margin: 0 auto 32px;"></div>
+      <a href="/" style={`
+        font-family: var(--mono); font-size: 11px; font-weight: 400;
+        letter-spacing: 0.04em; color: rgba(255,255,255,0.3);
+        text-decoration: none;
+      `}>&larr; Back</a>
+    </footer>
+  </div>
+</BaseLayout>

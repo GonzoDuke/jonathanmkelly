@@ -1,0 +1,11 @@
+---
+import AALayout from '../../layouts/AALayout.astro';
+import { AA_PIECES } from '../../data/pieces.js';
+import Unclassified from '../../components/pieces/agency-artifact/Unclassified.jsx';
+
+const piece = AA_PIECES.find(p => p.id === 'unclassified');
+---
+
+<AALayout piece={piece}>
+  <Unclassified client:load />
+</AALayout>

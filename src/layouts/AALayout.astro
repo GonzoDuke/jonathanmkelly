@@ -1,0 +1,84 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { piece } = Astro.props;
+const pageTitle = `${piece.title} — Agency & Artifact`;
+const ogUrl = `https://jonathanmkelly.com/agency-artifact/${piece.id}`;
+---
+
+<BaseLayout title={pageTitle} description={piece.subtitle || ''} ogUrl={ogUrl}>
+  <div style="background: #f0f2f5; min-height: 100vh;">
+    <!-- Nav - steel blue accent bar -->
+    <nav style={`
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: #1b2332;
+      padding: 0 var(--page-pad);
+      display: flex; align-items: center; justify-content: space-between;
+      height: 44px;
+    `}>
+      <a href="/agency-artifact" style={`
+        font-family: var(--mono); font-size: 10px; font-weight: 500;
+        letter-spacing: 0.08em; color: rgba(255,255,255,0.5);
+        text-decoration: none; text-transform: uppercase;
+      `}>&larr; Agency &amp; Artifact</a>
+      <span style={`
+        font-family: var(--mono); font-size: 9px; font-weight: 500;
+        color: rgba(255,255,255,0.3); letter-spacing: 0.12em;
+        text-transform: uppercase;
+      `}>A&thinsp;&&thinsp;A</span>
+    </nav>
+
+    <!-- Header block -->
+    <header style={`
+      background: #1b2332; color: #e0e4ec;
+      padding: 68px var(--page-pad) 40px;
+    `}>
+      <div style="max-width: var(--max-content); margin: 0 auto;">
+        <div style={`
+          font-family: var(--mono); font-size: 9px; font-weight: 500;
+          letter-spacing: 0.14em; text-transform: uppercase;
+          color: #6889b4; margin-bottom: 16px;
+        `}>Agency &amp; Artifact</div>
+        <h1 style={`
+          font-family: var(--serif); font-size: clamp(28px, 4.5vw, 40px);
+          font-weight: 400; line-height: 1.12; color: #e0e4ec;
+          letter-spacing: -0.015em; margin: 0 0 10px;
+        `}>{piece.title}</h1>
+        {piece.subtitle && (
+          <p style={`
+            font-family: var(--body); font-size: 15px; font-weight: 400;
+            color: rgba(224,228,236,0.6); line-height: 1.5;
+            margin: 0; max-width: 540px;
+          `}>{piece.subtitle}</p>
+        )}
+      </div>
+    </header>
+
+    <!-- Content on white card -->
+    <main style={`
+      max-width: calc(var(--max-content) + 80px); margin: -1px auto 0;
+      padding: 0 var(--page-pad);
+    `}>
+      <div style={`
+        background: #ffffff; border-radius: 2px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
+        padding: clamp(32px, 5vw, 56px) clamp(24px, 4vw, 48px);
+        max-width: var(--max-content); margin: 0 auto;
+      `}>
+        <slot />
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style={`
+      max-width: var(--max-content); margin: 0 auto;
+      padding: 48px var(--page-pad) 100px; text-align: center;
+    `}>
+      <a href="/agency-artifact" style={`
+        font-family: var(--mono); font-size: 11px; font-weight: 400;
+        letter-spacing: 0.04em; color: #8a94a8;
+        text-decoration: none;
+      `}>&larr; Agency &amp; Artifact</a>
+    </footer>
+  </div>
+</BaseLayout>

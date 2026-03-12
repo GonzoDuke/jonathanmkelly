@@ -1,0 +1,11 @@
+---
+import DetouristLayout from '../../layouts/DetouristLayout.astro';
+import { DET_PIECES } from '../../data/pieces.js';
+import TheLessonsWeBuried from '../../components/pieces/detourist/TheLessonsWeBuried.jsx';
+
+const piece = DET_PIECES.find(p => p.id === 'the-lessons-we-buried');
+---
+
+<DetouristLayout piece={piece}>
+  <TheLessonsWeBuried client:load />
+</DetouristLayout>

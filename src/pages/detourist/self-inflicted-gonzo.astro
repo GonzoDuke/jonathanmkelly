@@ -1,0 +1,11 @@
+---
+import DetouristLayout from '../../layouts/DetouristLayout.astro';
+import { DET_PIECES } from '../../data/pieces.js';
+import SelfInflictedGonzo from '../../components/pieces/detourist/SelfInflictedGonzo.jsx';
+
+const piece = DET_PIECES.find(p => p.id === 'self-inflicted-gonzo');
+---
+
+<DetouristLayout piece={piece}>
+  <SelfInflictedGonzo client:load />
+</DetouristLayout>

@@ -1,0 +1,11 @@
+---
+import AALayout from '../../layouts/AALayout.astro';
+import { AA_PIECES } from '../../data/pieces.js';
+import GrendelsRevenge from '../../components/pieces/agency-artifact/GrendelsRevenge.jsx';
+
+const piece = AA_PIECES.find(p => p.id === 'grendels-revenge');
+---
+
+<AALayout piece={piece}>
+  <GrendelsRevenge client:load />
+</AALayout>

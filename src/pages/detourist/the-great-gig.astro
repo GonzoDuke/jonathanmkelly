@@ -1,0 +1,11 @@
+---
+import DetouristLayout from '../../layouts/DetouristLayout.astro';
+import { DET_PIECES } from '../../data/pieces.js';
+import TheGreatGig from '../../components/pieces/detourist/TheGreatGig.jsx';
+
+const piece = DET_PIECES.find(p => p.id === 'the-great-gig');
+---
+
+<DetouristLayout piece={piece}>
+  <TheGreatGig client:load />
+</DetouristLayout>

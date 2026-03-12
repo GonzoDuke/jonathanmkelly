@@ -1,0 +1,11 @@
+---
+import PieceLayout from '../layouts/PieceLayout.astro';
+import { PIECES } from '../data/pieces.js';
+import Sleepwrong from '../components/pieces/poems/Sleepwrong.jsx';
+
+const piece = PIECES.find(p => p.id === 'sleepwrong');
+---
+
+<PieceLayout piece={piece}>
+  <Sleepwrong client:load />
+</PieceLayout>

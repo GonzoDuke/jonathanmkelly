@@ -1,0 +1,11 @@
+---
+import PieceLayout from '../layouts/PieceLayout.astro';
+import { PIECES } from '../data/pieces.js';
+import PotheadsDontBelieveInTime from '../components/pieces/poems/PotheadsDontBelieveInTime.jsx';
+
+const piece = PIECES.find(p => p.id === 'potheads-dont-believe-in-time');
+---
+
+<PieceLayout piece={piece}>
+  <PotheadsDontBelieveInTime client:load />
+</PieceLayout>

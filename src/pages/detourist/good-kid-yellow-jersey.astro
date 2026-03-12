@@ -1,0 +1,11 @@
+---
+import DetouristLayout from '../../layouts/DetouristLayout.astro';
+import { DET_PIECES } from '../../data/pieces.js';
+import GoodKidYellowJersey from '../../components/pieces/detourist/GoodKidYellowJersey.jsx';
+
+const piece = DET_PIECES.find(p => p.id === 'good-kid-yellow-jersey');
+---
+
+<DetouristLayout piece={piece}>
+  <GoodKidYellowJersey client:load />
+</DetouristLayout>

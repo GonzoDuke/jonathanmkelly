@@ -1,0 +1,11 @@
+---
+import AALayout from '../../layouts/AALayout.astro';
+import { AA_PIECES } from '../../data/pieces.js';
+import TheMoodThatAteTheMessage from '../../components/pieces/agency-artifact/TheMoodThatAteTheMessage.jsx';
+
+const piece = AA_PIECES.find(p => p.id === 'the-mood-that-ate-the-message');
+---
+
+<AALayout piece={piece}>
+  <TheMoodThatAteTheMessage client:load />
+</AALayout>

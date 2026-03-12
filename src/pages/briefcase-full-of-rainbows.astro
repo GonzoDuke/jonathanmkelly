@@ -1,0 +1,11 @@
+---
+import PieceLayout from '../layouts/PieceLayout.astro';
+import { PIECES } from '../data/pieces.js';
+import BriefcaseFullOfRainbows from '../components/pieces/poems/BriefcaseFullOfRainbows.jsx';
+
+const piece = PIECES.find(p => p.id === 'briefcase-full-of-rainbows');
+---
+
+<PieceLayout piece={piece}>
+  <BriefcaseFullOfRainbows client:load />
+</PieceLayout>

@@ -1,0 +1,11 @@
+---
+import DetouristLayout from '../../layouts/DetouristLayout.astro';
+import { DET_PIECES } from '../../data/pieces.js';
+import TheTellTaleVibe from '../../components/pieces/detourist/TheTellTaleVibe.jsx';
+
+const piece = DET_PIECES.find(p => p.id === 'the-tell-tale-vibe');
+---
+
+<DetouristLayout piece={piece}>
+  <TheTellTaleVibe client:load />
+</DetouristLayout>

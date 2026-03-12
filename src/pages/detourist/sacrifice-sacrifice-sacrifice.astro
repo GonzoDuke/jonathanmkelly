@@ -1,0 +1,11 @@
+---
+import DetouristLayout from '../../layouts/DetouristLayout.astro';
+import { DET_PIECES } from '../../data/pieces.js';
+import SacrificeSacrificeSacrifice from '../../components/pieces/detourist/SacrificeSacrificeSacrifice.jsx';
+
+const piece = DET_PIECES.find(p => p.id === 'sacrifice-sacrifice-sacrifice');
+---
+
+<DetouristLayout piece={piece}>
+  <SacrificeSacrificeSacrifice client:load />
+</DetouristLayout>

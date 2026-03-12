@@ -1,0 +1,11 @@
+---
+import DetouristLayout from '../../layouts/DetouristLayout.astro';
+import { DET_PIECES } from '../../data/pieces.js';
+import YourHistoryIsAlwaysHappening from '../../components/pieces/detourist/YourHistoryIsAlwaysHappening.jsx';
+
+const piece = DET_PIECES.find(p => p.id === 'your-history-is-always-happening');
+---
+
+<DetouristLayout piece={piece}>
+  <YourHistoryIsAlwaysHappening client:load />
+</DetouristLayout>

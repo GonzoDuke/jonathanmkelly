@@ -1,0 +1,11 @@
+---
+import DetouristLayout from '../../layouts/DetouristLayout.astro';
+import { DET_PIECES } from '../../data/pieces.js';
+import YourHandsHaveNothingToDo from '../../components/pieces/detourist/YourHandsHaveNothingToDo.jsx';
+
+const piece = DET_PIECES.find(p => p.id === 'your-hands-have-nothing-to-do');
+---
+
+<DetouristLayout piece={piece}>
+  <YourHandsHaveNothingToDo client:load />
+</DetouristLayout>

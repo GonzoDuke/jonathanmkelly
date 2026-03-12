@@ -7,70 +7,60 @@ const ogUrl = `https://jonathanmkelly.com/${piece.id}`;
 ---
 
 <BaseLayout title={pageTitle} description={piece.subtitle || ''} ogUrl={ogUrl}>
-  <div style="background: var(--bg); min-height: 100vh;">
-    <!-- Top nav -->
+  <div style="background: #0f0f0f; min-height: 100vh; color: #e8e4dc;">
+    <!-- Nav -->
     <nav style={`
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(250,248,245,0.92);
+      background: rgba(15,15,15,0.9);
       backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--rule);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
       padding: 0 var(--page-pad);
       display: flex; align-items: center; justify-content: space-between;
       height: 48px;
     `}>
       <a href="/" style={`
         font-family: var(--mono); font-size: 11px; font-weight: 400;
-        letter-spacing: 0.04em; color: var(--ghost);
-        text-decoration: none; transition: color 0.2s ease;
+        letter-spacing: 0.04em; color: rgba(232,228,220,0.4);
+        text-decoration: none;
       `}>&larr; Jonathan M. Kelly</a>
       <span style={`
         font-family: var(--mono); font-size: 10px; font-weight: 300;
-        color: var(--ghost); letter-spacing: 0.02em;
-      `}>{piece.type}{piece.date ? ` · ${piece.date}` : ''}</span>
+        color: rgba(232,228,220,0.25); letter-spacing: 0.04em;
+      `}>{piece.date || 'poem'}</span>
     </nav>
 
-    <!-- Piece header -->
+    <!-- Title -->
     <header style={`
-      max-width: var(--max-content); margin: 0 auto;
-      padding: 80px var(--page-pad) 0;
+      max-width: 640px; margin: 0 auto;
+      padding: min(16vh, 140px) var(--page-pad) 0;
+      text-align: center;
     `}>
       <h1 style={`
-        font-family: var(--serif); font-size: clamp(28px, 4.5vw, 38px);
-        font-weight: 400; line-height: 1.15; color: var(--text);
-        letter-spacing: -0.015em; margin: 0 0 6px;
+        font-family: var(--serif); font-size: clamp(30px, 5vw, 44px);
+        font-weight: 300; line-height: 1.12; color: #e8e4dc;
+        letter-spacing: -0.015em; margin: 0 0 20px;
       `}>{piece.title}</h1>
-      {piece.subtitle && (
-        <p style={`
-          font-family: var(--serif); font-size: 17px; font-weight: 300;
-          font-style: italic; color: var(--dim); line-height: 1.4;
-          margin: 0 0 12px;
-        `}>{piece.subtitle}</p>
-      )}
-      <div style={`
-        font-family: var(--mono); font-size: 10px; font-weight: 300;
-        color: var(--ghost); letter-spacing: 0.02em; margin-bottom: 24px;
-      `}>{piece.type}{piece.date ? ` · ${piece.date}` : ''}</div>
-      <div style="height: 1px; background: var(--rule);"></div>
+      <div style="width: 40px; height: 1px; background: rgba(232,228,220,0.2); margin: 0 auto 0;"></div>
     </header>
 
-    <!-- Content -->
+    <!-- Poem body -->
     <main style={`
-      max-width: var(--max-content); margin: 0 auto;
-      padding: 32px var(--page-pad) 0;
+      max-width: 600px; margin: 0 auto;
+      padding: 48px var(--page-pad) 0;
     `}>
       <slot />
     </main>
 
-    <!-- Return footer -->
+    <!-- Footer -->
     <footer style={`
-      max-width: var(--max-content); margin: 0 auto;
-      padding: 64px var(--page-pad) 120px; text-align: center;
+      max-width: 600px; margin: 0 auto;
+      padding: 80px var(--page-pad) 120px; text-align: center;
     `}>
-      <div style="height: 1px; background: var(--rule); margin-bottom: 32px;"></div>
+      <div style="width: 40px; height: 1px; background: rgba(232,228,220,0.1); margin: 0 auto 32px;"></div>
       <a href="/" style={`
         font-family: var(--mono); font-size: 11px; font-weight: 400;
-        letter-spacing: 0.04em; color: var(--ghost);
-        text-decoration: none; transition: color 0.2s ease;
+        letter-spacing: 0.04em; color: rgba(232,228,220,0.3);
+        text-decoration: none;
       `}>&larr; Back</a>
     </footer>
   </div>

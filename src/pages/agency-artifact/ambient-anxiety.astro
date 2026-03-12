@@ -1,0 +1,11 @@
+---
+import AALayout from '../../layouts/AALayout.astro';
+import { AA_PIECES } from '../../data/pieces.js';
+import AmbientAnxiety from '../../components/pieces/agency-artifact/AmbientAnxiety.jsx';
+
+const piece = AA_PIECES.find(p => p.id === 'ambient-anxiety');
+---
+
+<AALayout piece={piece}>
+  <AmbientAnxiety client:load />
+</AALayout>

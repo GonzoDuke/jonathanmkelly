@@ -1,0 +1,11 @@
+---
+import AALayout from '../../layouts/AALayout.astro';
+import { AA_PIECES } from '../../data/pieces.js';
+import WhatWeTalkAbout from '../../components/pieces/agency-artifact/WhatWeTalkAbout.jsx';
+
+const piece = AA_PIECES.find(p => p.id === 'what-we-talk-about');
+---
+
+<AALayout piece={piece}>
+  <WhatWeTalkAbout client:load />
+</AALayout>
