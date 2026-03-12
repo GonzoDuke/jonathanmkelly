@@ -4,11 +4,12 @@ import BaseLayout from './BaseLayout.astro';
 const { piece } = Astro.props;
 const pageTitle = `${piece.title} — detourist`;
 const ogUrl = `https://jonathanmkelly.com/detourist/${piece.id}`;
+const shareTitle = piece.title;
+const shareText = `From detourist, by Jonathan M. Kelly`;
 ---
 
 <BaseLayout title={pageTitle} description={piece.subtitle || ''} ogUrl={ogUrl}>
   <div style="background: #0a0a0a; min-height: 100vh;">
-    <!-- Nav -->
     <nav style={`
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       background: rgba(10,10,10,0.92);
@@ -16,20 +17,33 @@ const ogUrl = `https://jonathanmkelly.com/detourist/${piece.id}`;
       border-bottom: 1px solid rgba(255,255,255,0.06);
       padding: 0 var(--page-pad);
       display: flex; align-items: center; justify-content: space-between;
-      height: 48px;
+      height: 64px;
     `}>
       <a href="/detourist" style={`
         font-family: var(--mono); font-size: 11px; font-weight: 400;
         letter-spacing: 0.04em; color: rgba(255,255,255,0.35);
         text-decoration: none;
       `}>&larr; detourist</a>
-      <span style={`
-        font-family: var(--serif); font-size: 16px; font-weight: 500;
-        letter-spacing: -0.01em;
-      `}><span style="color: #d4822a;">de</span><span style="color: rgba(255,255,255,0.7);">tourist</span></span>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span style={`
+          font-family: var(--serif); font-size: 16px; font-weight: 500;
+          letter-spacing: -0.01em;
+        `}><span style="color: #d4822a;">de</span><span style="color: rgba(255,255,255,0.7);">tourist</span></span>
+        <button
+          class="share-btn"
+          data-title={shareTitle}
+          data-text={shareText}
+          data-url={ogUrl}
+          style={`
+            background: none; border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 3px; padding: 5px 12px; cursor: pointer;
+            font-family: var(--mono); font-size: 10px; font-weight: 400;
+            letter-spacing: 0.06em; text-transform: uppercase;
+            color: rgba(255,255,255,0.3); transition: all 0.2s ease;
+          `}>Share</button>
+      </div>
     </nav>
 
-    <!-- Header -->
     <header style="max-width: 900px; margin: 0 auto; padding: min(14vh, 120px) var(--page-pad) 0;">
       <h1 style={`
         font-family: var(--serif); font-size: clamp(36px, 6vw, 56px);
@@ -46,12 +60,10 @@ const ogUrl = `https://jonathanmkelly.com/detourist/${piece.id}`;
       <div style="height: 3px; background: #d4822a; width: 60px;"></div>
     </header>
 
-    <!-- Content -->
     <main style="max-width: 900px; margin: 0 auto; padding: 44px var(--page-pad) 0;">
       <slot />
     </main>
 
-    <!-- Footer -->
     <footer style="max-width: 900px; margin: 0 auto; padding: 80px var(--page-pad) 120px; text-align: center;">
       <div style="height: 3px; background: rgba(212,130,42,0.3); width: 60px; margin: 0 auto 32px;"></div>
       <a href="/detourist" style={`
@@ -61,4 +73,18 @@ const ogUrl = `https://jonathanmkelly.com/detourist/${piece.id}`;
       `}>&larr; detourist</a>
     </footer>
   </div>
+  <script>
+    document.querySelectorAll('.share-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const data = { title: btn.dataset.title, text: btn.dataset.text, url: btn.dataset.url };
+        if (navigator.share) {
+          try { await navigator.share(data); } catch {}
+        } else {
+          await navigator.clipboard.writeText(data.url);
+          btn.textContent = 'Copied';
+          setTimeout(() => { btn.textContent = 'Share'; }, 1500);
+        }
+      });
+    });
+  </script>
 </BaseLayout>

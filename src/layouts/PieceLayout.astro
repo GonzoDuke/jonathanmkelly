@@ -4,11 +4,12 @@ import BaseLayout from './BaseLayout.astro';
 const { piece } = Astro.props;
 const pageTitle = `${piece.title} — Jonathan M. Kelly`;
 const ogUrl = `https://jonathanmkelly.com/${piece.id}`;
+const shareTitle = piece.title;
+const shareText = `A poem by Jonathan M. Kelly`;
 ---
 
 <BaseLayout title={pageTitle} description={piece.subtitle || ''} ogUrl={ogUrl}>
   <div style="background: #0f0f0f; min-height: 100vh; color: #e8e4dc;">
-    <!-- Nav -->
     <nav style={`
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       background: rgba(15,15,15,0.9);
@@ -16,20 +17,33 @@ const ogUrl = `https://jonathanmkelly.com/${piece.id}`;
       border-bottom: 1px solid rgba(255,255,255,0.06);
       padding: 0 var(--page-pad);
       display: flex; align-items: center; justify-content: space-between;
-      height: 48px;
+      height: 64px;
     `}>
-      <a href="/" style={`
+      <a href="/poetry" style={`
         font-family: var(--mono); font-size: 11px; font-weight: 400;
         letter-spacing: 0.04em; color: rgba(232,228,220,0.35);
         text-decoration: none;
-      `}>&larr; Jonathan M. Kelly</a>
-      <span style={`
-        font-family: var(--mono); font-size: 11px; font-weight: 300;
-        color: rgba(232,228,220,0.2); letter-spacing: 0.04em;
-      `}>{piece.date || 'poem'}</span>
+      `}>&larr; Poetry</a>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span style={`
+          font-family: var(--mono); font-size: 11px; font-weight: 300;
+          color: rgba(232,228,220,0.2); letter-spacing: 0.04em;
+        `}>{piece.date || 'poem'}</span>
+        <button
+          class="share-btn"
+          data-title={shareTitle}
+          data-text={shareText}
+          data-url={ogUrl}
+          style={`
+            background: none; border: 1px solid rgba(232,228,220,0.12);
+            border-radius: 3px; padding: 5px 12px; cursor: pointer;
+            font-family: var(--mono); font-size: 10px; font-weight: 400;
+            letter-spacing: 0.06em; text-transform: uppercase;
+            color: rgba(232,228,220,0.35); transition: all 0.2s ease;
+          `}>Share</button>
+      </div>
     </nav>
 
-    <!-- Title -->
     <header style="max-width: 720px; margin: 0 auto; padding: min(16vh, 140px) var(--page-pad) 0; text-align: center;">
       <h1 style={`
         font-family: var(--serif); font-size: clamp(34px, 5.5vw, 52px);
@@ -39,19 +53,31 @@ const ogUrl = `https://jonathanmkelly.com/${piece.id}`;
       <div style="width: 48px; height: 1px; background: rgba(232,228,220,0.2); margin: 0 auto;"></div>
     </header>
 
-    <!-- Poem body -->
     <main style="max-width: 680px; margin: 0 auto; padding: 56px var(--page-pad) 0;">
       <slot />
     </main>
 
-    <!-- Footer -->
     <footer style="max-width: 680px; margin: 0 auto; padding: 80px var(--page-pad) 120px; text-align: center;">
       <div style="width: 48px; height: 1px; background: rgba(232,228,220,0.1); margin: 0 auto 32px;"></div>
-      <a href="/" style={`
+      <a href="/poetry" style={`
         font-family: var(--mono); font-size: 12px; font-weight: 400;
         letter-spacing: 0.04em; color: rgba(232,228,220,0.3);
         text-decoration: none;
       `}>&larr; Back</a>
     </footer>
   </div>
+  <script>
+    document.querySelectorAll('.share-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const data = { title: btn.dataset.title, text: btn.dataset.text, url: btn.dataset.url };
+        if (navigator.share) {
+          try { await navigator.share(data); } catch {}
+        } else {
+          await navigator.clipboard.writeText(data.url);
+          btn.textContent = 'Copied';
+          setTimeout(() => { btn.textContent = 'Share'; }, 1500);
+        }
+      });
+    });
+  </script>
 </BaseLayout>

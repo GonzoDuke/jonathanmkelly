@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { PIECES } from '../../data/pieces.js';
+
+const livePoems = PIECES.filter(p => p.status === 'live');
+---
+
+<BaseLayout title="Poetry — Jonathan M. Kelly" description="Poems by Jonathan M. Kelly." ogUrl="https://jonathanmkelly.com/poetry">
+  <div style="background: #231c14; min-height: 100vh; position: relative; overflow: hidden;">
+    <!-- Leather texture -->
+    <div style={`
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 25% 40%, rgba(62,42,20,0.4) 0%, transparent 65%),
+        radial-gradient(ellipse at 75% 70%, rgba(45,30,15,0.3) 0%, transparent 55%);
+      pointer-events: none;
+    `}></div>
+
+    <!-- Nav -->
+    <nav style={`
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(35,28,20,0.92);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(210,196,168,0.08);
+      padding: 0 var(--page-pad);
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    `}>
+      <a href="/" style={`
+        font-family: var(--mono); font-size: 11px; font-weight: 400;
+        letter-spacing: 0.04em; color: rgba(210,196,168,0.4);
+        text-decoration: none;
+      `}>&larr; Jonathan M. Kelly</a>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span style={`
+          font-family: var(--serif); font-size: 15px; font-weight: 300;
+          font-style: italic; color: rgba(210,196,168,0.3);
+        `}>Poetry</span>
+        <button
+          class="share-btn"
+          data-title="Poetry — Jonathan M. Kelly"
+          data-text="Poems by Jonathan M. Kelly"
+          data-url="https://jonathanmkelly.com/poetry"
+          style={`
+            background: none; border: 1px solid rgba(210,196,168,0.12);
+            border-radius: 3px; padding: 5px 12px; cursor: pointer;
+            font-family: var(--mono); font-size: 10px; font-weight: 400;
+            letter-spacing: 0.06em; text-transform: uppercase;
+            color: rgba(210,196,168,0.3); transition: all 0.2s ease;
+          `}>Share</button>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header style="max-width: 1200px; margin: 0 auto; padding: 112px var(--page-pad) 0; position: relative; z-index: 1;">
+      <h1 style={`
+        font-family: var(--serif); font-size: clamp(52px, 9vw, 96px);
+        font-weight: 300; line-height: 0.95; font-style: italic;
+        color: #d2c4a8; letter-spacing: -0.03em;
+        margin: 0 0 20px;
+      `}>Poetry</h1>
+      <p style={`
+        font-family: var(--body); font-size: 18px;
+        color: rgba(210,196,168,0.4); line-height: 1.6;
+        max-width: 480px; margin: 0 0 48px;
+      `}>The work that started it all. The work that won't stop.</p>
+      <div style="height: 2px; background: rgba(210,196,168,0.15); width: 60px;"></div>
+    </header>
+
+    <!-- Poem grid -->
+    <main style="max-width: 1200px; margin: 0 auto; padding: 56px var(--page-pad) 0; position: relative; z-index: 1;">
+      <div style={`
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+        gap: 24px;
+      `}>
+        {livePoems.map((poem) => (
+          <a href={`/${poem.id}`} style={`
+            display: flex; flex-direction: column; justify-content: space-between;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(210,196,168,0.08);
+            padding: 36px 32px;
+            min-height: 180px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+          `}
+          onmouseover="this.style.background='rgba(255,255,255,0.06)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(0,0,0,0.2)'"
+          onmouseout="this.style.background='rgba(255,255,255,0.03)';this.style.transform='translateY(0)';this.style.boxShadow='none'"
+          >
+            <div style={`
+              font-family: var(--serif); font-size: 24px; font-weight: 400;
+              color: #d2c4a8; line-height: 1.2; letter-spacing: -0.01em;
+            `}>{poem.title}</div>
+            {poem.date && (
+              <div style={`
+                font-family: var(--mono); font-size: 11px; font-weight: 300;
+                color: rgba(210,196,168,0.25); letter-spacing: 0.04em;
+                margin-top: 20px;
+              `}>{poem.date}</div>
+            )}
+          </a>
+        ))}
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="max-width: 1200px; margin: 0 auto; padding: 80px var(--page-pad) 120px; text-align: center; position: relative; z-index: 1;">
+      <div style="height: 2px; background: rgba(210,196,168,0.08); width: 60px; margin: 0 auto 32px;"></div>
+      <a href="/" style={`
+        font-family: var(--mono); font-size: 12px; font-weight: 400;
+        letter-spacing: 0.04em; color: rgba(210,196,168,0.3);
+        text-decoration: none;
+      `}>&larr; Back</a>
+    </footer>
+  </div>
+  <script>
+    document.querySelectorAll('.share-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const data = { title: btn.dataset.title, text: btn.dataset.text, url: btn.dataset.url };
+        if (navigator.share) {
+          try { await navigator.share(data); } catch {}
+        } else {
+          await navigator.clipboard.writeText(data.url);
+          btn.textContent = 'Copied';
+          setTimeout(() => { btn.textContent = 'Share'; }, 1500);
+        }
+      });
+    });
+  </script>
+</BaseLayout>

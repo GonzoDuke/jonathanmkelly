@@ -4,32 +4,46 @@ import BaseLayout from './BaseLayout.astro';
 const { piece } = Astro.props;
 const pageTitle = `${piece.title} — Agency & Artifact`;
 const ogUrl = `https://jonathanmkelly.com/agency-artifact/${piece.id}`;
+const shareTitle = piece.title;
+const shareText = `From Agency & Artifact, by Jonathan M. Kelly`;
 ---
 
 <BaseLayout title={pageTitle} description={piece.subtitle || ''} ogUrl={ogUrl}>
   <div style="background: #f0f2f5; min-height: 100vh;">
-    <!-- Nav -->
     <nav style={`
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       background: #1b2332;
       padding: 0 var(--page-pad);
       display: flex; align-items: center; justify-content: space-between;
-      height: 48px;
+      height: 64px;
     `}>
       <a href="/agency-artifact" style={`
         font-family: var(--mono); font-size: 11px; font-weight: 500;
         letter-spacing: 0.08em; color: rgba(255,255,255,0.5);
         text-decoration: none; text-transform: uppercase;
       `}>&larr; Agency &amp; Artifact</a>
-      <span style={`
-        font-family: var(--mono); font-size: 10px; font-weight: 500;
-        color: rgba(255,255,255,0.25); letter-spacing: 0.12em;
-        text-transform: uppercase;
-      `}>A&thinsp;&&thinsp;A</span>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span style={`
+          font-family: var(--mono); font-size: 10px; font-weight: 500;
+          color: rgba(255,255,255,0.25); letter-spacing: 0.12em;
+          text-transform: uppercase;
+        `}>A&thinsp;&&thinsp;A</span>
+        <button
+          class="share-btn"
+          data-title={shareTitle}
+          data-text={shareText}
+          data-url={ogUrl}
+          style={`
+            background: none; border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 3px; padding: 5px 12px; cursor: pointer;
+            font-family: var(--mono); font-size: 10px; font-weight: 400;
+            letter-spacing: 0.06em; text-transform: uppercase;
+            color: rgba(255,255,255,0.4); transition: all 0.2s ease;
+          `}>Share</button>
+      </div>
     </nav>
 
-    <!-- Full-width dark header -->
-    <header style="background: #1b2332; color: #e0e4ec; padding: 80px var(--page-pad) 56px;">
+    <header style="background: #1b2332; color: #e0e4ec; padding: 96px var(--page-pad) 56px;">
       <div style="max-width: 900px; margin: 0 auto;">
         <div style={`
           font-family: var(--mono); font-size: 10px; font-weight: 500;
@@ -51,7 +65,6 @@ const ogUrl = `https://jonathanmkelly.com/agency-artifact/${piece.id}`;
       </div>
     </header>
 
-    <!-- Content on white card -->
     <main style="max-width: 980px; margin: 0 auto; padding: 0 var(--page-pad);">
       <div style={`
         background: #ffffff;
@@ -63,7 +76,6 @@ const ogUrl = `https://jonathanmkelly.com/agency-artifact/${piece.id}`;
       </div>
     </main>
 
-    <!-- Footer -->
     <footer style="max-width: 900px; margin: 0 auto; padding: 56px var(--page-pad) 100px; text-align: center;">
       <a href="/agency-artifact" style={`
         font-family: var(--mono); font-size: 12px; font-weight: 400;
@@ -71,4 +83,18 @@ const ogUrl = `https://jonathanmkelly.com/agency-artifact/${piece.id}`;
       `}>&larr; Agency &amp; Artifact</a>
     </footer>
   </div>
+  <script>
+    document.querySelectorAll('.share-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const data = { title: btn.dataset.title, text: btn.dataset.text, url: btn.dataset.url };
+        if (navigator.share) {
+          try { await navigator.share(data); } catch {}
+        } else {
+          await navigator.clipboard.writeText(data.url);
+          btn.textContent = 'Copied';
+          setTimeout(() => { btn.textContent = 'Share'; }, 1500);
+        }
+      });
+    });
+  </script>
 </BaseLayout>

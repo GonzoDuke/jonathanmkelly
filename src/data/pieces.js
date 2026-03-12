@@ -7,14 +7,14 @@ export const PROJECTS = [
   {
     id: 'b-side',
     title: 'The B-Side of Everything',
-    description: 'A collection of para-fictional music writing published as a web archive. Each piece takes a recognizable form of music journalism and fills it with invented bands. The writing is real. The bands are not.',
+    description: 'A collection of music writing published as a web archive. Liner notes, live reviews, dissertations, radio transcripts, zine pages, and record guide entries. Music journalism spanning five decades.',
     url: 'https://thebsideofeverything.com',
     status: 'live',
   },
   {
     id: 'rowan-black',
     title: 'The Collected Works of Rowan Black',
-    description: 'A navigable archive of poems, essays, fragments, and digital artifacts by the fictional composite author Rowan Black. The creative component of a D.Litt. dissertation, passed with distinction.',
+    description: 'A navigable archive of poems, essays, fragments, and digital artifacts by the author Rowan Black, curated by the Corvids Collective. Recovered, reconstructed, and preserved as found.',
     url: 'https://whoisrowanblack.com',
     status: 'live',
   },
@@ -33,7 +33,6 @@ export const AA_PIECES = [
 
 // ── detourist ──
 export const DET_PIECES = [
-  { id: 'what-is-a-detourist', title: 'What is (a) detourist?', subtitle: '', status: 'live' },
   { id: 'self-inflicted-gonzo', title: 'Self-Inflicted Gonzo', subtitle: 'On Attempted Resurrection in a Safe-for-Work World', status: 'live' },
   { id: 'sacrifice-sacrifice-sacrifice', title: 'Sacrifice. Sacrifice. Sacrifice.', subtitle: 'The Unbroken Chain of Someone Else\u2019s Burden', status: 'live' },
   { id: 'the-great-gig', title: 'The Great Gig in Someone Else\u2019s Sky', subtitle: 'On the Tragedy of Building a Cathedral You\u2019re Not Allowed to Pray In', status: 'live' },

@@ -15,20 +15,34 @@ const livePieces = DET_PIECES.filter(p => p.status === 'live');
       border-bottom: 1px solid rgba(255,255,255,0.06);
       padding: 0 var(--page-pad);
       display: flex; align-items: center; justify-content: space-between;
-      height: 48px;
+      height: 64px;
     `}>
       <a href="/" style={`
         font-family: var(--mono); font-size: 11px; font-weight: 400;
         letter-spacing: 0.04em; color: rgba(255,255,255,0.35);
         text-decoration: none;
       `}>&larr; Jonathan M. Kelly</a>
-      <span style={`
-        font-family: var(--serif); font-size: 16px; font-weight: 500;
-      `}><span style="color: #d4822a;">de</span><span style="color: rgba(255,255,255,0.7);">tourist</span></span>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span style={`
+          font-family: var(--serif); font-size: 16px; font-weight: 500;
+        `}><span style="color: #d4822a;">de</span><span style="color: rgba(255,255,255,0.7);">tourist</span></span>
+        <button
+          class="share-btn"
+          data-title="detourist"
+          data-text="Deviation as discipline. Digression as method. By Jonathan M. Kelly"
+          data-url="https://jonathanmkelly.com/detourist"
+          style={`
+            background: none; border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 3px; padding: 5px 12px; cursor: pointer;
+            font-family: var(--mono); font-size: 10px; font-weight: 400;
+            letter-spacing: 0.06em; text-transform: uppercase;
+            color: rgba(255,255,255,0.3); transition: all 0.2s ease;
+          `}>Share</button>
+      </div>
     </nav>
 
     <!-- Header -->
-    <header style="max-width: 900px; margin: 0 auto; padding: 88px var(--page-pad) 0;">
+    <header style="max-width: 900px; margin: 0 auto; padding: 112px var(--page-pad) 0;">
       <h1 style={`
         font-family: var(--serif); font-size: clamp(56px, 10vw, 100px);
         font-weight: 500; line-height: 0.95;
@@ -38,7 +52,7 @@ const livePieces = DET_PIECES.filter(p => p.status === 'live');
         font-family: var(--body); font-size: 18px;
         color: rgba(255,255,255,0.4); line-height: 1.6;
         margin: 0 0 40px; max-width: 560px;
-      `}>Deviation as discipline. Digression as method. Each tangent is a turnstile, each sidetrack a form of research.</p>
+      `}>Deviation as discipline. Digression as method. Each tangent is a turnstile, each sidetrack a form of research. <a href="/detourist/what-is-a-detourist" style="color: #5b8dd9; text-decoration: none; font-style: normal;">What is a detourist?</a></p>
       <div style="height: 3px; background: #d4822a; width: 60px;"></div>
     </header>
 
@@ -74,4 +88,18 @@ const livePieces = DET_PIECES.filter(p => p.status === 'live');
       `}>&larr; Back</a>
     </footer>
   </div>
+  <script>
+    document.querySelectorAll('.share-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const data = { title: btn.dataset.title, text: btn.dataset.text, url: btn.dataset.url };
+        if (navigator.share) {
+          try { await navigator.share(data); } catch {}
+        } else {
+          await navigator.clipboard.writeText(data.url);
+          btn.textContent = 'Copied';
+          setTimeout(() => { btn.textContent = 'Share'; }, 1500);
+        }
+      });
+    });
+  </script>
 </BaseLayout>

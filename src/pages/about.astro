@@ -2,45 +2,52 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About — Jonathan M. Kelly" description="Poet, essayist, fiction-maker." ogUrl="https://jonathanmkelly.com/about">
-  <div style="background: var(--bg); min-height: 100vh;">
+<BaseLayout title="About — Jonathan M. Kelly" description="Poet, essayist, writer." ogUrl="https://jonathanmkelly.com/about">
+  <div style="background: #0c0c0c; min-height: 100vh;">
     <!-- Nav -->
     <nav style={`
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(250,248,245,0.92);
-      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--rule);
+      background: rgba(12,12,12,0.92);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(240,236,228,0.06);
       padding: 0 var(--page-pad);
-      display: flex; align-items: center; height: 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
     `}>
       <a href="/" style={`
-        font-family: var(--mono); font-size: 11px; font-weight: 400;
-        letter-spacing: 0.04em; color: var(--ghost); text-decoration: none;
-      `}>&larr; Jonathan M. Kelly</a>
+        font-family: var(--serif); font-size: 20px; font-weight: 500;
+        color: #f0ece4; text-decoration: none; letter-spacing: -0.01em;
+      `}>JMK</a>
+      <div style="display: flex; gap: clamp(20px, 3vw, 36px); align-items: center;">
+        <a href="/detourist" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(240,236,228,0.5); text-decoration: none;">detourist</a>
+        <a href="/poetry" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(240,236,228,0.5); text-decoration: none;">Poetry</a>
+        <a href="/projects" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(240,236,228,0.5); text-decoration: none;">Projects</a>
+        <a href="/agency-artifact" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(240,236,228,0.5); text-decoration: none;">A&amp;A</a>
+        <a href="/about" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(240,236,228,0.8); text-decoration: none;">About</a>
+      </div>
     </nav>
 
-    <!-- Content -->
-    <main style="max-width: 900px; margin: 0 auto; padding: 88px var(--page-pad) 120px;">
+    <main style="max-width: 1200px; margin: 0 auto; padding: 120px var(--page-pad) 120px;">
       <h1 style={`
         font-family: var(--serif);
-        font-size: clamp(40px, 6vw, 60px);
-        font-weight: 400; line-height: 1.05;
-        color: var(--text); letter-spacing: -0.025em;
-        margin: 0 0 32px;
+        font-size: clamp(48px, 8vw, 80px);
+        font-weight: 400; line-height: 0.95;
+        color: #f0ece4; letter-spacing: -0.03em;
+        margin: 0 0 40px;
       `}>About</h1>
-      <div style="height: 1px; background: var(--rule); margin-bottom: 40px;"></div>
+      <div style="height: 1px; background: rgba(240,236,228,0.1); margin-bottom: 48px;"></div>
 
-      <div style="font-family: var(--body); font-size: 19px; line-height: 1.7; color: var(--text); max-width: 720px;">
-        <p style="margin: 0 0 24px;">
-          Jonathan M. Kelly is a poet, essayist, and fiction-maker. He holds a D.Litt. in Creative Writing from Drew University, where his dissertation "The Glitch Is the Machine" was passed with distinction.
+      <div style="font-family: var(--body); font-size: 19px; line-height: 1.75; color: rgba(240,236,228,0.7); max-width: 680px;">
+        <p style="margin: 0 0 28px;">
+          Jonathan M. Kelly is a poet, essayist, and writer. He holds a D.Litt. in Creative Writing from Drew University, where his dissertation "The Glitch Is the Machine" was passed with distinction.
         </p>
-        <p style="margin: 0 0 24px;">
-          His work moves between poetry, critical essays on craft, and digital fiction projects that test the boundaries between what is real and what is constructed. He is the creator of
-          <a href="https://thebsideofeverything.com" target="_blank" rel="noopener noreferrer">The B-Side of Everything</a>, a collection of para-fictional music writing, and
-          <a href="https://whoisrowanblack.com" target="_blank" rel="noopener noreferrer">The Collected Works of Rowan Black</a>, a recovered archive of poems and fragments by a fictional composite author.
+        <p style="margin: 0 0 28px;">
+          His work moves between poetry, critical essays on craft, and digital projects that live at the edges of authorship and form. He is the creator of
+          <a href="https://thebsideofeverything.com" target="_blank" rel="noopener noreferrer" style="color: #f0ece4; text-decoration-color: rgba(240,236,228,0.25);">The B-Side of Everything</a>, a web archive of music writing curated by TL Skinsbury, and
+          <a href="https://whoisrowanblack.com" target="_blank" rel="noopener noreferrer" style="color: #f0ece4; text-decoration-color: rgba(240,236,228,0.25);">The Collected Works of Rowan Black</a>, a recovered archive of poems and fragments curated by the Corvids Collective.
         </p>
         <p style="margin: 0;">
-          Contact: <a href="mailto:contact@jonathanmkelly.com">contact@jonathanmkelly.com</a>
+          <a href="mailto:contact@jonathanmkelly.com" style="color: #f0ece4; text-decoration-color: rgba(240,236,228,0.25);">contact@jonathanmkelly.com</a>
         </p>
       </div>
     </main>

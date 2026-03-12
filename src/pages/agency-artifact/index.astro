@@ -13,22 +13,36 @@ const livePieces = AA_PIECES.filter(p => p.status === 'live');
       background: #1b2332;
       padding: 0 var(--page-pad);
       display: flex; align-items: center; justify-content: space-between;
-      height: 48px;
+      height: 64px;
     `}>
       <a href="/" style={`
         font-family: var(--mono); font-size: 11px; font-weight: 500;
         letter-spacing: 0.08em; color: rgba(255,255,255,0.5);
         text-decoration: none; text-transform: uppercase;
       `}>&larr; Jonathan M. Kelly</a>
-      <span style={`
-        font-family: var(--mono); font-size: 10px; font-weight: 500;
-        color: rgba(255,255,255,0.25); letter-spacing: 0.12em;
-        text-transform: uppercase;
-      `}>A&thinsp;&&thinsp;A</span>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span style={`
+          font-family: var(--mono); font-size: 10px; font-weight: 500;
+          color: rgba(255,255,255,0.25); letter-spacing: 0.12em;
+          text-transform: uppercase;
+        `}>A&thinsp;&&thinsp;A</span>
+        <button
+          class="share-btn"
+          data-title="Agency & Artifact"
+          data-text="Writing clearly in a system built for noise. By Jonathan M. Kelly"
+          data-url="https://jonathanmkelly.com/agency-artifact"
+          style={`
+            background: none; border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 3px; padding: 5px 12px; cursor: pointer;
+            font-family: var(--mono); font-size: 10px; font-weight: 400;
+            letter-spacing: 0.06em; text-transform: uppercase;
+            color: rgba(255,255,255,0.35); transition: all 0.2s ease;
+          `}>Share</button>
+      </div>
     </nav>
 
     <!-- Full-width dark header -->
-    <header style="background: #1b2332; color: #e0e4ec; padding: 80px var(--page-pad) 56px;">
+    <header style="background: #1b2332; color: #e0e4ec; padding: 100px var(--page-pad) 56px;">
       <div style="max-width: 900px; margin: 0 auto;">
         <h1 style={`
           font-family: var(--serif); font-size: clamp(44px, 7vw, 72px);
@@ -80,4 +94,18 @@ const livePieces = AA_PIECES.filter(p => p.status === 'live');
       `}>&larr; Back</a>
     </footer>
   </div>
+  <script>
+    document.querySelectorAll('.share-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const data = { title: btn.dataset.title, text: btn.dataset.text, url: btn.dataset.url };
+        if (navigator.share) {
+          try { await navigator.share(data); } catch {}
+        } else {
+          await navigator.clipboard.writeText(data.url);
+          btn.textContent = 'Copied';
+          setTimeout(() => { btn.textContent = 'Share'; }, 1500);
+        }
+      });
+    });
+  </script>
 </BaseLayout>

@@ -1,60 +1,64 @@
 /* ═══════════════════════════════════════
-   JONATHAN M. KELLY — DESIGN SYSTEM
-   Bold. Wide. Present.
+   JONATHAN M. KELLY
    ═══════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400;1,6..72,500&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Alegreya+SC:ital,wght@0,400;0,500;0,700;1,400&display=swap');
 
 :root {
-  --bg: #faf8f5;
-  --surface: #ffffff;
-  --text: #1a1a1a;
-  --dim: #6b6b6b;
-  --ghost: #a0a0a0;
-  --rule: rgba(0,0,0,0.08);
-  --rule-strong: rgba(0,0,0,0.15);
-
   --serif: 'Cormorant Garamond', 'Georgia', serif;
   --body: 'Newsreader', 'Georgia', serif;
   --mono: 'DM Mono', 'Menlo', monospace;
-
-  --max-content: 900px;
-  --max-wide: 1200px;
   --page-pad: 48px;
+  --max-content: 900px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--body);
-  font-size: 18px;
-  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  scroll-padding-top: 68px;
 }
 
-body { min-height: 100vh; background: var(--bg); }
+body { margin: 0; padding: 0; }
 
-a {
-  color: var(--text);
-  text-decoration-color: var(--rule-strong);
-  text-underline-offset: 3px;
-  transition: text-decoration-color 0.2s ease;
-}
-a:hover { text-decoration-color: var(--text); }
+::selection { background: rgba(255,255,255,0.15); }
 
-::selection { background: rgba(26,26,26,0.12); color: var(--text); }
+::-webkit-scrollbar { width: 0px; }
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--rule-strong); border-radius: 3px; }
-
+/* ── Mobile ── */
 @media (max-width: 768px) {
-  :root {
-    --page-pad: 24px;
+  :root { --page-pad: 20px; }
+}
+
+/* ── Share button hover ── */
+.share-btn:hover {
+  border-color: rgba(255,255,255,0.3) !important;
+  color: rgba(255,255,255,0.6) !important;
+}
+
+/* ── Mobile nav ── */
+@media (max-width: 640px) {
+  nav {
+    padding: 0 16px !important;
   }
-  html { font-size: 17px; }
+  nav > div {
+    gap: 12px !important;
+  }
+}
+
+/* ── Poem cards grid mobile ── */
+@media (max-width: 768px) {
+  .poem-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Project cards mobile ── */
+@media (max-width: 540px) {
+  .project-grid {
+    grid-template-columns: 1fr !important;
+  }
 }

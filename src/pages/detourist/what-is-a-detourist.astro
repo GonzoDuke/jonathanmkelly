@@ -1,9 +1,8 @@
 ---
 import DetouristLayout from '../../layouts/DetouristLayout.astro';
-import { DET_PIECES } from '../../data/pieces.js';
 import WhatIsADetourist from '../../components/pieces/detourist/WhatIsADetourist.jsx';
 
-const piece = DET_PIECES.find(p => p.id === 'what-is-a-detourist');
+const piece = { id: 'what-is-a-detourist', title: 'What is (a) detourist?', subtitle: '' };
 ---
 
 <DetouristLayout piece={piece}>
