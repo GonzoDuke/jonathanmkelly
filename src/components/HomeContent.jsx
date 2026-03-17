@@ -35,13 +35,13 @@ function Navbar() {
       <div style={{ display: 'flex', gap: 'clamp(20px, 3vw, 36px)', alignItems: 'center', flexWrap: 'wrap' }}>
         <a href="/detourist" style={ls}>detourist</a>
         <a href="/poetry" style={ls}>Poetry</a>
-        <a href="/projects" style={ls}>Projects</a>
         <a href="/agency-artifact" style={ls}>A&amp;A</a>
+        <a href="/projects" style={ls}>Projects</a>
         <a href="mailto:contact@jonathanmkelly.com" style={ls}>Contact</a>
         <a href="/about" style={ls}>About</a>
         <button
           onClick={async () => {
-            const data = { title: 'Jonathan M. Kelly', text: 'Poet. Essayist. Writer.', url: 'https://jonathanmkelly.com' };
+            const data = { title: 'Jonathan M. Kelly', text: 'Poet. Writer.', url: 'https://jonathanmkelly.com' };
             if (navigator.share) {
               try { await navigator.share(data); } catch {}
             } else {
@@ -101,7 +101,7 @@ function Hero({ mounted }) {
               fontWeight: 300, fontStyle: 'italic',
               color: 'rgba(240,236,228,0.4)', letterSpacing: '0.01em',
               margin: 0, textAlign: 'center',
-            }}>Poet &middot; Essayist &middot; Writer</p>
+            }}>Poet &middot; Writer</p>
           </div>
         </div>
         <div style={{
@@ -316,11 +316,11 @@ function Footer() {
         <p style={{
           fontFamily: 'var(--serif)', fontSize: '17px',
           fontWeight: 300, fontStyle: 'italic',
-          color: 'rgba(240,236,228,0.2)', margin: '0 0 6px',
+          color: 'rgba(240,236,228,0.45)', margin: '0 0 6px',
         }}>"Buy the ticket, take the ride."</p>
         <span style={{
           fontFamily: 'var(--mono)', fontSize: '11px',
-          color: 'rgba(240,236,228,0.12)', letterSpacing: '0.06em',
+          color: 'rgba(240,236,228,0.25)', letterSpacing: '0.06em',
         }}>HST</span>
         <div style={{ margin: '24px 0 0' }}>
           <span style={{ fontFamily: 'var(--mono)', fontSize: '14px', color: 'rgba(240,236,228,0.2)' }}>&copy; {new Date().getFullYear()} Jonathan M. Kelly</span>
@@ -339,8 +339,8 @@ export default function HomeContent() {
       <Hero mounted={mounted} />
       <DetouristBand />
       <PoetryBand />
-      <ProjectsBand />
       <AABand />
+      <ProjectsBand />
       <Footer />
     </div>
   );
