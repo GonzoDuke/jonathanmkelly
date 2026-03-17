@@ -33,10 +33,10 @@ function Navbar() {
     }}>
       <a href="/" style={{ fontFamily: 'var(--serif)', fontSize: '20px', fontWeight: 500, color: '#f0ece4', textDecoration: 'none', letterSpacing: '-0.01em' }}>JMK</a>
       <div style={{ display: 'flex', gap: 'clamp(20px, 3vw, 36px)', alignItems: 'center', flexWrap: 'wrap' }}>
+        <a href="/projects" style={ls}>Projects</a>
         <a href="/detourist" style={ls}>detourist</a>
         <a href="/poetry" style={ls}>Poetry</a>
         <a href="/agency-artifact" style={ls}>A&amp;A</a>
-        <a href="/projects" style={ls}>Projects</a>
         <a href="mailto:contact@jonathanmkelly.com" style={ls}>Contact</a>
         <a href="/about" style={ls}>About</a>
         <button
@@ -338,10 +338,10 @@ export default function HomeContent() {
     <div>
       <Navbar />
       <Hero mounted={mounted} />
+      <ProjectsBand />
       <DetouristBand />
       <PoetryBand />
       <AABand />
-      <ProjectsBand />
       <Footer />
     </div>
   );
