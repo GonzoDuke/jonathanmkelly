@@ -18,12 +18,12 @@ function Navbar() {
   const ls = {
     fontFamily: 'var(--mono)', fontSize: '13px', fontWeight: 400,
     letterSpacing: '0.06em', textTransform: 'uppercase',
-    color: 'rgba(240,236,228,0.5)', textDecoration: 'none',
+    color: 'rgba(240,236,228,0.7)', textDecoration: 'none',
   };
   return (
     <nav style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 9999,
-      background: scrolled ? 'rgba(12,12,12,0.92)' : 'transparent',
+      background: scrolled ? 'rgba(26,26,32,0.92)' : 'transparent',
       backdropFilter: scrolled ? 'blur(16px)' : 'none',
       WebkitBackdropFilter: scrolled ? 'blur(16px)' : 'none',
       borderBottom: scrolled ? '1px solid rgba(240,236,228,0.06)' : '1px solid transparent',
@@ -53,11 +53,11 @@ function Navbar() {
           }}
           className="home-share-btn"
           style={{
-            background: 'none', border: '1px solid rgba(240,236,228,0.12)',
+            background: 'none', border: '1px solid rgba(240,236,228,0.2)',
             borderRadius: '3px', padding: '5px 12px', cursor: 'pointer',
             fontFamily: 'var(--mono)', fontSize: '10px', fontWeight: 400,
             letterSpacing: '0.06em', textTransform: 'uppercase',
-            color: 'rgba(240,236,228,0.35)', transition: 'all 0.2s ease',
+            color: 'rgba(240,236,228,0.5)', transition: 'all 0.2s ease',
           }}>Share</button>
       </div>
     </nav>
@@ -68,7 +68,7 @@ function Navbar() {
 function Hero({ mounted }) {
   return (
     <section style={{
-      background: '#0c0c0c', position: 'relative', overflow: 'hidden',
+      background: '#1a1a20', position: 'relative', overflow: 'hidden',
       padding: 'clamp(100px, 14vh, 160px) var(--page-pad) clamp(64px, 8vh, 96px)',
     }}>
       <div style={{
@@ -90,16 +90,17 @@ function Hero({ mounted }) {
           <div style={{ width: 'fit-content' }}>
             <a href="/about" style={{ textDecoration: 'none' }}>
               <h1 style={{
-                fontFamily: 'var(--serif)', fontSize: 'clamp(44px, 8vw, 100px)',
-                fontWeight: 600, lineHeight: 0.95, color: '#f0ece4',
-                letterSpacing: '-0.04em', margin: '0 0 16px',
-                transition: 'color 0.3s ease', cursor: 'pointer',
+                fontFamily: "'Crimson Pro', var(--serif)", fontSize: 'clamp(44px, 8vw, 100px)',
+                fontWeight: 600, lineHeight: 0.95,
+                color: '#ffffff',
+                letterSpacing: '-0.02em', margin: '0 0 14px',
+                cursor: 'pointer',
               }}>Jonathan M. Kelly</h1>
             </a>
             <p style={{
-              fontFamily: 'var(--serif)', fontSize: 'clamp(18px, 2.5vw, 26px)',
+              fontFamily: "'Crimson Pro', var(--serif)", fontSize: 'clamp(18px, 2.5vw, 26px)',
               fontWeight: 300, fontStyle: 'italic',
-              color: 'rgba(240,236,228,0.4)', letterSpacing: '0.01em',
+              color: 'rgba(255,255,255,0.6)', letterSpacing: '0.01em',
               margin: 0, textAlign: 'center',
             }}>Poet &middot; Writer</p>
           </div>
@@ -111,7 +112,7 @@ function Hero({ mounted }) {
           <p style={{
             fontFamily: 'var(--serif)', fontSize: 'clamp(18px, 2.2vw, 24px)',
             fontWeight: 300, lineHeight: 1.5,
-            color: 'rgba(240,236,228,0.35)', margin: 0,
+            color: 'rgba(255,255,255,0.55)', margin: 0,
           }}>Essays, poems, and hybrid projects that live at the edges of authorship and form. This is where the work lives.</p>
         </div>
       </div>
@@ -305,8 +306,8 @@ function ProjectsBand() {
 function Footer() {
   return (
     <footer style={{
-      background: '#0c0c0c',
-      borderTop: '1px solid rgba(240,236,228,0.06)',
+      background: '#1a1a20',
+      borderTop: '1px solid rgba(240,236,228,0.1)',
       padding: '48px var(--page-pad) 64px',
     }}>
       <div style={{
@@ -316,14 +317,14 @@ function Footer() {
         <p style={{
           fontFamily: 'var(--serif)', fontSize: '17px',
           fontWeight: 300, fontStyle: 'italic',
-          color: 'rgba(240,236,228,0.45)', margin: '0 0 6px',
+          color: 'rgba(255,255,255,0.6)', margin: '0 0 6px',
         }}>"Buy the ticket, take the ride."</p>
         <span style={{
           fontFamily: 'var(--mono)', fontSize: '11px',
-          color: 'rgba(240,236,228,0.25)', letterSpacing: '0.06em',
+          color: 'rgba(255,255,255,0.4)', letterSpacing: '0.06em',
         }}>HST</span>
         <div style={{ margin: '24px 0 0' }}>
-          <span style={{ fontFamily: 'var(--mono)', fontSize: '14px', color: 'rgba(240,236,228,0.2)' }}>&copy; {new Date().getFullYear()} Jonathan M. Kelly</span>
+          <span style={{ fontFamily: 'var(--mono)', fontSize: '14px', color: 'rgba(255,255,255,0.35)' }}>&copy; {new Date().getFullYear()} Jonathan M. Kelly</span>
         </div>
       </div>
     </footer>
