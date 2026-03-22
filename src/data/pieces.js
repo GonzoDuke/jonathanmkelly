@@ -58,6 +58,7 @@ export const PIECES = [
   { id: 'kerouac-is-chilling-on-my-couch', title: 'Kerouac is Chilling on My Couch', type: 'poem', date: '2024', status: 'live' },
   { id: 'potheads-dont-believe-in-time', title: 'Potheads Don\u2019t Believe in Time', type: 'poem', date: '2024', status: 'live' },
   { id: 'briefcase-full-of-rainbows', title: 'Briefcase Full of Rainbows', type: 'poem', date: '2023', status: 'live' },
+  { id: 'satori-in-a-paper-cup', title: 'Satori in a Paper Cup', type: 'poem', date: '2022', status: 'live' },
   { id: 'sleepwrong', title: 'sleepwrong', type: 'poem', date: '2019', status: 'live' },
   { id: 'and-the-living-is-easy', title: 'And the Living is Easy', type: 'poem', date: '2015', status: 'live' },
 ];

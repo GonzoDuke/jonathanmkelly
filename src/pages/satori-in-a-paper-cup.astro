@@ -1,0 +1,11 @@
+---
+import PieceLayout from '../layouts/PieceLayout.astro';
+import { PIECES } from '../data/pieces.js';
+import SatoriInAPaperCup from '../components/pieces/poems/SatoriInAPaperCup.jsx';
+
+const piece = PIECES.find(p => p.id === 'satori-in-a-paper-cup');
+---
+
+<PieceLayout piece={piece}>
+  <SatoriInAPaperCup client:load />
+</PieceLayout>
