@@ -1,0 +1,11 @@
+---
+import PieceLayout from '../layouts/PieceLayout.astro';
+import { PIECES } from '../data/pieces.js';
+import Metrolined from '../components/pieces/poems/Metrolined.jsx';
+
+const piece = PIECES.find(p => p.id === 'metrolined');
+---
+
+<PieceLayout piece={piece}>
+  <Metrolined client:load />
+</PieceLayout>

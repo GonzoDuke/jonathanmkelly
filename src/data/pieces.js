@@ -61,4 +61,5 @@ export const PIECES = [
   { id: 'satori-in-a-paper-cup', title: 'Satori in a Paper Cup', type: 'poem', date: '2022', status: 'live' },
   { id: 'sleepwrong', title: 'sleepwrong', type: 'poem', date: '2019', status: 'live' },
   { id: 'and-the-living-is-easy', title: 'And the Living is Easy', type: 'poem', date: '2015', status: 'live' },
+  { id: 'metrolined', title: 'Metrolined', type: 'poem', date: '1999', status: 'live' },
 ];
