@@ -52,7 +52,6 @@ export const DET_PIECES = [
 // ── Poems ──
 export const PIECES = [
   { id: 'brake-check-this-motherfucker', title: 'Brake Check This, Motherfucker', type: 'poem', date: '2025', status: 'live' },
-  { id: 'this-is-not-content', title: 'THIS IS NOT CONTENT (BUT IT WILL BE)', type: 'poem', date: '2025', status: 'live' },
   { id: 'to-become-what-burns', title: 'To Become What Burns', type: 'poem', date: '2025', status: 'live' },
   { id: 'wisdom-teeth', title: 'Wisdom Teeth', type: 'poem', date: '2024', status: 'live' },
   { id: 'this-machine-kills-democracy', title: 'This Machine Kills Democracy', type: 'poem', date: '2024', status: 'live' },
