@@ -17,23 +17,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <nav style={`
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       background: rgba(30,50,40,0.92);
-      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(76,112,72,0.12);
       padding: 0 var(--page-pad);
       display: flex; align-items: center; justify-content: space-between;
       height: 64px;
     `}>
       <a href="/" style={`
-        font-family: var(--mono); font-size: 13px; font-weight: 400;
-        letter-spacing: 0.04em; color: rgba(212,184,150,0.5);
-        text-decoration: none;
-      `}>&larr; Jonathan M. Kelly</a>
-      <div style="display: flex; align-items: center; gap: 20px;">
-        <span style={`
-          font-family: var(--mono); font-size: 11px; font-weight: 400;
-          letter-spacing: 0.1em; text-transform: uppercase;
-          color: rgba(76,112,72,0.5);
-        `}>Hybrid Projects</span>
+        font-family: var(--serif); font-size: 20px; font-weight: 500;
+        color: #d4b896; text-decoration: none; letter-spacing: -0.01em;
+      `}>JMK</a>
+      <div style="display: flex; gap: clamp(20px, 3vw, 36px); align-items: center; flex-wrap: wrap;">
+        <a href="/projects" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(212,184,150,0.8); text-decoration: none;">Projects</a>
+        <a href="/detourist" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(212,184,150,0.4); text-decoration: none;">detourist</a>
+        <a href="/poetry" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(212,184,150,0.4); text-decoration: none;">Poetry</a>
+        <a href="/agency-artifact" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(212,184,150,0.4); text-decoration: none;">A&amp;A</a>
+        <a href="mailto:contact@jonathanmkelly.com" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(212,184,150,0.4); text-decoration: none;">Contact</a>
+        <a href="/about" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(212,184,150,0.4); text-decoration: none;">About</a>
         <button
           class="share-btn"
           data-title="Hybrid Projects — Jonathan M. Kelly"
@@ -69,10 +69,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <main style="max-width: 1200px; margin: 0 auto; padding: 56px var(--page-pad) 0; position: relative; z-index: 1;">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 32px;">
 
-        <!-- ═══ THE B-SIDE OF EVERYTHING ═══
-             Warm brown vinyl atmosphere matching the actual site.
-             Dark gatefold surround, warm cream text.
-        -->
+        <!-- ═══ THE B-SIDE OF EVERYTHING ═══ -->
         <a href="https://thebsideofeverything.com" target="_blank" rel="noopener noreferrer" style={`
           display: block; text-decoration: none;
           background: #1a1714;
@@ -83,7 +80,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 20px 60px rgba(0,0,0,0.4)'"
         onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'"
         >
-          <!-- Warm textured background matching the B-Side site -->
           <div style={`
             position: absolute; inset: 0;
             background:
@@ -97,7 +93,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             padding: clamp(36px, 5vw, 52px);
             position: relative; z-index: 1;
           `}>
-            <!-- Faux vinyl label at top -->
             <div style={`
               display: flex; align-items: center; gap: 12px;
               margin-bottom: 24px;
@@ -153,13 +148,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </div>
         </a>
 
-        <!-- ═══ THE COLLECTED WORKS OF ROWAN BLACK ═══
-             Light archival. Terminal window aesthetic.
-             macOS-style chrome with traffic light dots.
-             Colors from actual site: #eef0f4 bg, #ffffff surface,
-             #1a1d24 text, #2a6dd4 accent blue, #9099a8 ghost,
-             IBM Plex Mono feel, Leopard-era Finder
-        -->
+        <!-- ═══ THE COLLECTED WORKS OF ROWAN BLACK ═══ -->
         <a href="https://whoisrowanblack.com" target="_blank" rel="noopener noreferrer" style={`
           display: block; text-decoration: none;
           background: #eef0f4;
@@ -172,7 +161,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 20px 60px rgba(0,0,0,0.15)'"
         onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'"
         >
-          <!-- macOS-style title bar -->
           <div style={`
             background: linear-gradient(180deg, #e8eaee 0%, #d8dae0 100%);
             border-bottom: 1px solid #c8cad0;
@@ -190,7 +178,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             `}>corvids@archive: ~/collected-works/rowan-black</span>
           </div>
 
-          <!-- White card body -->
           <div style={`
             background: #ffffff;
             margin: 16px;
@@ -219,7 +206,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               `}>A Letter from the Corvids Collective</span>
             </div>
 
-            <!-- Footer -->
             <div style={`
               margin-top: 24px; padding-top: 14px;
               border-top: 1px solid rgba(0,0,0,0.06);

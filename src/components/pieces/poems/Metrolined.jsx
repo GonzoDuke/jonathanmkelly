@@ -5,6 +5,7 @@ export default function Metrolined() {
       fontSize: "19px",
       lineHeight: 1.65,
       color: "#e8e4dc",
+      textAlign: "center",
     }}>
       <div style={{ marginBottom: "24px" }}>
         Feebled old blues dig&mdash;<br />

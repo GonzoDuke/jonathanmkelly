@@ -11,21 +11,23 @@ const livePieces = DET_PIECES.filter(p => p.status === 'live');
     <nav style={`
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       background: rgba(10,10,10,0.92);
-      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(255,255,255,0.06);
       padding: 0 var(--page-pad);
       display: flex; align-items: center; justify-content: space-between;
       height: 64px;
     `}>
       <a href="/" style={`
-        font-family: var(--mono); font-size: 11px; font-weight: 400;
-        letter-spacing: 0.04em; color: rgba(255,255,255,0.35);
-        text-decoration: none;
-      `}>&larr; Jonathan M. Kelly</a>
-      <div style="display: flex; align-items: center; gap: 20px;">
-        <span style={`
-          font-family: var(--serif); font-size: 16px; font-weight: 500;
-        `}><span style="color: #d4822a;">de</span><span style="color: rgba(255,255,255,0.7);">tourist</span></span>
+        font-family: var(--serif); font-size: 20px; font-weight: 500;
+        color: #f0ece4; text-decoration: none; letter-spacing: -0.01em;
+      `}>JMK</a>
+      <div style="display: flex; gap: clamp(20px, 3vw, 36px); align-items: center; flex-wrap: wrap;">
+        <a href="/projects" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none;">Projects</a>
+        <a href="/detourist" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none;">detourist</a>
+        <a href="/poetry" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none;">Poetry</a>
+        <a href="/agency-artifact" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none;">A&amp;A</a>
+        <a href="mailto:contact@jonathanmkelly.com" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none;">Contact</a>
+        <a href="/about" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none;">About</a>
         <button
           class="share-btn"
           data-title="detourist"
