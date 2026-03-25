@@ -53,7 +53,6 @@ export default function SimpletonSeason() {
       <p style={{ margin: "0 0 20px" }}>But let’s not confuse this safety with virtue, or group quiet with any kind of truth. The real price is paid in everything that goes unsaid.
 This is not a call for cruelty, but for the restoration of consequence. If you cannot name what is happening, step aside for those who will. The price of clarity is high, but the cost of its absence is higher.</p>
 
-      <p style={{ margin: "0 0 20px" }}>I write about topics like this because they both fascinate and concern me. I’m curious how other people feel about this phenomenon. Leave a comment below.</p>
     </div>
   );
 }

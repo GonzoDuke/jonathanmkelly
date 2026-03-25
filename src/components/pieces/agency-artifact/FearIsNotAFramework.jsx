@@ -60,15 +60,15 @@ export default function FearIsNotAFramework() {
 
       <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Five Principles for AI-Era Pedagogy</h2>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Separate process from product. If we continue assessing only final outputs, students will always look for the fastest way to generate them. Instead, build assessments that reward iteration, revision, and critical engagement. Make thinking visible.</h2>
+      <p style={{ margin: "0 0 20px" }}>Separate process from product. If we continue assessing only final outputs, students will always look for the fastest way to generate them. Instead, build assessments that reward iteration, revision, and critical engagement. Make thinking visible.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Scaffold AI use explicitly. Do not just say “AI is allowed.” Model how to use it well. Provide examples of strong prompts, side-by-side comparisons of AI drafts and human revisions, and annotated feedback that shows what improvement looks like.</h2>
+      <p style={{ margin: "0 0 20px" }}>Scaffold AI use explicitly. Do not just say “AI is allowed.” Model how to use it well. Provide examples of strong prompts, side-by-side comparisons of AI drafts and human revisions, and annotated feedback that shows what improvement looks like.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Center reflection. Require students to articulate what the AI got right, what it missed, and what choices they made during revision. This reinforces metacognition and helps students develop ownership over AI-assisted work.</h2>
+      <p style={{ margin: "0 0 20px" }}>Center reflection. Require students to articulate what the AI got right, what it missed, and what choices they made during revision. This reinforces metacognition and helps students develop ownership over AI-assisted work.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Differentiate tool roles. AI is useful for brainstorming, tone smoothing, and early drafting, but not for fact-checking or original argumentation. Build rubrics that reflect those boundaries and teach students to evaluate AI’s role accordingly.</h2>
+      <p style={{ margin: "0 0 20px" }}>Differentiate tool roles. AI is useful for brainstorming, tone smoothing, and early drafting, but not for fact-checking or original argumentation. Build rubrics that reflect those boundaries and teach students to evaluate AI’s role accordingly.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Modernize honesty policies. Blanket bans prevent transparency, not cheating. Create clear, realistic guidelines for appropriate AI use and explain the rationale. Trust students enough to give them rules worth respecting.</h2>
+     <p style={{ margin: "0 0 20px" }}>Modernize honesty policies. Blanket bans prevent transparency, not cheating. Create clear, realistic guidelines for appropriate AI use and explain the rationale. Trust students enough to give them rules worth respecting.<p>
 
       <p style={{ margin: "0 0 20px" }}>None of this requires a total curricular overhaul. It requires intentionality. The same principles that apply to good teaching, such as transparency, scaffolding, reflection, and iteration, also apply to AI. The challenge is not to reinvent education from scratch. It is to stop pretending the landscape has not changed.</p>
 

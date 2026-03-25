@@ -115,7 +115,6 @@ He was genuinely unable to perform conformity.</p>
 
       <p style={{ margin: "0 0 20px" }}>The work begins anyway.</p>
 
-      <p style={{ margin: "0 0 20px" }}>Hunter S. Thompson: Self-portrait, Tijuana, 1960s</p>
-    </div>
+      </div>
   );
 }

@@ -34,25 +34,6 @@ export default function Unclassified() {
 
       <p style={{ margin: "0 0 20px" }}>Whitchurch, Celia. “Shifting Identities and Blurring Boundaries: The Emergence of Third Space Professionals in UK Higher Education.” Higher Education Quarterly 62, no. 4 (2008): 377–96.</p>
 
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Casual Version</h2>
-
-      <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>Unclassified: Dispatches from the Professional Gray Zone</h2>
-
-      <p style={{ margin: "0 0 20px" }}>Call it what you want, librarian, library media specialist, faculty adjacent. The title is just a nametag. The real story is the diagnosis. In the machinery of schools and universities, the librarian lives in what bureaucrats like to call “the third space”: credentialed and accountable for the intellectual life of a campus, yet locked out of the status and protections that come with fields the institution understands.</p>
-
-      <p style={{ margin: "0 0 20px" }}>That is not an accident. It is the point. Administrations have perfected the art of creating roles that are not fully faculty or fully staff, so they can have your expertise without giving you power. The position is essential and exposed. You teach, you curate, you lead, but always at the pleasure of someone else’s authority.</p>
-
-      <p style={{ margin: "0 0 20px" }}>In practice, the erasure is subtle but relentless. Librarians get treated as support staff. Collection development becomes “shopping.” Information literacy is “tech help.” Instructional partnership is “assisting.” Principals and administrators might nod along about your instructional role, but most see it as a backup act, not a headliner. Collaboration, when it happens, is on their terms. You can contribute, but you do not set the agenda.</p>
-
-      <p style={{ margin: "0 0 20px" }}>It is not unusual to defend professional decisions to a committee of people who have never trained in your field. Everyone comes armed with confidence. You come armed with your CV, hoping that will be enough. Every new policy shift lands in your lap. Even if you have “faculty” on paper, the autonomy is conditional, and you know it. Research confirms it. Only about half of academic librarians feel genuinely protected in their work. The rest operate under a quiet, constant threat.</p>
-
-      <p style={{ margin: "0 0 20px" }}>The fear has teeth. More than a third of librarians have faced subtle punishment or outright isolation for doing their jobs the way they think they should be done. Collection decisions, programming choices, even mild dissent from management can paint a target on your back. Nearly half say speaking up is as likely to hurt their career as it is to help the institution. That is not professional freedom. That is hostage negotiation.</p>
-
-      <p style={{ margin: "0 0 20px" }}>We talk a big game about intellectual freedom for our users. But for ourselves, the right to teach, to advocate, to speak without fear is often an illusion. Even libraries with “faculty status” for librarians rarely match the autonomy or due process of disciplinary faculty. Institutions love to talk about the library’s central role in the mission, right up until the work becomes controversial or threatens someone’s control.</p>
-
-      <p style={{ margin: "0 0 20px" }}>The third space is a holding pen. It is vital when convenient, invisible when dangerous, and always subject to renegotiation. As education sinks deeper into austerity and compliance, the library becomes a canary in the coal mine. If you want to know how seriously a school takes its intellectual life, look at how much freedom it gives its librarians.</p>
-
-      <p style={{ margin: "0 0 20px" }}>Librarians are asked to be responsible for knowledge but denied the standing to defend it. Until that changes, until power matches responsibility, collaboration will remain a euphemism, status will be a moving target, and freedom will be whatever those in charge say it is this week. The library will survive. The people who make it matter will keep working. But they will do it as tolerated guests in their own house.</p>
-    </div>
+      </div>
   );
 }

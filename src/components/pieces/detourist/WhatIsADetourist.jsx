@@ -20,7 +20,6 @@ export default function WhatIsADetourist() {
 
       <p style={{ margin: "0 0 20px" }}>You asked for fun. This is a passport, not a plan.</p>
 
-      <p style={{ margin: "0 0 20px" }}>If you’re interested in joining us, comment below.</p>
-    </div>
+      </div>
   );
 }
