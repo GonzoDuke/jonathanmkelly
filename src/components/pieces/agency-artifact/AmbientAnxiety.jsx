@@ -6,8 +6,6 @@ export default function AmbientAnxiety() {
       lineHeight: 1.7,
       color: "#1a1d28",
     }}>
-      <p style={{ margin: "0 0 20px" }}>How adult fear and misunderstanding of AI shapes student experience</p>
-
       <p style={{ margin: "0 0 20px" }}>The adult/teacher/admin fear of AI, as encountered by students, rarely registers as reasoned critique or pedagogical care. It is received as a mood: an ambient signal that saturates the environment with anxiety, suspicion, and arbitrary control. When administrators block ChatGPT, when teachers sermonize about "real thinking" and decry cognitive offloading as a moral failing, students do not absorb an argument. They absorb affect: distrust, restriction, a sense that the adults are fighting ghosts with rules.</p>
 
       <p style={{ margin: "0 0 20px" }}>The message is clear, but the meaning is obscure. What students perceive is not intellectual engagement, but bureaucratic panic dressed up as virtue.</p>

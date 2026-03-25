@@ -24,7 +24,7 @@ export default function TheTellTaleVibe() {
 
       <p style={{ margin: "0 0 20px" }}>(The strangest part is how loud they are about it. These self-appointed arbiters of authorship have 1,000+ subscribers and seemingly nothing to say, unless it’s a warning. But not about meaning, about method. As if the biggest threat to language is someone using a tool. Not someone wasting your time.)</p>
 
-     <p style={{ margin: "0 0 20px" }}>They want to feel the strain. The sweat. The hesitation. They want the writing to bruise a little, just enough to confirm its humanity.</p>
+      <p style={{ margin: "0 0 20px" }}>They want to feel the strain. The sweat. The hesitation. They want the writing to bruise a little, just enough to confirm its humanity.</p>
 
       <p style={{ margin: "0 0 20px" }}>Somehow, this became a standard. Not quality. Not voice. Not depth. Just the absence of friction.</p>
 
