@@ -6,7 +6,7 @@ export default function FearIsNotAFramework() {
       lineHeight: 1.7,
       color: "#1a1d28",
     }}>
-      <p style={{ margin: "0 0 20px" }}>Recent research from MIT triggered a familiar media frenzy: "ChatGPT is changing your brain," headlines declared, as if that fact alone were cause for alarm. It is changing your brain, but so did writing, arithmetic, Google, and the invention of the index card. The capacity for cognitive change is not a flaw. It is the signature of human intelligence.</p>
+      <p style={{ margin: "0 0 20px", fontStyle: "italic" }}>Recent research from MIT triggered a familiar media frenzy: "ChatGPT is changing your brain," headlines declared, as if that fact alone were cause for alarm. It is changing your brain, but so did writing, arithmetic, Google, and the invention of the index card. The capacity for cognitive change is not a flaw. It is the signature of human intelligence.</p>
 
       <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Study and the Panic</h2>
 
