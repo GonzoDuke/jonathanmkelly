@@ -163,11 +163,7 @@ const THEMES = {
 
     <!-- Masthead -->
     <header class="poetry-masthead">
-      <p class="poetry-masthead-label">Poetry</p>
-      <p class="poetry-masthead-tagline">
-        The work that started it all. The work that won&rsquo;t stop.
-      </p>
-      <div class="poetry-masthead-rule" aria-hidden="true"></div>
+      <h1 class="poetry-masthead-word">poetry</h1>
     </header>
 
     <!-- Bands -->
@@ -254,34 +250,29 @@ const THEMES = {
     .poetry-masthead {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 120px var(--page-pad) 56px;
+      padding: clamp(140px, 20vh, 220px) var(--page-pad) clamp(80px, 12vh, 140px);
       position: relative;
       z-index: 1;
     }
-    .poetry-masthead-label {
-      font-family: var(--mono);
-      font-size: 12px;
+    .poetry-masthead-word {
+      font-family: var(--poetry-classical);
+      font-size: clamp(96px, 18vw, 220px);
       font-weight: 400;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: rgba(240, 236, 228, 0.45);
-      margin: 0 0 28px;
-    }
-    .poetry-masthead-tagline {
-      font-family: var(--serif);
-      font-size: clamp(22px, 3.2vw, 32px);
       font-style: italic;
-      font-weight: 400;
-      line-height: 1.3;
-      color: rgba(240, 236, 228, 0.82);
-      max-width: 640px;
-      margin: 0 0 40px;
-      letter-spacing: -0.005em;
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      color: #f0ece4;
+      margin: 0;
     }
-    .poetry-masthead-rule {
-      width: 56px;
-      height: 1px;
-      background: rgba(240, 236, 228, 0.25);
+
+    @media (max-width: 540px) {
+      .poetry-masthead {
+        padding: 120px 20px 72px;
+      }
+      .poetry-masthead-word {
+        font-size: clamp(72px, 26vw, 120px);
+        letter-spacing: -0.03em;
+      }
     }
 
     /* ── Bands ── */
@@ -357,9 +348,6 @@ const THEMES = {
 
     /* ── Mobile ── */
     @media (max-width: 768px) {
-      .poetry-masthead {
-        padding-top: 96px;
-      }
       .poetry-band {
         min-height: 48vh;
       }
