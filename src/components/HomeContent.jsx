@@ -41,7 +41,7 @@ function Navbar() {
         <a href="/about" style={ls}>About</a>
         <button
           onClick={async () => {
-            const data = { title: 'Jonathan M. Kelly', text: 'Poet. Writer.', url: 'https://jonathanmkelly.com' };
+            const data = { title: 'Jonathan M. Kelly', text: 'Poet. Writer.', url: 'https://www.jonathanmkelly.com' };
             if (navigator.share) {
               try { await navigator.share(data); } catch {}
             } else {

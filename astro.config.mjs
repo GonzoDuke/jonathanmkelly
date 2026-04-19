@@ -3,7 +3,7 @@ import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://jonathanmkelly.com',
+  site: 'https://www.jonathanmkelly.com',
   integrations: [react(), sitemap()],
   vite: {
     ssr: {

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^5.0.0",
+    "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.1",
     "@vercel/analytics": "^1.6.1",
     "astro": "^6.0.0",
