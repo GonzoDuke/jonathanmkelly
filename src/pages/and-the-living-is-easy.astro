@@ -1,11 +1,358 @@
 ---
-import PieceLayout from '../layouts/PieceLayout.astro';
-import { PIECES } from '../data/pieces.js';
-import AndTheLivingIsEasy from '../components/pieces/poems/AndTheLivingIsEasy.jsx';
+import PoetryLayout from '../layouts/PoetryLayout.astro';
+import { parseLiving } from '../data/poems/and-the-living-is-easy.js';
 
-const piece = PIECES.find(p => p.id === 'and-the-living-is-easy');
+const stanzas = parseLiving();
+const year = '2015';
+const next = { slug: 'metrolined', title: 'Metrolined' };
+
+// Elevation gain: early stanzas sit lower in their block, late stanzas
+// near the top. Subtle — should be felt, not obvious.
+// We interpolate padding-top from 22vh down to 6vh across the poem.
+const total = stanzas.length;
+const stanzasWithElev = stanzas.map((s, i) => {
+  const t = total > 1 ? i / (total - 1) : 1;
+  const paddingTopVh = +(22 - t * 16).toFixed(1);
+  return { ...s, paddingTopVh, index: i };
+});
 ---
+<PoetryLayout
+  title="And the Living is Easy — Jonathan M. Kelly"
+  description="A poem by Jonathan M. Kelly."
+  ogUrl="https://www.jonathanmkelly.com/and-the-living-is-easy"
+>
+  <div class="lv-page">
+    <svg class="lv-contour" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="lv-contour-pattern" width="420" height="140" patternUnits="userSpaceOnUse">
+          <path d="M0 22 C 80 8, 180 44, 260 28 C 340 14, 380 38, 420 22"
+                stroke="#2F4028" stroke-width="0.7" fill="none" opacity="0.3" />
+          <path d="M0 60 C 70 42, 160 82, 250 58 C 330 38, 370 76, 420 60"
+                stroke="#2F4028" stroke-width="0.7" fill="none" opacity="0.25" />
+          <path d="M0 98 C 90 78, 190 120, 280 92 C 350 70, 390 112, 420 100"
+                stroke="#2F4028" stroke-width="0.7" fill="none" opacity="0.22" />
+          <path d="M0 136 C 60 112, 180 158, 280 128 C 340 106, 390 144, 420 134"
+                stroke="#2F4028" stroke-width="0.7" fill="none" opacity="0.18" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#lv-contour-pattern)" />
+    </svg>
 
-<PieceLayout piece={piece}>
-  <AndTheLivingIsEasy client:load />
-</PieceLayout>
+    <nav class="lv-nav">
+      <a href="/" class="lv-brand">JMK</a>
+      <div class="lv-nav-links">
+        <a href="/projects">Projects</a>
+        <a href="/detourist">detourist</a>
+        <a href="/poetry" class="is-current">Poetry</a>
+        <a href="/agency-artifact">A&amp;A</a>
+        <a href="mailto:contact@jonathanmkelly.com">Contact</a>
+        <a href="/about">About</a>
+      </div>
+    </nav>
+
+    <article class="lv-article">
+      <header class="lv-masthead">
+        <a href="/poetry" class="lv-back">&larr; Poetry</a>
+        <p class="lv-year">{year}</p>
+        <h1 class="lv-title">And the Living is Easy</h1>
+      </header>
+
+      <div class="lv-body">
+        {stanzasWithElev.map((stanza, i) => (
+          <Fragment>
+            <p
+              class={stanza.isSummit ? 'lv-stanza lv-summit' : 'lv-stanza'}
+              style={`padding-top: ${stanza.paddingTopVh}vh;`}
+              data-index={stanza.index}
+            >
+              {stanza.lines.map((line, li) => (
+                <Fragment>
+                  {line}
+                  {li < stanza.lines.length - 1 && '\n'}
+                </Fragment>
+              ))}
+            </p>
+            {i < stanzasWithElev.length - 1 && (
+              <div class="lv-marker" aria-hidden="true">
+                <svg viewBox="0 0 18 22" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9 1 L16 20 L9 16 L2 20 Z"
+                    fill="none"
+                    stroke="#A68A56"
+                    stroke-width="1.2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            )}
+          </Fragment>
+        ))}
+      </div>
+
+      <footer class="lv-footer">
+        <a href={`/${next.slug}`} class="lv-next">
+          <span class="lv-next-label">Next poem &rarr;</span>
+          <span class="lv-next-title">{next.title}</span>
+        </a>
+      </footer>
+    </article>
+
+    <!-- Trail progress indicator: desktop-only (>1024px) -->
+    <aside class="lv-progress" aria-hidden="true">
+      <div class="lv-progress-line"></div>
+      <div class="lv-progress-dot"></div>
+      <svg class="lv-progress-summit" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 1 L13 12 L1 12 Z"
+              fill="none" stroke="#A68A56" stroke-width="1.2" stroke-linejoin="round" />
+      </svg>
+    </aside>
+  </div>
+
+  <style is:global>
+    .lv-page {
+      --lv-bg: #F5EFE0;
+      --lv-fg: #1C2818;
+      --lv-muted: rgba(28, 40, 24, 0.55);
+      --lv-tan: #A68A56;
+      --lv-green: #4A5A3C;
+      background: var(--lv-bg);
+      color: var(--lv-fg);
+      min-height: 100vh;
+      position: relative;
+      font-family: var(--poetry-humanist);
+    }
+
+    /* ── Contour texture ── */
+    .lv-contour {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.34;
+      mix-blend-mode: multiply;
+    }
+
+    /* ── Nav ── */
+    .lv-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(245, 239, 224, 0.88);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(28, 40, 24, 0.08);
+      padding: 0 var(--page-pad);
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .lv-brand {
+      font-family: var(--poetry-humanist);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--lv-fg);
+      text-decoration: none;
+      letter-spacing: -0.005em;
+    }
+    .lv-nav-links {
+      display: flex;
+      gap: clamp(20px, 3vw, 36px);
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .lv-nav-links a {
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(28, 40, 24, 0.42);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .lv-nav-links a:hover { color: var(--lv-tan); }
+    .lv-nav-links a.is-current { color: rgba(28, 40, 24, 0.85); }
+
+    /* ── Article ── */
+    .lv-article {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 120px var(--page-pad) 160px;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* ── Masthead ── */
+    .lv-masthead { margin-bottom: 72px; }
+    .lv-back {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(28, 40, 24, 0.45);
+      text-decoration: none;
+      margin-bottom: 56px;
+      transition: color 0.3s ease;
+    }
+    .lv-back:hover { color: var(--lv-tan); }
+    .lv-year {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--lv-tan);
+      margin: 0 0 20px;
+    }
+    .lv-title {
+      font-family: var(--poetry-humanist);
+      font-size: clamp(44px, 7vw, 68px);
+      font-weight: 500;
+      letter-spacing: -0.015em;
+      line-height: 1.04;
+      color: var(--lv-fg);
+      margin: 0;
+    }
+
+    /* ── Body ── */
+    .lv-body {
+      font-family: var(--poetry-humanist);
+      font-size: 20px;
+      line-height: 1.72;
+      color: var(--lv-fg);
+    }
+    .lv-stanza {
+      white-space: pre-wrap;
+      margin: 0;
+      padding-bottom: 2vh;
+      font-family: var(--poetry-humanist);
+    }
+    .lv-stanza:first-of-type { padding-top: 6vh !important; }
+    .lv-summit {
+      color: var(--lv-green);
+      font-style: italic;
+    }
+
+    /* Inline trail marker between stanzas */
+    .lv-marker {
+      display: flex;
+      justify-content: center;
+      padding: 28px 0 24px;
+    }
+    .lv-marker svg {
+      width: 16px;
+      height: 20px;
+      opacity: 0.75;
+    }
+
+    /* ── Desktop-only trail progress ── */
+    .lv-progress {
+      display: none;
+      position: fixed;
+      top: 120px;
+      right: 36px;
+      bottom: 60px;
+      width: 14px;
+      z-index: 50;
+      pointer-events: none;
+    }
+    .lv-progress-line {
+      position: absolute;
+      top: 0;
+      bottom: 22px;
+      left: 50%;
+      width: 1px;
+      transform: translateX(-50%);
+      background: rgba(166, 138, 86, 0.3);
+    }
+    .lv-progress-dot {
+      position: absolute;
+      top: calc((100% - 22px) * var(--trail-progress, 0));
+      left: 50%;
+      transform: translate(-50%, -3px);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--lv-tan);
+      box-shadow: 0 0 0 3px rgba(245, 239, 224, 0.8);
+      transition: top 0.12s linear;
+    }
+    .lv-progress-summit {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 14px;
+      height: 14px;
+    }
+    @media (min-width: 1024px) {
+      .lv-progress { display: block; }
+    }
+
+    /* ── Footer ── */
+    .lv-footer {
+      margin-top: 96px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(28, 40, 24, 0.16);
+    }
+    .lv-next {
+      text-decoration: none;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 10px;
+      color: var(--lv-fg);
+      transition: color 0.3s ease;
+    }
+    .lv-next-label {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--lv-tan);
+    }
+    .lv-next-title {
+      font-family: var(--poetry-classical);
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(22px, 3vw, 28px);
+      line-height: 1.2;
+      color: var(--lv-fg);
+    }
+    .lv-next:hover .lv-next-title { color: var(--lv-tan); }
+
+    /* ── Mobile ── */
+    @media (max-width: 640px) {
+      .lv-article { padding: 96px var(--page-pad) 120px; }
+      .lv-masthead { margin-bottom: 56px; }
+      .lv-back { margin-bottom: 40px; }
+      .lv-body { font-size: 18px; line-height: 1.7; }
+      .lv-marker { padding: 20px 0 16px; }
+      .lv-footer { margin-top: 72px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .lv-progress-dot { transition: none; }
+    }
+  </style>
+
+  <script>
+    // Update the trail progress dot based on scroll position.
+    const progress = document.querySelector<HTMLElement>('.lv-progress');
+    if (progress && window.matchMedia('(min-width: 1024px)').matches) {
+      let ticking = false;
+      const update = () => {
+        const doc = document.documentElement;
+        const denom = (doc.scrollHeight - window.innerHeight) || 1;
+        const ratio = Math.min(1, Math.max(0, window.scrollY / denom));
+        progress.style.setProperty('--trail-progress', String(ratio));
+        ticking = false;
+      };
+      const onScroll = () => {
+        if (!ticking) {
+          window.requestAnimationFrame(update);
+          ticking = true;
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    }
+  </script>
+</PoetryLayout>
