@@ -1,131 +1,377 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import PoetryLayout from '../../layouts/PoetryLayout.astro';
 import { PIECES } from '../../data/pieces.js';
 
 const livePoems = PIECES.filter(p => p.status === 'live');
+
+// Per-poem band theming. Each poem gets its own palette, title typography,
+// and body typography on the index band. These mirror the full-page
+// treatments described in the brief — atmospheric layers (embers, scanlines,
+// metaballs, parallax, static) will be added in a later pass.
+const THEMES = {
+  'brake-check-this-motherfucker': {
+    bg: '#1a0604',
+    fg: '#FFE4D6',
+    muted: 'rgba(255,228,214,0.55)',
+    accent: '#ff3c28',
+    titleFont: 'var(--poetry-display-condensed)',
+    titleTransform: 'uppercase',
+    titleWeight: '700',
+    titleSpacing: '-0.005em',
+    bodyFont: 'var(--poetry-mono)',
+    bodyStyle: 'normal',
+    align: 'left',
+  },
+  'to-become-what-burns': {
+    bg: '#000000',
+    fg: '#F4EBD4',
+    muted: 'rgba(244,235,212,0.55)',
+    accent: '#FFA04A',
+    titleFont: 'var(--poetry-classical)',
+    titleTransform: 'none',
+    titleWeight: '500',
+    titleSpacing: '-0.01em',
+    bodyFont: 'var(--poetry-classical)',
+    bodyStyle: 'italic',
+    align: 'left',
+  },
+  'wisdom-teeth': {
+    bg: '#F2EADA',
+    fg: '#1A1714',
+    muted: 'rgba(26,23,20,0.55)',
+    accent: '#8B2416',
+    titleFont: 'var(--poetry-classical)',
+    titleTransform: 'none',
+    titleWeight: '700',
+    titleSpacing: '-0.015em',
+    bodyFont: 'var(--poetry-classical)',
+    bodyStyle: 'italic',
+    align: 'left',
+  },
+  'this-machine-kills-democracy': {
+    bg: '#F5F2EA',
+    fg: '#0F0C0A',
+    muted: 'rgba(15,12,10,0.55)',
+    accent: '#B82418',
+    titleFont: 'var(--poetry-display-slab)',
+    titleTransform: 'uppercase',
+    titleWeight: '400',
+    titleSpacing: '0.01em',
+    bodyFont: 'var(--poetry-humanist)',
+    bodyStyle: 'normal',
+    align: 'left',
+  },
+  'kerouac-is-chilling-on-my-couch': {
+    bg: '#2B1E13',
+    fg: '#F4EBD4',
+    muted: 'rgba(244,235,212,0.55)',
+    accent: '#D4A574',
+    titleFont: 'var(--poetry-italic-display)',
+    titleTransform: 'none',
+    titleWeight: '500',
+    titleSpacing: '-0.01em',
+    bodyFont: 'var(--poetry-humanist)',
+    bodyStyle: 'normal',
+    align: 'left',
+  },
+  'potheads-dont-believe-in-time': {
+    bg: '#2E1008',
+    fg: '#F0E4D0',
+    muted: 'rgba(240,228,208,0.55)',
+    accent: '#FF5522',
+    titleFont: 'var(--poetry-classical)',
+    titleTransform: 'none',
+    titleWeight: '500',
+    titleSpacing: '-0.01em',
+    bodyFont: 'var(--poetry-classical)',
+    bodyStyle: 'normal',
+    align: 'left',
+  },
+  'briefcase-full-of-rainbows': {
+    bg: '#C4C0B8',
+    fg: '#1A1714',
+    muted: 'rgba(26,23,20,0.6)',
+    accent: '#8B6A2A',
+    titleFont: 'var(--poetry-slab)',
+    titleTransform: 'none',
+    titleWeight: '700',
+    titleSpacing: '-0.005em',
+    bodyFont: 'var(--poetry-humanist)',
+    bodyStyle: 'normal',
+    align: 'left',
+  },
+  'sleepwrong': {
+    bg: '#07090F',
+    fg: '#E8E4DA',
+    muted: 'rgba(232,228,218,0.45)',
+    accent: '#7A8AA0',
+    titleFont: 'var(--poetry-italic-display)',
+    titleTransform: 'lowercase',
+    titleWeight: '500',
+    titleSpacing: '-0.01em',
+    bodyFont: 'var(--poetry-classical)',
+    bodyStyle: 'italic',
+    align: 'left',
+  },
+  'and-the-living-is-easy': {
+    bg: '#F5EFE0',
+    fg: '#1C2818',
+    muted: 'rgba(28,40,24,0.55)',
+    accent: '#A68A56',
+    titleFont: 'var(--poetry-humanist)',
+    titleTransform: 'none',
+    titleWeight: '500',
+    titleSpacing: '-0.01em',
+    bodyFont: 'var(--poetry-humanist)',
+    bodyStyle: 'italic',
+    align: 'left',
+  },
+  'metrolined': {
+    bg: '#0A0C1A',
+    fg: '#E8DED0',
+    muted: 'rgba(232,222,208,0.5)',
+    accent: '#C8A468',
+    titleFont: '"Times New Roman", Times, serif',
+    titleTransform: 'none',
+    titleWeight: '400',
+    titleSpacing: '0em',
+    bodyFont: '"Times New Roman", Times, serif',
+    bodyStyle: 'italic',
+    align: 'center',
+  },
+};
 ---
 
-<BaseLayout title="Poetry — Jonathan M. Kelly" description="Poems by Jonathan M. Kelly." ogUrl="https://www.jonathanmkelly.com/poetry">
-  <div style="background: #231c14; min-height: 100vh; position: relative; overflow: hidden;">
-    <!-- Leather texture -->
-    <div style={`
-      position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse at 25% 40%, rgba(62,42,20,0.4) 0%, transparent 65%),
-        radial-gradient(ellipse at 75% 70%, rgba(45,30,15,0.3) 0%, transparent 55%);
-      pointer-events: none;
-    `}></div>
-
+<PoetryLayout
+  title="Poetry — Jonathan M. Kelly"
+  description="Poems by Jonathan M. Kelly."
+  ogUrl="https://www.jonathanmkelly.com/poetry"
+>
+  <div class="poetry-root">
     <!-- Nav -->
-    <nav style={`
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(35,28,20,0.92);
-      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(210,196,168,0.08);
-      padding: 0 var(--page-pad);
-      display: flex; align-items: center; justify-content: space-between;
-      height: 64px;
-    `}>
-      <a href="/" style={`
-        font-family: var(--serif); font-size: 20px; font-weight: 500;
-        color: #d2c4a8; text-decoration: none; letter-spacing: -0.01em;
-      `}>JMK</a>
-      <div style="display: flex; gap: clamp(20px, 3vw, 36px); align-items: center; flex-wrap: wrap;">
-        <a href="/projects" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(210,196,168,0.4); text-decoration: none;">Projects</a>
-        <a href="/detourist" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(210,196,168,0.4); text-decoration: none;">detourist</a>
-        <a href="/poetry" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(210,196,168,0.8); text-decoration: none;">Poetry</a>
-        <a href="/agency-artifact" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(210,196,168,0.4); text-decoration: none;">A&amp;A</a>
-        <a href="mailto:contact@jonathanmkelly.com" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(210,196,168,0.4); text-decoration: none;">Contact</a>
-        <a href="/about" style="font-family: var(--mono); font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(210,196,168,0.4); text-decoration: none;">About</a>
-        <button
-          class="share-btn"
-          data-title="Poetry — Jonathan M. Kelly"
-          data-text="Poems by Jonathan M. Kelly"
-          data-url="https://www.jonathanmkelly.com/poetry"
-          style={`
-            background: none; border: 1px solid rgba(210,196,168,0.15);
-            border-radius: 3px; padding: 5px 12px; cursor: pointer;
-            font-family: var(--mono); font-size: 10px; font-weight: 400;
-            letter-spacing: 0.06em; text-transform: uppercase;
-            color: rgba(210,196,168,0.35); transition: all 0.2s ease;
-          `}>Share</button>
+    <nav class="poetry-nav">
+      <a href="/" class="poetry-brand">JMK</a>
+      <div class="poetry-nav-links">
+        <a href="/projects">Projects</a>
+        <a href="/detourist">detourist</a>
+        <a href="/poetry" class="is-current">Poetry</a>
+        <a href="/agency-artifact">A&amp;A</a>
+        <a href="mailto:contact@jonathanmkelly.com">Contact</a>
+        <a href="/about">About</a>
       </div>
     </nav>
 
-    <!-- Header -->
-    <header style="max-width: 1200px; margin: 0 auto; padding: 112px var(--page-pad) 0; position: relative; z-index: 1;">
-      <h1 style={`
-        font-family: var(--serif); font-size: clamp(52px, 9vw, 96px);
-        font-weight: 300; line-height: 0.95; font-style: italic;
-        color: #d2c4a8; letter-spacing: -0.03em;
-        margin: 0 0 20px;
-      `}>Poetry</h1>
-      <p style={`
-        font-family: var(--body); font-size: 18px;
-        color: rgba(210,196,168,0.4); line-height: 1.6;
-        max-width: 480px; margin: 0 0 48px;
-      `}>The work that started it all. The work that won't stop.</p>
-      <div style="height: 2px; background: rgba(210,196,168,0.15); width: 60px;"></div>
+    <!-- Masthead -->
+    <header class="poetry-masthead">
+      <p class="poetry-masthead-label">Poetry</p>
+      <p class="poetry-masthead-tagline">
+        The work that started it all. The work that won&rsquo;t stop.
+      </p>
+      <div class="poetry-masthead-rule" aria-hidden="true"></div>
     </header>
 
-    <!-- Poem grid -->
-    <main style="max-width: 1200px; margin: 0 auto; padding: 56px var(--page-pad) 0; position: relative; z-index: 1;">
-      <div style={`
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
-        gap: 24px;
-      `}>
-        {livePoems.map((poem) => (
-          <a href={`/${poem.id}`} style={`
-            display: flex; flex-direction: column; justify-content: space-between;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(210,196,168,0.08);
-            padding: 36px 32px;
-            min-height: 180px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-          `}
-          onmouseover="this.style.background='rgba(255,255,255,0.06)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(0,0,0,0.2)'"
-          onmouseout="this.style.background='rgba(255,255,255,0.03)';this.style.transform='translateY(0)';this.style.boxShadow='none'"
+    <!-- Bands -->
+    <main class="poetry-bands">
+      {livePoems.map((poem) => {
+        const t = THEMES[poem.id];
+        const alignLeft = t.align === 'left';
+        return (
+          <a
+            href={`/${poem.id}`}
+            class="poetry-band"
+            data-slug={poem.id}
+            style={`
+              --band-bg: ${t.bg};
+              --band-fg: ${t.fg};
+              --band-muted: ${t.muted};
+              --band-accent: ${t.accent};
+              --band-title-font: ${t.titleFont};
+              --band-title-transform: ${t.titleTransform};
+              --band-title-weight: ${t.titleWeight};
+              --band-title-spacing: ${t.titleSpacing};
+              --band-body-font: ${t.bodyFont};
+              --band-body-style: ${t.bodyStyle};
+              text-align: ${t.align};
+            `}
           >
-            <div style={`
-              font-family: var(--serif); font-size: 24px; font-weight: 400;
-              color: #d2c4a8; line-height: 1.2; letter-spacing: -0.01em;
-            `}>{poem.title}</div>
-            {poem.date && (
-              <div style={`
-                font-family: var(--mono); font-size: 11px; font-weight: 300;
-                color: rgba(210,196,168,0.25); letter-spacing: 0.04em;
-                margin-top: 20px;
-              `}>{poem.date}</div>
-            )}
+            <div class="poetry-band-inner" data-align={t.align}>
+              <div class="poetry-band-meta">
+                <span class="poetry-band-year">{poem.date}</span>
+              </div>
+              <h2 class="poetry-band-title">{poem.title}</h2>
+              <p class="poetry-band-pulled" set:html={poem.pulledLine.replace(/ \/ /g, '<br/>')}></p>
+            </div>
           </a>
-        ))}
-      </div>
+        );
+      })}
     </main>
-
-    <!-- Footer -->
-    <footer style="max-width: 1200px; margin: 0 auto; padding: 80px var(--page-pad) 120px; text-align: center; position: relative; z-index: 1;">
-      <div style="height: 2px; background: rgba(210,196,168,0.08); width: 60px; margin: 0 auto 32px;"></div>
-      <a href="/" style={`
-        font-family: var(--mono); font-size: 12px; font-weight: 400;
-        letter-spacing: 0.04em; color: rgba(210,196,168,0.3);
-        text-decoration: none;
-      `}>&larr; Back</a>
-    </footer>
   </div>
-  <script>
-    document.querySelectorAll('.share-btn').forEach(btn => {
-      btn.addEventListener('click', async () => {
-        const data = { title: btn.dataset.title, text: btn.dataset.text, url: btn.dataset.url };
-        if (navigator.share) {
-          try { await navigator.share(data); } catch {}
-        } else {
-          await navigator.clipboard.writeText(data.url);
-          btn.textContent = 'Copied';
-          setTimeout(() => { btn.textContent = 'Share'; }, 1500);
-        }
-      });
-    });
-  </script>
-</BaseLayout>
+
+  <style is:global>
+    .poetry-root {
+      background: #0a0a0a;
+      color: #e8e4da;
+      min-height: 100vh;
+    }
+
+    /* ── Nav ── */
+    .poetry-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10, 10, 10, 0.86);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 0 var(--page-pad);
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .poetry-brand {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 500;
+      color: #f0ece4;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .poetry-nav-links {
+      display: flex;
+      gap: clamp(20px, 3vw, 36px);
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .poetry-nav-links a {
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(240, 236, 228, 0.4);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .poetry-nav-links a:hover { color: rgba(240, 236, 228, 0.8); }
+    .poetry-nav-links a.is-current { color: rgba(240, 236, 228, 0.85); }
+
+    /* ── Masthead ── */
+    .poetry-masthead {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 120px var(--page-pad) 56px;
+      position: relative;
+      z-index: 1;
+    }
+    .poetry-masthead-label {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(240, 236, 228, 0.45);
+      margin: 0 0 28px;
+    }
+    .poetry-masthead-tagline {
+      font-family: var(--serif);
+      font-size: clamp(22px, 3.2vw, 32px);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.3;
+      color: rgba(240, 236, 228, 0.82);
+      max-width: 640px;
+      margin: 0 0 40px;
+      letter-spacing: -0.005em;
+    }
+    .poetry-masthead-rule {
+      width: 56px;
+      height: 1px;
+      background: rgba(240, 236, 228, 0.25);
+    }
+
+    /* ── Bands ── */
+    .poetry-bands {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .poetry-band {
+      display: block;
+      background: var(--band-bg);
+      color: var(--band-fg);
+      text-decoration: none;
+      min-height: 55vh;
+      padding: clamp(48px, 7vw, 96px) var(--page-pad);
+      position: relative;
+      transition: filter 0.35s ease;
+      overflow: hidden;
+    }
+    .poetry-band:hover {
+      filter: brightness(1.06);
+    }
+    .poetry-band-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      min-height: calc(55vh - clamp(48px, 7vw, 96px) * 2);
+      gap: 24px;
+    }
+    .poetry-band-inner[data-align="center"] {
+      align-items: center;
+      text-align: center;
+    }
+    .poetry-band-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .poetry-band-year {
+      font-family: var(--poetry-mono);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--band-muted);
+    }
+    .poetry-band-title {
+      font-family: var(--band-title-font);
+      font-size: clamp(40px, 6.5vw, 72px);
+      font-weight: var(--band-title-weight);
+      letter-spacing: var(--band-title-spacing);
+      text-transform: var(--band-title-transform);
+      line-height: 1.02;
+      margin: 0;
+      color: var(--band-fg);
+    }
+    .poetry-band-pulled {
+      font-family: var(--band-body-font);
+      font-style: var(--band-body-style);
+      font-size: clamp(17px, 1.9vw, 22px);
+      line-height: 1.55;
+      color: var(--band-muted);
+      max-width: 620px;
+      margin: 0;
+    }
+    .poetry-band-inner[data-align="center"] .poetry-band-pulled {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .poetry-masthead {
+        padding-top: 96px;
+      }
+      .poetry-band {
+        min-height: 48vh;
+      }
+      .poetry-band-inner {
+        min-height: calc(48vh - clamp(48px, 7vw, 96px) * 2);
+      }
+    }
+
+    @media (max-width: 540px) {
+      .poetry-nav {
+        padding: 0 16px;
+      }
+    }
+  </style>
+</PoetryLayout>

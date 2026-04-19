@@ -1,0 +1,30 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const {
+  title = 'Poetry \u2014 Jonathan M. Kelly',
+  description = 'Poems by Jonathan M. Kelly.',
+  ogUrl = 'https://www.jonathanmkelly.com/poetry',
+  ogImage = '/og-image.png',
+} = Astro.props;
+---
+<BaseLayout title={title} description={description} ogUrl={ogUrl} ogImage={ogImage}>
+  <Fragment slot="head-extra">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Anton&family=Bebas+Neue&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Arvo:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style is:global>
+      :root {
+        --poetry-display-condensed: 'Oswald', 'Anton', 'Impact', sans-serif;
+        --poetry-display-slab: 'Bebas Neue', 'Oswald', 'Impact', sans-serif;
+        --poetry-mono: 'JetBrains Mono', 'DM Mono', 'Menlo', monospace;
+        --poetry-classical: 'EB Garamond', 'Cormorant Garamond', 'Georgia', serif;
+        --poetry-humanist: 'Lora', 'Newsreader', 'Georgia', serif;
+        --poetry-italic-display: 'Playfair Display', 'Cormorant Garamond', 'Georgia', serif;
+        --poetry-slab: 'Arvo', 'Lora', 'Georgia', serif;
+      }
+    </style>
+  </Fragment>
+  <slot />
+</BaseLayout>
