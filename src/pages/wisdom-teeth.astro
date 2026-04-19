@@ -1,11 +1,367 @@
 ---
-import PieceLayout from '../layouts/PieceLayout.astro';
-import { PIECES } from '../data/pieces.js';
-import WisdomTeeth from '../components/pieces/poems/WisdomTeeth.jsx';
+import PoetryLayout from '../layouts/PoetryLayout.astro';
+import { parseWisdomTeeth } from '../data/poems/wisdom-teeth.js';
 
-const piece = PIECES.find(p => p.id === 'wisdom-teeth');
+const sections = parseWisdomTeeth();
+const year = '2024';
+const next = { slug: 'this-machine-kills-democracy', title: 'This Machine Kills Democracy' };
 ---
+<PoetryLayout
+  title="Wisdom Teeth — Jonathan M. Kelly"
+  description="A poem by Jonathan M. Kelly."
+  ogUrl="https://www.jonathanmkelly.com/wisdom-teeth"
+>
+  <div class="wt-page">
+    <svg class="wt-grain" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <filter id="wt-grain-filter">
+        <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="3" seed="7" stitchTiles="stitch" />
+        <feColorMatrix values="0 0 0 0 0.36  0 0 0 0 0.26  0 0 0 0 0.14  0 0 0 0.55 0" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#wt-grain-filter)" />
+    </svg>
 
-<PieceLayout piece={piece}>
-  <WisdomTeeth client:load />
-</PieceLayout>
+    <nav class="wt-nav">
+      <a href="/" class="wt-brand">JMK</a>
+      <div class="wt-nav-links">
+        <a href="/projects">Projects</a>
+        <a href="/detourist">detourist</a>
+        <a href="/poetry" class="is-current">Poetry</a>
+        <a href="/agency-artifact">A&amp;A</a>
+        <a href="mailto:contact@jonathanmkelly.com">Contact</a>
+        <a href="/about">About</a>
+      </div>
+    </nav>
+
+    <article class="wt-article">
+      <header class="wt-masthead">
+        <a href="/poetry" class="wt-back">&larr; Poetry</a>
+        <p class="wt-year">{year}</p>
+        <h1 class="wt-title">Wisdom Teeth</h1>
+      </header>
+
+      <div class="wt-body">
+        {sections.map((section) => (
+          <section class={section.isAppendix ? 'wt-section wt-appendix' : 'wt-section'}>
+            <h2 class="wt-section-head">
+              <span class="wt-mark" aria-hidden="true">&#x273D;</span>
+              <em>{section.subtitle}</em>
+            </h2>
+            {section.stanzas.map((stanza) => (
+              <p class="wt-stanza">
+                {stanza.map((token, i) => {
+                  const content = token.text + (i < stanza.length - 1 ? '\n' : '');
+                  return token.aside
+                    ? <span class="wt-aside">{content}</span>
+                    : <Fragment>{content}</Fragment>;
+                })}
+              </p>
+            ))}
+          </section>
+        ))}
+      </div>
+
+      <footer class="wt-footer">
+        <a href={`/${next.slug}`} class="wt-next">
+          <span class="wt-next-label">Next poem &rarr;</span>
+          <span class="wt-next-title">{next.title}</span>
+        </a>
+      </footer>
+    </article>
+  </div>
+
+  <style is:global>
+    .wt-page {
+      background: #F2EADA;
+      color: #1A1714;
+      min-height: 100vh;
+      position: relative;
+      font-family: var(--poetry-classical);
+    }
+    .wt-grain {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0.42;
+      mix-blend-mode: multiply;
+      z-index: 0;
+    }
+
+    /* Lamplight vignette — a warm radial pinned upper-left, very low
+       contrast, non-animating. Sits above parchment grain but below text. */
+    .wt-page::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background:
+        radial-gradient(
+          ellipse 95vw 80vh at 28% 12%,
+          rgba(255, 214, 140, 0.22) 0%,
+          rgba(255, 196, 110, 0.10) 28%,
+          rgba(240, 180, 90, 0.04) 55%,
+          transparent 75%
+        );
+    }
+
+    /* ── Nav ── */
+    .wt-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(242, 234, 218, 0.88);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(26, 23, 20, 0.08);
+      padding: 0 var(--page-pad);
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .wt-brand {
+      font-family: var(--poetry-classical);
+      font-size: 20px;
+      font-weight: 600;
+      color: #1A1714;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .wt-nav-links {
+      display: flex;
+      gap: clamp(20px, 3vw, 36px);
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .wt-nav-links a {
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(26, 23, 20, 0.42);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .wt-nav-links a:hover { color: rgba(26, 23, 20, 0.85); }
+    .wt-nav-links a.is-current { color: rgba(26, 23, 20, 0.85); }
+
+    /* ── Article ── */
+    .wt-article {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 128px var(--page-pad) 140px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── Masthead ── */
+    .wt-masthead {
+      margin-bottom: 72px;
+    }
+    .wt-back {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(26, 23, 20, 0.42);
+      text-decoration: none;
+      margin-bottom: 56px;
+      transition: color 0.2s ease;
+    }
+    .wt-back:hover { color: #8B2416; }
+    .wt-year {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(26, 23, 20, 0.5);
+      margin: 0 0 18px;
+    }
+    .wt-title {
+      font-family: var(--poetry-classical);
+      font-size: clamp(48px, 8vw, 72px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 0.98;
+      color: #1A1714;
+      margin: 0;
+    }
+
+    /* ── Body ── */
+    .wt-body {
+      font-family: var(--poetry-classical);
+      font-size: 19px;
+      line-height: 1.72;
+      color: #1A1714;
+    }
+    .wt-section {
+      margin-top: 64px;
+    }
+    .wt-section:first-child {
+      margin-top: 0;
+    }
+    .wt-section-head {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin: 0 0 28px;
+      font-size: clamp(19px, 2.2vw, 22px);
+      font-weight: 400;
+      font-style: italic;
+      color: #1A1714;
+      line-height: 1.35;
+    }
+    .wt-mark {
+      font-size: 1.15em;
+      color: #8B2416;
+      font-style: normal;
+      flex: 0 0 auto;
+      display: inline-block;
+      transition: filter 0.9s ease-out;
+    }
+    .wt-mark.is-lit {
+      filter: drop-shadow(0 0 6px rgba(212, 148, 88, 0.48))
+              drop-shadow(0 0 14px rgba(212, 148, 88, 0.2));
+    }
+    .wt-mark.is-glowing {
+      animation: wt-mark-glow 2.1s ease-in-out;
+    }
+    @keyframes wt-mark-glow {
+      0%   { filter: drop-shadow(0 0 0 rgba(212, 148, 88, 0)); }
+      30%  { filter: drop-shadow(0 0 16px rgba(212, 148, 88, 0.95))
+                     drop-shadow(0 0 32px rgba(212, 148, 88, 0.55)); }
+      100% { filter: drop-shadow(0 0 6px rgba(212, 148, 88, 0.48))
+                     drop-shadow(0 0 14px rgba(212, 148, 88, 0.2)); }
+    }
+    .wt-stanza {
+      white-space: pre-wrap;
+      margin: 0 0 28px;
+      font-family: var(--poetry-classical);
+      font-size: 19px;
+      line-height: 1.72;
+    }
+    .wt-stanza:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Illuminated drop cap — only on the opening word of the first section.
+       A rubric-red initial in the scripture tradition. */
+    .wt-section:first-of-type > .wt-stanza:first-of-type::first-letter {
+      float: left;
+      font-family: var(--poetry-classical);
+      font-weight: 700;
+      font-style: normal;
+      font-size: 5.4em;
+      line-height: 0.86;
+      color: #8B2416;
+      padding: 8px 14px 0 0;
+      margin: -4px 6px 0 0;
+      text-shadow: 0 0 1px rgba(139, 36, 22, 0.3);
+    }
+    .wt-aside {
+      color: #6B6258;
+      font-size: 0.92em;
+      font-style: italic;
+    }
+
+    /* ── Appendix ── */
+    .wt-appendix {
+      margin-top: 96px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(26, 23, 20, 0.18);
+    }
+    .wt-appendix .wt-section-head {
+      font-size: 17px;
+      color: rgba(26, 23, 20, 0.7);
+    }
+    .wt-appendix .wt-stanza {
+      padding-left: clamp(12px, 3vw, 28px);
+      font-size: 17px;
+      color: rgba(26, 23, 20, 0.82);
+    }
+
+    /* ── Footer / Next poem ── */
+    .wt-footer {
+      margin-top: 128px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(26, 23, 20, 0.12);
+    }
+    .wt-next {
+      text-decoration: none;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 8px;
+      color: #1A1714;
+      transition: color 0.2s ease;
+    }
+    .wt-next-label {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(26, 23, 20, 0.5);
+    }
+    .wt-next-title {
+      font-family: var(--poetry-classical);
+      font-style: italic;
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 500;
+      line-height: 1.2;
+      color: #1A1714;
+    }
+    .wt-next:hover .wt-next-title { color: #8B2416; }
+    .wt-next:hover .wt-next-label { color: #8B2416; }
+
+    /* ── Mobile ── */
+    @media (max-width: 640px) {
+      .wt-article {
+        padding-top: 96px;
+        padding-bottom: 96px;
+      }
+      .wt-masthead { margin-bottom: 56px; }
+      .wt-back { margin-bottom: 40px; }
+      .wt-body { font-size: 17.5px; line-height: 1.7; }
+      .wt-stanza { font-size: 17.5px; }
+      .wt-section { margin-top: 48px; }
+      .wt-footer { margin-top: 88px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .wt-mark.is-glowing { animation: none; }
+      .wt-mark { filter: drop-shadow(0 0 6px rgba(212, 148, 88, 0.48))
+                         drop-shadow(0 0 14px rgba(212, 148, 88, 0.2)); }
+    }
+  </style>
+
+  <script>
+    const marks = document.querySelectorAll('.wt-mark');
+    if (marks.length) {
+      const viewportH = window.innerHeight;
+      // Mark any ✽ already on-screen as lit without flare (candle already burning).
+      marks.forEach((m) => {
+        const r = m.getBoundingClientRect();
+        if (r.top < viewportH * 0.9 && r.bottom > 0) {
+          m.classList.add('is-lit');
+        }
+      });
+
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target as HTMLElement;
+            if (el.classList.contains('is-lit')) {
+              io.unobserve(el);
+              return;
+            }
+            el.classList.remove('is-glowing');
+            void el.offsetWidth;
+            el.classList.add('is-glowing', 'is-lit');
+            io.unobserve(el);
+          });
+        }, { threshold: 0.6, rootMargin: '0px 0px -15% 0px' });
+        marks.forEach((m) => io.observe(m));
+      } else {
+        marks.forEach((m) => m.classList.add('is-lit'));
+      }
+    }
+  </script>
+</PoetryLayout>
