@@ -64,14 +64,12 @@ const stanzasWithElev = stanzas.map((s, i) => {
               class={stanza.isSummit ? 'lv-stanza lv-summit' : 'lv-stanza'}
               style={`padding-top: ${stanza.paddingTopVh}vh;`}
               data-index={stanza.index}
-            >
-              {stanza.lines.map((line, li) => (
-                <Fragment>
-                  {line}
-                  {li < stanza.lines.length - 1 && '\n'}
-                </Fragment>
-              ))}
-            </p>
+            >{stanza.lines.map((line, li) => (
+              <Fragment>
+                {line}
+                {li < stanza.lines.length - 1 && '\n'}
+              </Fragment>
+            ))}</p>
             {i < stanzasWithElev.length - 1 && (
               <div class="lv-marker" aria-hidden="true">
                 <svg viewBox="0 0 18 22" xmlns="http://www.w3.org/2000/svg">

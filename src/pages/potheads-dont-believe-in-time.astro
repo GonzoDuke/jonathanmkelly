@@ -143,14 +143,12 @@ const smokeParticles = Array.from({ length: SMOKE_COUNT }).map((_, i) => {
               <span class="po-numeral">{section.numeral === 'Coda' ? 'Coda.' : `${section.numeral}.`}</span>
             </h2>
             {section.stanzas.map((stanza) => (
-              <p class="po-stanza">
-                {stanza.map((line, li) => (
-                  <Fragment>
-                    {line}
-                    {li < stanza.length - 1 && '\n'}
-                  </Fragment>
-                ))}
-              </p>
+              <p class="po-stanza">{stanza.map((line, li) => (
+                <Fragment>
+                  {line}
+                  {li < stanza.length - 1 && '\n'}
+                </Fragment>
+              ))}</p>
             ))}
           </section>
         ))}

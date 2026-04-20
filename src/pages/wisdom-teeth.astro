@@ -47,14 +47,12 @@ const next = { slug: 'this-machine-kills-democracy', title: 'This Machine Kills 
               <em>{section.subtitle}</em>
             </h2>
             {section.stanzas.map((stanza) => (
-              <p class="wt-stanza">
-                {stanza.map((token, i) => {
-                  const content = token.text + (i < stanza.length - 1 ? '\n' : '');
-                  return token.aside
-                    ? <span class="wt-aside">{content}</span>
-                    : <Fragment>{content}</Fragment>;
-                })}
-              </p>
+              <p class="wt-stanza">{stanza.map((token, i) => {
+                const content = token.text + (i < stanza.length - 1 ? '\n' : '');
+                return token.aside
+                  ? <span class="wt-aside">{content}</span>
+                  : <Fragment>{content}</Fragment>;
+              })}</p>
             ))}
           </section>
         ))}

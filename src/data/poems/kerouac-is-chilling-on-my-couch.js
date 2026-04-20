@@ -125,7 +125,7 @@ Sitting cross-legged, listening
 to Aja on vinyl
 and writing haikus
 in the air
-is not way for a holy mean
+is not way for a holy man
 to live.
 
 I won’t do it again,

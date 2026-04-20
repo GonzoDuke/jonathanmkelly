@@ -176,14 +176,12 @@ const next = { slug: 'potheads-dont-believe-in-time', title: 'Potheads Don\u2019
               <span class="kc-numeral">{section.numeral}.</span>
             </h2>
             {section.stanzas.map((stanza) => (
-              <p class="kc-stanza">
-                {stanza.map((line, li) => (
-                  <Fragment>
-                    {line}
-                    {li < stanza.length - 1 && '\n'}
-                  </Fragment>
-                ))}
-              </p>
+              <p class="kc-stanza">{stanza.map((line, li) => (
+                <Fragment>
+                  {line}
+                  {li < stanza.length - 1 && '\n'}
+                </Fragment>
+              ))}</p>
             ))}
           </section>
         ))}
