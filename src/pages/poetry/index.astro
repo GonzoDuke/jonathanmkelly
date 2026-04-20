@@ -170,7 +170,15 @@ const THEMES = {
     <main class="poetry-bands">
       {livePoems.map((poem) => {
         const t = THEMES[poem.id];
-        const alignLeft = t.align === 'left';
+        const slug = poem.id;
+        // For This Machine, wrap "fascism" with the overprint span so the
+        // band carries the full-page treatment in miniature.
+        const pulledHtml =
+          slug === 'this-machine-kills-democracy'
+            ? poem.pulledLine
+                .replace(/ \/ /g, '<br/>')
+                .replace(/fascism/g, '<span class="atm-tm-overprint" data-text="fascism">fascism</span>')
+            : poem.pulledLine.replace(/ \/ /g, '<br/>');
         return (
           <a
             href={`/${poem.id}`}
@@ -190,12 +198,133 @@ const THEMES = {
               text-align: ${t.align};
             `}
           >
+            {/* ── Per-band reduced-intensity atmospherics ── */}
+            {slug === 'brake-check-this-motherfucker' && (
+              <div class="atm atm-bc" aria-hidden="true" />
+            )}
+            {slug === 'to-become-what-burns' && (
+              <div class="atm atm-tb" aria-hidden="true">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span
+                    class="atm-tb-ember"
+                    style={`--x: ${14 + i * 17}%; --delay: ${(i * 1.6).toFixed(1)}s; --dur: ${(7 + i).toFixed(1)}s;`}
+                  />
+                ))}
+              </div>
+            )}
+            {slug === 'wisdom-teeth' && (
+              <div class="atm atm-wt" aria-hidden="true">
+                <svg class="atm-wt-grain" xmlns="http://www.w3.org/2000/svg">
+                  <filter id="atm-wt-grain-filter">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.78" numOctaves="2" seed="7" stitchTiles="stitch" />
+                    <feColorMatrix values="0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 0 0.12  0 0 0 0.32 0" />
+                  </filter>
+                  <rect width="100%" height="100%" filter="url(#atm-wt-grain-filter)" />
+                </svg>
+                <span class="atm-wt-mark">&#x273D;</span>
+              </div>
+            )}
+            {slug === 'this-machine-kills-democracy' && (
+              <div class="atm atm-tm" aria-hidden="true">
+                <svg class="atm-tm-grain" xmlns="http://www.w3.org/2000/svg">
+                  <filter id="atm-tm-grain-filter">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="2" seed="11" stitchTiles="stitch" />
+                    <feColorMatrix values="0 0 0 0 0.18  0 0 0 0 0.13  0 0 0 0 0.08  0 0 0 0.42 0" />
+                  </filter>
+                  <rect width="100%" height="100%" filter="url(#atm-tm-grain-filter)" />
+                </svg>
+              </div>
+            )}
+            {slug === 'kerouac-is-chilling-on-my-couch' && (
+              <div class="atm atm-kc" aria-hidden="true">
+                {Array.from({ length: 3 }).map((_, i) => (
+                  <span
+                    class="atm-kc-smoke"
+                    style={`--x: ${18 + i * 28}%; --delay: ${(i * 2.2).toFixed(1)}s;`}
+                  />
+                ))}
+              </div>
+            )}
+            {slug === 'potheads-dont-believe-in-time' && (
+              <div class="atm atm-po" aria-hidden="true">
+                <div class="atm-po-lamp">
+                  <svg viewBox="0 0 120 260" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                    <rect x="38" y="4" width="44" height="14" rx="3" fill="#1E0F07" />
+                    <path d="M 42 18 L 78 18 L 72 36 L 48 36 Z" fill="#1E0F07" />
+                    <path d="M 44 36 Q 14 96 20 174 Q 26 234 60 242 Q 94 234 100 174 Q 106 96 76 36 Z"
+                          fill="#2A0E06" opacity="0.9" />
+                    <path d="M 30 240 L 90 240 L 84 256 L 36 256 Z" fill="#1E0F07" />
+                  </svg>
+                  <span class="atm-po-blob atm-po-blob-1" />
+                  <span class="atm-po-blob atm-po-blob-2" />
+                  <span class="atm-po-blob atm-po-blob-3" />
+                </div>
+              </div>
+            )}
+            {slug === 'briefcase-full-of-rainbows' && (
+              <div class="atm atm-bf" aria-hidden="true">
+                <div class="atm-bf-ribbon" />
+              </div>
+            )}
+            {slug === 'sleepwrong' && (
+              <div class="atm atm-sw" aria-hidden="true">
+                <svg class="atm-sw-static" xmlns="http://www.w3.org/2000/svg">
+                  <filter id="atm-sw-static-filter">
+                    <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" seed="17" />
+                    <feColorMatrix values="0 0 0 0 0.82  0 0 0 0 0.82  0 0 0 0 0.78  0 0 0 0.28 0" />
+                  </filter>
+                  <rect width="100%" height="100%" filter="url(#atm-sw-static-filter)" />
+                </svg>
+              </div>
+            )}
+            {slug === 'and-the-living-is-easy' && (
+              <div class="atm atm-lv" aria-hidden="true">
+                <svg class="atm-lv-contours" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <pattern id="atm-lv-pattern" width="420" height="140" patternUnits="userSpaceOnUse">
+                      <path d="M0 30 C 80 14, 180 50, 260 34 C 340 20, 380 44, 420 30"
+                            stroke="#2F4028" stroke-width="0.7" fill="none" opacity="0.28" />
+                      <path d="M0 84 C 80 68, 180 104, 260 88 C 340 72, 380 100, 420 84"
+                            stroke="#2F4028" stroke-width="0.7" fill="none" opacity="0.22" />
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#atm-lv-pattern)" />
+                </svg>
+                <svg class="atm-lv-pine" viewBox="0 0 18 22" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 1 L16 20 L9 16 L2 20 Z" fill="none" stroke="#A68A56" stroke-width="1.2" stroke-linejoin="round" />
+                </svg>
+              </div>
+            )}
+            {slug === 'metrolined' && (
+              <div class="atm atm-mt" aria-hidden="true">
+                <svg class="atm-mt-skyline" viewBox="0 0 400 80" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+                  <!-- smokestack -->
+                  <g fill="#14100A" opacity="0.62">
+                    <rect x="32" y="22" width="6" height="58" />
+                    <rect x="28" y="18" width="14" height="5" />
+                    <!-- low factory -->
+                    <path d="M 80 58 L 90 48 L 100 58 L 110 48 L 120 58 L 130 48 L 140 58 L 140 80 L 80 80 Z" />
+                    <!-- water tower -->
+                    <path d="M 180 34 L 198 20 L 216 34 Z" />
+                    <rect x="180" y="34" width="36" height="18" />
+                    <path d="M 184 52 L 212 80 M 212 52 L 184 80 M 198 52 L 198 80" stroke="#14100A" stroke-width="1.6" fill="none" />
+                    <!-- utility pole -->
+                    <rect x="254" y="24" width="3" height="56" />
+                    <rect x="244" y="28" width="23" height="2" />
+                    <!-- tall building -->
+                    <rect x="300" y="18" width="38" height="62" />
+                    <rect x="308" y="10" width="10" height="10" />
+                  </g>
+                </svg>
+              </div>
+            )}
+
             <div class="poetry-band-inner" data-align={t.align}>
               <div class="poetry-band-meta">
                 <span class="poetry-band-year">{poem.date}</span>
               </div>
               <h2 class="poetry-band-title">{poem.title}</h2>
-              <p class="poetry-band-pulled" set:html={poem.pulledLine.replace(/ \/ /g, '<br/>')}></p>
+              <p class="poetry-band-pulled" set:html={pulledHtml}></p>
             </div>
           </a>
         );
@@ -304,6 +433,228 @@ const THEMES = {
       height: 100%;
       min-height: calc(55vh - clamp(48px, 7vw, 96px) * 2);
       gap: 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ── Per-band atmospherics — reduced-intensity previews ── */
+    .atm {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Brake Check — scanline overlay */
+    .atm-bc {
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 2px,
+        rgba(255, 60, 40, 0.06) 2.5px,
+        transparent 3.5px
+      );
+      mix-blend-mode: screen;
+    }
+
+    /* To Become What Burns — drifting embers */
+    .atm-tb-ember {
+      position: absolute;
+      left: var(--x, 50%);
+      bottom: -8px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: radial-gradient(circle,
+        rgba(255, 200, 130, 0.95) 0%,
+        rgba(255, 140, 60, 0.45) 50%,
+        transparent 100%);
+      filter: blur(1px);
+      animation: atm-tb-rise var(--dur, 8s) linear infinite;
+      animation-delay: var(--delay, 0s);
+    }
+    @keyframes atm-tb-rise {
+      0%   { transform: translate(0, 0) scale(0.6);  opacity: 0; }
+      12%  { opacity: 0.85; }
+      80%  { opacity: 0.5; }
+      100% { transform: translate(18px, -55vh) scale(1.5); opacity: 0; }
+    }
+
+    /* Wisdom Teeth — paper grain + small rubric ✽ */
+    .atm-wt-grain {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.48;
+      mix-blend-mode: multiply;
+    }
+    .atm-wt-mark {
+      position: absolute;
+      top: 14%;
+      right: 9%;
+      font-family: var(--poetry-classical);
+      font-size: clamp(32px, 4.6vw, 56px);
+      color: #8B2416;
+      filter: drop-shadow(0 0 6px rgba(212, 148, 88, 0.35));
+    }
+
+    /* This Machine — newsprint grain + press-settle-style overprint on "fascism" */
+    .atm-tm-grain {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.52;
+      mix-blend-mode: multiply;
+    }
+    .atm-tm-overprint {
+      position: relative;
+      display: inline-block;
+    }
+    .atm-tm-overprint::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: -2px;
+      color: #B82418;
+      opacity: 0.78;
+      transform: rotate(0.55deg) translate(0, -0.5px);
+      pointer-events: none;
+      z-index: -1;
+      font: inherit;
+      text-transform: inherit;
+      letter-spacing: inherit;
+      line-height: inherit;
+      white-space: pre;
+    }
+
+    /* Kerouac — slow cigarette smoke */
+    .atm-kc-smoke {
+      position: absolute;
+      left: var(--x, 30%);
+      bottom: -20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: radial-gradient(circle,
+        rgba(244, 235, 212, 0.4) 0%,
+        rgba(244, 235, 212, 0.15) 45%,
+        transparent 72%);
+      filter: blur(10px);
+      opacity: 0;
+      animation: atm-kc-drift 10s ease-in-out infinite;
+      animation-delay: var(--delay, 0s);
+      mix-blend-mode: screen;
+    }
+    @keyframes atm-kc-drift {
+      0%   { transform: translate(0, 0) scale(0.6); opacity: 0; }
+      15%  { opacity: 0.35; }
+      60%  { opacity: 0.25; }
+      100% { transform: translate(30px, -55vh) scale(1.8); opacity: 0; }
+    }
+
+    /* Potheads — miniature lava lamp in the corner */
+    .atm-po-lamp {
+      position: absolute;
+      right: clamp(24px, 4vw, 72px);
+      bottom: clamp(-8px, -1vh, 0px);
+      width: clamp(46px, 6vw, 78px);
+      aspect-ratio: 120 / 260;
+      filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.55));
+    }
+    .atm-po-lamp svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .atm-po-blob {
+      position: absolute;
+      left: 50%;
+      width: 36%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle,
+        rgba(255, 200, 120, 0.95) 0%,
+        rgba(255, 100, 40, 0.6) 55%,
+        rgba(200, 60, 20, 0) 100%);
+      filter: blur(3px);
+      mix-blend-mode: screen;
+      animation: atm-po-blob 10s ease-in-out infinite;
+    }
+    .atm-po-blob-1 { animation-delay: 0s;   transform: translate(-50%, 0); }
+    .atm-po-blob-2 { animation-delay: 3.2s; animation-duration: 12s; width: 28%; }
+    .atm-po-blob-3 { animation-delay: 6.4s; animation-duration: 14s; width: 24%; }
+    @keyframes atm-po-blob {
+      0%, 100% { top: 82%; transform: translate(-50%, 0) scale(0.85); opacity: 0.85; }
+      50%      { top: 22%; transform: translate(-30%, 0) scale(1);    opacity: 1; }
+    }
+
+    /* Briefcase — thin oil-slick ribbon on the left edge */
+    .atm-bf-ribbon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 6px;
+      background: linear-gradient(
+        to bottom,
+        #6b2a8a 0%,
+        #2460b0 14%,
+        #28a0a0 28%,
+        #3da858 42%,
+        #d48a20 56%,
+        #e05050 70%,
+        #e070b0 84%,
+        #6b2a8a 100%);
+      background-size: 100% 200%;
+      background-repeat: repeat-y;
+      animation: atm-bf-drift 20s linear infinite;
+      box-shadow: 4px 0 20px rgba(107, 42, 138, 0.22);
+    }
+    @keyframes atm-bf-drift {
+      from { background-position-y: 0; }
+      to   { background-position-y: -200%; }
+    }
+
+    /* sleepwrong — static grain */
+    .atm-sw-static {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.38;
+      mix-blend-mode: screen;
+    }
+
+    /* Living — faint contour lines + small pine glyph */
+    .atm-lv-contours {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      mix-blend-mode: multiply;
+    }
+    .atm-lv-pine {
+      position: absolute;
+      top: 16%;
+      right: 9%;
+      width: clamp(16px, 1.6vw, 22px);
+      height: auto;
+      opacity: 0.75;
+    }
+
+    /* Metrolined — faint urban skyline along the bottom */
+    .atm-mt-skyline {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 34%;
+      opacity: 0.55;
     }
     .poetry-band-inner[data-align="center"] {
       align-items: center;
@@ -360,6 +711,17 @@ const THEMES = {
       .poetry-nav {
         padding: 0 16px;
       }
+      .atm-wt-mark { font-size: 28px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .atm-tb-ember,
+      .atm-kc-smoke,
+      .atm-po-blob,
+      .atm-bf-ribbon { animation: none; }
+      .atm-tb-ember { opacity: 0.4; transform: translate(10px, -25vh) scale(1.2); }
+      .atm-kc-smoke { opacity: 0.25; transform: translate(15px, -20vh) scale(1.4); }
+      .atm-po-blob { top: 55%; opacity: 0.75; }
     }
   </style>
 </PoetryLayout>
