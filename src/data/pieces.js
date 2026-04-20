@@ -54,20 +54,20 @@ export const DET_PIECES = [
 // Order is reverse chronological and drives the index page rendering.
 export const PIECES = [
   {
-    id: 'brake-check-this-motherfucker',
-    title: 'Brake Check This, Motherfucker',
-    type: 'poem',
-    date: '2025',
-    status: 'live',
-    pulledLine: 'Stay the fuck out of this stanza. / This is for people / who want to move forward.',
-  },
-  {
     id: 'to-become-what-burns',
     title: 'To Become What Burns',
     type: 'poem',
     date: '2025',
     status: 'live',
     pulledLine: 'Not warmth\u2014 / flame. / Not healing\u2014 / heat.',
+  },
+  {
+    id: 'brake-check-this-motherfucker',
+    title: 'Brake Check This',
+    type: 'poem',
+    date: '2025',
+    status: 'live',
+    pulledLine: 'Stay the fuck out of this stanza. / This is for people / who want to move forward.',
   },
   {
     id: 'wisdom-teeth',

@@ -200,53 +200,170 @@ const THEMES = {
           >
             {/* ── Per-band reduced-intensity atmospherics ── */}
             {slug === 'brake-check-this-motherfucker' && (
-              <div class="atm atm-bc" aria-hidden="true" />
+              <div class="atm atm-bc" aria-hidden="true">
+                <div class="atm-bc-wash" />
+                <div class="atm-bc-scanlines" />
+                <div class="atm-bc-bar" />
+              </div>
             )}
             {slug === 'to-become-what-burns' && (
               <div class="atm atm-tb" aria-hidden="true">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <span
-                    class="atm-tb-ember"
-                    style={`--x: ${14 + i * 17}%; --delay: ${(i * 1.6).toFixed(1)}s; --dur: ${(7 + i).toFixed(1)}s;`}
-                  />
-                ))}
+                <div class="atm-tb-warmth atm-tb-warmth-l" />
+                <div class="atm-tb-warmth atm-tb-warmth-r" />
+                {Array.from({ length: 12 }).map((_, i) => {
+                  const seed = (i * 37) + 11;
+                  const x = (seed % 93) + 4;
+                  const size = 3 + (seed % 6);
+                  const delay = (i * 0.7 + (seed % 5)).toFixed(1);
+                  const dur = (6 + ((seed * 3) % 5)).toFixed(1);
+                  return (
+                    <span
+                      class="atm-tb-ember"
+                      style={`--x: ${x}%; --size: ${size}px; --delay: ${delay}s; --dur: ${dur}s;`}
+                    />
+                  );
+                })}
               </div>
             )}
             {slug === 'wisdom-teeth' && (
               <div class="atm atm-wt" aria-hidden="true">
+                <div class="atm-wt-lamp" />
                 <svg class="atm-wt-grain" xmlns="http://www.w3.org/2000/svg">
                   <filter id="atm-wt-grain-filter">
                     <feTurbulence type="fractalNoise" baseFrequency="0.78" numOctaves="2" seed="7" stitchTiles="stitch" />
-                    <feColorMatrix values="0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 0 0.12  0 0 0 0.32 0" />
+                    <feColorMatrix values="0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 0 0.12  0 0 0 0.38 0" />
                   </filter>
                   <rect width="100%" height="100%" filter="url(#atm-wt-grain-filter)" />
                 </svg>
-                <span class="atm-wt-mark">&#x273D;</span>
+                <!-- Manuscript page rule — thin rubric border inside the band -->
+                <div class="atm-wt-rule" />
+                <!-- Ornamental vine corner flourishes -->
+                <svg class="atm-wt-corner atm-wt-corner-tl" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="none" stroke="#8B2416" stroke-width="1" stroke-linecap="round">
+                    <path d="M 4 4 Q 24 4 30 18 Q 36 4 56 4" />
+                    <path d="M 4 4 Q 4 24 18 30 Q 4 36 4 56" />
+                    <circle cx="30" cy="18" r="2" fill="#8B2416" />
+                    <circle cx="18" cy="30" r="2" fill="#8B2416" />
+                    <path d="M 22 10 Q 26 6 30 8" />
+                    <path d="M 10 22 Q 6 26 8 30" />
+                  </g>
+                </svg>
+                <svg class="atm-wt-corner atm-wt-corner-tr" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="none" stroke="#8B2416" stroke-width="1" stroke-linecap="round">
+                    <path d="M 56 4 Q 36 4 30 18 Q 24 4 4 4" />
+                    <path d="M 56 4 Q 56 24 42 30 Q 56 36 56 56" />
+                    <circle cx="30" cy="18" r="2" fill="#8B2416" />
+                    <circle cx="42" cy="30" r="2" fill="#8B2416" />
+                    <path d="M 38 10 Q 34 6 30 8" />
+                    <path d="M 50 22 Q 54 26 52 30" />
+                  </g>
+                </svg>
+                <svg class="atm-wt-corner atm-wt-corner-bl" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="none" stroke="#8B2416" stroke-width="1" stroke-linecap="round">
+                    <path d="M 4 56 Q 24 56 30 42 Q 36 56 56 56" />
+                    <path d="M 4 56 Q 4 36 18 30 Q 4 24 4 4" />
+                    <circle cx="30" cy="42" r="2" fill="#8B2416" />
+                    <circle cx="18" cy="30" r="2" fill="#8B2416" />
+                  </g>
+                </svg>
+                <svg class="atm-wt-corner atm-wt-corner-br" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="none" stroke="#8B2416" stroke-width="1" stroke-linecap="round">
+                    <path d="M 56 56 Q 36 56 30 42 Q 24 56 4 56" />
+                    <path d="M 56 56 Q 56 36 42 30 Q 56 24 56 4" />
+                    <circle cx="30" cy="42" r="2" fill="#8B2416" />
+                    <circle cx="42" cy="30" r="2" fill="#8B2416" />
+                  </g>
+                </svg>
+                <!-- Gothic cross — top-center -->
+                <svg class="atm-wt-cross" viewBox="0 0 40 50" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#8B2416">
+                    <rect x="17" y="4" width="6" height="42" />
+                    <rect x="6" y="14" width="28" height="6" />
+                    <path d="M 17 4 L 17 0 L 23 0 L 23 4 Z" />
+                    <path d="M 6 14 L 2 14 L 2 20 L 6 20 Z" />
+                    <path d="M 34 14 L 38 14 L 38 20 L 34 20 Z" />
+                    <path d="M 17 46 L 13 46 L 13 50 L 27 50 L 27 46 L 23 46 Z" />
+                  </g>
+                </svg>
+                <!-- Illuminated initial W (rubric red with gold accents) -->
+                <div class="atm-wt-initial-frame">
+                  <svg viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="atm-wt-gold" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#E8C060" />
+                        <stop offset="50%" stop-color="#D4A040" />
+                        <stop offset="100%" stop-color="#A47820" />
+                      </linearGradient>
+                    </defs>
+                    <!-- outer frame -->
+                    <rect x="4" y="4" width="102" height="102" fill="none" stroke="#8B2416" stroke-width="2.2" />
+                    <rect x="8" y="8" width="94" height="94" fill="none" stroke="url(#atm-wt-gold)" stroke-width="1" />
+                    <!-- corner diamonds -->
+                    <g fill="url(#atm-wt-gold)">
+                      <path d="M 4 4 L 10 8 L 4 12 Z" />
+                      <path d="M 106 4 L 100 8 L 106 12 Z" />
+                      <path d="M 4 106 L 10 102 L 4 98 Z" />
+                      <path d="M 106 106 L 100 102 L 106 98 Z" />
+                    </g>
+                    <!-- illuminated W -->
+                    <text x="55" y="84" text-anchor="middle"
+                          font-family="'EB Garamond', 'Cormorant Garamond', serif"
+                          font-weight="700" font-size="88"
+                          fill="#8B2416">W</text>
+                    <!-- vine flourish inside the frame -->
+                    <g fill="none" stroke="#D4A040" stroke-width="0.7" opacity="0.8">
+                      <path d="M 14 14 Q 22 22 18 32" />
+                      <path d="M 96 14 Q 88 22 92 32" />
+                    </g>
+                  </svg>
+                </div>
+                <p class="atm-wt-epigraph"><em>The Gospel According to Napkin #7</em></p>
               </div>
             )}
             {slug === 'this-machine-kills-democracy' && (
               <div class="atm atm-tm" aria-hidden="true">
                 <svg class="atm-tm-grain" xmlns="http://www.w3.org/2000/svg">
                   <filter id="atm-tm-grain-filter">
-                    <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="2" seed="11" stitchTiles="stitch" />
-                    <feColorMatrix values="0 0 0 0 0.18  0 0 0 0 0.13  0 0 0 0 0.08  0 0 0 0.42 0" />
+                    <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="2" seed="11" stitchTiles="stitch" />
+                    <feColorMatrix values="0 0 0 0 0.18  0 0 0 0 0.13  0 0 0 0 0.08  0 0 0 0.62 0" />
                   </filter>
                   <rect width="100%" height="100%" filter="url(#atm-tm-grain-filter)" />
                 </svg>
+                <div class="atm-tm-dateline">
+                  <span>An Editorial</span>
+                  <span>&middot;</span>
+                  <span>2024</span>
+                </div>
               </div>
             )}
             {slug === 'kerouac-is-chilling-on-my-couch' && (
               <div class="atm atm-kc" aria-hidden="true">
-                {Array.from({ length: 3 }).map((_, i) => (
-                  <span
-                    class="atm-kc-smoke"
-                    style={`--x: ${18 + i * 28}%; --delay: ${(i * 2.2).toFixed(1)}s;`}
-                  />
-                ))}
+                {Array.from({ length: 4 }).map((_, i) => {
+                  const x = 12 + i * 23;
+                  const delay = (i * 1.6).toFixed(1);
+                  return (
+                    <div class="atm-kc-trail" style={`--x: ${x}%; --delay: ${delay}s;`}>
+                      <span class="atm-kc-wisp atm-kc-wisp-lo" />
+                      <span class="atm-kc-wisp atm-kc-wisp-mid" />
+                      <span class="atm-kc-wisp atm-kc-wisp-hi" />
+                    </div>
+                  );
+                })}
               </div>
             )}
             {slug === 'potheads-dont-believe-in-time' && (
               <div class="atm atm-po" aria-hidden="true">
+                <!-- Ambient warm lamplight bathing the basement -->
+                <div class="atm-po-ambient" />
+                <!-- Slow drifting color orbs — stage-lighting feel,
+                     mellow / psychedelic / hazy -->
+                <span class="atm-po-orb atm-po-orb-amber" />
+                <span class="atm-po-orb atm-po-orb-burgundy" />
+                <span class="atm-po-orb atm-po-orb-violet" />
+                <!-- Thick smoke haze cloud drifting slowly across the band -->
+                <span class="atm-po-haze atm-po-haze-a" />
+                <span class="atm-po-haze atm-po-haze-b" />
+                <!-- The lamp itself -->
                 <div class="atm-po-lamp">
                   <svg viewBox="0 0 120 260" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
                     <rect x="38" y="4" width="44" height="14" rx="3" fill="#1E0F07" />
@@ -263,17 +380,25 @@ const THEMES = {
             )}
             {slug === 'briefcase-full-of-rainbows' && (
               <div class="atm atm-bf" aria-hidden="true">
-                <div class="atm-bf-ribbon" />
+                <div class="atm-bf-ribbon atm-bf-ribbon-l" />
+                <div class="atm-bf-ribbon atm-bf-ribbon-r" />
               </div>
             )}
             {slug === 'sleepwrong' && (
               <div class="atm atm-sw" aria-hidden="true">
-                <svg class="atm-sw-static" xmlns="http://www.w3.org/2000/svg">
-                  <filter id="atm-sw-static-filter">
-                    <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" seed="17" />
-                    <feColorMatrix values="0 0 0 0 0.82  0 0 0 0 0.82  0 0 0 0 0.78  0 0 0 0.28 0" />
+                <svg class="atm-sw-static atm-sw-static-a" xmlns="http://www.w3.org/2000/svg">
+                  <filter id="atm-sw-static-a-filter">
+                    <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="17" />
+                    <feColorMatrix values="0 0 0 0 0.82  0 0 0 0 0.82  0 0 0 0 0.78  0 0 0 0.48 0" />
                   </filter>
-                  <rect width="100%" height="100%" filter="url(#atm-sw-static-filter)" />
+                  <rect width="100%" height="100%" filter="url(#atm-sw-static-a-filter)" />
+                </svg>
+                <svg class="atm-sw-static atm-sw-static-b" xmlns="http://www.w3.org/2000/svg">
+                  <filter id="atm-sw-static-b-filter">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="29" />
+                    <feColorMatrix values="0 0 0 0 0.78  0 0 0 0 0.80  0 0 0 0 0.82  0 0 0 0.38 0" />
+                  </filter>
+                  <rect width="100%" height="100%" filter="url(#atm-sw-static-b-filter)" />
                 </svg>
               </div>
             )}
@@ -283,46 +408,99 @@ const THEMES = {
                   <defs>
                     <pattern id="atm-lv-pattern" width="420" height="140" patternUnits="userSpaceOnUse">
                       <path d="M0 30 C 80 14, 180 50, 260 34 C 340 20, 380 44, 420 30"
-                            stroke="#2F4028" stroke-width="0.7" fill="none" opacity="0.28" />
+                            stroke="#2F4028" stroke-width="0.7" fill="none" opacity="0.32" />
                       <path d="M0 84 C 80 68, 180 104, 260 88 C 340 72, 380 100, 420 84"
-                            stroke="#2F4028" stroke-width="0.7" fill="none" opacity="0.22" />
+                            stroke="#2F4028" stroke-width="0.7" fill="none" opacity="0.24" />
                     </pattern>
                   </defs>
                   <rect width="100%" height="100%" fill="url(#atm-lv-pattern)" />
                 </svg>
-                <svg class="atm-lv-pine" viewBox="0 0 18 22" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 1 L16 20 L9 16 L2 20 Z" fill="none" stroke="#A68A56" stroke-width="1.2" stroke-linejoin="round" />
+                <!-- Distant mountain range silhouette -->
+                <svg class="atm-lv-mountains" viewBox="0 0 1200 140" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M 0 140 L 0 92 L 90 54 L 170 86 L 240 40 L 330 88 L 420 48 L 520 94 L 600 60 L 710 96 L 820 52 L 910 98 L 1010 68 L 1120 100 L 1200 72 L 1200 140 Z"
+                        fill="#4A5A3C" opacity="0.42" />
+                  <path d="M 0 140 L 0 108 L 100 84 L 200 110 L 310 76 L 420 112 L 540 90 L 650 114 L 770 86 L 900 116 L 1040 96 L 1200 118 L 1200 140 Z"
+                        fill="#3A4A2E" opacity="0.55" />
+                </svg>
+                <!-- Row of receding pine silhouettes along bottom -->
+                <svg class="atm-lv-pines" viewBox="0 0 1200 70" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="#2E3C20">
+                    <path d="M 40 70 L 54 26 L 68 70 Z" />
+                    <path d="M 84 70 L 96 34 L 108 70 Z" opacity="0.82" />
+                    <path d="M 140 70 L 158 18 L 176 70 Z" />
+                    <path d="M 200 70 L 214 40 L 228 70 Z" opacity="0.75" />
+                    <path d="M 258 70 L 276 10 L 294 70 Z" />
+                    <path d="M 316 70 L 328 44 L 340 70 Z" opacity="0.78" />
+                    <path d="M 380 70 L 398 22 L 416 70 Z" />
+                    <path d="M 440 70 L 452 42 L 464 70 Z" opacity="0.7" />
+                    <path d="M 500 70 L 518 14 L 536 70 Z" />
+                    <path d="M 568 70 L 582 46 L 596 70 Z" opacity="0.75" />
+                    <path d="M 628 70 L 646 24 L 664 70 Z" />
+                    <path d="M 700 70 L 714 42 L 728 70 Z" opacity="0.72" />
+                    <path d="M 762 70 L 778 18 L 794 70 Z" />
+                    <path d="M 830 70 L 844 44 L 858 70 Z" opacity="0.78" />
+                    <path d="M 890 70 L 908 28 L 926 70 Z" />
+                    <path d="M 960 70 L 974 46 L 988 70 Z" opacity="0.7" />
+                    <path d="M 1020 70 L 1038 20 L 1056 70 Z" />
+                    <path d="M 1090 70 L 1104 44 L 1118 70 Z" opacity="0.76" />
+                    <path d="M 1152 70 L 1168 30 L 1184 70 Z" />
+                  </g>
+                </svg>
+                <!-- Trail marker post with chevron -->
+                <svg class="atm-lv-marker" viewBox="0 0 40 60" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="18" y="18" width="4" height="42" fill="#A68A56" />
+                  <path d="M 6 12 L 34 12 L 30 4 L 10 4 Z" fill="#A68A56" stroke="#6B5628" stroke-width="1" />
+                  <path d="M 14 6 L 26 6 M 14 10 L 26 10" stroke="#6B5628" stroke-width="1" fill="none" />
+                </svg>
+                <!-- Compass rose in corner -->
+                <svg class="atm-lv-compass" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20" cy="20" r="16" fill="none" stroke="#A68A56" stroke-width="0.8" opacity="0.7" />
+                  <circle cx="20" cy="20" r="11" fill="none" stroke="#A68A56" stroke-width="0.5" opacity="0.55" />
+                  <path d="M 20 4 L 24 20 L 20 36 L 16 20 Z" fill="#A68A56" opacity="0.82" />
+                  <path d="M 4 20 L 20 16 L 36 20 L 20 24 Z" fill="#A68A56" opacity="0.55" />
+                  <text x="20" y="10" text-anchor="middle" font-size="6" font-family="serif" fill="#6B5628" opacity="0.8">N</text>
                 </svg>
               </div>
             )}
             {slug === 'metrolined' && (
               <div class="atm atm-mt" aria-hidden="true">
-                <svg class="atm-mt-skyline" viewBox="0 0 400 80" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
-                  <!-- smokestack -->
-                  <g fill="#14100A" opacity="0.62">
-                    <rect x="32" y="22" width="6" height="58" />
-                    <rect x="28" y="18" width="14" height="5" />
-                    <!-- low factory -->
-                    <path d="M 80 58 L 90 48 L 100 58 L 110 48 L 120 58 L 130 48 L 140 58 L 140 80 L 80 80 Z" />
-                    <!-- water tower -->
-                    <path d="M 180 34 L 198 20 L 216 34 Z" />
-                    <rect x="180" y="34" width="36" height="18" />
-                    <path d="M 184 52 L 212 80 M 212 52 L 184 80 M 198 52 L 198 80" stroke="#14100A" stroke-width="1.6" fill="none" />
-                    <!-- utility pole -->
-                    <rect x="254" y="24" width="3" height="56" />
-                    <rect x="244" y="28" width="23" height="2" />
-                    <!-- tall building -->
-                    <rect x="300" y="18" width="38" height="62" />
-                    <rect x="308" y="10" width="10" height="10" />
-                  </g>
-                </svg>
+                <div class="atm-mt-window">
+                  <div class="atm-mt-sun" />
+                  <div class="atm-mt-skyline-drift">
+                    <svg class="atm-mt-skyline" viewBox="0 0 400 80" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+                      <g fill="#14100A">
+                        <rect x="32" y="22" width="6" height="58" />
+                        <rect x="28" y="18" width="14" height="5" />
+                        <path d="M 80 58 L 90 48 L 100 58 L 110 48 L 120 58 L 130 48 L 140 58 L 140 80 L 80 80 Z" />
+                        <path d="M 180 34 L 198 20 L 216 34 Z" />
+                        <rect x="180" y="34" width="36" height="18" />
+                        <path d="M 184 52 L 212 80 M 212 52 L 184 80 M 198 52 L 198 80" stroke="#14100A" stroke-width="1.6" fill="none" />
+                        <rect x="254" y="24" width="3" height="56" />
+                        <rect x="244" y="28" width="23" height="2" />
+                        <rect x="300" y="18" width="38" height="62" />
+                        <rect x="308" y="10" width="10" height="10" />
+                      </g>
+                    </svg>
+                    <svg class="atm-mt-skyline" viewBox="0 0 400 80" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+                      <g fill="#14100A">
+                        <rect x="32" y="22" width="6" height="58" />
+                        <rect x="28" y="18" width="14" height="5" />
+                        <path d="M 80 58 L 90 48 L 100 58 L 110 48 L 120 58 L 130 48 L 140 58 L 140 80 L 80 80 Z" />
+                        <path d="M 180 34 L 198 20 L 216 34 Z" />
+                        <rect x="180" y="34" width="36" height="18" />
+                        <path d="M 184 52 L 212 80 M 212 52 L 184 80 M 198 52 L 198 80" stroke="#14100A" stroke-width="1.6" fill="none" />
+                        <rect x="254" y="24" width="3" height="56" />
+                        <rect x="244" y="28" width="23" height="2" />
+                        <rect x="300" y="18" width="38" height="62" />
+                        <rect x="308" y="10" width="10" height="10" />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
               </div>
             )}
 
             <div class="poetry-band-inner" data-align={t.align}>
-              <div class="poetry-band-meta">
-                <span class="poetry-band-year">{poem.date}</span>
-              </div>
               <h2 class="poetry-band-title">{poem.title}</h2>
               <p class="poetry-band-pulled" set:html={pulledHtml}></p>
             </div>
@@ -385,7 +563,7 @@ const THEMES = {
     }
     .poetry-masthead-word {
       font-family: var(--poetry-classical);
-      font-size: clamp(96px, 18vw, 220px);
+      font-size: clamp(48px, 9vw, 110px);
       font-weight: 400;
       font-style: italic;
       line-height: 0.9;
@@ -399,7 +577,7 @@ const THEMES = {
         padding: 120px 20px 72px;
       }
       .poetry-masthead-word {
-        font-size: clamp(72px, 26vw, 120px);
+        font-size: clamp(36px, 13vw, 60px);
         letter-spacing: -0.03em;
       }
     }
@@ -415,8 +593,8 @@ const THEMES = {
       background: var(--band-bg);
       color: var(--band-fg);
       text-decoration: none;
-      min-height: 55vh;
-      padding: clamp(48px, 7vw, 96px) var(--page-pad);
+      min-height: 41vh;
+      padding: clamp(36px, 5vw, 72px) var(--page-pad);
       position: relative;
       transition: filter 0.35s ease;
       overflow: hidden;
@@ -431,8 +609,8 @@ const THEMES = {
       flex-direction: column;
       justify-content: center;
       height: 100%;
-      min-height: calc(55vh - clamp(48px, 7vw, 96px) * 2);
-      gap: 24px;
+      min-height: calc(41vh - clamp(36px, 5vw, 72px) * 2);
+      gap: 18px;
       position: relative;
       z-index: 2;
     }
@@ -445,68 +623,213 @@ const THEMES = {
       z-index: 0;
     }
 
-    /* Brake Check — scanline overlay */
-    .atm-bc {
+    /* ── Brake Check — red wash + scanlines + pulsing bar + chroma title ── */
+    .atm-bc-wash {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 90% 70% at 50% 25%,
+          rgba(255, 60, 40, 0.24) 0%,
+          rgba(255, 40, 20, 0.1) 45%,
+          transparent 75%),
+        radial-gradient(ellipse 60% 50% at 85% 90%,
+          rgba(255, 80, 50, 0.18) 0%, transparent 70%);
+      mix-blend-mode: screen;
+    }
+    .atm-bc-scanlines {
+      position: absolute; inset: 0;
       background: repeating-linear-gradient(
         to bottom,
         transparent 0,
         transparent 2px,
-        rgba(255, 60, 40, 0.06) 2.5px,
-        transparent 3.5px
+        rgba(255, 60, 40, 0.18) 2.5px,
+        rgba(255, 120, 60, 0.08) 3px,
+        transparent 3.8px
       );
       mix-blend-mode: screen;
     }
+    .atm-bc-bar {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 2px;
+      background: #ff3c28;
+      box-shadow: 0 0 14px rgba(255, 60, 40, 0.7);
+      opacity: 0.35;
+      animation: atm-bc-pulse 1.8s ease-in-out infinite;
+    }
+    @keyframes atm-bc-pulse {
+      0%, 82%, 100% { opacity: 0.35; box-shadow: 0 0 10px rgba(255, 60, 40, 0.45); }
+      88% { opacity: 1; box-shadow: 0 0 22px rgba(255, 60, 40, 0.95); }
+      94% { opacity: 0.95; box-shadow: 0 0 24px rgba(255, 60, 40, 0.9); }
+    }
+    /* Chromatic-aberration title, scoped to this band */
+    [data-slug="brake-check-this-motherfucker"] .poetry-band-title {
+      text-shadow:
+        -2px 0 0 rgba(255, 60, 40, 0.85),
+        2px 0 0 rgba(48, 217, 255, 0.55);
+    }
 
-    /* To Become What Burns — drifting embers */
+    /* ── To Become What Burns — embers + warmth pools ── */
+    .atm-tb-warmth {
+      position: absolute;
+      width: 60vw;
+      height: 60vh;
+      border-radius: 50%;
+      filter: blur(48px);
+      mix-blend-mode: screen;
+      animation: atm-tb-warmth-breathe 9s ease-in-out infinite;
+    }
+    .atm-tb-warmth-l {
+      left: -10vw; bottom: -30vh;
+      background: radial-gradient(circle,
+        rgba(255, 140, 60, 0.38) 0%,
+        rgba(255, 80, 30, 0.18) 35%,
+        transparent 70%);
+      animation-delay: 0s;
+    }
+    .atm-tb-warmth-r {
+      right: -10vw; bottom: -28vh;
+      background: radial-gradient(circle,
+        rgba(255, 100, 40, 0.32) 0%,
+        rgba(200, 60, 20, 0.15) 35%,
+        transparent 70%);
+      animation-delay: -4.5s;
+    }
+    @keyframes atm-tb-warmth-breathe {
+      0%, 100% { opacity: 0.75; transform: scale(1); }
+      50%      { opacity: 1;    transform: scale(1.06); }
+    }
     .atm-tb-ember {
       position: absolute;
       left: var(--x, 50%);
-      bottom: -8px;
-      width: 4px;
-      height: 4px;
+      bottom: -10px;
+      width: var(--size, 4px);
+      height: var(--size, 4px);
       border-radius: 50%;
       background: radial-gradient(circle,
-        rgba(255, 200, 130, 0.95) 0%,
-        rgba(255, 140, 60, 0.45) 50%,
+        rgba(255, 220, 170, 1) 0%,
+        rgba(255, 160, 80, 0.85) 35%,
+        rgba(255, 100, 40, 0.3) 70%,
         transparent 100%);
-      filter: blur(1px);
+      filter: blur(0.6px);
+      box-shadow: 0 0 10px rgba(255, 140, 60, 0.55),
+                  0 0 24px rgba(255, 100, 40, 0.25);
       animation: atm-tb-rise var(--dur, 8s) linear infinite;
       animation-delay: var(--delay, 0s);
     }
     @keyframes atm-tb-rise {
-      0%   { transform: translate(0, 0) scale(0.6);  opacity: 0; }
-      12%  { opacity: 0.85; }
-      80%  { opacity: 0.5; }
-      100% { transform: translate(18px, -55vh) scale(1.5); opacity: 0; }
+      0%   { transform: translate(0, 0) scale(0.5);  opacity: 0; }
+      10%  { opacity: 1; }
+      60%  { opacity: 0.85; }
+      100% { transform: translate(28px, -45vh) scale(1.6); opacity: 0; }
     }
 
-    /* Wisdom Teeth — paper grain + small rubric ✽ */
+    /* ── Wisdom Teeth — medieval manuscript / illuminated scripture ── */
+    .atm-wt-lamp {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 85% at 20% 12%,
+        rgba(255, 214, 140, 0.32) 0%,
+        rgba(212, 148, 88, 0.16) 35%,
+        transparent 78%);
+      mix-blend-mode: multiply;
+    }
     .atm-wt-grain {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
-      opacity: 0.48;
+      opacity: 0.58;
       mix-blend-mode: multiply;
     }
-    .atm-wt-mark {
+    /* Thin rubric-red page rule — the page border of the manuscript */
+    .atm-wt-rule {
       position: absolute;
-      top: 14%;
-      right: 9%;
+      inset: clamp(20px, 3vh, 38px) clamp(24px, 4vw, 60px);
+      border: 1px solid rgba(139, 36, 22, 0.4);
+      pointer-events: none;
+    }
+    /* Corner vine flourishes */
+    .atm-wt-corner {
+      position: absolute;
+      width: clamp(38px, 4.5vw, 58px);
+      height: auto;
+      opacity: 0.82;
+    }
+    .atm-wt-corner-tl { top: clamp(12px, 2vh, 26px); left:  clamp(16px, 3vw, 48px); }
+    .atm-wt-corner-tr { top: clamp(12px, 2vh, 26px); right: clamp(16px, 3vw, 48px); }
+    .atm-wt-corner-bl { bottom: clamp(12px, 2vh, 26px); left:  clamp(16px, 3vw, 48px); }
+    .atm-wt-corner-br { bottom: clamp(12px, 2vh, 26px); right: clamp(16px, 3vw, 48px); }
+    /* Gothic cross at top-center */
+    .atm-wt-cross {
+      position: absolute;
+      top: clamp(12px, 2.4vh, 30px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: clamp(22px, 2.2vw, 32px);
+      height: auto;
+      opacity: 0.72;
+      filter: drop-shadow(0 0 6px rgba(139, 36, 22, 0.3));
+    }
+    /* Illuminated initial — square frame with gold + rubric red W */
+    .atm-wt-initial-frame {
+      position: absolute;
+      left: clamp(24px, 4vw, 72px);
+      top: 50%;
+      transform: translateY(-50%);
+      width: clamp(74px, 8vw, 108px);
+      height: clamp(74px, 8vw, 108px);
+      filter: drop-shadow(0 4px 8px rgba(60, 40, 10, 0.22));
+      opacity: 0.95;
+    }
+    .atm-wt-initial-frame svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    /* Epigraph — italic serif in rubric red, positioned above the
+       illuminated initial as a chapter head */
+    .atm-wt-epigraph {
+      position: absolute;
+      top: clamp(52px, 7vh, 80px);
+      left: clamp(24px, 4vw, 72px);
+      margin: 0;
       font-family: var(--poetry-classical);
-      font-size: clamp(32px, 4.6vw, 56px);
+      font-style: italic;
+      font-size: clamp(13px, 1.2vw, 16px);
       color: #8B2416;
-      filter: drop-shadow(0 0 6px rgba(212, 148, 88, 0.35));
+      letter-spacing: 0.04em;
+      opacity: 0.82;
+      pointer-events: none;
+      max-width: clamp(180px, 20vw, 280px);
+      line-height: 1.3;
     }
 
-    /* This Machine — newsprint grain + press-settle-style overprint on "fascism" */
+    /* ── This Machine — newsprint + dateline + overprint title ── */
     .atm-tm-grain {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
-      opacity: 0.52;
+      opacity: 0.78;
       mix-blend-mode: multiply;
+    }
+    .atm-tm-dateline {
+      position: absolute;
+      top: clamp(14px, 2vh, 28px);
+      left: clamp(24px, 4vw, 72px);
+      right: clamp(24px, 4vw, 72px);
+      padding: 6px 0;
+      border-top: 1px solid rgba(15, 12, 10, 0.5);
+      border-bottom: 1px solid rgba(15, 12, 10, 0.5);
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      font-family: var(--poetry-display-condensed);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: #0F0C0A;
+      opacity: 0.78;
     }
     .atm-tm-overprint {
       position: relative;
@@ -518,7 +841,7 @@ const THEMES = {
       top: 0;
       left: -2px;
       color: #B82418;
-      opacity: 0.78;
+      opacity: 0.82;
       transform: rotate(0.55deg) translate(0, -0.5px);
       pointer-events: none;
       z-index: -1;
@@ -528,38 +851,134 @@ const THEMES = {
       line-height: inherit;
       white-space: pre;
     }
+    /* Title gets chromatic overprint feel in the band */
+    [data-slug="this-machine-kills-democracy"] .poetry-band-title {
+      text-shadow:
+        -2px 0 0 rgba(184, 36, 24, 0.78),
+        1px 0 0 rgba(184, 36, 24, 0.4);
+    }
 
-    /* Kerouac — slow cigarette smoke */
-    .atm-kc-smoke {
+    /* ── Kerouac — multi-layered curling smoke ── */
+    .atm-kc-trail {
       position: absolute;
       left: var(--x, 30%);
-      bottom: -20px;
-      width: 60px;
-      height: 60px;
+      bottom: 0;
+      width: 120px;
+      height: 100%;
+      pointer-events: none;
+    }
+    .atm-kc-wisp {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
       border-radius: 50%;
       background: radial-gradient(circle,
-        rgba(244, 235, 212, 0.4) 0%,
-        rgba(244, 235, 212, 0.15) 45%,
+        rgba(244, 235, 212, 0.5) 0%,
+        rgba(244, 235, 212, 0.22) 40%,
         transparent 72%);
-      filter: blur(10px);
-      opacity: 0;
-      animation: atm-kc-drift 10s ease-in-out infinite;
-      animation-delay: var(--delay, 0s);
       mix-blend-mode: screen;
+      animation: atm-kc-curl 9s ease-in-out infinite;
+      animation-delay: var(--delay, 0s);
+      opacity: 0;
     }
-    @keyframes atm-kc-drift {
-      0%   { transform: translate(0, 0) scale(0.6); opacity: 0; }
-      15%  { opacity: 0.35; }
-      60%  { opacity: 0.25; }
-      100% { transform: translate(30px, -55vh) scale(1.8); opacity: 0; }
+    .atm-kc-wisp-lo  { width: 110px; height: 110px; filter: blur(16px); animation-delay: calc(var(--delay) + 0s); }
+    .atm-kc-wisp-mid { width: 130px; height: 130px; filter: blur(22px); animation-delay: calc(var(--delay) + 1.6s); }
+    .atm-kc-wisp-hi  { width: 160px; height: 160px; filter: blur(28px); animation-delay: calc(var(--delay) + 3.2s); }
+    @keyframes atm-kc-curl {
+      0%   { transform: translate(-50%, 0)            scale(0.55); opacity: 0; }
+      12%  { opacity: 0.5; }
+      30%  { transform: translate(calc(-50% + 18px), -12vh) scale(0.9); opacity: 0.6; }
+      55%  { transform: translate(calc(-50% - 14px), -24vh) scale(1.3); opacity: 0.45; }
+      80%  { transform: translate(calc(-50% + 22px), -36vh) scale(1.7); opacity: 0.22; }
+      100% { transform: translate(calc(-50% + 8px),  -45vh) scale(2);   opacity: 0; }
     }
 
-    /* Potheads — miniature lava lamp in the corner */
+    /* ── Potheads — mellow basement atmosphere: ambient warmth,
+       drifting color orbs, thick smoke haze. No objects, just vibe. ── */
+    .atm-po-ambient {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 75vw 70vh at 88% 88%,
+          rgba(255, 110, 40, 0.32) 0%,
+          rgba(255, 80, 20, 0.16) 28%,
+          transparent 75%),
+        radial-gradient(ellipse 45vw 35vh at 88% 88%,
+          rgba(255, 190, 110, 0.24) 0%,
+          transparent 65%);
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+    /* Slow drifting color orbs — soft stage-light bloom, psychedelic mellow */
+    .atm-po-orb {
+      position: absolute;
+      width: 48vw;
+      height: 48vh;
+      border-radius: 50%;
+      filter: blur(72px);
+      mix-blend-mode: screen;
+      pointer-events: none;
+      animation: atm-po-orb-drift 22s ease-in-out infinite;
+    }
+    .atm-po-orb-amber {
+      top: -10%;
+      left: 8%;
+      background: radial-gradient(circle, rgba(255, 150, 70, 0.55) 0%, rgba(255, 100, 30, 0.12) 55%, transparent 80%);
+      animation-delay: 0s;
+    }
+    .atm-po-orb-burgundy {
+      bottom: -18%;
+      left: 40%;
+      background: radial-gradient(circle, rgba(200, 60, 80, 0.48) 0%, rgba(140, 30, 40, 0.1) 55%, transparent 80%);
+      animation-delay: -8s;
+      animation-duration: 28s;
+    }
+    .atm-po-orb-violet {
+      top: 10%;
+      right: -5%;
+      background: radial-gradient(circle, rgba(140, 70, 190, 0.4) 0%, rgba(90, 40, 140, 0.08) 55%, transparent 80%);
+      animation-delay: -15s;
+      animation-duration: 32s;
+    }
+    @keyframes atm-po-orb-drift {
+      0%, 100% { transform: translate(0, 0)       scale(1);    opacity: 0.6; }
+      33%      { transform: translate(5vw, -3vh)  scale(1.12); opacity: 0.82; }
+      66%      { transform: translate(-4vw, 4vh)  scale(0.94); opacity: 0.68; }
+    }
+    /* Thick smoke haze — huge blurred warm clouds drifting slowly */
+    .atm-po-haze {
+      position: absolute;
+      width: 70vw;
+      height: 60vh;
+      border-radius: 50%;
+      filter: blur(52px);
+      mix-blend-mode: screen;
+      pointer-events: none;
+      animation: atm-po-haze-drift 40s ease-in-out infinite;
+    }
+    .atm-po-haze-a {
+      top: 30%;
+      left: -15%;
+      background: radial-gradient(circle, rgba(200, 140, 90, 0.22) 0%, rgba(150, 80, 50, 0.1) 50%, transparent 80%);
+      animation-delay: 0s;
+    }
+    .atm-po-haze-b {
+      bottom: -20%;
+      right: -10%;
+      background: radial-gradient(circle, rgba(180, 110, 70, 0.26) 0%, rgba(130, 70, 40, 0.12) 50%, transparent 80%);
+      animation-delay: -18s;
+      animation-duration: 48s;
+    }
+    @keyframes atm-po-haze-drift {
+      0%, 100% { transform: translate(0, 0)       scale(1);    opacity: 0.55; }
+      50%      { transform: translate(10vw, -2vh) scale(1.1);  opacity: 0.72; }
+    }
     .atm-po-lamp {
       position: absolute;
       right: clamp(24px, 4vw, 72px);
-      bottom: clamp(-8px, -1vh, 0px);
-      width: clamp(46px, 6vw, 78px);
+      bottom: clamp(10px, 1.8vh, 22px);
+      width: clamp(58px, 7vw, 94px);
       aspect-ratio: 120 / 260;
       filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.55));
     }
@@ -591,13 +1010,12 @@ const THEMES = {
       50%      { top: 22%; transform: translate(-30%, 0) scale(1);    opacity: 1; }
     }
 
-    /* Briefcase — thin oil-slick ribbon on the left edge */
+    /* ── Briefcase — oil-slick ribbons on both edges + prism title word ── */
     .atm-bf-ribbon {
       position: absolute;
-      left: 0;
       top: 0;
       bottom: 0;
-      width: 6px;
+      width: 14px;
       background: linear-gradient(
         to bottom,
         #6b2a8a 0%,
@@ -611,50 +1029,175 @@ const THEMES = {
       background-size: 100% 200%;
       background-repeat: repeat-y;
       animation: atm-bf-drift 20s linear infinite;
-      box-shadow: 4px 0 20px rgba(107, 42, 138, 0.22);
+    }
+    .atm-bf-ribbon-l {
+      left: 0;
+      box-shadow: 4px 0 32px rgba(107, 42, 138, 0.32);
+    }
+    .atm-bf-ribbon-r {
+      right: 0;
+      animation-direction: reverse;
+      animation-delay: -10s;
+      box-shadow: -4px 0 32px rgba(61, 168, 88, 0.32);
     }
     @keyframes atm-bf-drift {
       from { background-position-y: 0; }
       to   { background-position-y: -200%; }
     }
+    /* Prism "Rainbows" word in the title — show the whole title first in
+       ink, then the last word swapped for the gradient via ::after. Too
+       much DOM rework to split the text; safer: give the whole title a
+       gradient shimmer for this band. */
+    [data-slug="briefcase-full-of-rainbows"] .poetry-band-title {
+      background: linear-gradient(
+        92deg,
+        #6b2a8a 0%,
+        #2460b0 18%,
+        #28a0a0 34%,
+        #3da858 50%,
+        #d48a20 66%,
+        #e05050 82%,
+        #e070b0 100%);
+      background-size: 220% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      animation: atm-bf-title-shimmer 14s linear infinite;
+    }
+    @keyframes atm-bf-title-shimmer {
+      from { background-position-x: 0%; }
+      to   { background-position-x: 220%; }
+    }
 
-    /* sleepwrong — static grain */
+    /* ── sleepwrong — two offset grain layers out of phase ── */
     .atm-sw-static {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
-      opacity: 0.38;
       mix-blend-mode: screen;
     }
+    .atm-sw-static-a {
+      opacity: 0.62;
+      animation: atm-sw-flicker-a 0.7s steps(2, end) infinite;
+    }
+    .atm-sw-static-b {
+      opacity: 0.42;
+      animation: atm-sw-flicker-b 0.9s steps(2, end) infinite;
+    }
+    @keyframes atm-sw-flicker-a {
+      0%, 49%   { opacity: 0.62; }
+      50%, 100% { opacity: 0.38; }
+    }
+    @keyframes atm-sw-flicker-b {
+      0%, 49%   { opacity: 0.42; }
+      50%, 100% { opacity: 0.62; }
+    }
 
-    /* Living — faint contour lines + small pine glyph */
+    /* ── Living — trail scene: contours, mountains, pines, marker, compass ── */
     .atm-lv-contours {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
-      opacity: 0.5;
+      opacity: 0.6;
       mix-blend-mode: multiply;
     }
-    .atm-lv-pine {
+    .atm-lv-mountains {
       position: absolute;
-      top: 16%;
-      right: 9%;
-      width: clamp(16px, 1.6vw, 22px);
-      height: auto;
-      opacity: 0.75;
+      left: 0;
+      right: 0;
+      bottom: 38%;
+      width: 100%;
+      height: 28%;
     }
-
-    /* Metrolined — faint urban skyline along the bottom */
-    .atm-mt-skyline {
+    .atm-lv-pines {
       position: absolute;
       left: 0;
       right: 0;
       bottom: 0;
       width: 100%;
-      height: 34%;
-      opacity: 0.55;
+      height: 38%;
+    }
+    .atm-lv-marker {
+      position: absolute;
+      bottom: 14%;
+      left: clamp(16px, 3vw, 48px);
+      width: clamp(26px, 2.6vw, 36px);
+      height: auto;
+      opacity: 0.82;
+      filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15));
+    }
+    .atm-lv-compass {
+      position: absolute;
+      top: clamp(14px, 2.2vh, 26px);
+      right: clamp(18px, 2.6vw, 40px);
+      width: clamp(38px, 3.6vw, 54px);
+      height: auto;
+      opacity: 0.75;
+    }
+
+    /* ── Metrolined — window with a bright sky and drifting silhouettes ── */
+    .atm-mt-window {
+      position: absolute;
+      inset: clamp(14px, 3vh, 28px) clamp(18px, 3vw, 40px);
+      border-radius: 6px;
+      overflow: hidden;
+      background: linear-gradient(
+        to bottom,
+        #B8CEDE 0%,
+        #CBD1C6 38%,
+        #D6C8A8 64%,
+        #E4CFA0 82%,
+        #A89268 100%);
+      box-shadow:
+        0 0 0 1px rgba(40, 28, 18, 0.85),
+        0 0 0 5px #2A1F14,
+        0 0 0 7px rgba(10, 6, 3, 0.9),
+        inset 0 0 60px rgba(20, 14, 8, 0.2);
+      pointer-events: none;
+    }
+    .atm-mt-sun {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle 28vh at 22% 20%,
+        rgba(255, 238, 200, 0.85) 0%,
+        rgba(255, 220, 150, 0.35) 28%,
+        rgba(255, 200, 120, 0.1) 55%,
+        transparent 75%);
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+    .atm-mt-skyline-drift {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      width: 200%;
+      height: 60%;
+      animation: atm-mt-drift 55s linear infinite;
+    }
+    .atm-mt-skyline {
+      flex: 0 0 50%;
+      width: 50%;
+      height: 100%;
+      opacity: 0.9;
+    }
+    @keyframes atm-mt-drift {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    /* Metrolined band text reads over bright sky — flip to dark ink with
+       cream halo for legibility. */
+    [data-slug="metrolined"] .poetry-band-title,
+    [data-slug="metrolined"] .poetry-band-pulled,
+    [data-slug="metrolined"] .poetry-band-year {
+      color: #1A140A;
+      text-shadow:
+        0 0 2px rgba(240, 232, 214, 0.92),
+        0 0 14px rgba(240, 232, 214, 0.62);
     }
     .poetry-band-inner[data-align="center"] {
       align-items: center;
@@ -700,10 +1243,10 @@ const THEMES = {
     /* ── Mobile ── */
     @media (max-width: 768px) {
       .poetry-band {
-        min-height: 48vh;
+        min-height: 36vh;
       }
       .poetry-band-inner {
-        min-height: calc(48vh - clamp(48px, 7vw, 96px) * 2);
+        min-height: calc(36vh - clamp(36px, 5vw, 72px) * 2);
       }
     }
 
@@ -716,11 +1259,20 @@ const THEMES = {
 
     @media (prefers-reduced-motion: reduce) {
       .atm-tb-ember,
-      .atm-kc-smoke,
+      .atm-kc-wisp,
       .atm-po-blob,
-      .atm-bf-ribbon { animation: none; }
-      .atm-tb-ember { opacity: 0.4; transform: translate(10px, -25vh) scale(1.2); }
-      .atm-kc-smoke { opacity: 0.25; transform: translate(15px, -20vh) scale(1.4); }
+      .atm-po-orb,
+      .atm-po-haze,
+      .atm-bf-ribbon,
+      .atm-tb-warmth,
+      .atm-bc-bar,
+      .atm-sw-static-a,
+      .atm-sw-static-b,
+      .atm-skyline-drift,
+      .atm-mt-skyline-drift { animation: none; }
+      [data-slug="briefcase-full-of-rainbows"] .poetry-band-title { animation: none; }
+      .atm-tb-ember { opacity: 0.5; transform: translate(12px, -25vh) scale(1.2); }
+      .atm-kc-wisp  { opacity: 0.3; transform: translate(15px, -20vh) scale(1.4); }
       .atm-po-blob { top: 55%; opacity: 0.75; }
     }
   </style>
