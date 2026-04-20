@@ -50,35 +50,45 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </nav>
 
     <!-- Header -->
-    <header style="max-width: 1200px; margin: 0 auto; padding: 112px var(--page-pad) 0; position: relative; z-index: 1;">
+    <header style="max-width: 1480px; margin: 0 auto; padding: 128px var(--page-pad) 0; position: relative; z-index: 1;">
       <h1 style={`
-        font-family: 'Alegreya SC', var(--serif); font-size: clamp(48px, 8vw, 80px);
+        font-family: 'Alegreya SC', var(--serif); font-size: clamp(48px, 8vw, 88px);
         font-weight: 400; line-height: 0.95;
         color: #d4b896; letter-spacing: 0.01em;
-        margin: 0 0 24px;
+        margin: 0 0 28px;
       `}>Hybrid Projects</h1>
-      <p style={`
-        font-family: var(--body); font-size: 18px;
-        color: rgba(212,184,150,0.5); line-height: 1.7;
-        max-width: 600px; margin: 0 0 56px;
-      `}>Both are fiction projects of mine, though that's not how the archives talk about themselves. Skinsbury curates B-Side in its own voice. The Corvids Collective stewards Rowan's archive in theirs. I built the personas, then got out of their way.</p>
+      <div style="max-width: 680px; margin: 0 0 44px;">
+        <p style={`
+          font-family: var(--body); font-size: 18px;
+          color: rgba(240,232,210,0.72); line-height: 1.7;
+          margin: 0 0 20px;
+        `}>These are larger, self-contained works. Each lives on its own domain, under its own name, with its own curatorial voice. They grew out of the same questions that drive everything else here, but they needed their own space to answer them.</p>
+        <p style={`
+          font-family: var(--body); font-size: 17px;
+          color: rgba(212,184,150,0.55); line-height: 1.7;
+          font-style: italic;
+          margin: 0;
+        `}>Both are fiction projects of mine, though that's not how the archives talk about themselves. Skinsbury curates B-Side in its own voice. The Corvids Collective stewards Rowan's archive in theirs. I built the personas, then got out of their way.</p>
+      </div>
       <div style="height: 2px; background: rgba(76,112,72,0.3); width: 60px;"></div>
     </header>
 
     <!-- Project cards -->
-    <main style="max-width: 1200px; margin: 0 auto; padding: 56px var(--page-pad) 0; position: relative; z-index: 1;">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 32px;">
+    <main style="max-width: 1480px; margin: 0 auto; padding: 56px var(--page-pad) 0; position: relative; z-index: 1;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr)); gap: 48px;">
 
         <!-- ═══ THE B-SIDE OF EVERYTHING ═══ -->
         <a href="https://thebsideofeverything.com" target="_blank" rel="noopener noreferrer" style={`
           display: block; text-decoration: none;
           background: #1a1714;
           padding: 0;
-          transition: all 0.3s ease;
+          transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
           position: relative; overflow: hidden;
+          border: 1px solid rgba(240,236,228,0.04);
+          box-shadow: 0 4px 16px rgba(0,0,0,0.25);
         `}
-        onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 20px 60px rgba(0,0,0,0.4)'"
-        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'"
+        onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 28px 68px rgba(0,0,0,0.5)';this.style.borderColor='rgba(240,236,228,0.12)'"
+        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.25)';this.style.borderColor='rgba(240,236,228,0.04)'"
         >
           <div style={`
             position: absolute; inset: 0;
@@ -90,12 +100,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           `}></div>
 
           <div style={`
-            padding: clamp(36px, 5vw, 52px);
+            padding: clamp(40px, 5.6vw, 72px);
             position: relative; z-index: 1;
           `}>
             <div style={`
               display: flex; align-items: center; gap: 12px;
-              margin-bottom: 24px;
+              margin-bottom: 32px;
             `}>
               <div style={`
                 width: 28px; height: 28px; border-radius: 50%;
@@ -110,39 +120,40 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                 `}></div>
               </div>
               <span style={`
-                font-family: var(--mono); font-size: 9px; font-weight: 400;
-                letter-spacing: 0.12em; text-transform: uppercase;
-                color: rgba(240,236,228,0.25);
+                font-family: var(--mono); font-size: 10px; font-weight: 400;
+                letter-spacing: 0.14em; text-transform: uppercase;
+                color: rgba(240,236,228,0.28);
               `}>thebsideofeverything.com</span>
             </div>
 
             <div style={`
-              font-family: var(--serif); font-size: clamp(28px, 3.5vw, 40px);
-              font-weight: 400; line-height: 1.12;
-              color: #f0ece4; letter-spacing: -0.01em; margin-bottom: 16px;
+              font-family: var(--serif); font-size: clamp(32px, 4vw, 52px);
+              font-weight: 400; line-height: 1.08;
+              color: #f0ece4; letter-spacing: -0.015em; margin-bottom: 24px;
             `}>The B-Side of Everything</div>
             <p style={`
-              font-family: var(--body); font-size: 15px;
-              font-style: italic; line-height: 1.65;
-              color: rgba(240,236,228,0.5); margin: 0 0 16px;
+              font-family: var(--body); font-size: 17px;
+              font-style: italic; line-height: 1.6;
+              color: rgba(240,236,228,0.56); margin: 0 0 20px;
             `}>Writing about music that didn't survive its own context. Bands without archives. Scenes without historians.</p>
             <p style={`
-              font-family: var(--body); font-size: 14px; line-height: 1.65;
-              color: rgba(240,236,228,0.35); margin: 0;
+              font-family: var(--body); font-size: 15px; line-height: 1.7;
+              color: rgba(240,236,228,0.4); margin: 0;
             `}>Liner notes, live reviews, dissertations, radio transcripts, zine pages, and record guide entries. Music journalism spanning five decades.</p>
 
             <div style={`
-              margin-top: 28px; padding-top: 16px;
+              margin-top: 40px; padding-top: 20px;
               border-top: 1px solid rgba(240,236,228,0.06);
               display: flex; justify-content: space-between; align-items: center;
             `}>
               <span style={`
-                font-family: var(--mono); font-size: 10px; font-weight: 300;
-                font-style: italic; color: rgba(240,236,228,0.2);
+                font-family: var(--mono); font-size: 11px; font-weight: 300;
+                font-style: italic; color: rgba(240,236,228,0.24);
+                letter-spacing: 0.02em;
               `}>Collected by Skinsbury</span>
               <span style={`
-                font-family: var(--mono); font-size: 12px;
-                color: rgba(240,236,228,0.25);
+                font-family: var(--mono); font-size: 14px;
+                color: rgba(240,236,228,0.3);
               `}>&rarr;</span>
             </div>
           </div>
@@ -155,16 +166,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           border: none;
           border-radius: 8px;
           overflow: hidden;
-          transition: all 0.3s ease;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          box-shadow: 0 4px 16px rgba(0,0,0,0.15);
         `}
-        onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 20px 60px rgba(0,0,0,0.15)'"
-        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'"
+        onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 28px 68px rgba(0,0,0,0.28)'"
+        onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)'"
         >
           <div style={`
             background: linear-gradient(180deg, #e8eaee 0%, #d8dae0 100%);
             border-bottom: 1px solid #c8cad0;
-            padding: 10px 16px;
+            padding: 12px 20px;
             display: flex; align-items: center; gap: 8px;
           `}>
             <div style="display: flex; gap: 6px;">
@@ -173,50 +184,50 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
               <div style="width: 12px; height: 12px; border-radius: 50%; background: #28c840;"></div>
             </div>
             <span style={`
-              font-family: var(--mono); font-size: 11px; font-weight: 400;
-              color: #6a7088; margin-left: 8px;
+              font-family: var(--mono); font-size: 12px; font-weight: 400;
+              color: #6a7088; margin-left: 10px;
             `}>corvids@archive: ~/collected-works/rowan-black</span>
           </div>
 
           <div style={`
             background: #ffffff;
-            margin: 16px;
+            margin: 20px;
             border-radius: 2px;
-            padding: clamp(28px, 4vw, 40px);
+            padding: clamp(32px, 4.5vw, 56px);
           `}>
             <div style={`
-              font-family: var(--serif); font-size: clamp(24px, 3vw, 32px);
-              font-weight: 400; line-height: 1.15;
-              color: #1a1d24; margin-bottom: 4px;
+              font-family: var(--serif); font-size: clamp(28px, 3.6vw, 44px);
+              font-weight: 400; line-height: 1.1;
+              color: #1a1d24; margin-bottom: 6px;
             `}>The Collected Works of <span style="font-weight: 700;">Rowan Black</span></div>
             <div style={`
-              font-family: var(--mono); font-size: 13px; line-height: 1.75;
-              color: #5a6070; margin: 16px 0 20px;
+              font-family: var(--mono); font-size: 14px; line-height: 1.75;
+              color: #5a6070; margin: 22px 0 26px;
             `}>Recovered archive. Poems, essays, fragments, and digital artifacts assembled by the Corvids Collective. Some files are damaged. Some are incomplete. All are preserved as found.</div>
             <div style={`
-              display: flex; gap: 16px; flex-wrap: wrap;
+              display: flex; gap: 20px; flex-wrap: wrap;
             `}>
               <span style={`
-                font-family: var(--mono); font-size: 12px;
+                font-family: var(--mono); font-size: 13px;
                 color: #2a6dd4;
               `}>Who is Rowan Black</span>
               <span style={`
-                font-family: var(--mono); font-size: 12px;
+                font-family: var(--mono); font-size: 13px;
                 color: #2a6dd4;
               `}>A Letter from the Corvids Collective</span>
             </div>
 
             <div style={`
-              margin-top: 24px; padding-top: 14px;
+              margin-top: 32px; padding-top: 18px;
               border-top: 1px solid rgba(0,0,0,0.06);
               display: flex; justify-content: space-between; align-items: center;
             `}>
               <span style={`
-                font-family: var(--mono); font-size: 11px;
+                font-family: var(--mono); font-size: 12px;
                 color: #9099a8;
               `}>whoisrowanblack.com</span>
               <span style={`
-                font-family: var(--mono); font-size: 12px;
+                font-family: var(--mono); font-size: 14px;
                 color: #9099a8;
               `}>&rarr;</span>
             </div>
@@ -227,7 +238,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </main>
 
     <!-- Footer -->
-    <footer style="max-width: 1200px; margin: 0 auto; padding: 80px var(--page-pad) 120px; text-align: center; position: relative; z-index: 1;">
+    <footer style="max-width: 1480px; margin: 0 auto; padding: 80px var(--page-pad) 120px; text-align: center; position: relative; z-index: 1;">
       <div style="height: 2px; background: rgba(76,112,72,0.12); width: 60px; margin: 0 auto 32px;"></div>
       <a href="/" style={`
         font-family: var(--mono); font-size: 13px; font-weight: 400;
