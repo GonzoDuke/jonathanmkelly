@@ -1,11 +1,432 @@
 ---
-import PieceLayout from '../layouts/PieceLayout.astro';
-import { PIECES } from '../data/pieces.js';
-import Sleepwrong from '../components/pieces/poems/Sleepwrong.jsx';
+import PoetryLayout from '../layouts/PoetryLayout.astro';
+import { parseSleepwrong } from '../data/poems/sleepwrong.js';
 
-const piece = PIECES.find(p => p.id === 'sleepwrong');
+const stanzas = parseSleepwrong();
+const year = '2019';
+const next = { slug: 'and-the-living-is-easy', title: 'And the Living is Easy' };
 ---
+<PoetryLayout
+  title="sleepwrong — Jonathan M. Kelly"
+  description="A poem by Jonathan M. Kelly."
+  ogUrl="https://www.jonathanmkelly.com/sleepwrong"
+>
+  <div class="sw-page">
+    <canvas class="sw-noise" aria-hidden="true"></canvas>
+    <svg class="sw-grain" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <filter id="sw-grain-filter">
+        <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="2" seed="19" stitchTiles="stitch" />
+        <feColorMatrix values="0 0 0 0 0.78  0 0 0 0 0.78  0 0 0 0 0.76  0 0 0 0.35 0" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#sw-grain-filter)" />
+    </svg>
 
-<PieceLayout piece={piece}>
-  <Sleepwrong client:load />
-</PieceLayout>
+    <nav class="sw-nav">
+      <a href="/" class="sw-brand">JMK</a>
+      <div class="sw-nav-links">
+        <a href="/projects">Projects</a>
+        <a href="/detourist">detourist</a>
+        <a href="/poetry" class="is-current">Poetry</a>
+        <a href="/agency-artifact">A&amp;A</a>
+        <a href="mailto:contact@jonathanmkelly.com">Contact</a>
+        <a href="/about">About</a>
+      </div>
+    </nav>
+
+    <article class="sw-article">
+      <header class="sw-masthead">
+        <a href="/poetry" class="sw-back">&larr; Poetry</a>
+        <p class="sw-year">{year}</p>
+        <h1 class="sw-title">sleepwrong</h1>
+      </header>
+
+      <div class="sw-body">
+        {stanzas.map((stanza, i) => {
+          const isFinal = i === stanzas.length - 1;
+          return (
+            <p
+              class={isFinal ? 'sw-stanza sw-final' : 'sw-stanza'}
+              data-index={i}
+            >
+              {stanza.map((line, li) => (
+                <Fragment>
+                  {line}
+                  {li < stanza.length - 1 && <br />}
+                </Fragment>
+              ))}
+            </p>
+          );
+        })}
+      </div>
+
+      <footer class="sw-footer">
+        <a href={`/${next.slug}`} class="sw-next">
+          <span class="sw-next-label">Next poem &rarr;</span>
+          <span class="sw-next-title">{next.title}</span>
+        </a>
+      </footer>
+    </article>
+  </div>
+
+  <style is:global>
+    .sw-page {
+      --sw-bg: #07090F;
+      --sw-bg-deep: #04060A;
+      --sw-text: #E8E4DA;
+      --sw-muted: rgba(232, 228, 218, 0.38);
+      --sw-faint: #5A5E65;
+      --sw-amber: #C8A468;
+      background:
+        radial-gradient(ellipse 120vw 70vh at 50% 36%,
+          #0B0E18 0%,
+          var(--sw-bg) 58%,
+          var(--sw-bg-deep) 100%);
+      color: var(--sw-text);
+      min-height: 100vh;
+      position: relative;
+      font-family: var(--serif);
+      overflow-x: hidden;
+    }
+
+    /* Full-screen analog-static canvas — fixed behind all content */
+    .sw-noise {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.55;
+      mix-blend-mode: screen;
+    }
+    /* Reduced-motion fallback — faint grain layer replaces the canvas */
+    .sw-grain {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0;
+      mix-blend-mode: screen;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sw-noise { display: none; }
+      .sw-grain { opacity: 0.28; }
+    }
+
+    /* ── Nav ── */
+    .sw-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(6, 8, 14, 0.82);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(200, 164, 104, 0.08);
+      padding: 0 var(--page-pad);
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .sw-brand {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--sw-text);
+      text-decoration: none;
+    }
+    .sw-nav-links {
+      display: flex;
+      gap: clamp(20px, 3vw, 36px);
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .sw-nav-links a {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(232, 228, 218, 0.4);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .sw-nav-links a:hover { color: var(--sw-amber); }
+    .sw-nav-links a.is-current { color: rgba(232, 228, 218, 0.85); }
+
+    /* ── Article — generous spacing so each stanza gets its own viewport ── */
+    .sw-article {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 124px var(--page-pad) 180px;
+      position: relative;
+      z-index: 5;
+    }
+
+    /* ── Masthead ── */
+    .sw-masthead { margin-bottom: 30vh; }
+    .sw-back {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(232, 228, 218, 0.42);
+      text-decoration: none;
+      margin-bottom: 56px;
+      transition: color 0.3s ease;
+    }
+    .sw-back:hover { color: var(--sw-amber); }
+    .sw-year {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: rgba(200, 164, 104, 0.75);
+      margin: 0 0 22px;
+    }
+    .sw-title {
+      font-family: var(--poetry-italic-display);
+      font-style: italic;
+      font-size: clamp(48px, 8vw, 72px);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.02;
+      color: var(--sw-text);
+      margin: 0;
+    }
+
+    /* ── Body — serif, roomy, each stanza gets its own scroll-space ── */
+    .sw-body {
+      font-family: var(--serif);
+      font-size: clamp(22px, 2.6vw, 26px);
+      line-height: 1.6;
+      color: var(--sw-text);
+    }
+    .sw-stanza {
+      margin: 0 auto 36vh;  /* vertical air so each stanza has its own
+                              scroll frequency, but not punishingly tall */
+      font-family: inherit;
+      max-width: 520px;
+      position: relative;
+      opacity: var(--sw-stanza-opacity, 0.18);
+      filter: blur(calc((1 - var(--sw-stanza-clarity, 0)) * 4px));
+      transition: opacity 0.8s ease, filter 0.8s ease;
+      letter-spacing: -0.002em;
+    }
+    .sw-stanza:last-child { margin-bottom: 20vh; }
+
+    /* Final stanza — once revealed, stays clear (JS locks it). */
+    .sw-final[data-locked="true"] {
+      --sw-stanza-opacity: 1;
+      --sw-stanza-clarity: 1;
+      color: #F0ECE0;
+    }
+
+    /* Per-stanza text color degrades toward muted gray at the edges of
+       viewport visibility. The clarity variable drives this. */
+    .sw-stanza {
+      color: color-mix(in srgb,
+        var(--sw-faint),
+        var(--sw-text) calc(var(--sw-stanza-clarity, 0) * 100%));
+    }
+
+    /* ── Footer ── */
+    .sw-footer {
+      margin-top: 12vh;
+      padding-top: 40px;
+      border-top: 1px solid rgba(200, 164, 104, 0.2);
+    }
+    .sw-next {
+      text-decoration: none;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 10px;
+      color: var(--sw-text);
+      transition: color 0.3s ease;
+    }
+    .sw-next-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(200, 164, 104, 0.75);
+    }
+    .sw-next-title {
+      font-family: var(--poetry-italic-display);
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(22px, 3vw, 28px);
+      line-height: 1.2;
+      color: var(--sw-text);
+    }
+    .sw-next:hover .sw-next-title { color: var(--sw-amber); }
+
+    /* ── Mobile ── */
+    @media (max-width: 640px) {
+      .sw-article { padding: 108px var(--page-pad) 140px; }
+      .sw-masthead { margin-bottom: 24vh; }
+      .sw-back { margin-bottom: 40px; }
+      .sw-body { font-size: 19px; line-height: 1.6; }
+      .sw-stanza { margin-bottom: 30vh; }
+      .sw-footer { margin-top: 10vh; }
+      .sw-noise { opacity: 0.42; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .sw-stanza {
+        --sw-stanza-opacity: 1;
+        --sw-stanza-clarity: 1;
+        transition: none;
+      }
+    }
+  </style>
+
+  <script>
+    // ── Static canvas: low-amplitude time-variant noise that reads as
+    //    analog VHS / broken-signal static rather than pure white noise ──
+    const canvas = document.querySelector<HTMLCanvasElement>('.sw-noise');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (canvas && !reduce) {
+      const ctx = canvas.getContext('2d');
+      if (ctx) {
+        const isMobile = window.matchMedia('(max-width: 640px)').matches;
+        const density = isMobile ? 0.45 : 1.0;
+        let W = 0, H = 0;
+        let noiseCanvas: HTMLCanvasElement | null = null;
+        let noiseCtx: CanvasRenderingContext2D | null = null;
+
+        const resize = () => {
+          W = Math.floor(window.innerWidth);
+          H = Math.floor(window.innerHeight);
+          // Render noise at a lower internal resolution, then scale up —
+          // gives the organic VHS-fuzz feel rather than crisp pixel noise.
+          const scale = isMobile ? 0.32 : 0.42;
+          const nw = Math.max(1, Math.floor(W * scale));
+          const nh = Math.max(1, Math.floor(H * scale));
+          canvas.width = W;
+          canvas.height = H;
+          canvas.style.width = W + 'px';
+          canvas.style.height = H + 'px';
+          ctx.imageSmoothingEnabled = true;
+          noiseCanvas = document.createElement('canvas');
+          noiseCanvas.width = nw;
+          noiseCanvas.height = nh;
+          noiseCtx = noiseCanvas.getContext('2d');
+        };
+        resize();
+        window.addEventListener('resize', resize);
+
+        let running = true;
+        let rafId: number | null = null;
+
+        const draw = () => {
+          rafId = null;
+          if (!running || !noiseCtx || !noiseCanvas) return;
+
+          const nw = noiseCanvas.width;
+          const nh = noiseCanvas.height;
+          const imageData = noiseCtx.createImageData(nw, nh);
+          const data = imageData.data;
+          for (let i = 0; i < data.length; i += 4) {
+            // base gray + warm bias; density jitter controls sparsity
+            const v = Math.random();
+            if (v < density) {
+              const g = 140 + Math.floor(Math.random() * 115);
+              data[i]     = g + 8;           // R (slightly warmer)
+              data[i + 1] = g + 2;           // G
+              data[i + 2] = g - 12;          // B (cooler pull-back)
+              data[i + 3] = 40 + Math.floor(Math.random() * 130); // alpha
+            } else {
+              data[i + 3] = 0;
+            }
+          }
+          noiseCtx.putImageData(imageData, 0, 0);
+
+          // Upscale onto the visible canvas
+          ctx.clearRect(0, 0, W, H);
+          ctx.drawImage(noiseCanvas, 0, 0, W, H);
+
+          rafId = requestAnimationFrame(draw);
+        };
+        rafId = requestAnimationFrame(draw);
+
+        const pause = () => {
+          running = false;
+          if (rafId !== null) cancelAnimationFrame(rafId);
+          rafId = null;
+        };
+        const resume = () => {
+          if (running) return;
+          running = true;
+          rafId = requestAnimationFrame(draw);
+        };
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'hidden') pause();
+          else resume();
+        });
+        document.addEventListener('astro:before-swap', pause);
+      }
+    }
+
+    // ── Per-stanza reveal driven by IntersectionObserver.
+    //    Each stanza's clarity/opacity ramps from 0 at edges to 1 at
+    //    viewport center. The final stanza latches clear once reached. ──
+    const stanzas = document.querySelectorAll<HTMLElement>('.sw-stanza');
+    if (stanzas.length && 'IntersectionObserver' in window && !reduce) {
+      // Use a wide threshold array for smooth ramp.
+      const thresholds = Array.from({ length: 21 }, (_, i) => i / 20);
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const el = entry.target as HTMLElement;
+          if (el.dataset.locked === 'true') return;
+          // Distance from center of viewport in proportion of viewport height
+          const rect = entry.boundingClientRect;
+          const vh = window.innerHeight;
+          const centerDist = Math.abs((rect.top + rect.height / 2) - vh / 2) / vh;
+          // Peak (clarity 1) when the stanza center is at viewport center;
+          // fades out over ~0.35 vh either side.
+          const clarity = Math.max(0, Math.min(1, 1 - centerDist / 0.35));
+          el.style.setProperty('--sw-stanza-clarity', clarity.toFixed(3));
+          el.style.setProperty(
+            '--sw-stanza-opacity',
+            (0.18 + clarity * 0.82).toFixed(3)
+          );
+          // Once the FINAL stanza has been mostly read, latch it clear.
+          if (el.classList.contains('sw-final') && clarity > 0.85) {
+            el.dataset.locked = 'true';
+          }
+        });
+      }, { threshold: thresholds });
+      stanzas.forEach((s) => io.observe(s));
+
+      // Drive a re-evaluation on scroll (IntersectionObserver only fires at
+      // threshold boundaries; to get smooth ramp we re-compute on each rAF).
+      let ticking = false;
+      const recompute = () => {
+        stanzas.forEach((el) => {
+          if (el.dataset.locked === 'true') return;
+          const rect = el.getBoundingClientRect();
+          const vh = window.innerHeight;
+          const centerDist = Math.abs((rect.top + rect.height / 2) - vh / 2) / vh;
+          const clarity = Math.max(0, Math.min(1, 1 - centerDist / 0.35));
+          el.style.setProperty('--sw-stanza-clarity', clarity.toFixed(3));
+          el.style.setProperty(
+            '--sw-stanza-opacity',
+            (0.18 + clarity * 0.82).toFixed(3)
+          );
+          if (el.classList.contains('sw-final') && clarity > 0.85) {
+            el.dataset.locked = 'true';
+          }
+        });
+        ticking = false;
+      };
+      const onScroll = () => {
+        if (!ticking) {
+          window.requestAnimationFrame(recompute);
+          ticking = true;
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      recompute();
+    }
+  </script>
+</PoetryLayout>
