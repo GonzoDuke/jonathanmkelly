@@ -323,8 +323,26 @@ function Footer() {
           fontFamily: 'var(--mono)', fontSize: '11px',
           color: 'rgba(255,255,255,0.4)', letterSpacing: '0.06em',
         }}>HST</span>
+        <div style={{ margin: '16px 0 0' }}>
+          <a
+            href="https://theglitchisthemachine.substack.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: 'var(--mono)',
+              fontSize: '13px',
+              letterSpacing: '0.06em',
+              color: 'rgba(255,255,255,0.55)',
+              textDecoration: 'none',
+              borderBottom: '1px solid rgba(255,255,255,0.2)',
+              paddingBottom: '2px',
+            }}
+          >
+            Newsletter &rarr;
+          </a>
+        </div>
         <div style={{ margin: '24px 0 0' }}>
-          <span style={{ fontFamily: 'var(--mono)', fontSize: '14px', color: 'rgba(255,255,255,0.35)' }}>&copy; {new Date().getFullYear()} Jonathan M. Kelly</span>
+          <span style={{ fontFamily: 'var(--mono)', fontSize: '14px', color: 'rgba(255,255,255,0.35)' }}>&copy; 2026 Jonathan M. Kelly</span>
         </div>
       </div>
     </footer>
