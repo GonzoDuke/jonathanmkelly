@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
-import { inject } from '@vercel/analytics';
+import Analytics from '@vercel/analytics/astro';
 
 const {
   title = "Jonathan M. Kelly",
@@ -42,8 +42,6 @@ const {
   </head>
   <body style="background: #1a1a20;">
     <slot />
-    <script>
-      inject();
-    </script>
+    <Analytics />
   </body>
 </html>
