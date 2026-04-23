@@ -423,16 +423,21 @@ const smokeParticles = Array.from({ length: SMOKE_COUNT }).map((_, i) => {
     .po-nav-links a.is-current { color: var(--po-text); }
 
     /* ── Article ── */
+    /* Width is sized to fit the longest line of the poem (~74 chars) on one
+       row at the body font-size below. This is a deliberate fixed-line-length
+       layout: every docx line break renders as a hard break and the browser
+       never adds its own mid-line wraps on desktop. Narrow viewports fall
+       back to pre-wrap word-wrap (see @media block). */
     .po-article {
-      max-width: 620px;
+      max-width: 880px;
       margin: 0 auto;
-      padding: 124px var(--page-pad) 180px;
+      padding: 96px var(--page-pad) 120px;
       position: relative;
       z-index: 5;
     }
 
     /* ── Masthead ── */
-    .po-masthead { margin-bottom: 88px; }
+    .po-masthead { margin-bottom: 56px; }
     .po-back {
       display: inline-block;
       font-family: var(--mono);
@@ -468,13 +473,15 @@ const smokeParticles = Array.from({ length: SMOKE_COUNT }).map((_, i) => {
     /* ── Body ── */
     .po-body {
       font-family: var(--poetry-classical);
-      font-size: clamp(19px, 2.2vw, 22px);
-      line-height: 1.72;
+      /* Sized so the longest line of the poem (~74 chars) fits in the
+         880px article column without browser-wrapping mid-line. */
+      font-size: clamp(18px, 1.8vw, 21px);
+      line-height: 1.7;
       color: var(--po-text);
       transition: color 2.2s ease;
     }
     .po-section {
-      margin-top: 88px;
+      margin-top: 64px;
     }
     .po-section:first-child { margin-top: 0; }
     .po-section-head {
