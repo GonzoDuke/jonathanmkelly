@@ -37,7 +37,7 @@ and could quote Ginsberg while stoned.
 The mad ones found you, didn’t they?
 Just like you wanted,
 just like you prayed for,
-never realizing “mad” meant exactly that
+never realizing “mad” meant exactly that:
 not the romantic kind of crazy
 that gets you into poetry anthologies,
 but the real deal, the genuine article,
