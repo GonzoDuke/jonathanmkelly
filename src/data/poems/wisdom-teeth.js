@@ -76,7 +76,7 @@ thinking every neuron you burned
 was a sacrifice to some higher truth.
 
 We were soldiers in a war,
-eventually fought with spoons and borrowed fire,
+eventually fought with borrowed fire,
 every battle lost before it began—
 generals in an army of one,
 fighting for a kingdom
