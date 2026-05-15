@@ -34,13 +34,13 @@ export const AA_PIECES = [
 
 // ── detourist ──
 export const DET_PIECES = [
+  { id: 'good-kid-yellow-jersey', title: 'Good Kid, Yellow Jersey', subtitle: 'On tempo as strategic method, and the value of unseen tactics', status: 'live' },
   { id: 'self-inflicted-gonzo', title: 'Self-Inflicted Gonzo', subtitle: 'On Attempted Resurrection in a Safe-for-Work World', status: 'live' },
   { id: 'sacrifice-sacrifice-sacrifice', title: 'Sacrifice. Sacrifice. Sacrifice.', subtitle: 'The Unbroken Chain of Someone Else\u2019s Burden', status: 'live' },
   { id: 'the-great-gig', title: 'The Great Gig in Someone Else\u2019s Sky', subtitle: 'On the Tragedy of Building a Cathedral You\u2019re Not Allowed to Pray In', status: 'live' },
   { id: 'watch-the-tramcar-please', title: 'Watch the Tramcar Please', subtitle: 'A Circuit of Salt and Noise', status: 'live' },
   { id: 'the-lessons-we-buried', title: 'The Lessons We Buried', subtitle: 'The House that Ruth Built, The Pet Goat, and the Theater of Obedience', status: 'live' },
   { id: 'do-you-have-a-flag', title: 'Do You Have a Flag?', subtitle: 'On Claiming Territory You Never Owned and Policing the Borders of Creativity', status: 'live' },
-  { id: 'good-kid-yellow-jersey', title: 'Good Kid, Yellow Jersey', subtitle: 'On tempo as strategic method, and the value of unseen tactics', status: 'live' },
   { id: 'a-hint-of-football-paradise', title: 'A Hint of Football Paradise', subtitle: '', status: 'live' },
   { id: 'simpleton-season', title: 'Simpleton Season', subtitle: 'Why We Pretend Not to Know', status: 'live' },
   { id: 'the-fear-was-waiting', title: 'The Fear Was Waiting When You Got Here', subtitle: '', status: 'live' },
