@@ -1,0 +1,11 @@
+---
+import AALayout from '../../layouts/AALayout.astro';
+import { AA_PIECES } from '../../data/pieces.js';
+import ShowYourWork from '../../components/pieces/agency-artifact/ShowYourWork.jsx';
+
+const piece = AA_PIECES.find(p => p.id === 'show-your-work');
+---
+
+<AALayout piece={piece}>
+  <ShowYourWork client:load />
+</AALayout>

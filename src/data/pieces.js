@@ -22,6 +22,7 @@ export const PROJECTS = [
 
 // ── Agency & Artifact ──
 export const AA_PIECES = [
+  { id: 'show-your-work', title: 'Show Your Work', subtitle: 'A three-part essay on AI, K-12, and the case that has not been made.', status: 'live' },
   { id: 'fear-is-not-a-framework', title: 'Fear Is Not a Framework', subtitle: 'Why AI Panic Misses the Point', status: 'live' },
   { id: 'ambient-anxiety', title: 'Ambient Anxiety', subtitle: 'What Students Learn from AI Panic', status: 'live' },
   { id: 'what-we-talk-about', title: 'What We Talk About When We Talk About Thinking', subtitle: 'Why effort isn\u2019t the soul of intelligence. And never was.', status: 'live' },
