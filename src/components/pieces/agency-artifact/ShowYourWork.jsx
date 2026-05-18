@@ -191,7 +191,7 @@ export default function ShowYourWork() {
           backdropFilter: 'blur(10px)',
           WebkitBackdropFilter: 'blur(10px)',
           margin:
-            'calc(-1 * clamp(40px, 5vw, 64px)) calc(-1 * clamp(32px, 5vw, 60px)) 40px',
+            '0 calc(-1 * clamp(32px, 5vw, 60px)) 40px',
           padding: '14px clamp(32px, 5vw, 60px) 12px',
           borderBottom: '1px solid rgba(0,0,0,0.08)',
           zIndex: 5,
