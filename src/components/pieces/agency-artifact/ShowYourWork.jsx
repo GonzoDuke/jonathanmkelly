@@ -163,6 +163,26 @@ export default function ShowYourWork() {
         color: '#1a1d28',
       }}
     >
+      <aside style={{
+        margin: '0 0 32px',
+        padding: '16px 0',
+        borderTop: '1px solid rgba(0,0,0,0.12)',
+        borderBottom: '1px solid rgba(0,0,0,0.12)',
+        fontFamily: 'var(--body)',
+        fontSize: '15px',
+        fontStyle: 'italic',
+        lineHeight: 1.55,
+        color: '#5e6478',
+      }}>
+        Some of what this piece argues replaces an earlier essay of mine. The bridge between the two is <a href="/agency-artifact/what-i-got-wrong" style={{
+          color: '#6889b4',
+          textDecoration: 'underline',
+          textDecorationColor: 'rgba(104,137,180,0.5)',
+          textUnderlineOffset: '3px',
+          fontStyle: 'italic',
+        }}>here</a>.
+      </aside>
+
       <div
         style={{
           position: 'sticky',

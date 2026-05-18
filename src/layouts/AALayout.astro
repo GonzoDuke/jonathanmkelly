@@ -8,7 +8,7 @@ const shareTitle = piece.title;
 const shareText = `From Agency & Artifact, by Jonathan M. Kelly`;
 ---
 
-<BaseLayout title={pageTitle} description={piece.subtitle || ''} ogUrl={ogUrl}>
+<BaseLayout title={pageTitle} description={piece.metaDescription || piece.subtitle || ''} ogUrl={ogUrl}>
   <div style="background: #f0f2f5; min-height: 100vh;">
     <nav style={`
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;

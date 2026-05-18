@@ -1,0 +1,11 @@
+---
+import AALayout from '../../layouts/AALayout.astro';
+import { AA_PIECES } from '../../data/pieces.js';
+import WhatIGotWrong from '../../components/pieces/agency-artifact/WhatIGotWrong.jsx';
+
+const piece = AA_PIECES.find(p => p.id === 'what-i-got-wrong');
+---
+
+<AALayout piece={piece}>
+  <WhatIGotWrong client:load />
+</AALayout>

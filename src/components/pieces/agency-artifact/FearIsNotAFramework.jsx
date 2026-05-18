@@ -6,6 +6,26 @@ export default function FearIsNotAFramework() {
       lineHeight: 1.7,
       color: "#1a1d28",
     }}>
+      <aside style={{
+        margin: "0 0 36px",
+        padding: "16px 0",
+        borderTop: "1px solid rgba(0,0,0,0.12)",
+        borderBottom: "1px solid rgba(0,0,0,0.12)",
+        fontFamily: "var(--body)",
+        fontSize: "15px",
+        fontStyle: "italic",
+        lineHeight: 1.55,
+        color: "#5e6478",
+      }}>
+        I have revised my position on the central argument of this piece. The bridge is <a href="/agency-artifact/what-i-got-wrong" style={{
+          color: "#6889b4",
+          textDecoration: "underline",
+          textDecorationColor: "rgba(104,137,180,0.5)",
+          textUnderlineOffset: "3px",
+          fontStyle: "italic",
+        }}>here</a>. The original essay below remains as published in June 2025.
+      </aside>
+
       <p style={{ margin: "0 0 20px", fontStyle: "italic" }}>Recent research from MIT triggered a familiar media frenzy: "ChatGPT is changing your brain," headlines declared, as if that fact alone were cause for alarm. It is changing your brain, but so did writing, arithmetic, Google, and the invention of the index card. The capacity for cognitive change is not a flaw. It is the signature of human intelligence.</p>
 
       <h2 style={{ fontFamily: "var(--serif)", fontSize: "26px", fontWeight: 500, color: "#1a1d28", margin: "40px 0 16px", lineHeight: 1.3 }}>The Study and the Panic</h2>
