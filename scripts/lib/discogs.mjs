@@ -23,7 +23,8 @@ export function makeClient(token, { throttleMs = 1100, maxRetries = 4 } = {}) {
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
       let r;
       try {
-        r = await fetch(url, { headers });
+        // 25s timeout so a stuck connection can never hang the job.
+        r = await fetch(url, { headers, signal: AbortSignal.timeout(25000) });
       } catch (e) {
         await sleep(1500 * attempt);
         continue;
@@ -47,7 +48,10 @@ export function makeClient(token, { throttleMs = 1100, maxRetries = 4 } = {}) {
 }
 
 export async function downloadImage(url, destPath) {
-  const r = await fetch(url, { headers: { 'User-Agent': USER_AGENT } });
+  const r = await fetch(url, {
+    headers: { 'User-Agent': USER_AGENT },
+    signal: AbortSignal.timeout(30000),
+  });
   if (!r.ok) throw new Error(`image HTTP ${r.status}`);
   const ct = r.headers.get('content-type') || '';
   if (!ct.startsWith('image/')) throw new Error(`not an image (${ct})`);
