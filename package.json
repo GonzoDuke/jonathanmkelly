@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "records:update": "node --env-file=.env scripts/fetch-discogs.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.0",
