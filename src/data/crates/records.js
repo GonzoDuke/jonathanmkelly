@@ -16,6 +16,7 @@
 
 import rawCsv from './collection.csv?raw';
 import enriched from './enriched.json';
+import collectionJson from './collection.json';
 import { parseCsv } from '../../../scripts/lib/parse-csv.mjs';
 
 // -- Mojibake repair -----------------------------------------
@@ -174,10 +175,146 @@ function parseFormat(rawFormat) {
 const firstOf = (s) => (s || '').split(',')[0].trim();
 const decadeOf = (y) => (y == null ? null : `${Math.floor(y / 10) * 10}s`);
 
-// -- Normalize every row -------------------------------------
-const rows = parseCsv(rawCsv);
+// -- Format parsing from the Discogs API (full words) --------
+// The collection API gives full descriptors ("Limited Edition", "Gatefold")
+// and the vinyl color as plain text ("White"), so this path is cleaner and
+// more accurate than the CSV abbreviation/truncation parsing above.
+const API_FLAG = {
+  Gatefold: 'Gatefold',
+  Reissue: 'Reissue',
+  Remastered: 'Remastered',
+  Repress: 'Repress',
+  'Limited Edition': 'Limited',
+  Numbered: 'Numbered',
+  'Record Store Day': 'Record Store Day',
+  Mono: 'Mono',
+  'Unofficial Release': 'Bootleg',
+  'Picture Disc': 'Picture Disc',
+  Compilation: 'Compilation',
+  Promo: 'Promo',
+  'Deluxe Edition': 'Deluxe',
+  '180 Gram': '180g',
+  'Special Edition': 'Special Edition',
+  'Club Edition': 'Club Edition',
+};
+// Scanned in order against the format `text`; concrete colors before modifiers.
+const API_COLORS = [
+  ['coke bottle', 'Coke Bottle', '#7fa07a'],
+  ['cobalt', 'Cobalt', '#2747a8'],
+  ['turquoise', 'Turquoise', '#1fb8b0'],
+  ['magenta', 'Magenta', '#c2185b'],
+  ['red', 'Red', '#c0392b'],
+  ['orange', 'Orange', '#d4822a'],
+  ['yellow', 'Yellow', '#e3c027'],
+  ['green', 'Green', '#3f8f55'],
+  ['blue', 'Blue', '#2f6fb0'],
+  ['purple', 'Purple', '#7e57c2'],
+  ['pink', 'Pink', '#d96fa3'],
+  ['gold', 'Gold', '#c8a24a'],
+  ['silver', 'Silver', '#b6bbc1'],
+  ['amber', 'Amber', '#cf8a2e'],
+  ['cream', 'Cream', '#ece3cf'],
+  ['beige', 'Beige', '#d8c8a6'],
+  ['bone', 'Bone', '#e8e0d0'],
+  ['smoke', 'Smoke', '#9aa0a6'],
+  ['marble', 'Marbled', '#9aa0a6'],
+  ['splatter', 'Splatter', '#b07d57'],
+  ['translucent', 'Translucent', '#a9c2cf'],
+  ['transparent', 'Clear', '#c3ccd2'],
+  ['clear', 'Clear', '#c3ccd2'],
+  ['opaque', 'Opaque', '#d6cfbf'],
+  ['white', 'White', '#e8e8ea'],
+];
 
-export const RECORDS = rows.map((r, i) => {
+function parseFormatApi(formats) {
+  const fmts = Array.isArray(formats) ? formats : [];
+  let discCount = 0;
+  const allDesc = [];
+  let textBlob = '';
+  for (const f of fmts) {
+    discCount += parseInt(f.qty, 10) || 1;
+    (f.descriptions || []).forEach((d) => allDesc.push(d));
+    if (f.text) textBlob += ' ' + f.text;
+  }
+  if (discCount === 0) discCount = 1;
+
+  const descStr = allDesc.join(' ');
+  let mediaType = 'LP';
+  if (/\bLP\b/.test(descStr)) mediaType = 'LP';
+  else if (/12"/.test(descStr)) mediaType = '12"';
+  else if (/10"/.test(descStr)) mediaType = '10"';
+  else if (/7"/.test(descStr)) mediaType = '7"';
+  const isSingle = /(7"|10"|12")/.test(descStr) && !/\bLP\b/.test(descStr);
+
+  const flags = [];
+  for (const d of allDesc) {
+    if (API_FLAG[d] && !flags.includes(API_FLAG[d])) flags.push(API_FLAG[d]);
+  }
+
+  let color = null;
+  const low = textBlob.toLowerCase();
+  for (const [kw, name, hex] of API_COLORS) {
+    if (low.includes(kw)) {
+      color = { name, hex };
+      break;
+    }
+  }
+  if (color && !flags.includes('Colored Vinyl')) flags.unshift('Colored Vinyl');
+  if (discCount >= 3 && !flags.includes('Box Set')) flags.push('Box Set');
+  if (isSingle && !flags.includes('Single')) flags.push('Single');
+
+  const display = fmts
+    .map((f) => {
+      const q = parseInt(f.qty, 10) || 1;
+      const head = q > 1 ? `${q}x` : '';
+      const parts = [...(f.descriptions || [])];
+      return head + parts.join(', ') + (f.text ? `, ${f.text}` : '');
+    })
+    .join(' + ');
+
+  return { discCount, mediaType, isSingle, flags, color, display };
+}
+
+// -- Normalizers (one per source) ----------------------------
+function normalizeFromJson(item) {
+  const id = String(item.id);
+  const releasedYear = item.year && item.year > 0 ? item.year : null;
+  const fmt = parseFormatApi(item.formats);
+  const labels = Array.isArray(item.labels) ? item.labels : [];
+  const labelFirst = labels[0]?.name || '';
+  let catalog = labels[0]?.catno || '';
+  if (catalog.toLowerCase() === 'none') catalog = '';
+
+  return {
+    id,
+    artist: item.artist || '',
+    title: item.title || '',
+    label: labels.map((l) => l.name).join(', '),
+    labelFirst,
+    catalog,
+    folder: item.folder || '',
+    format: fmt.display,
+    discCount: fmt.discCount,
+    mediaType: fmt.mediaType,
+    isSingle: fmt.isSingle,
+    flags: fmt.flags,
+    color: fmt.color,
+    releasedYear,
+    decade: decadeOf(releasedYear),
+    dateAdded: item.dateAdded || '',
+    monthAdded: (item.dateAdded || '').slice(0, 7),
+    media: item.media || '',
+    sleeve: item.sleeve || '',
+    notes: item.notes || '',
+    genres: item.genres || [],
+    styles: item.styles || [],
+    hasCover: !!item.hasCover,
+    coverSrc: item.hasCover ? `/crates/covers/${id}.jpg` : null,
+    discogsUrl: `https://www.discogs.com/release/${id}`,
+  };
+}
+
+function normalizeFromCsv(r, i) {
   const idRaw = (r['release_id'] || '').trim();
   const isNumericId = /^\d+$/.test(idRaw);
   const id = isNumericId ? idRaw : `row-${i}`;
@@ -190,9 +327,6 @@ export const RECORDS = rows.map((r, i) => {
   const catalog = catalogRaw.toLowerCase() === 'none' ? '' : firstOf(catalogRaw);
 
   const enr = (isNumericId && enriched[idRaw]) || {};
-  const genres = enr.genres || [];
-  const styles = enr.styles || [];
-  const hasCover = !!enr.hasCover;
 
   return {
     id,
@@ -215,13 +349,21 @@ export const RECORDS = rows.map((r, i) => {
     media: (r['Collection Media Condition'] || '').trim(),
     sleeve: (r['Collection Sleeve Condition'] || '').trim(),
     notes: fixMojibake((r['Collection Notes'] || '').trim()),
-    genres,
-    styles,
-    hasCover,
-    coverSrc: hasCover ? `/crates/covers/${idRaw}.jpg` : null,
+    genres: enr.genres || [],
+    styles: enr.styles || [],
+    hasCover: !!enr.hasCover,
+    coverSrc: enr.hasCover ? `/crates/covers/${idRaw}.jpg` : null,
     discogsUrl: isNumericId ? `https://www.discogs.com/release/${idRaw}` : null,
   };
-});
+}
+
+// Prefer the synced Discogs API data (collection.json); fall back to the
+// original CSV export + enrichment cache if the sync hasn't run yet.
+// -- Normalize every record ----------------------------------
+export const RECORDS =
+  Array.isArray(collectionJson) && collectionJson.length > 0
+    ? collectionJson.map(normalizeFromJson)
+    : parseCsv(rawCsv).map(normalizeFromCsv);
 
 // -- Aggregates for the data-story ---------------------------
 function countBy(arr, keyFn) {

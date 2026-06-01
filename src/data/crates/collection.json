@@ -1,0 +1,9494 @@
+[
+  {
+    "id": 66644,
+    "artist": "Moby",
+    "title": "Moby",
+    "labels": [
+      {
+        "name": "Instinct Records",
+        "catno": "EX-241-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1992,
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "House",
+      "Techno",
+      "Ambient"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-28T12:02:22-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 215012,
+    "artist": "The Cars",
+    "title": "Greatest Hits",
+    "labels": [
+      {
+        "name": "Elektra",
+        "catno": "60464-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "RCA Music Service",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Club Edition"
+        ]
+      }
+    ],
+    "year": 1985,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Synth-pop"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-13T12:40:36-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 380609,
+    "artist": "Pink Floyd",
+    "title": "Wish You Were Here",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "PC 33453"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1975,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Classic Rock",
+      "Prog Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-07-19T15:42:13-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 401512,
+    "artist": "Peter Frampton",
+    "title": "Frampton Comes Alive!",
+    "labels": [
+      {
+        "name": "A&M Records",
+        "catno": "SP-3703"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1976,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Rock & Roll",
+      "Pop Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T09:34:26-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 497769,
+    "artist": "Huey Lewis & The News",
+    "title": "Sports",
+    "labels": [
+      {
+        "name": "Chrysalis",
+        "catno": "FV 41412"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Carrollton Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1983,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-18T10:06:50-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 526569,
+    "artist": "Pink Floyd",
+    "title": "The Wall",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "PC2 36183"
+      },
+      {
+        "name": "Columbia",
+        "catno": "36183"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Santa Maria, Second Sleeve",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1979,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock",
+      "Classic Rock",
+      "Art Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-05T07:28:37-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 696823,
+    "artist": "Jean-Luc Ponty",
+    "title": "Individual Choice",
+    "labels": [
+      {
+        "name": "Atlantic",
+        "catno": "80098-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "SP",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1983,
+    "genres": [
+      "Electronic",
+      "Jazz"
+    ],
+    "styles": [
+      "Fusion"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-05T09:10:24-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 844094,
+    "artist": "Steely Dan",
+    "title": "Gaucho",
+    "labels": [
+      {
+        "name": "MCA Records",
+        "catno": "MCA-6102"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1980,
+    "genres": [
+      "Jazz",
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Jazz-Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-02-21T16:53:06-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 869077,
+    "artist": "Janis Joplin",
+    "title": "Pearl",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "KC 30322"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Pitman Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1971,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Blues Rock",
+      "Soul"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T08:29:08-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 1056070,
+    "artist": "The Cinematic Orchestra",
+    "title": "Ma Fleur",
+    "labels": [
+      {
+        "name": "Domino",
+        "catno": "DNO 151"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "45 RPM",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2007,
+    "genres": [
+      "Electronic",
+      "Jazz"
+    ],
+    "styles": [
+      "Future Jazz",
+      "Downtempo"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-13T07:30:11-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Near Mint (NM or M-)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 1157598,
+    "artist": "Tool (2)",
+    "title": "Undertow",
+    "labels": [
+      {
+        "name": "Volcano (2)",
+        "catno": "61422-31052-1"
+      },
+      {
+        "name": "Tool Dissectional",
+        "catno": "61422-31052-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2006,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Hard Rock",
+      "Prog Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-18T10:08:30-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 1173755,
+    "artist": "The Allman Brothers Band",
+    "title": "Beginnings",
+    "labels": [
+      {
+        "name": "Capricorn Records",
+        "catno": "2CX 0132"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Santa Maria Pressing",
+        "descriptions": [
+          "LP",
+          "Compilation"
+        ]
+      }
+    ],
+    "year": 1974,
+    "genres": [
+      "Rock",
+      "Blues"
+    ],
+    "styles": [
+      "Blues Rock",
+      "Southern Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T08:36:26-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 1205127,
+    "artist": "The Lovin' Spoonful",
+    "title": "The Best Of The Lovin' Spoonful",
+    "labels": [
+      {
+        "name": "Kama Sutra",
+        "catno": "KLP-8056"
+      },
+      {
+        "name": "Kama Sutra",
+        "catno": "KLP 8056"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Mono"
+        ]
+      }
+    ],
+    "year": 1967,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Folk Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T08:38:12-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 1230078,
+    "artist": "Ken Nordine",
+    "title": "Colors (A Sensuous Listening Experience)",
+    "labels": [
+      {
+        "name": "Philips",
+        "catno": "PHM 200-224"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Mono"
+        ]
+      }
+    ],
+    "year": 1967,
+    "genres": [
+      "Jazz",
+      "Non-Music"
+    ],
+    "styles": [
+      "Spoken Word",
+      "Cool Jazz"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-05-31T11:45:31-07:00",
+    "rating": 0,
+    "media": "Very Good Plus (VG+)",
+    "sleeve": "Very Good (VG)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 1284784,
+    "artist": "The Allman Brothers Band",
+    "title": "Eat A Peach",
+    "labels": [
+      {
+        "name": "Capricorn Records",
+        "catno": "2CP 0102"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Santa Maria Press, Gatefold",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1972,
+    "genres": [
+      "Rock",
+      "Blues"
+    ],
+    "styles": [
+      "Blues Rock",
+      "Southern Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-02-21T16:56:27-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 1313001,
+    "artist": "America (2)",
+    "title": "History - America's Greatest Hits",
+    "labels": [
+      {
+        "name": "Warner Bros. Records",
+        "catno": "BS 2894"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1975,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T09:37:13-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 1361007,
+    "artist": "Bon Iver",
+    "title": "For Emma, Forever Ago",
+    "labels": [
+      {
+        "name": "Jagjaguwar",
+        "catno": "JAG115"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2008,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Acoustic",
+      "Indie Rock",
+      "Folk"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2025-09-09T14:48:27-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 1426272,
+    "artist": "Richard Wright",
+    "title": "Wet Dream",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "JC 35559"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Terre Haute Pressing, Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1978,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-05T08:57:46-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 1610236,
+    "artist": "Bon Iver",
+    "title": "Blood Bank",
+    "labels": [
+      {
+        "name": "Jagjaguwar",
+        "catno": "JAG 134"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "12\"",
+          "45 RPM",
+          "EP"
+        ]
+      }
+    ],
+    "year": 2009,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Acoustic",
+      "Folk",
+      "Indie Rock",
+      "Folk Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-02-25T15:17:30-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 1875311,
+    "artist": "Florence And The Machine",
+    "title": "Lungs",
+    "labels": [
+      {
+        "name": "Island Records",
+        "catno": "2709106"
+      },
+      {
+        "name": "Moshi Moshi Records",
+        "catno": "2709106"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2009,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Baroque Pop",
+      "Indie Rock",
+      "Indie Pop",
+      "Art Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-04-16T12:54:15-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 2166080,
+    "artist": "The Screaming Abdabs",
+    "title": "A Great Set",
+    "labels": [
+      {
+        "name": "Night Plane",
+        "catno": "RDRN-50977"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "3",
+        "descriptions": [
+          "LP",
+          "Unofficial Release"
+        ]
+      }
+    ],
+    "year": 1986,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-05T09:03:37-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 2237459,
+    "artist": "Pink Floyd",
+    "title": "How Shall We Sing In A Foreign Land?",
+    "labels": [
+      {
+        "name": "Annuit Cceptis",
+        "catno": "SHLP 012372"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Unofficial Release"
+        ]
+      }
+    ],
+    "year": 2010,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-02-01T06:40:03-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 2463267,
+    "artist": "The Bad Plus",
+    "title": "Never Stop",
+    "labels": [
+      {
+        "name": "eOne",
+        "catno": "EOM-LP-2340"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2010,
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Free Jazz",
+      "Contemporary Jazz"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-09-19T08:58:10-07:00",
+    "rating": 0,
+    "media": "Near Mint (NM or M-)",
+    "sleeve": "Near Mint (NM or M-)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 2548925,
+    "artist": "The Doors",
+    "title": "L.A. Woman",
+    "labels": [
+      {
+        "name": "Elektra",
+        "catno": "8122-79865-5"
+      },
+      {
+        "name": "Rhino Vinyl",
+        "catno": "8122-79865-5"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180 Gram, Embossed",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2009,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Blues Rock",
+      "Pop Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-09-21T10:58:00-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 2940876,
+    "artist": "Bon Iver",
+    "title": "Bon Iver, Bon Iver",
+    "labels": [
+      {
+        "name": "Jagjaguwar",
+        "catno": "JAG135"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2011,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Indie Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2025-09-09T14:49:33-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 2995572,
+    "artist": "Supertramp",
+    "title": "Breakfast In America",
+    "labels": [
+      {
+        "name": "A&M Records",
+        "catno": "AMLK 64747"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1979,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-05T09:07:49-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 3115652,
+    "artist": "Midlake",
+    "title": "The Trials Of Van Occupanther",
+    "labels": [
+      {
+        "name": "Nova Posta",
+        "catno": "NPV003"
+      },
+      {
+        "name": "Bella Union",
+        "catno": "bellav117"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2010,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Indie Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-02T13:33:33-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 3517314,
+    "artist": "Various",
+    "title": "The Big Chill - Original Motion Picture Soundtrack",
+    "labels": [
+      {
+        "name": "Motown",
+        "catno": "6062ML"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Club Edition"
+        ]
+      }
+    ],
+    "year": 1983,
+    "genres": [
+      "Rock",
+      "Funk / Soul"
+    ],
+    "styles": [],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-13T12:35:04-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 3526778,
+    "artist": "Nirvana",
+    "title": "Bleach",
+    "labels": [
+      {
+        "name": "Sub Pop",
+        "catno": "SP034"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2011,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Grunge"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-01-11T08:02:39-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 3701587,
+    "artist": "Van Morrison",
+    "title": "Moondance",
+    "labels": [
+      {
+        "name": "Warner Bros. Records",
+        "catno": "WS 1835"
+      },
+      {
+        "name": "Warner Bros. Records",
+        "catno": "1835"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Terre Haute Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Repress",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1970,
+    "genres": [
+      "Rock",
+      "Funk / Soul",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Rhythm & Blues",
+      "Classic Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T08:52:26-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 3971421,
+    "artist": "Red Hot Chili Peppers",
+    "title": "Californication",
+    "labels": [
+      {
+        "name": "Warner Bros. Records",
+        "catno": "47386-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2012,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Funk Metal"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-09-09T14:53:59-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4043576,
+    "artist": "Various",
+    "title": "Night Beat",
+    "labels": [
+      {
+        "name": "Warner Special Products",
+        "catno": "OP-4515"
+      },
+      {
+        "name": "Sessions (2)",
+        "catno": "OP-4515"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "4",
+        "descriptions": [
+          "LP",
+          "Compilation"
+        ]
+      }
+    ],
+    "year": 1988,
+    "genres": [
+      "Electronic",
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Rock & Roll",
+      "Pop Rock",
+      "Synth-pop"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T09:30:56-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4198506,
+    "artist": "The Doors",
+    "title": "The Doors",
+    "labels": [
+      {
+        "name": "Elektra",
+        "catno": "EKS-74007"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "AR - Allied Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-07T10:06:17-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4263175,
+    "artist": "George Carlin",
+    "title": "Class Clown",
+    "labels": [
+      {
+        "name": "Little David Records",
+        "catno": "LD 1004"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "RI, Gatefold",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1972,
+    "genres": [
+      "Non-Music"
+    ],
+    "styles": [
+      "Comedy",
+      "Spoken Word"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-02-21T16:59:38-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4278082,
+    "artist": "George Carlin",
+    "title": "Take-Offs And Put-Ons",
+    "labels": [
+      {
+        "name": "Pickwick",
+        "catno": "CAS-2566"
+      },
+      {
+        "name": "RCA Camden",
+        "catno": "CAS-2566"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Non-Music"
+    ],
+    "styles": [
+      "Comedy",
+      "Spoken Word"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-02-21T17:03:38-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4292232,
+    "artist": "The Firesign Theatre",
+    "title": "Waiting For The Electrician Or Someone Like Him",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "PC 9518"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Carrollton Pressing",
+        "descriptions": [
+          "LP",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Non-Music"
+    ],
+    "styles": [
+      "Comedy"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-13T12:44:05-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4329406,
+    "artist": "Arctic Monkeys",
+    "title": "Favourite Worst Nightmare",
+    "labels": [
+      {
+        "name": "Domino",
+        "catno": "534467-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Repress"
+        ]
+      }
+    ],
+    "year": 2013,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Indie Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-12T05:56:20-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4330954,
+    "artist": "Various",
+    "title": "WFIL Much More Music",
+    "labels": [
+      {
+        "name": "Lost Nite Records",
+        "catno": "LPS-136"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1969,
+    "genres": [
+      "Rock",
+      "Funk / Soul",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Psychedelic Rock",
+      "Soul"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T09:48:02-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4351328,
+    "artist": "Fugees",
+    "title": "The Score",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "88765400911"
+      },
+      {
+        "name": "Ruffhouse Records",
+        "catno": "88765400911"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2012,
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Pop Rap",
+      "Conscious"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-02-01T06:38:33-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4454836,
+    "artist": "The Monkees",
+    "title": "The Monkees",
+    "labels": [
+      {
+        "name": "RCA Victor",
+        "catno": "COM 101"
+      },
+      {
+        "name": "Colgems",
+        "catno": "COM-101"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Mono"
+        ]
+      }
+    ],
+    "year": 1966,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T07:40:19-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4503423,
+    "artist": "The Doors",
+    "title": "Waiting For The Sun",
+    "labels": [
+      {
+        "name": "Elektra",
+        "catno": "EKS-74024"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Sonic Pressing, Unipak",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1968,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Blues Rock",
+      "Psychedelic Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-01-11T08:10:32-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4539393,
+    "artist": "Christopher Cross",
+    "title": "Christopher Cross",
+    "labels": [
+      {
+        "name": "Warner Bros. Records",
+        "catno": "BSK 3383"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "RCA Music Service",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Club Edition"
+        ]
+      }
+    ],
+    "year": 1979,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-13T12:30:02-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4613624,
+    "artist": "Simon & Garfunkel",
+    "title": "Bookends",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "KCS 9529"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Pitman Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1968,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Vocal",
+      "Psychedelic Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T09:19:12-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4635606,
+    "artist": "Nick Drake",
+    "title": "Bryter Layter",
+    "labels": [
+      {
+        "name": "Island Records",
+        "catno": "0602537347551"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180 Gram, Textured Sleeve",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2013,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Folk"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-11-01T12:48:56-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4647053,
+    "artist": "Toad The Wet Sprocket",
+    "title": "Fear",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "COL 468582 1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1991,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-05-13T10:17:37-07:00",
+    "rating": 0,
+    "media": "Very Good Plus (VG+)",
+    "sleeve": "Very Good Plus (VG+)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 5064334,
+    "artist": "Steely Dan",
+    "title": "Aja",
+    "labels": [
+      {
+        "name": "ABC Records",
+        "catno": "AA 1006"
+      },
+      {
+        "name": "ABC Records",
+        "catno": "AA-1006"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Keel Pressing, Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Repress"
+        ]
+      }
+    ],
+    "year": 1977,
+    "genres": [
+      "Jazz",
+      "Rock"
+    ],
+    "styles": [
+      "Soft Rock",
+      "Jazz-Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-09-09T14:51:33-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 5337368,
+    "artist": "The Doors",
+    "title": "Strange Days",
+    "labels": [
+      {
+        "name": "Elektra",
+        "catno": "EKS-74014"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "AR-Allied Press",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Repress",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1980,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Classic Rock",
+      "Blues Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-07T10:09:56-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 5942599,
+    "artist": "Pink Floyd",
+    "title": "Atom Heart Mother",
+    "labels": [
+      {
+        "name": "Harvest",
+        "catno": "SKAO-382"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1970,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Prog Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-01-11T08:05:33-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 6069459,
+    "artist": "Jethro Tull",
+    "title": "Original Masters",
+    "labels": [
+      {
+        "name": "Chrysalis",
+        "catno": "FV 41515"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "RCA",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Club Edition",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1985,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Classic Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-13T12:32:44-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 6134437,
+    "artist": "Peter, Paul & Mary",
+    "title": "In Concert",
+    "labels": [
+      {
+        "name": "Warner Bros. Records",
+        "catno": "2WS 1555"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Folk"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2025-10-05T09:13:02-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 6209056,
+    "artist": "Various",
+    "title": "WFIL Famous 56 Music Power",
+    "labels": [
+      {
+        "name": "Lost Nite Records",
+        "catno": "LPS-133"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T09:38:51-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 6296978,
+    "artist": "Cream (2)",
+    "title": "Disraeli Gears",
+    "labels": [
+      {
+        "name": "ATCO Records",
+        "catno": "SD 33-232"
+      },
+      {
+        "name": "ATCO Records",
+        "catno": "33-232"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1967,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Blues Rock",
+      "Psychedelic Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-10-05T07:29:58-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 7122157,
+    "artist": "The Firesign Theatre",
+    "title": "Don't Crush That Dwarf, Hand Me The Pliers",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "C 30102"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Santa Maria Press",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1970,
+    "genres": [
+      "Non-Music"
+    ],
+    "styles": [
+      "Comedy"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-13T12:42:29-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 7220581,
+    "artist": "The Doobie Brothers",
+    "title": "Takin' It To The Streets",
+    "labels": [
+      {
+        "name": "Warner Bros. Records",
+        "catno": "BS 2899"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Goldisc Pressing",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1976,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Soft Rock",
+      "Classic Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T08:39:01-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 7239755,
+    "artist": "The Doobie Brothers",
+    "title": "What Were Once Vices Are Now Habits",
+    "labels": [
+      {
+        "name": "Warner Bros. Records",
+        "catno": "W 2750"
+      },
+      {
+        "name": "Warner Bros. Records",
+        "catno": "W2750"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Terre Haute Pressing",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1974,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Soft Rock",
+      "Classic Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T08:21:21-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 7254128,
+    "artist": "James Taylor (2)",
+    "title": "Sweet Baby James",
+    "labels": [
+      {
+        "name": "Warner Bros. Records",
+        "catno": "WS 1843"
+      },
+      {
+        "name": "Warner Bros. Records",
+        "catno": "1843"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Repress",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1970,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Acoustic",
+      "Soft Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T09:46:56-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 7827345,
+    "artist": "The Beach Boys",
+    "title": "Surfin' U.S.A.",
+    "labels": [
+      {
+        "name": "Capitol Records",
+        "catno": "T 1890"
+      },
+      {
+        "name": "Capitol Records",
+        "catno": "T-1890"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Los Angeles Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Mono"
+        ]
+      }
+    ],
+    "year": 1963,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Surf",
+      "Pop Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T07:51:19-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 7882544,
+    "artist": "The Beach Boys",
+    "title": "Pet Sounds",
+    "labels": [
+      {
+        "name": "Capitol Records",
+        "catno": "T 2458"
+      },
+      {
+        "name": "Capitol Records",
+        "catno": "T-2458"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Scranton Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Mono"
+        ]
+      }
+    ],
+    "year": 1966,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Psychedelic Rock",
+      "Surf"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T09:14:53-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 8428623,
+    "artist": "Phronesis",
+    "title": "Parallax",
+    "labels": [
+      {
+        "name": "Edition Records",
+        "catno": "EDNLP1070"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2016,
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Contemporary Jazz"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-04-13T13:33:18-07:00",
+    "rating": 0,
+    "media": "Very Good Plus (VG+)",
+    "sleeve": "Very Good Plus (VG+)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 8518115,
+    "artist": "David Bowie",
+    "title": "ChangesOneBowie",
+    "labels": [
+      {
+        "name": "Parlophone",
+        "catno": "COBLP 2016"
+      },
+      {
+        "name": "Parlophone",
+        "catno": "0190295994082"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Clear, 180g",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2016,
+    "genres": [
+      "Rock",
+      "Funk / Soul",
+      "Pop"
+    ],
+    "styles": [
+      "Glam",
+      "Pop Rock",
+      "Soul"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-10-05T07:13:14-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 8577393,
+    "artist": "Moby",
+    "title": "Everything Is Wrong",
+    "labels": [
+      {
+        "name": "Mute",
+        "catno": "STUMM130"
+      },
+      {
+        "name": "BMG",
+        "catno": "STUMM130"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2016,
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "House",
+      "Techno",
+      "Ambient",
+      "Rhythmic Noise",
+      "Hard Beat"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-04-20T13:37:46-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 8639126,
+    "artist": "Wu-Tang Clan",
+    "title": "The Essential Wu-Tang Clan",
+    "labels": [
+      {
+        "name": "Loud Records",
+        "catno": "88985312401"
+      },
+      {
+        "name": "Legacy",
+        "catno": "88985312401"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Compilation"
+        ]
+      }
+    ],
+    "year": 2016,
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Hardcore Hip-Hop"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-09-09T14:53:41-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 8966486,
+    "artist": "Beck",
+    "title": "Odelay",
+    "labels": [
+      {
+        "name": "DGC",
+        "catno": "0602547933782"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180 Gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2016,
+    "genres": [
+      "Electronic",
+      "Hip Hop",
+      "Rock",
+      "Funk / Soul",
+      "Blues",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Electro",
+      "Downtempo",
+      "Hip Hop",
+      "Disco",
+      "Afrobeat",
+      "Abstract"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-11-01T12:42:07-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 9092521,
+    "artist": "Pink Floyd",
+    "title": "Meddle",
+    "labels": [
+      {
+        "name": "Pink Floyd Records",
+        "catno": "PFRLP6"
+      },
+      {
+        "name": "Pink Floyd Records",
+        "catno": "88875184231S1"
+      },
+      {
+        "name": "Pink Floyd Records",
+        "catno": "88875184231"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gatefold, 180 Gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2016,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Prog Rock",
+      "Ethereal"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-05-17T08:44:37-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 9118910,
+    "artist": "Bon Iver",
+    "title": "22, A Million",
+    "labels": [
+      {
+        "name": "Jagjaguwar",
+        "catno": "JAG300"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2016,
+    "genres": [
+      "Electronic",
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Indie Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-02-14T13:08:26-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 9296607,
+    "artist": "Pink Floyd",
+    "title": "The Dark Side Of The Moon",
+    "labels": [
+      {
+        "name": "Pink Floyd Records",
+        "catno": "PFRLP8"
+      },
+      {
+        "name": "Pink Floyd Records",
+        "catno": "88875184251"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180 Gram, Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2016,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock",
+      "Psychedelic Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-05T07:19:48-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 9431705,
+    "artist": "Pink Floyd",
+    "title": "Animals",
+    "labels": [
+      {
+        "name": "Pink Floyd Records",
+        "catno": "PFRLP10"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gatefold, 180 Gram, \"17203\"",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2016,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock",
+      "Psychedelic Rock",
+      "Classic Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-05T07:21:05-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 9959301,
+    "artist": "Billy Joel",
+    "title": "The Stranger",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "JC 34987"
+      },
+      {
+        "name": "Family Productions",
+        "catno": "JC 34987"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Pitman Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1977,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-10-18T10:05:17-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 10086368,
+    "artist": "The Four Seasons",
+    "title": "Golden Hits Of The 4 Seasons",
+    "labels": [
+      {
+        "name": "Vee Jay Records",
+        "catno": "SR 1065"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1963,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T07:43:40-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 10462547,
+    "artist": "Kendrick Lamar",
+    "title": "Damn",
+    "labels": [
+      {
+        "name": "Top Dawg Entertainment",
+        "catno": "B0026745-01"
+      },
+      {
+        "name": "Aftermath Entertainment",
+        "catno": "B0026745-01"
+      },
+      {
+        "name": "Interscope Records",
+        "catno": "B0026745-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Boom Bap",
+      "Trap",
+      "Conscious",
+      "Jazzy Hip-Hop"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2026-02-07T17:50:21-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 10470546,
+    "artist": "The Beach Boys",
+    "title": "Wild Honey & 20/20",
+    "labels": [
+      {
+        "name": "Brother Records (3)",
+        "catno": "2MS 2166"
+      },
+      {
+        "name": "Reprise Records",
+        "catno": "2MS 2166"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Terre Haute Pressing, Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Compilation"
+        ]
+      }
+    ],
+    "year": 1974,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Surf",
+      "Pop Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T09:43:29-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 10654756,
+    "artist": "Pink Floyd",
+    "title": "Meddle",
+    "labels": [
+      {
+        "name": "Harvest",
+        "catno": "SMAS-832"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1971,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Prog Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-28T12:04:18-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 11027496,
+    "artist": "Yeah Yeah Yeahs",
+    "title": "Fever To Tell",
+    "labels": [
+      {
+        "name": "Interscope Records",
+        "catno": "B0027270-01"
+      },
+      {
+        "name": "Dress Up",
+        "catno": "B0027270-01"
+      },
+      {
+        "name": "Polydor",
+        "catno": "B0027270-01"
+      },
+      {
+        "name": "UMe",
+        "catno": "B0027270-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2017,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-02-07T17:46:38-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 11116451,
+    "artist": "Pearl Jam",
+    "title": "Ten",
+    "labels": [
+      {
+        "name": "Epic Associated",
+        "catno": "88985376871"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2017,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Grunge",
+      "Alternative Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-28T12:07:03-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 11156869,
+    "artist": "Jamiroquai",
+    "title": "Travelling Without Moving",
+    "labels": [
+      {
+        "name": "Sony Music",
+        "catno": "88985453901"
+      },
+      {
+        "name": "Legacy",
+        "catno": "88985453901"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Repress",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2017,
+    "genres": [
+      "Electronic",
+      "Jazz",
+      "Reggae",
+      "Funk / Soul",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Disco",
+      "Funk",
+      "Soul",
+      "Acid Jazz",
+      "Contemporary R&B"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-04-03T12:42:09-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 11491524,
+    "artist": "Jethro Tull",
+    "title": "M.U. - The Best Of Jethro Tull",
+    "labels": [
+      {
+        "name": "Chrysalis",
+        "catno": "CHR 1078"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Compilation"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Prog Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T08:44:00-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 11541536,
+    "artist": "Crosby, Stills & Nash",
+    "title": "Crosby, Stills & Nash",
+    "labels": [
+      {
+        "name": "Atlantic",
+        "catno": "SD-8229"
+      },
+      {
+        "name": "Atlantic",
+        "catno": "SD 8229"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "PRC Pressing - RI, Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-10-05T09:01:38-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 11544583,
+    "artist": "GoGo Penguin",
+    "title": "A Humdrum Star",
+    "labels": [
+      {
+        "name": "Blue Note",
+        "catno": "B0027806-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2018,
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Contemporary Jazz"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-19T07:37:02-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Near Mint (NM or M-)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 11654911,
+    "artist": "King Gizzard And The Lizard Wizard",
+    "title": "Polygondwanaland",
+    "labels": [
+      {
+        "name": "ATO Records",
+        "catno": "ATO0418"
+      },
+      {
+        "name": "Flightless",
+        "catno": "ATO0418"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "4-Way Color",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2018,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Garage Rock",
+      "Space Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-01-29T17:43:15-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 11825457,
+    "artist": "Rainbow Kitten Surprise",
+    "title": "How To: Friend, Love, Freefall",
+    "labels": [
+      {
+        "name": "Elektra",
+        "catno": "566449-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2018,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2025-09-09T14:54:53-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 11826314,
+    "artist": "Radiohead",
+    "title": "In Rainbows",
+    "labels": [
+      {
+        "name": "XL Recordings",
+        "catno": "XLLP 324"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "GZ pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2017,
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Art Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-28T12:12:42-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 11877970,
+    "artist": "Björk",
+    "title": "Homogenic",
+    "labels": [
+      {
+        "name": "One Little Indian",
+        "catno": "TPLP71"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180 g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2015,
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "styles": [
+      "IDM",
+      "Leftfield",
+      "Ambient",
+      "Downtempo"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-14T12:06:02-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 11920486,
+    "artist": "Monolink",
+    "title": "Amniotic",
+    "labels": [
+      {
+        "name": "Embassy One",
+        "catno": "4251513913745"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2018,
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "Deep House",
+      "Downtempo"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-02-27T13:32:06-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 12045917,
+    "artist": "Radiohead",
+    "title": "The King Of Limbs",
+    "labels": [
+      {
+        "name": "XL Recordings Ltd.",
+        "catno": "XLLP787"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Repress"
+        ]
+      }
+    ],
+    "year": 2017,
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Abstract",
+      "Downtempo",
+      "Experimental"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-04T10:07:35-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 12072116,
+    "artist": "Damien Rice",
+    "title": "O",
+    "labels": [
+      {
+        "name": "Damien Rice Music",
+        "catno": "R1 565991"
+      },
+      {
+        "name": "Vector Recordings",
+        "catno": "R1 565991"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2018,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-05-17T08:44:37-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 12242840,
+    "artist": "The Police",
+    "title": "Outlandos D'Amour",
+    "labels": [
+      {
+        "name": "A&M Records",
+        "catno": "SP-4753"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Red Logo, Y",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1978,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "New Wave"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-19T05:38:32-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 12357616,
+    "artist": "Various",
+    "title": "Windham Hill Records Sampler '81",
+    "labels": [
+      {
+        "name": "Windham Hill Records",
+        "catno": "C-1015"
+      },
+      {
+        "name": "Windham Hill Records",
+        "catno": "WHS C-1015"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "RTI Pressing & Matrixing",
+        "descriptions": [
+          "LP",
+          "Sampler",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1981,
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Modern Classical",
+      "New Age",
+      "Acoustic"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-05T08:42:35-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 12413962,
+    "artist": "The Boomtown Rats",
+    "title": "The Fine Art Of Surfacing",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "JC 36248"
+      },
+      {
+        "name": "Columbia",
+        "catno": "36248"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Terre Haute Pressing",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1979,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "New Wave",
+      "Power Pop"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-04-03T12:49:55-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 12655331,
+    "artist": "Nine Inch Nails",
+    "title": "Pretty Hate Machine",
+    "labels": [
+      {
+        "name": "The Bicycle Music Company",
+        "catno": "B0015767-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2011,
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Industrial",
+      "Synth-pop"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-11-01T12:45:15-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 12686978,
+    "artist": "Simon & Garfunkel",
+    "title": "Sounds Of Silence",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "CS 9269"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Terre Haute Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Repress",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1967,
+    "genres": [
+      "Rock",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk",
+      "Folk Rock"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T09:21:37-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 12773291,
+    "artist": "Travis Scott (2)",
+    "title": "Astroworld",
+    "labels": [
+      {
+        "name": "Epic",
+        "catno": "19075888361"
+      },
+      {
+        "name": "Cactus Jack",
+        "catno": "19075888361"
+      },
+      {
+        "name": "Grand Hustle",
+        "catno": "19075888361"
+      },
+      {
+        "name": "Sony Music",
+        "catno": "19075888361"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2018,
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Trap",
+      "Pop Rap",
+      "Psychedelic"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2025-09-14T16:47:20-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 13110682,
+    "artist": "Snow Patrol",
+    "title": "A Hundred Million Suns",
+    "labels": [
+      {
+        "name": "Fiction Records",
+        "catno": "6795428"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "180 Gram, Gatefold",
+        "descriptions": [
+          "LP",
+          "45 RPM",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2019,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Indie Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-11-01T04:48:48-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Very Good Plus (VG+)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 13200926,
+    "artist": "Anton Eger",
+    "title": "Æ",
+    "labels": [
+      {
+        "name": "Edition Records Ltd.",
+        "catno": "EDNLP1122"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180g",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2019,
+    "genres": [
+      "Electronic",
+      "Jazz"
+    ],
+    "styles": [
+      "Contemporary Jazz"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-16T11:48:11-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Near Mint (NM or M-)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 13694938,
+    "artist": "Bob Marley & The Wailers",
+    "title": "Legend (The Best Of Bob Marley And The Wailers)",
+    "labels": [
+      {
+        "name": "Island Records",
+        "catno": "5303052"
+      },
+      {
+        "name": "Tuff Gong",
+        "catno": "5303052"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180 gram",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Reissue",
+          "Repress",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Reggae"
+    ],
+    "styles": [
+      "Reggae",
+      "Roots Reggae",
+      "Reggae-Pop"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-09-09T14:56:05-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 13749625,
+    "artist": "Miles Davis",
+    "title": "Kind Of Blue",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "88697680571"
+      },
+      {
+        "name": "Legacy",
+        "catno": "88697680571"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180 Gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2019,
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Modal"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-10-05T08:50:18-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 14114022,
+    "artist": "The Beach Boys",
+    "title": "Summer Days (And Summer Nights!!)",
+    "labels": [
+      {
+        "name": "Capitol Records",
+        "catno": "T 2354"
+      },
+      {
+        "name": "Capitol Records",
+        "catno": "T-2354"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gloversville Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Mono"
+        ]
+      }
+    ],
+    "year": 1965,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Surf"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T08:19:48-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 14120723,
+    "artist": "Radiohead",
+    "title": "Pablo Honey",
+    "labels": [
+      {
+        "name": "XL Recordings",
+        "catno": "XLLP779"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Repress"
+        ]
+      }
+    ],
+    "year": 2016,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Indie Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-04T10:08:28-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 14210644,
+    "artist": "Tyler, The Creator",
+    "title": "Igor",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "19075965221"
+      },
+      {
+        "name": "Sony Music",
+        "catno": "19075965221"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2019,
+    "genres": [
+      "Hip Hop",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Contemporary R&B",
+      "Neo Soul"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2025-09-14T16:45:24-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 14811979,
+    "artist": "The Beach Boys",
+    "title": "In Concert",
+    "labels": [
+      {
+        "name": "Reprise Records",
+        "catno": "2RS 6484"
+      },
+      {
+        "name": "Brother Records (3)",
+        "catno": "2RS 6484"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Santa Maria Pressing",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1973,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Rock & Roll"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T08:17:31-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "Deadwax inscription: “Brian, with love and gratitude” (etched, Side 1)\nLikely cut by Lee Herschberg at Warner Bros. Studios, Burbank (1973).",
+    "hasCover": true
+  },
+  {
+    "id": 15001946,
+    "artist": "Miles Davis",
+    "title": "Bitches Brew",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "19075950861"
+      },
+      {
+        "name": "Legacy",
+        "catno": "19075950861"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2020,
+    "genres": [
+      "Jazz",
+      "Rock"
+    ],
+    "styles": [
+      "Fusion"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-01-04T10:07:05-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 15007137,
+    "artist": "James Taylor (2)",
+    "title": "James Taylor's Greatest Hits",
+    "labels": [
+      {
+        "name": "Warner Records",
+        "catno": "R1 3113"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180 Gram ",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Remastered",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2020,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Pop Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2025-10-05T07:24:38-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 15092818,
+    "artist": "Father John Misty",
+    "title": "Pure Comedy",
+    "labels": [
+      {
+        "name": "Bella Union",
+        "catno": "BELLA628V"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Sunset Cover",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2017,
+    "genres": [
+      "Rock",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Indie Rock",
+      "Country Rock",
+      "Folk",
+      "Ballad"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-19T05:41:07-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 15182545,
+    "artist": "Meat Loaf",
+    "title": "Bat Out Of Hell",
+    "labels": [
+      {
+        "name": "Epic",
+        "catno": "19075985821"
+      },
+      {
+        "name": "Cleveland International Records",
+        "catno": "19075985821"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2019,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-04-03T13:00:55-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 15346187,
+    "artist": "Radiohead",
+    "title": "Other Colors",
+    "labels": [
+      {
+        "name": "Marble 4 Record Group",
+        "catno": "none"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Unofficial Release"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-14T12:02:12-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 15406350,
+    "artist": "Khruangbin",
+    "title": "Con Todo El Mundo",
+    "labels": [
+      {
+        "name": "Night Time Stories",
+        "catno": "ALNLP50R"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180 Gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Repress"
+        ]
+      }
+    ],
+    "year": 2020,
+    "genres": [
+      "Rock",
+      "Funk / Soul",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Psychedelic",
+      "Funk"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-02-25T15:16:51-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 15413135,
+    "artist": "Vance Joy",
+    "title": "Dream Your Life Away",
+    "labels": [
+      {
+        "name": "Atlantic",
+        "catno": "545170-1"
+      },
+      {
+        "name": "F-Stop Music",
+        "catno": "545170-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2020,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Indie Rock",
+      "Folk Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-07T10:02:39-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 15792995,
+    "artist": "The Diasonics",
+    "title": "Les Cornichons / Diggers Delight",
+    "labels": [
+      {
+        "name": "Fnr",
+        "catno": "FNR-137"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "7\"",
+          "45 RPM"
+        ]
+      }
+    ],
+    "year": 2020,
+    "genres": [
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Funk"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-23T13:50:00-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 15802150,
+    "artist": "The Doobie Brothers",
+    "title": "Best Of The Doobies",
+    "labels": [
+      {
+        "name": "Warner Records",
+        "catno": "RCV1 2978 / 081227906313"
+      },
+      {
+        "name": "Warner Records",
+        "catno": "081227962364"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Cola Bottle Green",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Limited Edition",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2020,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Rock & Roll"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-02-14T13:11:52-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 15857861,
+    "artist": "Bon Iver",
+    "title": "i,i",
+    "labels": [
+      {
+        "name": "Jagjaguwar",
+        "catno": "JAG350"
+      },
+      {
+        "name": "Jagjaguwar",
+        "catno": "JAG 350"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2019,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-03-30T16:20:49-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 15947938,
+    "artist": "ZZ Top",
+    "title": "Eliminator",
+    "labels": [
+      {
+        "name": "Warner Records",
+        "catno": "R1 23774"
+      },
+      {
+        "name": "Warner Records",
+        "catno": "08122796555"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180 gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2019,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Hard Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-10-05T07:27:01-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 15962169,
+    "artist": "Guns N' Roses",
+    "title": "Greatest Hits",
+    "labels": [
+      {
+        "name": "Geffen Records",
+        "catno": "B0032218-01"
+      },
+      {
+        "name": "UMe",
+        "catno": "B0032218-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "180g",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2020,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Hard Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-10-05T07:18:52-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 16095039,
+    "artist": "The Beach Boys",
+    "title": "Holland",
+    "labels": [
+      {
+        "name": "Brother Records (3)",
+        "catno": "MS 2118"
+      },
+      {
+        "name": "Reprise Records",
+        "catno": "MS 2118"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Jacksonville Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      },
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Santa Maria Pressing",
+        "descriptions": [
+          "7\"",
+          "33 ⅓ RPM",
+          "EP",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Rock",
+      "Children's"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Story"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T08:27:28-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 16133032,
+    "artist": "Van Morrison",
+    "title": "T.B. Sheets",
+    "labels": [
+      {
+        "name": "Bang Records",
+        "catno": "BLP-400"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Monarch Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1973,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Blues Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-02-01T06:42:19-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 16172108,
+    "artist": "Mickey Mouse (2), Donald Duck, Goofy (2), Chip 'n' Dale, Larry Groce, The Disneyland Children's Sing-Along Chorus",
+    "title": "Disney's Merry Christmas Carols",
+    "labels": [
+      {
+        "name": "Disneyland",
+        "catno": "2514"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Specialty Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Repress",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1987,
+    "genres": [
+      "Pop",
+      "Children's"
+    ],
+    "styles": [
+      "Vocal",
+      "Choral",
+      "Holiday"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T09:36:00-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 16187108,
+    "artist": "Khruangbin",
+    "title": "Hasta El Cielo",
+    "labels": [
+      {
+        "name": "Night Time Stories",
+        "catno": "ALNLP50DUBR"
+      },
+      {
+        "name": "Dead Oceans",
+        "catno": "DOC192"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      },
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "7\"",
+          "45 RPM"
+        ]
+      }
+    ],
+    "year": 2019,
+    "genres": [
+      "Reggae",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Dub"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-19T05:45:34-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 16194546,
+    "artist": "The Grateful Dead",
+    "title": "American Beauty",
+    "labels": [
+      {
+        "name": "Warner Records",
+        "catno": "RR1 1893"
+      },
+      {
+        "name": "Warner Records",
+        "catno": "603497847778"
+      },
+      {
+        "name": "Rhino Records (2)",
+        "catno": "RR1 1893"
+      },
+      {
+        "name": "Rhino Records (2)",
+        "catno": "603497847778"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "50th Anniversary Edition, 180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2020,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Folk Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-05T07:18:03-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 16266968,
+    "artist": "Crosby, Stills, Nash & Young",
+    "title": "So Far",
+    "labels": [
+      {
+        "name": "Atlantic",
+        "catno": "RCV5 18100"
+      },
+      {
+        "name": "Atlantic",
+        "catno": "081227905637"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Clear",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Limited Edition",
+          "Reissue",
+          "Repress"
+        ]
+      }
+    ],
+    "year": 2020,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Country Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-02-14T13:00:07-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 16376550,
+    "artist": "The Decemberists",
+    "title": "Her Majesty",
+    "labels": [
+      {
+        "name": "Kill Rock Stars",
+        "catno": "KRS 375"
+      },
+      {
+        "name": "Jealous Butcher Records",
+        "catno": "JB~046"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2020,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock",
+      "Folk Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-10T11:58:01-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 16415619,
+    "artist": "First Aid Kit",
+    "title": "The Lion's Roar",
+    "labels": [
+      {
+        "name": "Wichita",
+        "catno": "WEBB320LP"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2012,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Indie Rock",
+      "Folk"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2025-10-07T13:44:30-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 16545546,
+    "artist": "Belle & Sebastian",
+    "title": "If You're Feeling Sinister",
+    "labels": [
+      {
+        "name": "Matador",
+        "catno": "OLE-296-LP"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Repress"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-30T16:20:48-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 16828143,
+    "artist": "U2",
+    "title": "The Best Of 1980-1990",
+    "labels": [
+      {
+        "name": "Island Records",
+        "catno": "U211/5797089"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "180 Gram",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Reissue",
+          "Remastered",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2018,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "New Wave",
+      "Blues Rock",
+      "Alternative Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-12T06:09:07-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 16942773,
+    "artist": "Bill Withers",
+    "title": "Bill Withers' Greatest Hits",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "AL 37199"
+      },
+      {
+        "name": "Legacy",
+        "catno": "19439806741"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2021,
+    "genres": [
+      "Jazz",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Soul-Jazz",
+      "Soul"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-28T12:05:56-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 16954041,
+    "artist": "The Velvet Underground, Nico (3)",
+    "title": "The Velvet Underground & Nico",
+    "labels": [
+      {
+        "name": "Verve Records",
+        "catno": "371 710-8"
+      },
+      {
+        "name": "Verve Records",
+        "catno": "0602537171088"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2020,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Art Rock",
+      "Psychedelic Rock",
+      "Experimental"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-04-03T11:37:01-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 17050458,
+    "artist": "Dire Straits",
+    "title": "Brothers In Arms",
+    "labels": [
+      {
+        "name": "Warner Records",
+        "catno": "R1 25264"
+      },
+      {
+        "name": "Rhino Records (2)",
+        "catno": "R1 25264"
+      },
+      {
+        "name": "Rhino Records (2)",
+        "catno": "603497848577"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "180-Gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2021,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Blues Rock",
+      "Pub Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-14T12:06:39-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 17630212,
+    "artist": "Guster",
+    "title": "Parachute",
+    "labels": [
+      {
+        "name": "Ocho Mule",
+        "catno": "OCHO 101"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Green Colored LP",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2021,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Acoustic",
+      "Indie Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-30T16:19:27-07:00",
+    "rating": 0,
+    "media": "Near Mint (NM or M-)",
+    "sleeve": "Very Good Plus (VG+)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 17640640,
+    "artist": "Jefferson Airplane",
+    "title": "The Worst Of Jefferson Airplane",
+    "labels": [
+      {
+        "name": "RCA",
+        "catno": "19439819111"
+      },
+      {
+        "name": "Legacy",
+        "catno": "19439819111"
+      },
+      {
+        "name": "Sony Music",
+        "catno": "19439819111"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2021,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Classic Rock",
+      "Folk Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-02-14T13:02:07-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 18505945,
+    "artist": "First Aid Kit",
+    "title": "The Big Black & The Blue",
+    "labels": [
+      {
+        "name": "Wichita",
+        "catno": "WEBB222LPC"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Blue",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2021,
+    "genres": [
+      "Rock",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Indie Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2025-10-07T13:47:43-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 18837763,
+    "artist": "Radiohead",
+    "title": "Hail To The Thief",
+    "labels": [
+      {
+        "name": "XL Recordings",
+        "catno": "XLLP785"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "12\"",
+          "45 RPM",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2021,
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Experimental"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-01-11T07:58:43-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 18893731,
+    "artist": "Taylor Swift",
+    "title": "Evermore",
+    "labels": [
+      {
+        "name": "Republic Records",
+        "catno": "B0033410-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Opaque Green, Precision Record Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Deluxe Edition"
+        ]
+      }
+    ],
+    "year": 2021,
+    "genres": [
+      "Rock",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2025-11-15T13:14:55-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 19443298,
+    "artist": "Mumford & Sons",
+    "title": "Sigh No More",
+    "labels": [
+      {
+        "name": "Gentlemen Of The Road",
+        "catno": "GLS-0109-01"
+      },
+      {
+        "name": "Glassnote (2)",
+        "catno": "GLS-0109-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Bluegrass",
+      "Folk"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-02-28T10:37:17-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 19612255,
+    "artist": "Radiohead",
+    "title": "OK Computer OKNOTOK 1997 2017",
+    "labels": [
+      {
+        "name": "XL Recordings",
+        "catno": "XLLP868"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "3",
+        "text": "Gatefold, 180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2017,
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Experimental",
+      "Art Rock",
+      "Indie Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-09-13T13:13:40-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 19829920,
+    "artist": "Beastie Boys",
+    "title": "Ill Communication",
+    "labels": [
+      {
+        "name": "Grand Royal",
+        "catno": "509996 94232 15"
+      },
+      {
+        "name": "Capitol Records",
+        "catno": "509996 94232 15"
+      },
+      {
+        "name": "Brooklyn Dust Music",
+        "catno": "509996 94232 15"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Gatefold, 180",
+        "descriptions": [
+          "LP",
+          "Limited Edition",
+          "Reissue",
+          "Remastered",
+          "Repress"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Conscious",
+      "Bounce",
+      "Instrumental",
+      "Electro"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-05-31T11:58:28-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 20095750,
+    "artist": "Sublime (2)",
+    "title": "Greatest Hits",
+    "labels": [
+      {
+        "name": "Universal Music Enterprises",
+        "catno": "B0028959-01"
+      },
+      {
+        "name": "Geffen Records",
+        "catno": "B0028959-01"
+      },
+      {
+        "name": "Gasoline Alley",
+        "catno": "B0028959-01"
+      },
+      {
+        "name": "Skunk Records (2)",
+        "catno": "B0028959-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Compilation",
+          "Limited Edition",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2018,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Ska",
+      "Punk"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-09-14T16:43:22-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 20505697,
+    "artist": "Bob Dylan",
+    "title": "Bringing It All Back Home",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "CS 9128"
+      },
+      {
+        "name": "Columbia",
+        "catno": "CL 2328"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Pitman Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Repress",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1967,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Folk"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2025-10-18T09:59:59-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 20951299,
+    "artist": "José González",
+    "title": "In Our Nature",
+    "labels": [
+      {
+        "name": "City Slang",
+        "catno": "SLANG50398LP"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2021,
+    "genres": [
+      "Folk, World, & Country"
+    ],
+    "styles": [],
+    "folder": "JK Collection",
+    "dateAdded": "2025-08-20T06:14:14-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 21605908,
+    "artist": "Elliott Smith",
+    "title": "Either / Or",
+    "labels": [
+      {
+        "name": "Kill Rock Stars",
+        "catno": "KRS 269"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Repress"
+        ]
+      }
+    ],
+    "year": 2021,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Acoustic",
+      "Lo-Fi",
+      "Indie Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-05T07:15:50-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 22776578,
+    "artist": "The Beach Boys",
+    "title": "Carl And The Passions – So Tough / Pet Sounds",
+    "labels": [
+      {
+        "name": "Brother Records (3)",
+        "catno": "2MS 2083"
+      },
+      {
+        "name": "Reprise Records",
+        "catno": "2MS 2083"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      },
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Mono"
+        ]
+      },
+      {
+        "name": "All Media",
+        "qty": "1",
+        "text": "Pitman Pressing, Gatefold",
+        "descriptions": []
+      }
+    ],
+    "year": 1972,
+    "genres": [
+      "Rock",
+      "Funk / Soul",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Rock & Roll",
+      "Psychedelic"
+    ],
+    "folder": "The Jeff Collection",
+    "dateAdded": "2025-10-05T09:55:14-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 23172614,
+    "artist": "José González",
+    "title": "Veneer",
+    "labels": [
+      {
+        "name": "Imperial Recordings (4)",
+        "catno": "9324-1"
+      },
+      {
+        "name": "Mute",
+        "catno": "9324-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Green Marble,180 g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Club Edition",
+          "Limited Edition",
+          "Numbered",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2022,
+    "genres": [
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Acoustic"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-08-20T06:14:22-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 23549237,
+    "artist": "Phoebe Bridgers",
+    "title": "Stranger In The Alps",
+    "labels": [
+      {
+        "name": "Dead Oceans",
+        "catno": "DOC142"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2022,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk",
+      "Indie Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-03-14T12:14:55-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 23824484,
+    "artist": "Tom Petty And The Heartbreakers",
+    "title": "Greatest Hits",
+    "labels": [
+      {
+        "name": "Geffen Records",
+        "catno": "B0024293-01"
+      },
+      {
+        "name": "UMe",
+        "catno": "B0024293-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "GZ Media Pressing, 180g",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Remastered",
+          "Repress",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2016,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Rock & Roll",
+      "Soft Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-03-12T06:05:00-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 23931551,
+    "artist": "Third Eye Blind",
+    "title": "Third Eye Blind",
+    "labels": [
+      {
+        "name": "Elektra",
+        "catno": "RCV1 62012"
+      },
+      {
+        "name": "Elektra",
+        "catno": "62012"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Gilded Gold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2022,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Grunge"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-04-09T14:13:20-07:00",
+    "rating": 0,
+    "media": "Near Mint (NM or M-)",
+    "sleeve": "Near Mint (NM or M-)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 23978201,
+    "artist": "Thompson Twins",
+    "title": "Into The Gap",
+    "labels": [
+      {
+        "name": "Arista",
+        "catno": "AL8-8200"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Pitman Pressing, CRC",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Club Edition"
+        ]
+      }
+    ],
+    "year": 1984,
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "styles": [
+      "New Wave",
+      "Synth-pop"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-09-21T11:10:32-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 24798023,
+    "artist": "Snarky Puppy",
+    "title": "Empire Central",
+    "labels": [
+      {
+        "name": "GroundUP Music (2)",
+        "catno": "none"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "3",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2022,
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Contemporary Jazz",
+      "Fusion"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-09-09T14:56:31-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 25152160,
+    "artist": "DOMi & JD BECK",
+    "title": "Not Tight",
+    "labels": [
+      {
+        "name": "Blue Note",
+        "catno": "B003604701"
+      },
+      {
+        "name": "APESHIT, INC.",
+        "catno": "B003604701"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Pink 180g",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2022,
+    "genres": [
+      "Hip Hop",
+      "Jazz"
+    ],
+    "styles": [
+      "Fusion",
+      "Free Jazz",
+      "Jazzy Hip-Hop"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-09-09T14:55:45-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 25178185,
+    "artist": "Cake",
+    "title": "Fashion Nugget",
+    "labels": [
+      {
+        "name": "Upbeat Records (2)",
+        "catno": "19439966461"
+      },
+      {
+        "name": "Sony Music",
+        "catno": "19439966461"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2022,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-14T12:09:20-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 25236421,
+    "artist": "Taylor Swift",
+    "title": "Folklore",
+    "labels": [
+      {
+        "name": "Republic Records",
+        "catno": "00602435034881"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Beige \"In The Trees\"",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Deluxe Edition"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Rock",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Vocal",
+      "Indie Pop",
+      "Indie Rock",
+      "Ballad"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2025-12-08T15:29:17-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 25280392,
+    "artist": "The Knife",
+    "title": "Live At Terminal 5",
+    "labels": [
+      {
+        "name": "BFD",
+        "catno": "BFD229LP"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Purple, 180 g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Record Store Day",
+          "Limited Edition",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2022,
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "styles": [
+      "Techno",
+      "Electro",
+      "Dance-pop",
+      "Leftfield"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-13T12:26:40-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 25379524,
+    "artist": "Labi Siffre",
+    "title": "Crying Laughing Loving Lying",
+    "labels": [
+      {
+        "name": "Demon Records",
+        "catno": "DEMREC1052"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Half-Speed Master",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2022,
+    "genres": [
+      "Funk / Soul",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Soul",
+      "Folk"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-07T09:58:53-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 25811833,
+    "artist": "Simply Red",
+    "title": "Picture Book",
+    "labels": [
+      {
+        "name": "Elektra",
+        "catno": "9 60452-1"
+      },
+      {
+        "name": "Elektra",
+        "catno": "60452-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "SP - SRC Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1985,
+    "genres": [
+      "Electronic",
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Synth-pop"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-09-21T10:59:52-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 26373128,
+    "artist": "Radiohead",
+    "title": "Kid A",
+    "labels": [
+      {
+        "name": "XL Recordings",
+        "catno": "XLLP 782B"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2022,
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "IDM",
+      "Experimental"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-09-13T13:14:24-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 26524775,
+    "artist": "Lana Del Rey",
+    "title": "Did You Know That There's A Tunnel Under Ocean Blvd",
+    "labels": [
+      {
+        "name": "Polydor",
+        "catno": "4859191"
+      },
+      {
+        "name": "Interscope Records",
+        "catno": "00602448591913"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2023,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Baroque Pop",
+      "Indie Pop",
+      "Alt-Pop",
+      "Ballad",
+      "Indie Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-07T09:54:55-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 26757446,
+    "artist": "GoGo Penguin",
+    "title": "Everything Is Going To Be OK",
+    "labels": [
+      {
+        "name": "XXIM Records",
+        "catno": "19658776991"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Clear",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      },
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Clear",
+        "descriptions": [
+          "7\"",
+          "45 RPM"
+        ]
+      },
+      {
+        "name": "All Media",
+        "qty": "1",
+        "descriptions": [
+          "Deluxe Edition"
+        ]
+      }
+    ],
+    "year": 2023,
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-11T11:27:29-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 27122820,
+    "artist": "Radiohead",
+    "title": "Amnesiac",
+    "labels": [
+      {
+        "name": "XL Recordings",
+        "catno": "XLLP783B"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "12\"",
+          "45 RPM",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2023,
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Experimental"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-02-21T10:46:55-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 27542265,
+    "artist": "Phish",
+    "title": "Farmhouse",
+    "labels": [
+      {
+        "name": "Jemp Records",
+        "catno": "JEMP1104"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Blue-Green \"Northern Lights\" Swirl, 180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Numbered",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2023,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Psychedelic Rock",
+      "Prog Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-05-23T11:49:37-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 27644166,
+    "artist": "Aphex Twin",
+    "title": "Come To Daddy",
+    "labels": [
+      {
+        "name": "Warp Records",
+        "catno": "WAP94"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "12\"",
+          "45 RPM",
+          "Single",
+          "Reissue",
+          "Repress",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2022,
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "Drum n Bass",
+      "Experimental",
+      "Abstract",
+      "Breaks"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2026-05-31T12:05:00-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 27872193,
+    "artist": "Snow Patrol",
+    "title": "Final Straw ",
+    "labels": [
+      {
+        "name": "Polydor",
+        "catno": "5516056"
+      },
+      {
+        "name": "Fiction Records",
+        "catno": "5516056"
+      },
+      {
+        "name": "Universal Music Recordings",
+        "catno": "5516056"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      },
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP"
+        ]
+      },
+      {
+        "name": "All Media",
+        "qty": "1",
+        "text": "Gold, 20th Anniversary Edition",
+        "descriptions": [
+          "Deluxe Edition",
+          "Limited Edition",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2023,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-11T11:26:26-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 28087591,
+    "artist": "Gordon Lightfoot",
+    "title": "Now Playing ",
+    "labels": [
+      {
+        "name": "Rhino Records (2)",
+        "catno": "R1 725387"
+      },
+      {
+        "name": "Warner Records",
+        "catno": "603497831258"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2023,
+    "genres": [
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-13T12:30:55-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 28247026,
+    "artist": "Madvillain",
+    "title": "Madvillainy",
+    "labels": [
+      {
+        "name": "Stones Throw Records",
+        "catno": "STH2065"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2021,
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Jazzy Hip-Hop",
+      "Experimental",
+      "Abstract",
+      "Leftfield"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2025-10-05T07:25:30-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 28714750,
+    "artist": "Taylor Swift",
+    "title": "1989 (Taylor's Version)",
+    "labels": [
+      {
+        "name": "Republic Records",
+        "catno": "0245554217"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Yellow [Sunrise Boulevard Yellow]",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Special Edition"
+        ]
+      }
+    ],
+    "year": 2023,
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "styles": [
+      "Synth-pop",
+      "Ballad",
+      "Pop Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2025-10-05T07:25:59-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 28762423,
+    "artist": "Belle & Sebastian",
+    "title": "The Boy With The Arab Strap",
+    "labels": [
+      {
+        "name": "Matador",
+        "catno": "OLE 311LP"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Clear Pale Blue",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2023,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Indie Rock",
+      "Indie Pop"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-18T10:09:37-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 28863073,
+    "artist": "John Scofield",
+    "title": "A Go Go",
+    "labels": [
+      {
+        "name": "Verve Records",
+        "catno": "B0038117-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2023,
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Fusion",
+      "Jazz-Funk",
+      "Contemporary Jazz"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-09-21T10:59:04-07:00",
+    "rating": 5,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 28919746,
+    "artist": "The Smile (5)",
+    "title": "Wall Of Eyes",
+    "labels": [
+      {
+        "name": "XL Recordings",
+        "catno": "XL1394LP"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2024,
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Art Rock",
+      "Experimental",
+      "Indie Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-02-28T10:34:23-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 29057296,
+    "artist": "Khruangbin",
+    "title": "Live At Sydney Opera House",
+    "labels": [
+      {
+        "name": "Dead Oceans",
+        "catno": "DOC335"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Australia Edition",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition"
+        ]
+      }
+    ],
+    "year": 2023,
+    "genres": [
+      "Rock",
+      "Funk / Soul",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Funk",
+      "Dub",
+      "Soul",
+      "Surf"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-19T07:37:03-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Near Mint (NM or M-)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 29174830,
+    "artist": "The Prodigy",
+    "title": "The Fat Of The Land",
+    "labels": [
+      {
+        "name": "XL Recordings",
+        "catno": "XLLP 121"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Repress"
+        ]
+      }
+    ],
+    "year": 2020,
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "Breakbeat"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-04-03T12:58:53-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 29277010,
+    "artist": "Daft Punk",
+    "title": "Discovery",
+    "labels": [
+      {
+        "name": "ADA (6)",
+        "catno": "0190296617164"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2023,
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "Disco",
+      "House",
+      "Electro",
+      "French House"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-12-16T14:35:30-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 29620888,
+    "artist": "Sufjan Stevens",
+    "title": "Carrie & Lowell",
+    "labels": [
+      {
+        "name": "Asthmatic Kitty Records",
+        "catno": "AKR099"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Black Ice Translucent ",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2024,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk",
+      "Folk Rock",
+      "Indie Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-01-04T10:06:23-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 29802184,
+    "artist": "Nine Inch Nails",
+    "title": "The Downward Spiral",
+    "labels": [
+      {
+        "name": "Interscope Records",
+        "catno": "00602557142785"
+      },
+      {
+        "name": "Nothing Records",
+        "catno": "00602557142785"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Definitive Edition, 180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered",
+          "Repress",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2022,
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Industrial Metal",
+      "Alternative Rock",
+      "Experimental"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-04-03T12:46:56-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 29987029,
+    "artist": "Radiohead",
+    "title": "The Bends",
+    "labels": [
+      {
+        "name": "XL Recordings",
+        "catno": "XLLP780"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-09-13T13:14:54-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 30211727,
+    "artist": "Red Hot Chili Peppers",
+    "title": "Greatest Hits",
+    "labels": [
+      {
+        "name": "Warner Records",
+        "catno": "093624854517"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Compilation",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2020,
+    "genres": [
+      "Rock",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Funk Metal",
+      "Experimental"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-04-03T12:52:03-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 30292268,
+    "artist": "Khruangbin",
+    "title": "A La Sala",
+    "labels": [
+      {
+        "name": "Dead Oceans",
+        "catno": "DOC357LP"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2024,
+    "genres": [
+      "Rock",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Psychedelic",
+      "Indie Rock",
+      "Funk",
+      "Neo Soul"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-02-07T17:43:22-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 30432029,
+    "artist": "Khruangbin",
+    "title": "Mordechai",
+    "labels": [
+      {
+        "name": "Dead Oceans",
+        "catno": "DOC193"
+      },
+      {
+        "name": "Night Time Stories",
+        "catno": "DOC193"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Precision Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2020,
+    "genres": [
+      "Rock",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Funk",
+      "Psychedelic",
+      "Disco",
+      "Contemporary R&B"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-02-21T10:41:04-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 30454823,
+    "artist": "Duncan Sheik",
+    "title": "Duncan Sheik",
+    "labels": [
+      {
+        "name": "Real Gone Music",
+        "catno": "RGM-1667"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Cobalt Blue",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Record Store Day",
+          "Limited Edition",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2024,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Alternative Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-05-08T17:21:52-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 30478307,
+    "artist": "Tame Impala",
+    "title": "Lonerism",
+    "labels": [
+      {
+        "name": "Modular Recordings",
+        "catno": "MODVL161"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2024,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-07T09:50:49-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 30574987,
+    "artist": "Mdou Moctar",
+    "title": "Funeral For Justice",
+    "labels": [
+      {
+        "name": "Matador",
+        "catno": "OLE-2031LP"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2024,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "African",
+      "Psychedelic Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-19T07:44:17-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 31205101,
+    "artist": "Pigeons Playing Ping Pong",
+    "title": "Psychology",
+    "labels": [
+      {
+        "name": "No Coincidence Records",
+        "catno": "NOCO027lp-C1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Yellow w/ Purple Splatter",
+        "descriptions": [
+          "LP",
+          "Limited Edition",
+          "Numbered"
+        ]
+      }
+    ],
+    "year": 2024,
+    "genres": [
+      "Rock",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Funk",
+      "Alternative Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-05-23T11:47:55-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 31471502,
+    "artist": "Portishead",
+    "title": "Dummy",
+    "labels": [
+      {
+        "name": "Go! Beat",
+        "catno": "3797205"
+      },
+      {
+        "name": "Island Records",
+        "catno": "3797205"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180 Gram, Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Repress"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "Trip Hop"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-04T10:09:04-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 31719995,
+    "artist": "Lana Del Rey",
+    "title": "Ultraviolence",
+    "labels": [
+      {
+        "name": "Polydor",
+        "catno": "B0020952-01"
+      },
+      {
+        "name": "Interscope Records",
+        "catno": "B0020952-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2014,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Dream Pop",
+      "Indie Rock",
+      "Indie Pop",
+      "Alt-Pop"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-02-28T10:25:31-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 31893958,
+    "artist": "Third Eye Blind",
+    "title": "Blue",
+    "labels": [
+      {
+        "name": "Elektra",
+        "catno": "RCV1 62415"
+      },
+      {
+        "name": "Elektra",
+        "catno": "603497824762"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Clear And Blue Splatter",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2024,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Post-Grunge"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-04-03T12:01:29-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 32254773,
+    "artist": "The Bad Plus",
+    "title": "Complex Emotions",
+    "labels": [
+      {
+        "name": "Mack Avenue Music Group",
+        "catno": "MAC1215LP"
+      },
+      {
+        "name": "Mack Avenue Music Group",
+        "catno": "673203121515"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Cobalt",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition"
+        ]
+      }
+    ],
+    "year": 2024,
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [],
+    "folder": "JK Collection",
+    "dateAdded": "2025-08-20T06:14:47-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 32565279,
+    "artist": "Beastie Boys",
+    "title": "Licensed To Ill",
+    "labels": [
+      {
+        "name": "Def Jam Recordings",
+        "catno": "B0024720-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Spessartite Garnet",
+        "descriptions": [
+          "LP",
+          "Reissue",
+          "Special Edition"
+        ]
+      }
+    ],
+    "year": 2024,
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-05-09T15:31:26-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 32657103,
+    "artist": "Gorillaz",
+    "title": "Gorillaz",
+    "labels": [
+      {
+        "name": "Parlophone",
+        "catno": "7243 531138 1 0"
+      },
+      {
+        "name": "Parlophone",
+        "catno": "7243 5 31138 1 0"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "180 Gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2024,
+    "genres": [
+      "Electronic",
+      "Hip Hop",
+      "Rock",
+      "Latin",
+      "Funk / Soul",
+      "Pop"
+    ],
+    "styles": [
+      "Leftfield",
+      "Trip Hop",
+      "Lo-Fi",
+      "Experimental",
+      "UK Garage",
+      "Dub",
+      "Punk"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-20T16:48:43-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 33065907,
+    "artist": "Dave Matthews Band",
+    "title": "Where Are You Going: The Singles",
+    "labels": [
+      {
+        "name": "Bama Rags Records",
+        "catno": "19802829361"
+      },
+      {
+        "name": "RCA",
+        "catno": "19802829361"
+      },
+      {
+        "name": "Legacy",
+        "catno": "19802829361"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Embossed",
+        "descriptions": [
+          "LP",
+          "Compilation"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Pop Rock",
+      "Rock & Roll"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-08-20T06:19:07-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 33132297,
+    "artist": "Steely Dan",
+    "title": "Katy Lied",
+    "labels": [
+      {
+        "name": "Geffen Records",
+        "catno": "B0035086-01"
+      },
+      {
+        "name": "Universal Music",
+        "catno": "B0035086-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Jazz",
+      "Rock",
+      "Funk / Soul",
+      "Blues",
+      "Pop"
+    ],
+    "styles": [
+      "Jazz-Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-04T10:07:01-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 33243942,
+    "artist": "Mdou Moctar",
+    "title": "Tears Of Injustice",
+    "labels": [
+      {
+        "name": "Matador",
+        "catno": "OLE-2091-LP"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "African",
+      "Psychedelic Rock",
+      "Acoustic"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-19T07:41:43-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 33297984,
+    "artist": "Peter, Paul & Mary",
+    "title": "Album",
+    "labels": [
+      {
+        "name": "Warner Bros. Records",
+        "catno": "WS 1648"
+      },
+      {
+        "name": "Warner Bros. Records",
+        "catno": "1648"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Santa Maria Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1966,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk",
+      "Folk Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-03-13T12:49:48-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 33316476,
+    "artist": "TV Girl",
+    "title": "Who Really Cares",
+    "labels": [
+      {
+        "name": "Not On Label (TV Girl Self-Released)",
+        "catno": "none"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Blue & Pink Splatter",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Pop"
+    ],
+    "styles": [
+      "Indie Pop"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2026-01-24T08:23:25-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 33496049,
+    "artist": "MF Doom",
+    "title": "Operation: Doomsday",
+    "labels": [
+      {
+        "name": "Metal Face Records",
+        "catno": "826257035219"
+      },
+      {
+        "name": "Rhymesayers Entertainment",
+        "catno": "826257035219"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2023,
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Conscious"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2026-02-21T10:37:44-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 33632028,
+    "artist": "Khruangbin",
+    "title": "The Universe Smiles Upon You",
+    "labels": [
+      {
+        "name": "Night Time Stories",
+        "catno": "ALNLP40R"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2022,
+    "genres": [
+      "Rock",
+      "Funk / Soul",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Psychedelic",
+      "Surf"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-02-21T10:44:30-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 33659028,
+    "artist": "Bon Iver",
+    "title": "Sable, Fable",
+    "labels": [
+      {
+        "name": "Jagjaguwar",
+        "catno": "JAG450"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "12\"",
+          "45 RPM"
+        ]
+      },
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP"
+        ]
+      },
+      {
+        "name": "All Media",
+        "qty": "1",
+        "descriptions": [
+          "Album"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk",
+      "Alternative Rock",
+      "Pop Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-01-04T10:06:40-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 33668487,
+    "artist": "Lord Huron",
+    "title": "Strange Trails",
+    "labels": [
+      {
+        "name": "Mercury",
+        "catno": "IAM066L"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "10th Anniversary Edition, 180 Gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-05-09T15:27:09-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 33686088,
+    "artist": "Father John Misty",
+    "title": "Greatish Hits: I Followed My Dreams And My Dreams Said To Crawl",
+    "labels": [
+      {
+        "name": "Sub Pop",
+        "catno": "SP 1660"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Glacial Blue",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Limited Edition"
+        ]
+      }
+    ],
+    "year": 2024,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk",
+      "Country Rock",
+      "Indie Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-11-15T13:13:17-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 33705843,
+    "artist": "Underworld",
+    "title": "Dubnobasswithmyheadman",
+    "labels": [
+      {
+        "name": "Smith Hyde Productions",
+        "catno": "uwr00099"
+      },
+      {
+        "name": "Smith Hyde Productions",
+        "catno": "UWR00099LP"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "Techno",
+      "Leftfield",
+      "Ambient"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2025-10-18T10:02:42-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 33951768,
+    "artist": "Bob Dylan",
+    "title": "The Freewheelin' Bob Dylan",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "88985455281"
+      },
+      {
+        "name": "Columbia",
+        "catno": "CS 8786"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-01-11T08:12:45-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34029312,
+    "artist": "Hozier",
+    "title": "Hozier",
+    "labels": [
+      {
+        "name": "Rubyworks",
+        "catno": "19658871041"
+      },
+      {
+        "name": "Columbia",
+        "catno": "19658871041"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Opaque Custard",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Deluxe Edition",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock",
+      "Blues",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Blues Rock",
+      "Indie Pop"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-03-12T06:00:53-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34138348,
+    "artist": "David Bowie, Trevor Jones",
+    "title": "Labyrinth (From The Original Soundtrack Of The Jim Henson Film)",
+    "labels": [
+      {
+        "name": "Capitol Records",
+        "catno": "B0026220-01"
+      },
+      {
+        "name": "UMe",
+        "catno": "B0026220-01"
+      },
+      {
+        "name": "EMI America",
+        "catno": "B0026220-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Electronic",
+      "Rock",
+      "Stage & Screen"
+    ],
+    "styles": [
+      "Soundtrack",
+      "Score",
+      "Pop Rock",
+      "Synth-pop"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-12T05:58:42-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34147150,
+    "artist": "Kendrick Lamar",
+    "title": "To Pimp A Butterfly",
+    "labels": [
+      {
+        "name": "Top Dawg Entertainment",
+        "catno": "602478091186"
+      },
+      {
+        "name": "Aftermath Entertainment",
+        "catno": "602478091186"
+      },
+      {
+        "name": "Interscope Records",
+        "catno": "602478091186"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "180g, Alternate Artwork, 10th Anniversary",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Hip Hop",
+      "Jazz",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Conscious",
+      "Jazzy Hip-Hop",
+      "G-Funk",
+      "Neo Soul"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2026-01-24T08:20:40-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34194793,
+    "artist": "Steely Dan",
+    "title": "The Royal Scam",
+    "labels": [
+      {
+        "name": "Geffen Records",
+        "catno": "602445332489"
+      },
+      {
+        "name": "UMe",
+        "catno": "602445332489"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Jazz",
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Classic Rock",
+      "Jazz-Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-01-10T12:54:24-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34298893,
+    "artist": "TV Girl",
+    "title": "Death Of A Party Girl",
+    "labels": [
+      {
+        "name": "Not On Label (TV Girl Self-Released)",
+        "catno": "none"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Translucent Black w Splatter",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "styles": [
+      "Indie Pop",
+      "Plunderphonics"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2026-02-07T17:54:32-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34335127,
+    "artist": "John Mayer",
+    "title": "Room For Squares",
+    "labels": [
+      {
+        "name": "Aware Records",
+        "catno": "C 85293"
+      },
+      {
+        "name": "Columbia",
+        "catno": "C 85293"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Acoustic",
+      "Soft Rock",
+      "Pop Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-19T07:40:08-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34407406,
+    "artist": "Lana Del Rey",
+    "title": "Born To Die",
+    "labels": [
+      {
+        "name": "Polydor",
+        "catno": "B0016425-01"
+      },
+      {
+        "name": "Interscope Records",
+        "catno": "B0016425-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Memphis Record Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2024,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Dream Pop",
+      "Indie Pop",
+      "Trip Hop"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-02-14T13:14:28-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34524457,
+    "artist": "Vampire Weekend",
+    "title": "Vampire Weekend",
+    "labels": [
+      {
+        "name": "XL Recordings",
+        "catno": "XL LP 318"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Repress",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Pop"
+    ],
+    "styles": [
+      "Indie Pop"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-01-04T10:07:46-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34560418,
+    "artist": "Petey USA",
+    "title": "The Yips",
+    "labels": [
+      {
+        "name": "Capitol Records",
+        "catno": "00602478134289"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Black Vinyl",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Special Edition",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2025-10-04T10:05:17-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34574821,
+    "artist": "David Gray",
+    "title": "White Ladder",
+    "labels": [
+      {
+        "name": "Bella Figura Music",
+        "catno": "IHTLP1910a"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Acoustic",
+      "Indie Rock",
+      "Folk Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-04-16T12:54:16-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34596328,
+    "artist": "Aphex Twin",
+    "title": "Selected Ambient Works 85-92",
+    "labels": [
+      {
+        "name": "Apollo",
+        "catno": "AMBLP3922"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "K7 Music GmbH",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "IDM",
+      "Techno",
+      "Electro",
+      "Experimental",
+      "Ambient"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2026-02-21T10:38:35-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34746321,
+    "artist": "Radiohead",
+    "title": "A Moon Shaped Pool",
+    "labels": [
+      {
+        "name": "XL Recordings",
+        "catno": "XLLP790"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Art Rock",
+      "Indie Rock",
+      "Experimental"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-11-15T13:12:01-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34818842,
+    "artist": "Coldplay",
+    "title": "Parachutes",
+    "labels": [
+      {
+        "name": "Parlophone",
+        "catno": "5021732630865"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Clear, PET, Injection-Moulded, 140g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-10-11T15:37:41-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34818848,
+    "artist": "Coldplay",
+    "title": "A Rush Of Blood To The Head",
+    "labels": [
+      {
+        "name": "Parlophone",
+        "catno": "5021732630872"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Clear, 140g EcoRecord",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Pop Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-10-11T15:38:22-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34818854,
+    "artist": "Coldplay",
+    "title": "X&Y",
+    "labels": [
+      {
+        "name": "Parlophone",
+        "catno": "5021732630889"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Clear, 140g EcoRecord",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Pop Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-05-31T11:54:52-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34889531,
+    "artist": "Billy Joel",
+    "title": "Greatest Hits Volume I & Volume II",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "19802918791"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Repress",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Ballad",
+      "Classic Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-02-28T10:28:05-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 35170624,
+    "artist": "Steely Dan",
+    "title": "Can't Buy A Thrill",
+    "labels": [
+      {
+        "name": "Geffen Records",
+        "catno": "00602445406524"
+      },
+      {
+        "name": "UMe",
+        "catno": "00602445406524"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2022,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Jazz-Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-10-05T07:23:08-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 35261665,
+    "artist": "The Diasonics",
+    "title": "Ornithology",
+    "labels": [
+      {
+        "name": "Record Kicks",
+        "catno": "RKX104"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Clear",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Funk",
+      "Psychedelic"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-23T13:49:10-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 35268361,
+    "artist": "Phoebe Bridgers",
+    "title": "Punisher",
+    "labels": [
+      {
+        "name": "Dead Oceans",
+        "catno": "DOC200LP-C13"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Deep Blue [The Deep End]",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Repress"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Pop"
+    ],
+    "styles": [
+      "Indie Pop"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-03-11T11:39:40-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 35269831,
+    "artist": "Taylor Swift",
+    "title": "The Life Of A Showgirl",
+    "labels": [
+      {
+        "name": "Republic Records",
+        "catno": "00602478225277"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Green Translucent With Black Marbling [Wintergreen & Onyx Marbled], The Shiny Bug Edition",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "styles": [
+      "Synth-pop",
+      "Ballad",
+      "Downtempo",
+      "Soft Rock",
+      "Dance-pop"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2025-10-05T10:12:50-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 35383381,
+    "artist": "Tame Impala",
+    "title": "Deadbeat",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "19802956001"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Coke Bottle Clear",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "styles": [
+      "House",
+      "Dance-pop",
+      "Tech House",
+      "Alt-Pop"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-02-21T10:37:18-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 35495155,
+    "artist": "Xxxtentacion",
+    "title": "17",
+    "labels": [
+      {
+        "name": "Empire",
+        "catno": "none"
+      },
+      {
+        "name": "Bad Vibes Forever",
+        "catno": "none"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Zoetrope",
+        "descriptions": [
+          "12\"",
+          "Picture Disc"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Hip Hop",
+      "Rock"
+    ],
+    "styles": [
+      "Emo",
+      "Lo-Fi",
+      "Acoustic",
+      "Indie Rock"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2026-02-28T10:20:30-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 35524054,
+    "artist": "Jack Johnson",
+    "title": "In Between Dreams",
+    "labels": [
+      {
+        "name": "Brushfire Records",
+        "catno": "602478233593"
+      },
+      {
+        "name": "Republic Records",
+        "catno": "602478233593"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Acoustic",
+      "Soft Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-14T12:12:42-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 35599996,
+    "artist": "The Cranberries",
+    "title": "MTV Unplugged",
+    "labels": [
+      {
+        "name": "Island Records",
+        "catno": "602478707520"
+      },
+      {
+        "name": "MTV Music Television",
+        "catno": "602478707520"
+      },
+      {
+        "name": "UMe",
+        "catno": "602478707520"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Indie Rock",
+      "Acoustic"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2025-12-16T14:35:52-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 35916175,
+    "artist": "Lettuce (3)",
+    "title": "Cook",
+    "labels": [
+      {
+        "name": "Lettuce Records",
+        "catno": "LR0024LP"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Funk",
+      "Soul",
+      "Instrumental"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-07T09:48:27-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 35918233,
+    "artist": "Pink Floyd",
+    "title": "Wish You Were Here",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "198028767118SC"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered",
+          "Stereo"
+        ]
+      },
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Stereo"
+        ]
+      },
+      {
+        "name": "Box Set",
+        "qty": "1",
+        "text": "50th Anniversary",
+        "descriptions": [
+          "Album"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock",
+      "Psychedelic Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2025-12-16T14:36:10-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 35936008,
+    "artist": "MF Doom",
+    "title": "Mm..Food",
+    "labels": [
+      {
+        "name": "Rhymesayers Entertainment",
+        "catno": "RSE0400-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Purple, Pink & Blue [Sweetart Marble], 20th Anniversary, Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2024,
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Conscious",
+      "Jazzy Hip-Hop",
+      "Boom Bap"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2026-03-07T10:01:30-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 35947276,
+    "artist": "Oasis (2)",
+    "title": "destroyer",
+    "labels": [
+      {
+        "name": "Dear Boss.",
+        "catno": "JACK 090M"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "pink marbled vinyl",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Unofficial Release"
+        ]
+      }
+    ],
+    "year": 2025,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Britpop"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-03-13T12:29:23-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 36153172,
+    "artist": "The Dust Brothers",
+    "title": "Fight Club - Original Motion Picture Score",
+    "labels": [
+      {
+        "name": "Rhino Records (2)",
+        "catno": "RCV1 73715"
+      },
+      {
+        "name": "Restless Records",
+        "catno": "081227808600"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Pink 180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2026,
+    "genres": [
+      "Electronic",
+      "Stage & Screen"
+    ],
+    "styles": [
+      "Trip Hop",
+      "Breaks",
+      "Score",
+      "Ambient",
+      "Electro",
+      "Experimental"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-02-28T10:29:44-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 36374110,
+    "artist": "Tame Impala",
+    "title": "Currents",
+    "labels": [
+      {
+        "name": "Interscope Records",
+        "catno": "B0023337-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 0,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Indie Rock",
+      "Indie Pop",
+      "Synth-pop"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-20T11:37:32-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 36520261,
+    "artist": "Gorillaz",
+    "title": "पर्वत (The Mountain)",
+    "labels": [
+      {
+        "name": "Kong (7)",
+        "catno": "KONG001LP"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2026,
+    "genres": [
+      "Electronic",
+      "Hip Hop",
+      "Rock",
+      "Funk / Soul",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Alt-Pop",
+      "Indian Classical",
+      "Indie Pop",
+      "Latin Pop"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-02-28T10:30:58-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 36524902,
+    "artist": "Angine De Poitrine",
+    "title": "Vol.1",
+    "labels": [
+      {
+        "name": "Not On Label (Angine De Poitrine Self-Released)",
+        "catno": "PWEX001"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180g, Fourth Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Repress"
+        ]
+      }
+    ],
+    "year": 2026,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Math Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-04-06T13:29:27-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Near Mint (NM or M-)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 36661756,
+    "artist": "A Perfect Circle",
+    "title": "Mer De Noms",
+    "labels": [
+      {
+        "name": "Virgin",
+        "catno": "7243 8 49253 1 4"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Orange with Black, White & Yellow Splatter",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2026,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Prog Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-07T09:58:20-08:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 36764026,
+    "artist": "Mdou Moctar",
+    "title": "Ilana: The Creator",
+    "labels": [
+      {
+        "name": "Matador",
+        "catno": "OLE2043LP"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2026,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "African",
+      "Folk Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-03-28T12:04:31-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 36929280,
+    "artist": "José González",
+    "title": "Against The Dying Of The Light",
+    "labels": [
+      {
+        "name": "Mute",
+        "catno": "1218-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "White",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2026,
+    "genres": [
+      "Folk, World, & Country"
+    ],
+    "styles": [],
+    "folder": "JK Collection",
+    "dateAdded": "2026-05-31T12:08:44-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 36953691,
+    "artist": "Angine De Poitrine",
+    "title": "Vol. II",
+    "labels": [
+      {
+        "name": "Spectacles Bonzaï",
+        "catno": "AP-02"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "First Pressing, 180 Gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2026,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Math Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-04-12T12:36:09-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 37260795,
+    "artist": "Medeski Martin & Wood",
+    "title": "Friday Afternoon In The Universe",
+    "labels": [
+      {
+        "name": "Real Gone Music",
+        "catno": "RGM-1519"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Magenta",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2026,
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Free Jazz",
+      "Jazz-Funk"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-05-31T11:53:32-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 37433418,
+    "artist": "Ed O'Brien",
+    "title": "Blue Morpho",
+    "labels": [
+      {
+        "name": "Transgressive Records",
+        "catno": "TRANS955X"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Black",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2026,
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock",
+      "Folk"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-05-31T11:52:21-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  }
+]

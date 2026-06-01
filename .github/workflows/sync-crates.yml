@@ -1,0 +1,49 @@
+name: Sync Crates from Discogs
+
+# Weekly auto-update for the /crates page. Pulls the collection straight
+# from the Discogs API, downloads any new cover art, and commits the result.
+# That push triggers Vercel to redeploy, so the page stays current with zero
+# manual work. Runs with no new records simply make no commit.
+
+on:
+  schedule:
+    - cron: '0 9 * * 1' # Mondays 09:00 UTC (weekly)
+  workflow_dispatch: {} # manual "Run workflow" button in the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-crates
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # The sync script has zero npm dependencies (native fetch + node:fs),
+      # so there is nothing to install.
+      - name: Sync collection from Discogs
+        env:
+          DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
+        run: node scripts/sync-discogs.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "crates-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No collection changes -- nothing to commit."
+          else
+            git commit -m "crates: weekly Discogs sync"
+            git push
+          fi
