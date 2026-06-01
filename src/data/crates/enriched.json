@@ -1,0 +1,2506 @@
+{
+  "66644": {
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "House",
+      "Techno",
+      "Ambient"
+    ],
+    "hasCover": true
+  },
+  "215012": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Synth-pop"
+    ],
+    "hasCover": true
+  },
+  "380609": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Classic Rock",
+      "Prog Rock"
+    ],
+    "hasCover": true
+  },
+  "401512": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Rock & Roll",
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "497769": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "526569": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock",
+      "Classic Rock",
+      "Art Rock"
+    ],
+    "hasCover": true
+  },
+  "696823": {
+    "genres": [
+      "Electronic",
+      "Jazz"
+    ],
+    "styles": [
+      "Fusion"
+    ],
+    "hasCover": true
+  },
+  "844094": {
+    "genres": [
+      "Jazz",
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Jazz-Rock"
+    ],
+    "hasCover": true
+  },
+  "869077": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Blues Rock",
+      "Soul"
+    ],
+    "hasCover": true
+  },
+  "1056070": {
+    "genres": [
+      "Electronic",
+      "Jazz"
+    ],
+    "styles": [
+      "Future Jazz",
+      "Downtempo"
+    ],
+    "hasCover": true
+  },
+  "1157598": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Hard Rock",
+      "Prog Rock"
+    ],
+    "hasCover": true
+  },
+  "1173755": {
+    "genres": [
+      "Rock",
+      "Blues"
+    ],
+    "styles": [
+      "Blues Rock",
+      "Southern Rock"
+    ],
+    "hasCover": true
+  },
+  "1205127": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Folk Rock"
+    ],
+    "hasCover": true
+  },
+  "1230078": {
+    "genres": [
+      "Jazz",
+      "Non-Music"
+    ],
+    "styles": [
+      "Spoken Word",
+      "Cool Jazz"
+    ],
+    "hasCover": true
+  },
+  "1284784": {
+    "genres": [
+      "Rock",
+      "Blues"
+    ],
+    "styles": [
+      "Blues Rock",
+      "Southern Rock"
+    ],
+    "hasCover": true
+  },
+  "1313001": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "1361007": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Acoustic",
+      "Indie Rock",
+      "Folk"
+    ],
+    "hasCover": true
+  },
+  "1426272": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock"
+    ],
+    "hasCover": true
+  },
+  "1610236": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Acoustic",
+      "Folk",
+      "Indie Rock",
+      "Folk Rock"
+    ],
+    "hasCover": true
+  },
+  "1875311": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Baroque Pop",
+      "Indie Rock",
+      "Indie Pop",
+      "Art Rock"
+    ],
+    "hasCover": true
+  },
+  "2166080": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock"
+    ],
+    "hasCover": true
+  },
+  "2237459": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock"
+    ],
+    "hasCover": true
+  },
+  "2463267": {
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Free Jazz",
+      "Contemporary Jazz"
+    ],
+    "hasCover": true
+  },
+  "2548925": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Blues Rock",
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "2940876": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "2995572": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "3115652": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "3517314": {
+    "genres": [
+      "Rock",
+      "Funk / Soul"
+    ],
+    "styles": [],
+    "hasCover": true
+  },
+  "3526778": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Grunge"
+    ],
+    "hasCover": true
+  },
+  "3701587": {
+    "genres": [
+      "Rock",
+      "Funk / Soul",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Rhythm & Blues",
+      "Classic Rock"
+    ],
+    "hasCover": true
+  },
+  "3971421": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Funk Metal"
+    ],
+    "hasCover": true
+  },
+  "4043576": {
+    "genres": [
+      "Electronic",
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Rock & Roll",
+      "Pop Rock",
+      "Synth-pop"
+    ],
+    "hasCover": true
+  },
+  "4198506": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock"
+    ],
+    "hasCover": true
+  },
+  "4263175": {
+    "genres": [
+      "Non-Music"
+    ],
+    "styles": [
+      "Comedy",
+      "Spoken Word"
+    ],
+    "hasCover": true
+  },
+  "4278082": {
+    "genres": [
+      "Non-Music"
+    ],
+    "styles": [
+      "Comedy",
+      "Spoken Word"
+    ],
+    "hasCover": true
+  },
+  "4292232": {
+    "genres": [
+      "Non-Music"
+    ],
+    "styles": [
+      "Comedy"
+    ],
+    "hasCover": true
+  },
+  "4329406": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "4330954": {
+    "genres": [
+      "Rock",
+      "Funk / Soul",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Psychedelic Rock",
+      "Soul"
+    ],
+    "hasCover": true
+  },
+  "4351328": {
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Pop Rap",
+      "Conscious"
+    ],
+    "hasCover": true
+  },
+  "4454836": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "4503423": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Blues Rock",
+      "Psychedelic Rock"
+    ],
+    "hasCover": true
+  },
+  "4539393": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "4613624": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Vocal",
+      "Psychedelic Rock"
+    ],
+    "hasCover": true
+  },
+  "4635606": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Folk"
+    ],
+    "hasCover": true
+  },
+  "4647053": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock"
+    ],
+    "hasCover": true
+  },
+  "5064334": {
+    "genres": [
+      "Jazz",
+      "Rock"
+    ],
+    "styles": [
+      "Soft Rock",
+      "Jazz-Rock"
+    ],
+    "hasCover": true
+  },
+  "5337368": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Classic Rock",
+      "Blues Rock"
+    ],
+    "hasCover": true
+  },
+  "5942599": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Prog Rock"
+    ],
+    "hasCover": true
+  },
+  "6069459": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Classic Rock"
+    ],
+    "hasCover": true
+  },
+  "6134437": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Folk"
+    ],
+    "hasCover": true
+  },
+  "6209056": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [],
+    "hasCover": true
+  },
+  "6296978": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Blues Rock",
+      "Psychedelic Rock"
+    ],
+    "hasCover": true
+  },
+  "7122157": {
+    "genres": [
+      "Non-Music"
+    ],
+    "styles": [
+      "Comedy"
+    ],
+    "hasCover": true
+  },
+  "7220581": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Soft Rock",
+      "Classic Rock"
+    ],
+    "hasCover": true
+  },
+  "7239755": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Soft Rock",
+      "Classic Rock"
+    ],
+    "hasCover": true
+  },
+  "7254128": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Acoustic",
+      "Soft Rock"
+    ],
+    "hasCover": true
+  },
+  "7827345": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Surf",
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "7882544": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Psychedelic Rock",
+      "Surf"
+    ],
+    "hasCover": true
+  },
+  "8428623": {
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Contemporary Jazz"
+    ],
+    "hasCover": true
+  },
+  "8518115": {
+    "genres": [
+      "Rock",
+      "Funk / Soul",
+      "Pop"
+    ],
+    "styles": [
+      "Glam",
+      "Pop Rock",
+      "Soul"
+    ],
+    "hasCover": true
+  },
+  "8577393": {
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "House",
+      "Techno",
+      "Ambient",
+      "Rhythmic Noise",
+      "Hard Beat"
+    ],
+    "hasCover": true
+  },
+  "8639126": {
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Hardcore Hip-Hop"
+    ],
+    "hasCover": true
+  },
+  "8966486": {
+    "genres": [
+      "Electronic",
+      "Hip Hop",
+      "Rock",
+      "Funk / Soul",
+      "Blues",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Electro",
+      "Downtempo",
+      "Hip Hop",
+      "Disco",
+      "Afrobeat",
+      "Abstract"
+    ],
+    "hasCover": true
+  },
+  "9092521": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Prog Rock",
+      "Ethereal"
+    ],
+    "hasCover": true
+  },
+  "9118910": {
+    "genres": [
+      "Electronic",
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "9296607": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock",
+      "Psychedelic Rock"
+    ],
+    "hasCover": true
+  },
+  "9431705": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock",
+      "Psychedelic Rock",
+      "Classic Rock"
+    ],
+    "hasCover": true
+  },
+  "9959301": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "10086368": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "10462547": {
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Boom Bap",
+      "Trap",
+      "Conscious",
+      "Jazzy Hip-Hop"
+    ],
+    "hasCover": true
+  },
+  "10470546": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Surf",
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "10654756": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Prog Rock"
+    ],
+    "hasCover": true
+  },
+  "11027496": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "11116451": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Grunge",
+      "Alternative Rock"
+    ],
+    "hasCover": true
+  },
+  "11156869": {
+    "genres": [
+      "Electronic",
+      "Jazz",
+      "Reggae",
+      "Funk / Soul",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Disco",
+      "Funk",
+      "Soul",
+      "Acid Jazz",
+      "Contemporary R&B"
+    ],
+    "hasCover": true
+  },
+  "11491524": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Prog Rock"
+    ],
+    "hasCover": true
+  },
+  "11541536": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock"
+    ],
+    "hasCover": true
+  },
+  "11544583": {
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Contemporary Jazz"
+    ],
+    "hasCover": true
+  },
+  "11654911": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Garage Rock",
+      "Space Rock"
+    ],
+    "hasCover": true
+  },
+  "11825457": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "11826314": {
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Art Rock"
+    ],
+    "hasCover": true
+  },
+  "11877970": {
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "styles": [
+      "IDM",
+      "Leftfield",
+      "Ambient",
+      "Downtempo"
+    ],
+    "hasCover": true
+  },
+  "11920486": {
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "Deep House",
+      "Downtempo"
+    ],
+    "hasCover": true
+  },
+  "12045917": {
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Abstract",
+      "Downtempo",
+      "Experimental"
+    ],
+    "hasCover": true
+  },
+  "12072116": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock"
+    ],
+    "hasCover": true
+  },
+  "12242840": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "New Wave"
+    ],
+    "hasCover": true
+  },
+  "12357616": {
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Modern Classical",
+      "New Age",
+      "Acoustic"
+    ],
+    "hasCover": true
+  },
+  "12413962": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "New Wave",
+      "Power Pop"
+    ],
+    "hasCover": true
+  },
+  "12655331": {
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Industrial",
+      "Synth-pop"
+    ],
+    "hasCover": true
+  },
+  "12686978": {
+    "genres": [
+      "Rock",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk",
+      "Folk Rock"
+    ],
+    "hasCover": true
+  },
+  "12773291": {
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Trap",
+      "Pop Rap",
+      "Psychedelic"
+    ],
+    "hasCover": true
+  },
+  "13110682": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "13200926": {
+    "genres": [
+      "Electronic",
+      "Jazz"
+    ],
+    "styles": [
+      "Contemporary Jazz"
+    ],
+    "hasCover": true
+  },
+  "13694938": {
+    "genres": [
+      "Reggae"
+    ],
+    "styles": [
+      "Reggae",
+      "Roots Reggae",
+      "Reggae-Pop"
+    ],
+    "hasCover": true
+  },
+  "13749625": {
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Modal"
+    ],
+    "hasCover": true
+  },
+  "14114022": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Surf"
+    ],
+    "hasCover": true
+  },
+  "14120723": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "14210644": {
+    "genres": [
+      "Hip Hop",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Contemporary R&B",
+      "Neo Soul"
+    ],
+    "hasCover": true
+  },
+  "14811979": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Rock & Roll"
+    ],
+    "hasCover": true
+  },
+  "15001946": {
+    "genres": [
+      "Jazz",
+      "Rock"
+    ],
+    "styles": [
+      "Fusion"
+    ],
+    "hasCover": true
+  },
+  "15007137": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "15092818": {
+    "genres": [
+      "Rock",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Indie Rock",
+      "Country Rock",
+      "Folk",
+      "Ballad"
+    ],
+    "hasCover": true
+  },
+  "15182545": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "15346187": {
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock"
+    ],
+    "hasCover": true
+  },
+  "15406350": {
+    "genres": [
+      "Rock",
+      "Funk / Soul",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Psychedelic",
+      "Funk"
+    ],
+    "hasCover": true
+  },
+  "15413135": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Indie Rock",
+      "Folk Rock"
+    ],
+    "hasCover": true
+  },
+  "15792995": {
+    "genres": [
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Funk"
+    ],
+    "hasCover": true
+  },
+  "15802150": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Rock & Roll"
+    ],
+    "hasCover": true
+  },
+  "15857861": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock"
+    ],
+    "hasCover": true
+  },
+  "15947938": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Hard Rock"
+    ],
+    "hasCover": true
+  },
+  "15962169": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Hard Rock"
+    ],
+    "hasCover": true
+  },
+  "16095039": {
+    "genres": [
+      "Rock",
+      "Children's"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Story"
+    ],
+    "hasCover": true
+  },
+  "16133032": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Blues Rock"
+    ],
+    "hasCover": true
+  },
+  "16172108": {
+    "genres": [
+      "Pop",
+      "Children's"
+    ],
+    "styles": [
+      "Vocal",
+      "Choral",
+      "Holiday"
+    ],
+    "hasCover": true
+  },
+  "16187108": {
+    "genres": [
+      "Reggae",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Dub"
+    ],
+    "hasCover": true
+  },
+  "16194546": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Folk Rock"
+    ],
+    "hasCover": true
+  },
+  "16266968": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Country Rock"
+    ],
+    "hasCover": true
+  },
+  "16376550": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock",
+      "Folk Rock"
+    ],
+    "hasCover": true
+  },
+  "16415619": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Indie Rock",
+      "Folk"
+    ],
+    "hasCover": true
+  },
+  "16545546": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "16828143": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "New Wave",
+      "Blues Rock",
+      "Alternative Rock"
+    ],
+    "hasCover": true
+  },
+  "16942773": {
+    "genres": [
+      "Jazz",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Soul-Jazz",
+      "Soul"
+    ],
+    "hasCover": true
+  },
+  "16954041": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Art Rock",
+      "Psychedelic Rock",
+      "Experimental"
+    ],
+    "hasCover": true
+  },
+  "17050458": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Blues Rock",
+      "Pub Rock"
+    ],
+    "hasCover": true
+  },
+  "17630212": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Acoustic",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "17640640": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Classic Rock",
+      "Folk Rock"
+    ],
+    "hasCover": true
+  },
+  "18505945": {
+    "genres": [
+      "Rock",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "18837763": {
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Experimental"
+    ],
+    "hasCover": true
+  },
+  "18893731": {
+    "genres": [
+      "Rock",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "19443298": {
+    "genres": [
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Bluegrass",
+      "Folk"
+    ],
+    "hasCover": true
+  },
+  "19612255": {
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Experimental",
+      "Art Rock",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "19829920": {
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Conscious",
+      "Bounce",
+      "Instrumental",
+      "Electro"
+    ],
+    "hasCover": true
+  },
+  "20095750": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Ska",
+      "Punk"
+    ],
+    "hasCover": true
+  },
+  "20505697": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock",
+      "Folk"
+    ],
+    "hasCover": true
+  },
+  "20951299": {
+    "genres": [
+      "Folk, World, & Country"
+    ],
+    "styles": [],
+    "hasCover": true
+  },
+  "21605908": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Acoustic",
+      "Lo-Fi",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "22776578": {
+    "genres": [
+      "Rock",
+      "Funk / Soul",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Rock & Roll",
+      "Psychedelic"
+    ],
+    "hasCover": true
+  },
+  "23172614": {
+    "genres": [
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Acoustic"
+    ],
+    "hasCover": true
+  },
+  "23549237": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "23824484": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Rock & Roll",
+      "Soft Rock"
+    ],
+    "hasCover": true
+  },
+  "23931551": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Grunge"
+    ],
+    "hasCover": true
+  },
+  "23978201": {
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "styles": [
+      "New Wave",
+      "Synth-pop"
+    ],
+    "hasCover": true
+  },
+  "24798023": {
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Contemporary Jazz",
+      "Fusion"
+    ],
+    "hasCover": true
+  },
+  "25152160": {
+    "genres": [
+      "Hip Hop",
+      "Jazz"
+    ],
+    "styles": [
+      "Fusion",
+      "Free Jazz",
+      "Jazzy Hip-Hop"
+    ],
+    "hasCover": true
+  },
+  "25178185": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock"
+    ],
+    "hasCover": true
+  },
+  "25236421": {
+    "genres": [
+      "Rock",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Vocal",
+      "Indie Pop",
+      "Indie Rock",
+      "Ballad"
+    ],
+    "hasCover": true
+  },
+  "25280392": {
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "styles": [
+      "Techno",
+      "Electro",
+      "Dance-pop",
+      "Leftfield"
+    ],
+    "hasCover": true
+  },
+  "25379524": {
+    "genres": [
+      "Funk / Soul",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Soul",
+      "Folk"
+    ],
+    "hasCover": true
+  },
+  "25811833": {
+    "genres": [
+      "Electronic",
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Synth-pop"
+    ],
+    "hasCover": true
+  },
+  "26373128": {
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "IDM",
+      "Experimental"
+    ],
+    "hasCover": true
+  },
+  "26524775": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Baroque Pop",
+      "Indie Pop",
+      "Alt-Pop",
+      "Ballad",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "26757446": {
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [],
+    "hasCover": true
+  },
+  "27122820": {
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Experimental"
+    ],
+    "hasCover": true
+  },
+  "27542265": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Psychedelic Rock",
+      "Prog Rock"
+    ],
+    "hasCover": true
+  },
+  "27644166": {
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "Drum n Bass",
+      "Experimental",
+      "Abstract",
+      "Breaks"
+    ],
+    "hasCover": true
+  },
+  "27872193": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "28087591": {
+    "genres": [
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk"
+    ],
+    "hasCover": true
+  },
+  "28247026": {
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Jazzy Hip-Hop",
+      "Experimental",
+      "Abstract",
+      "Leftfield"
+    ],
+    "hasCover": true
+  },
+  "28714750": {
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "styles": [
+      "Synth-pop",
+      "Ballad",
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "28762423": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Indie Rock",
+      "Indie Pop"
+    ],
+    "hasCover": true
+  },
+  "28863073": {
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Fusion",
+      "Jazz-Funk",
+      "Contemporary Jazz"
+    ],
+    "hasCover": true
+  },
+  "28919746": {
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Art Rock",
+      "Experimental",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "29057296": {
+    "genres": [
+      "Rock",
+      "Funk / Soul",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Funk",
+      "Dub",
+      "Soul",
+      "Surf"
+    ],
+    "hasCover": true
+  },
+  "29174830": {
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "Breakbeat"
+    ],
+    "hasCover": true
+  },
+  "29277010": {
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "Disco",
+      "House",
+      "Electro",
+      "French House"
+    ],
+    "hasCover": true
+  },
+  "29620888": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk",
+      "Folk Rock",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "29802184": {
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Industrial Metal",
+      "Alternative Rock",
+      "Experimental"
+    ],
+    "hasCover": true
+  },
+  "29987029": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock"
+    ],
+    "hasCover": true
+  },
+  "30211727": {
+    "genres": [
+      "Rock",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Funk Metal",
+      "Experimental"
+    ],
+    "hasCover": true
+  },
+  "30292268": {
+    "genres": [
+      "Rock",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Psychedelic",
+      "Indie Rock",
+      "Funk",
+      "Neo Soul"
+    ],
+    "hasCover": true
+  },
+  "30432029": {
+    "genres": [
+      "Rock",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Funk",
+      "Psychedelic",
+      "Disco",
+      "Contemporary R&B"
+    ],
+    "hasCover": true
+  },
+  "30454823": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Alternative Rock"
+    ],
+    "hasCover": true
+  },
+  "30478307": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock"
+    ],
+    "hasCover": true
+  },
+  "30574987": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "African",
+      "Psychedelic Rock"
+    ],
+    "hasCover": true
+  },
+  "31205101": {
+    "genres": [
+      "Rock",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Funk",
+      "Alternative Rock"
+    ],
+    "hasCover": true
+  },
+  "31471502": {
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "Trip Hop"
+    ],
+    "hasCover": true
+  },
+  "31719995": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Dream Pop",
+      "Indie Rock",
+      "Indie Pop",
+      "Alt-Pop"
+    ],
+    "hasCover": true
+  },
+  "31893958": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Post-Grunge"
+    ],
+    "hasCover": true
+  },
+  "32254773": {
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [],
+    "hasCover": true
+  },
+  "32565279": {
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [],
+    "hasCover": true
+  },
+  "32657103": {
+    "genres": [
+      "Electronic",
+      "Hip Hop",
+      "Rock",
+      "Latin",
+      "Funk / Soul",
+      "Pop"
+    ],
+    "styles": [
+      "Leftfield",
+      "Trip Hop",
+      "Lo-Fi",
+      "Experimental",
+      "UK Garage",
+      "Dub",
+      "Punk"
+    ],
+    "hasCover": true
+  },
+  "33065907": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Pop Rock",
+      "Rock & Roll"
+    ],
+    "hasCover": true
+  },
+  "33132297": {
+    "genres": [
+      "Jazz",
+      "Rock",
+      "Funk / Soul",
+      "Blues",
+      "Pop"
+    ],
+    "styles": [
+      "Jazz-Rock"
+    ],
+    "hasCover": true
+  },
+  "33243942": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "African",
+      "Psychedelic Rock",
+      "Acoustic"
+    ],
+    "hasCover": true
+  },
+  "33297984": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk",
+      "Folk Rock"
+    ],
+    "hasCover": true
+  },
+  "33316476": {
+    "genres": [
+      "Pop"
+    ],
+    "styles": [
+      "Indie Pop"
+    ],
+    "hasCover": true
+  },
+  "33496049": {
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Conscious"
+    ],
+    "hasCover": true
+  },
+  "33632028": {
+    "genres": [
+      "Rock",
+      "Funk / Soul",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Psychedelic",
+      "Surf"
+    ],
+    "hasCover": true
+  },
+  "33659028": {
+    "genres": [
+      "Rock",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk",
+      "Alternative Rock",
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "33668487": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk Rock"
+    ],
+    "hasCover": true
+  },
+  "33686088": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk",
+      "Country Rock",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "33705843": {
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "Techno",
+      "Leftfield",
+      "Ambient"
+    ],
+    "hasCover": true
+  },
+  "33951768": {
+    "genres": [
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Folk"
+    ],
+    "hasCover": true
+  },
+  "34029312": {
+    "genres": [
+      "Rock",
+      "Blues",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Blues Rock",
+      "Indie Pop"
+    ],
+    "hasCover": true
+  },
+  "34138348": {
+    "genres": [
+      "Electronic",
+      "Rock",
+      "Stage & Screen"
+    ],
+    "styles": [
+      "Soundtrack",
+      "Score",
+      "Pop Rock",
+      "Synth-pop"
+    ],
+    "hasCover": true
+  },
+  "34147150": {
+    "genres": [
+      "Hip Hop",
+      "Jazz",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Conscious",
+      "Jazzy Hip-Hop",
+      "G-Funk",
+      "Neo Soul"
+    ],
+    "hasCover": true
+  },
+  "34194793": {
+    "genres": [
+      "Jazz",
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Classic Rock",
+      "Jazz-Rock"
+    ],
+    "hasCover": true
+  },
+  "34298893": {
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "styles": [
+      "Indie Pop",
+      "Plunderphonics"
+    ],
+    "hasCover": true
+  },
+  "34335127": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Acoustic",
+      "Soft Rock",
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "34407406": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Dream Pop",
+      "Indie Pop",
+      "Trip Hop"
+    ],
+    "hasCover": true
+  },
+  "34524457": {
+    "genres": [
+      "Pop"
+    ],
+    "styles": [
+      "Indie Pop"
+    ],
+    "hasCover": true
+  },
+  "34560418": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "34574821": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Acoustic",
+      "Indie Rock",
+      "Folk Rock"
+    ],
+    "hasCover": true
+  },
+  "34596328": {
+    "genres": [
+      "Electronic"
+    ],
+    "styles": [
+      "IDM",
+      "Techno",
+      "Electro",
+      "Experimental",
+      "Ambient"
+    ],
+    "hasCover": true
+  },
+  "34746321": {
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Art Rock",
+      "Indie Rock",
+      "Experimental"
+    ],
+    "hasCover": true
+  },
+  "34818842": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "34818848": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "34818854": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Pop Rock"
+    ],
+    "hasCover": true
+  },
+  "34889531": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Ballad",
+      "Classic Rock"
+    ],
+    "hasCover": true
+  },
+  "35170624": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Jazz-Rock"
+    ],
+    "hasCover": true
+  },
+  "35261665": {
+    "genres": [
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Funk",
+      "Psychedelic"
+    ],
+    "hasCover": true
+  },
+  "35268361": {
+    "genres": [
+      "Pop"
+    ],
+    "styles": [
+      "Indie Pop"
+    ],
+    "hasCover": true
+  },
+  "35269831": {
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "styles": [
+      "Synth-pop",
+      "Ballad",
+      "Downtempo",
+      "Soft Rock",
+      "Dance-pop"
+    ],
+    "hasCover": true
+  },
+  "35383381": {
+    "genres": [
+      "Electronic",
+      "Pop"
+    ],
+    "styles": [
+      "House",
+      "Dance-pop",
+      "Tech House",
+      "Alt-Pop"
+    ],
+    "hasCover": true
+  },
+  "35495155": {
+    "genres": [
+      "Hip Hop",
+      "Rock"
+    ],
+    "styles": [
+      "Emo",
+      "Lo-Fi",
+      "Acoustic",
+      "Indie Rock"
+    ],
+    "hasCover": true
+  },
+  "35524054": {
+    "genres": [
+      "Rock",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Acoustic",
+      "Soft Rock"
+    ],
+    "hasCover": true
+  },
+  "35599996": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Indie Rock",
+      "Acoustic"
+    ],
+    "hasCover": true
+  },
+  "35916175": {
+    "genres": [
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Funk",
+      "Soul",
+      "Instrumental"
+    ],
+    "hasCover": true
+  },
+  "35918233": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock",
+      "Psychedelic Rock"
+    ],
+    "hasCover": true
+  },
+  "35936008": {
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Conscious",
+      "Jazzy Hip-Hop",
+      "Boom Bap"
+    ],
+    "hasCover": true
+  },
+  "35947276": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Britpop"
+    ],
+    "hasCover": true
+  },
+  "36153172": {
+    "genres": [
+      "Electronic",
+      "Stage & Screen"
+    ],
+    "styles": [
+      "Trip Hop",
+      "Breaks",
+      "Score",
+      "Ambient",
+      "Electro",
+      "Experimental"
+    ],
+    "hasCover": true
+  },
+  "36374110": {
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Indie Rock",
+      "Indie Pop",
+      "Synth-pop"
+    ],
+    "hasCover": true
+  },
+  "36520261": {
+    "genres": [
+      "Electronic",
+      "Hip Hop",
+      "Rock",
+      "Funk / Soul",
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Alt-Pop",
+      "Indian Classical",
+      "Indie Pop",
+      "Latin Pop"
+    ],
+    "hasCover": true
+  },
+  "36524902": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Math Rock"
+    ],
+    "hasCover": true
+  },
+  "36661756": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Prog Rock"
+    ],
+    "hasCover": true
+  },
+  "36764026": {
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "African",
+      "Folk Rock"
+    ],
+    "hasCover": true
+  },
+  "36929280": {
+    "genres": [
+      "Folk, World, & Country"
+    ],
+    "styles": [],
+    "hasCover": true
+  },
+  "36953691": {
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Math Rock"
+    ],
+    "hasCover": true
+  },
+  "37260795": {
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Free Jazz",
+      "Jazz-Funk"
+    ],
+    "hasCover": true
+  },
+  "37433418": {
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock",
+      "Folk"
+    ],
+    "hasCover": true
+  }
+}

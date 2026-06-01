@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import DataStory from '../../components/crates/DataStory.jsx';
+import CratesBrowser from '../../components/crates/CratesBrowser.jsx';
+import { AGGREGATES, BROWSER_RECORDS, FACETS } from '../../data/crates/records.js';
+
+const ogUrl = 'https://www.jonathanmkelly.com/crates';
+const updated = AGGREGATES.notable.recentAddition?.dateAdded?.slice(0, 10) || '';
+---
+
+<BaseLayout
+  title="Crates"
+  description="A private walkthrough of a vinyl record collection."
+  ogUrl={ogUrl}
+>
+  <meta slot="head-extra" name="robots" content="noindex,nofollow" />
+
+  <div style="background: #0a0a0a; min-height: 100vh;">
+    <!-- Nav -->
+    <nav
+      style="
+        position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        background: rgba(10,10,10,0.9);
+        backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        padding: 0 var(--page-pad);
+        display: flex; align-items: center; justify-content: space-between;
+        height: 64px;
+      "
+    >
+      <a
+        href="/"
+        style="
+          font-family: var(--mono); font-size: 11px; font-weight: 400;
+          letter-spacing: 0.04em; color: rgba(255,255,255,0.35);
+          text-decoration: none;
+        ">&larr; JMK</a>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span
+          style="
+            font-family: var(--serif); font-size: 16px; font-weight: 500;
+            letter-spacing: 0.02em; color: rgba(255,255,255,0.7);
+          ">the <span style="color: #d4822a;">crates</span></span>
+        <button
+          class="share-btn"
+          data-title="The Crates"
+          data-text="A walkthrough of a vinyl record collection"
+          data-url={ogUrl}
+          style="
+            background: none; border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 3px; padding: 5px 12px; cursor: pointer;
+            font-family: var(--mono); font-size: 10px; font-weight: 400;
+            letter-spacing: 0.06em; text-transform: uppercase;
+            color: rgba(255,255,255,0.3); transition: all 0.2s ease;
+          ">Share</button>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header style="max-width: 1180px; margin: 0 auto; padding: min(15vh, 132px) var(--page-pad) 0;">
+      <div
+        style="
+          font-family: var(--mono); font-size: 12px; letter-spacing: 0.2em;
+          text-transform: uppercase; color: #d4822a; margin-bottom: 20px;
+        "
+      >
+        A record collection
+      </div>
+      <h1
+        style="
+          font-family: var(--serif); font-size: clamp(44px, 9vw, 96px);
+          font-weight: 500; line-height: 0.98; color: #ffffff;
+          letter-spacing: -0.03em; margin: 0 0 22px;
+        "
+      >
+        The Crates
+      </h1>
+      <p
+        style="
+          font-family: var(--serif); font-size: clamp(19px, 2.6vw, 26px);
+          font-weight: 300; font-style: italic; color: rgba(255,255,255,0.4);
+          line-height: 1.35; margin: 0 0 28px; max-width: 640px;
+        "
+      >
+        Every record on the shelf, counted and cross-cut &mdash; then laid out to dig
+        through, sleeve by sleeve.
+      </p>
+      <div style="height: 3px; background: #d4822a; width: 60px;"></div>
+    </header>
+
+    <!-- Data story (static) -->
+    <main style="max-width: 1180px; margin: 0 auto; padding: 10px var(--page-pad) 0;">
+      <DataStory agg={AGGREGATES} />
+
+      <!-- The tool -->
+      <section style="padding: 60px 0 40px; border-top: 1px solid rgba(255,255,255,0.08);">
+        <div
+          style="
+            font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
+            text-transform: uppercase; color: #d4822a; margin-bottom: 14px;
+          "
+        >
+          Dig in
+        </div>
+        <h2
+          style="
+            font-family: var(--serif); font-size: clamp(26px, 4vw, 40px);
+            font-weight: 500; color: #fff; letter-spacing: -0.015em;
+            line-height: 1.1; margin: 0 0 28px;
+          "
+        >
+          The whole crate
+        </h2>
+        <CratesBrowser records={BROWSER_RECORDS} facets={FACETS} client:load />
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="max-width: 1180px; margin: 0 auto; padding: 60px var(--page-pad) 120px;">
+      <div style="height: 3px; background: rgba(212,130,42,0.3); width: 60px; margin: 0 0 24px;"></div>
+      <p style="font-family: var(--mono); font-size: 11px; color: rgba(255,255,255,0.32); line-height: 1.7;">
+        Data from a Discogs collection export.
+        {updated && `Last record added ${updated}.`}
+        <br />
+        <a href="/" style="color: rgba(255,255,255,0.4); text-decoration: none;">&larr; jonathanmkelly.com</a>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.share-btn').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const data = { title: btn.dataset.title, text: btn.dataset.text, url: btn.dataset.url };
+        if (navigator.share) {
+          try { await navigator.share(data); } catch {}
+        } else {
+          await navigator.clipboard.writeText(data.url);
+          btn.textContent = 'Copied';
+          setTimeout(() => { btn.textContent = 'Share'; }, 1500);
+        }
+      });
+    });
+  </script>
+</BaseLayout>
