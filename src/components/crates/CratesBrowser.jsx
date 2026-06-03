@@ -6,7 +6,7 @@
 import { useState, useMemo, useEffect, useCallback } from 'react';
 import CoverTile from './CoverTile.jsx';
 
-const GOLD = '#d4822a';
+const ACCENT = '#2dd4bf';
 const TXT = 'rgba(255,255,255,0.86)';
 const MUT = 'rgba(255,255,255,0.45)';
 const MUT2 = 'rgba(255,255,255,0.62)';
@@ -17,8 +17,8 @@ const CARDB = 'rgba(255,255,255,0.09)';
 const SORTS = [
   { id: 'added-desc', label: 'Recently added' },
   { id: 'added-asc', label: 'First added' },
-  { id: 'year-desc', label: 'Newest release' },
-  { id: 'year-asc', label: 'Oldest release' },
+  { id: 'year-desc', label: 'Newest (original)' },
+  { id: 'year-asc', label: 'Oldest (original)' },
   { id: 'artist', label: 'Artist A–Z' },
 ];
 
@@ -86,13 +86,36 @@ export default function CratesBrowser({ records, facets }) {
     return [...res].sort(cmp);
   }, [query, filters, sort, records]);
 
-  // Close detail panel on Escape.
+  // Move to the previous/next record in the current filtered + sorted order.
+  const go = useCallback(
+    (dir) => {
+      setSelected((cur) => {
+        if (!cur) return cur;
+        const idx = visible.findIndex((r) => r.id === cur.id);
+        if (idx === -1) return cur;
+        return visible[idx + dir] || cur;
+      });
+    },
+    [visible]
+  );
+
+  // Drop the needle: open a random record from whatever's filtered in.
+  const surprise = useCallback(() => {
+    if (!visible.length) return;
+    setSelected(visible[Math.floor(Math.random() * visible.length)]);
+  }, [visible]);
+
+  // Keyboard: Escape closes; ←/→ flip through the crate.
   useEffect(() => {
     if (!selected) return;
-    const onKey = (e) => e.key === 'Escape' && setSelected(null);
+    const onKey = (e) => {
+      if (e.key === 'Escape') setSelected(null);
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+    };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [selected]);
+  }, [selected, go]);
 
   const facetGroups = GROUPS.filter((g) => (facets[g.key] || []).length > 0);
 
@@ -101,12 +124,60 @@ export default function CratesBrowser({ records, facets }) {
       <style>{`
         .crate-tile { transition: transform .18s ease, box-shadow .18s ease; }
         .crate-tile:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,.55); }
-        .crate-tile:focus-visible { outline: 2px solid ${GOLD}; outline-offset: 3px; }
-        .crate-chip:hover { border-color: rgba(212,130,42,.6) !important; color: #fff !important; }
+        .crate-tile:focus-visible { outline: 2px solid ${ACCENT}; outline-offset: 3px; }
+        .crate-chip:hover { border-color: rgba(45,212,191,.6) !important; color: #fff !important; }
         .crate-input::placeholder { color: rgba(255,255,255,.3); }
         @media (prefers-reduced-motion: reduce) {
           .crate-tile { transition: none; }
           .crate-tile:hover { transform: none; }
+        }
+
+        /* Detail modal: a landscape box that GROWS to fit its content -- the
+           info pane is not capped, so it doesn't scroll (until the viewport
+           itself is the limit). The cover is a square panel that scales with
+           the box height. */
+        .crate-modal {
+          --cover: clamp(300px, 50vh, 560px);
+          position: relative;
+          display: flex;
+          align-items: stretch;
+          width: 100%;
+          max-width: 1040px;
+          max-height: 92vh;
+          overflow: hidden;
+          background: #101013;
+          border: 1px solid ${CARDB};
+          border-radius: 12px;
+          box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+        }
+        .crate-cover {
+          flex: 0 0 var(--cover);
+          align-self: stretch;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 18px;
+          background: #15151a;
+        }
+        .crate-cover-art {
+          width: 100%;
+          aspect-ratio: 1;
+          border-radius: 4px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .crate-info {
+          flex: 1 1 0;
+          min-width: 0;
+          min-height: var(--cover);
+          max-height: 92vh;
+          overflow-y: auto;
+        }
+        @media (max-width: 680px) {
+          .crate-modal { flex-direction: column; max-width: 460px; max-height: 92vh; overflow-y: auto; }
+          .crate-cover { flex: none; padding: 0; }
+          .crate-cover-art { border-radius: 0; box-shadow: none; }
+          .crate-info { min-height: 0; max-height: none; overflow-y: visible; }
         }
       `}</style>
 
@@ -159,6 +230,26 @@ export default function CratesBrowser({ records, facets }) {
             v
           </span>
         </label>
+        <button
+          onClick={surprise}
+          disabled={!visible.length}
+          title="Drop the needle on a random record from the current results"
+          style={{
+            background: 'rgba(45,212,191,0.12)',
+            border: `1px solid ${ACCENT}`,
+            borderRadius: 8,
+            padding: '12px 18px',
+            color: ACCENT,
+            fontFamily: 'var(--mono)',
+            fontSize: 13,
+            letterSpacing: '0.02em',
+            cursor: visible.length ? 'pointer' : 'not-allowed',
+            opacity: visible.length ? 1 : 0.4,
+            whiteSpace: 'nowrap',
+          }}
+        >
+          Surprise me
+        </button>
       </div>
 
       {/* Filter chips */}
@@ -187,10 +278,10 @@ export default function CratesBrowser({ records, facets }) {
                 }}
                 aria-expanded={open}
               >
-                <span style={{ color: GOLD, fontSize: 9 }}>{open ? '▼' : '▶'}</span>
+                <span style={{ color: ACCENT, fontSize: 9 }}>{open ? '▼' : '▶'}</span>
                 {g.label}
                 {filters[g.key].length > 0 && (
-                  <span style={{ color: GOLD }}>({filters[g.key].length})</span>
+                  <span style={{ color: ACCENT }}>({filters[g.key].length})</span>
                 )}
               </button>
               {open && (
@@ -209,8 +300,8 @@ export default function CratesBrowser({ records, facets }) {
                           padding: '6px 13px',
                           borderRadius: 999,
                           cursor: 'pointer',
-                          border: `1px solid ${on ? GOLD : CARDB}`,
-                          background: on ? 'rgba(212,130,42,0.16)' : 'transparent',
+                          border: `1px solid ${on ? ACCENT : CARDB}`,
+                          background: on ? 'rgba(45,212,191,0.16)' : 'transparent',
                           color: on ? '#fff' : MUT2,
                           transition: 'all .15s ease',
                         }}
@@ -247,7 +338,7 @@ export default function CratesBrowser({ records, facets }) {
             style={{
               background: 'none',
               border: 'none',
-              color: GOLD,
+              color: ACCENT,
               cursor: 'pointer',
               fontFamily: 'var(--mono)',
               fontSize: 12,
@@ -330,6 +421,7 @@ export default function CratesBrowser({ records, facets }) {
                   title={r.artist}
                 >
                   {r.artist}
+                  {r.releasedYear ? ` · ${r.releasedYear}` : ''}
                 </div>
               </div>
             </button>
@@ -337,19 +429,58 @@ export default function CratesBrowser({ records, facets }) {
         </div>
       )}
 
-      {selected && <DetailPanel rec={selected} onClose={() => setSelected(null)} />}
+      {selected && (() => {
+        const idx = visible.findIndex((r) => r.id === selected.id);
+        return (
+          <DetailPanel
+            rec={selected}
+            onClose={() => setSelected(null)}
+            onPrev={() => go(-1)}
+            onNext={() => go(1)}
+            hasPrev={idx > 0}
+            hasNext={idx >= 0 && idx < visible.length - 1}
+            position={idx >= 0 ? `${idx + 1} / ${visible.length}` : ''}
+          />
+        );
+      })()}
     </div>
   );
 }
 
-function DetailPanel({ rec, onClose }) {
+// Small square nav button (prev/next) used in the detail panel.
+const navBtn = (enabled) => ({
+  background: 'none',
+  border: `1px solid ${CARDB}`,
+  borderRadius: 6,
+  width: 30,
+  height: 30,
+  color: enabled ? ACCENT : 'rgba(255,255,255,0.2)',
+  cursor: enabled ? 'pointer' : 'not-allowed',
+  fontFamily: 'var(--mono)',
+  fontSize: 16,
+  lineHeight: 1,
+});
+
+function DetailPanel({ rec, onClose, onPrev, onNext, hasPrev, hasNext, position }) {
+  const q = encodeURIComponent(`${rec.artist} ${rec.title}`.trim());
+  const listen = [
+    { name: 'Spotify', url: `https://open.spotify.com/search/${q}` },
+    { name: 'YouTube', url: `https://www.youtube.com/results?search_query=${q}` },
+    { name: 'Apple Music', url: `https://music.apple.com/us/search?term=${q}` },
+  ];
   const rows = [
     ['Artist', rec.artist],
     ['Title', rec.title],
     ['Label', rec.label],
     ['Catalog #', rec.catalog],
     ['Format', rec.format],
-    ['Released', rec.releasedYear || 'Unknown'],
+    [rec.originalYear ? 'Originally released' : 'Released', rec.releasedYear || 'Unknown'],
+    [
+      'This pressing',
+      rec.originalYear && rec.pressingYear && rec.pressingYear !== rec.originalYear
+        ? rec.pressingYear
+        : '',
+    ],
     ['Collection', rec.folder],
     ['Added', rec.dateAdded ? rec.dateAdded.slice(0, 10) : ''],
     ['Media', rec.media],
@@ -377,50 +508,55 @@ function DetailPanel({ rec, onClose }) {
         padding: 20,
       }}
     >
-      <div
-        onClick={(e) => e.stopPropagation()}
-        style={{
-          background: '#101013',
-          border: `1px solid ${CARDB}`,
-          borderRadius: 12,
-          maxWidth: 640,
-          width: '100%',
-          maxHeight: '88vh',
-          overflow: 'auto',
-          display: 'flex',
-          flexWrap: 'wrap',
-          boxShadow: '0 30px 80px rgba(0,0,0,0.6)',
-        }}
-      >
-        <div style={{ flex: '1 1 240px', minWidth: 220, aspectRatio: '1', background: '#15151a' }}>
-          <CoverTile rec={rec} />
+      <div onClick={(e) => e.stopPropagation()} className="crate-modal">
+        <button
+          onClick={onClose}
+          aria-label="Close"
+          style={{
+            position: 'absolute',
+            top: 14,
+            right: 14,
+            zIndex: 3,
+            background: 'rgba(0,0,0,0.55)',
+            border: `1px solid ${CARDB}`,
+            borderRadius: 6,
+            width: 30,
+            height: 30,
+            color: '#fff',
+            cursor: 'pointer',
+            fontFamily: 'var(--mono)',
+            fontSize: 14,
+            lineHeight: 1,
+          }}
+        >
+          x
+        </button>
+        <div className="crate-cover">
+          <div className="crate-cover-art">
+            <CoverTile rec={rec} />
+          </div>
         </div>
-        <div style={{ flex: '1 1 280px', padding: '26px 26px 30px', position: 'relative' }}>
-          <button
-            onClick={onClose}
-            aria-label="Close"
-            style={{
-              position: 'absolute',
-              top: 16,
-              right: 16,
-              background: 'none',
-              border: `1px solid ${CARDB}`,
-              borderRadius: 6,
-              width: 30,
-              height: 30,
-              color: MUT2,
-              cursor: 'pointer',
-              fontFamily: 'var(--mono)',
-              fontSize: 14,
-              lineHeight: 1,
-            }}
-          >
-            x
-          </button>
+        <div className="crate-info" style={{ padding: '26px 26px 30px', position: 'relative' }}>
+          {(onPrev || onNext) && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14, paddingRight: 40 }}>
+              <button onClick={onPrev} disabled={!hasPrev} aria-label="Previous record" style={navBtn(hasPrev)}>
+                ‹
+              </button>
+              <button onClick={onNext} disabled={!hasNext} aria-label="Next record" style={navBtn(hasNext)}>
+                ›
+              </button>
+              {position && (
+                <span style={{ fontFamily: 'var(--mono)', fontSize: 11, color: MUT, letterSpacing: '0.04em' }}>
+                  {position}
+                </span>
+              )}
+            </div>
+          )}
+
           <div style={{ fontFamily: 'var(--serif)', fontSize: 24, color: '#fff', lineHeight: 1.15, paddingRight: 34 }}>
             {rec.title}
           </div>
-          <div style={{ fontFamily: 'var(--body)', fontSize: 16, color: GOLD, marginTop: 4 }}>
+          <div style={{ fontFamily: 'var(--body)', fontSize: 16, color: ACCENT, marginTop: 4 }}>
             {rec.artist}
           </div>
 
@@ -468,6 +604,35 @@ function DetailPanel({ rec, onClose }) {
             ))}
           </dl>
 
+          <div style={{ marginTop: 22 }}>
+            <div style={{ fontFamily: 'var(--mono)', fontSize: 10.5, letterSpacing: '0.08em', textTransform: 'uppercase', color: MUT, marginBottom: 10 }}>
+              Listen
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              {listen.map((l) => (
+                <a
+                  key={l.name}
+                  href={l.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontFamily: 'var(--mono)',
+                    fontSize: 12,
+                    padding: '7px 13px',
+                    borderRadius: 999,
+                    border: `1px solid ${ACCENT}`,
+                    background: 'rgba(45,212,191,0.1)',
+                    color: ACCENT,
+                    textDecoration: 'none',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  {l.name}
+                </a>
+              ))}
+            </div>
+          </div>
+
           {rec.notes && (
             <p
               style={{
@@ -497,9 +662,9 @@ function DetailPanel({ rec, onClose }) {
                 fontFamily: 'var(--mono)',
                 fontSize: 12,
                 letterSpacing: '0.04em',
-                color: GOLD,
+                color: ACCENT,
                 textDecoration: 'none',
-                borderBottom: `1px solid rgba(212,130,42,0.5)`,
+                borderBottom: `1px solid rgba(45,212,191,0.5)`,
                 paddingBottom: 2,
               }}
             >

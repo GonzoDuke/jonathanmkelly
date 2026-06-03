@@ -278,7 +278,12 @@ function parseFormatApi(formats) {
 // -- Normalizers (one per source) ----------------------------
 function normalizeFromJson(item) {
   const id = String(item.id);
-  const releasedYear = item.year && item.year > 0 ? item.year : null;
+  // `year` is the owned pressing's year; `originalYear` is the master's first
+  // release year (resolved by the sync). The canonical release year used for
+  // sorting/eras is the ORIGINAL, falling back to the pressing when unknown.
+  const pressingYear = item.year && item.year > 0 ? item.year : null;
+  const originalYear = item.originalYear && item.originalYear > 0 ? item.originalYear : null;
+  const releasedYear = originalYear ?? pressingYear;
   const fmt = parseFormatApi(item.formats);
   const labels = Array.isArray(item.labels) ? item.labels : [];
   const labelFirst = labels[0]?.name || '';
@@ -300,6 +305,8 @@ function normalizeFromJson(item) {
     flags: fmt.flags,
     color: fmt.color,
     releasedYear,
+    pressingYear,
+    originalYear,
     decade: decadeOf(releasedYear),
     dateAdded: item.dateAdded || '',
     monthAdded: (item.dateAdded || '').slice(0, 7),
@@ -319,8 +326,11 @@ function normalizeFromCsv(r, i) {
   const isNumericId = /^\d+$/.test(idRaw);
   const id = isNumericId ? idRaw : `row-${i}`;
 
+  // The CSV export carries only the owned pressing's year -- no master /
+  // original year -- so original == pressing on this fallback path.
   const yearNum = parseInt(r['Released'], 10);
-  const releasedYear = Number.isFinite(yearNum) && yearNum > 0 ? yearNum : null;
+  const pressingYear = Number.isFinite(yearNum) && yearNum > 0 ? yearNum : null;
+  const releasedYear = pressingYear;
 
   const fmt = parseFormat(r['Format']);
   const catalogRaw = fixMojibake(r['Catalog#'] || '');
@@ -343,6 +353,8 @@ function normalizeFromCsv(r, i) {
     flags: fmt.flags,
     color: fmt.color,
     releasedYear,
+    pressingYear,
+    originalYear: null,
     decade: decadeOf(releasedYear),
     dateAdded: (r['Date Added'] || '').trim(),
     monthAdded: (r['Date Added'] || '').slice(0, 7),
@@ -569,6 +581,8 @@ export const BROWSER_RECORDS = RECORDS.map((r) => ({
   flags: r.flags,
   color: r.color,
   releasedYear: r.releasedYear,
+  pressingYear: r.pressingYear,
+  originalYear: r.originalYear,
   decade: r.decade,
   dateAdded: r.dateAdded,
   media: r.media,

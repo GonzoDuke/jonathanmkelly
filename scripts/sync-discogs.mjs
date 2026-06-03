@@ -7,8 +7,10 @@
 //
 // Pulls the ENTIRE collection straight from the Discogs API -- no manual
 // CSV export needed. Writes a clean, normalized src/data/crates/collection.json
-// (artist/title/labels/formats/year/genres/styles/folder/date/conditions),
-// and incrementally downloads any NEW cover art to public/crates/covers/.
+// (artist/title/labels/formats/year/originalYear/genres/styles/folder/date/
+// conditions), and incrementally downloads any NEW cover art to
+// public/crates/covers/. `year` is the owned pressing's year; `originalYear`
+// is the master's (first) release year, resolved once per master and cached.
 //
 // The username is derived from the token (oauth/identity), so the only
 // secret required is DISCOGS_TOKEN. Set DISCOGS_USERNAME to override.
@@ -43,6 +45,35 @@ async function main() {
 
   fs.mkdirSync(COVERS_DIR, { recursive: true });
   const client = makeClient(TOKEN);
+
+  // Reuse already-resolved original (master) release years from the prior
+  // run -- a master's year never changes, so each master is fetched only
+  // once, ever. (First run after this feature lands resolves them all.)
+  let prevById = new Map();
+  try {
+    const prev = JSON.parse(fs.readFileSync(OUT_JSON, 'utf8'));
+    if (Array.isArray(prev)) prevById = new Map(prev.map((r) => [r.id, r]));
+  } catch {
+    /* first run -- nothing cached */
+  }
+
+  // The "year" Discogs returns for a collection item is the year of the
+  // specific pressing owned. The ORIGINAL release year lives on the
+  // master. Resolve it (in-run cache dedupes masters shared by reissues).
+  const masterYearCache = new Map();
+  async function resolveOriginalYear(masterId, prevRecord) {
+    // Same master resolved last run? Reuse it (covers the no-year case too).
+    if (prevRecord && prevRecord.masterId === masterId && 'originalYear' in prevRecord) {
+      return prevRecord.originalYear;
+    }
+    if (!masterId) return null;
+    if (masterYearCache.has(masterId)) return masterYearCache.get(masterId);
+    const m = await client.get(`/masters/${masterId}`);
+    const year = m && m.year > 0 ? m.year : null;
+    masterYearCache.set(masterId, year);
+    await client.sleep(client.throttleMs);
+    return year;
+  }
 
   // Username from the token, unless explicitly overridden.
   let user = process.env.DISCOGS_USERNAME;
@@ -90,6 +121,9 @@ async function main() {
     const id = bi.id;
     if (!id) continue;
 
+    const masterId = bi.master_id || 0;
+    const originalYear = await resolveOriginalYear(masterId, prevById.get(id));
+
     const coverPath = path.join(COVERS_DIR, `${id}.jpg`);
     let hasCover = fs.existsSync(coverPath);
     if (hasCover) {
@@ -124,6 +158,8 @@ async function main() {
       labels: (bi.labels || []).map((l) => ({ name: l.name, catno: l.catno })),
       formats: bi.formats || [],
       year: bi.year || 0,
+      masterId,
+      originalYear,
       genres: bi.genres || [],
       styles: bi.styles || [],
       folder: folderName.get(it.folder_id) || '',
@@ -140,9 +176,11 @@ async function main() {
   records.sort((a, b) => a.id - b.id);
   fs.writeFileSync(OUT_JSON, JSON.stringify(records, null, 2) + '\n');
 
+  const withOriginal = records.filter((r) => r.originalYear).length;
   console.log(
     `  Wrote ${records.length} records to collection.json\n` +
-      `  Covers: ${fetched} new, ${skipped} cached, ${failed} failed\n`
+      `  Covers: ${fetched} new, ${skipped} cached, ${failed} failed\n` +
+      `  Original years: ${withOriginal} resolved, ${masterYearCache.size} masters fetched this run\n`
   );
 }
 
