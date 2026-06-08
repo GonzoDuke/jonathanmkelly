@@ -2062,7 +2062,7 @@
         ]
       }
     ],
-    "year": 0,
+    "year": 1970,
     "masterId": 0,
     "originalYear": null,
     "genres": [
@@ -2862,55 +2862,6 @@
     "hasCover": true
   },
   {
-    "id": 10462547,
-    "artist": "Kendrick Lamar",
-    "title": "Damn",
-    "labels": [
-      {
-        "name": "Top Dawg Entertainment",
-        "catno": "B0026745-01"
-      },
-      {
-        "name": "Aftermath Entertainment",
-        "catno": "B0026745-01"
-      },
-      {
-        "name": "Interscope Records",
-        "catno": "B0026745-01"
-      }
-    ],
-    "formats": [
-      {
-        "name": "Vinyl",
-        "qty": "2",
-        "descriptions": [
-          "LP",
-          "Album",
-          "Limited Edition"
-        ]
-      }
-    ],
-    "year": 0,
-    "masterId": 0,
-    "originalYear": null,
-    "genres": [
-      "Hip Hop"
-    ],
-    "styles": [
-      "Boom Bap",
-      "Trap",
-      "Conscious",
-      "Jazzy Hip-Hop"
-    ],
-    "folder": "Spud's Pile",
-    "dateAdded": "2026-02-07T17:50:21-08:00",
-    "rating": 0,
-    "media": "",
-    "sleeve": "",
-    "notes": "",
-    "hasCover": true
-  },
-  {
     "id": 10470546,
     "artist": "The Beach Boys",
     "title": "Wild Honey & 20/20",
@@ -2948,6 +2899,55 @@
     ],
     "folder": "The Jeff Collection",
     "dateAdded": "2025-10-05T09:43:29-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 10559651,
+    "artist": "Kendrick Lamar",
+    "title": "Damn.",
+    "labels": [
+      {
+        "name": "Top Dawg Entertainment",
+        "catno": "B0026745-01"
+      },
+      {
+        "name": "Aftermath Entertainment",
+        "catno": "B0026745-01"
+      },
+      {
+        "name": "Interscope Records",
+        "catno": "B0026745-01"
+      },
+      {
+        "name": "Aftermath/Interscope Records",
+        "catno": "B0026745-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2017,
+    "masterId": 1164779,
+    "originalYear": 2017,
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Conscious"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2026-06-04T08:34:22-07:00",
     "rating": 0,
     "media": "",
     "sleeve": "",
@@ -7023,7 +7023,9 @@
       "Electronic"
     ],
     "styles": [
-      "Breakbeat"
+      "Breakbeat",
+      "Big Beat",
+      "Breaks"
     ],
     "folder": "JK Collection",
     "dateAdded": "2026-04-03T12:58:53-07:00",
@@ -7629,6 +7631,47 @@
     ],
     "folder": "JK Collection",
     "dateAdded": "2026-04-03T12:01:29-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 32249100,
+    "artist": "MF Doom",
+    "title": "MM..Food",
+    "labels": [
+      {
+        "name": "Rhymesayers Entertainment",
+        "catno": "RSE0400-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Purple, Pink & Blue [Sweetart Marble], 20th Anniversary, Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2024,
+    "masterId": 8478,
+    "originalYear": 2004,
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Conscious",
+      "Jazzy Hip-Hop",
+      "Boom Bap"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2026-03-07T10:01:30-08:00",
     "rating": 0,
     "media": "",
     "sleeve": "",
@@ -9448,48 +9491,6 @@
     ],
     "folder": "JK Collection",
     "dateAdded": "2025-12-16T14:36:10-08:00",
-    "rating": 0,
-    "media": "",
-    "sleeve": "",
-    "notes": "",
-    "hasCover": true
-  },
-  {
-    "id": 35936008,
-    "artist": "MF Doom",
-    "title": "Mm..Food",
-    "labels": [
-      {
-        "name": "Rhymesayers Entertainment",
-        "catno": "RSE0400-1"
-      }
-    ],
-    "formats": [
-      {
-        "name": "Vinyl",
-        "qty": "2",
-        "text": "Purple, Pink & Blue [Sweetart Marble], 20th Anniversary, Gatefold",
-        "descriptions": [
-          "LP",
-          "Album",
-          "Reissue",
-          "Stereo"
-        ]
-      }
-    ],
-    "year": 2024,
-    "masterId": 8478,
-    "originalYear": 2004,
-    "genres": [
-      "Hip Hop"
-    ],
-    "styles": [
-      "Conscious",
-      "Jazzy Hip-Hop",
-      "Boom Bap"
-    ],
-    "folder": "Spud's Pile",
-    "dateAdded": "2026-03-07T10:01:30-08:00",
     "rating": 0,
     "media": "",
     "sleeve": "",
