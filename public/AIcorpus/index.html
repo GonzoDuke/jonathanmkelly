@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>The Working Corpus — Explorer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+  :root{
+    --paper:#DFE4E8;        /* endpaper blue-gray */
+    --card:#FAF9F5;         /* card stock */
+    --ink:#1C2630;          /* reading ink */
+    --ink-soft:#5A6573;
+    --rule:#C4CBD2;
+    --rule-card:#D8D2C4;
+    --accent:#1C2630;
+    /* camps */
+    --c-critical:#A14334;
+    --c-pro:#2F6B4F;
+    --c-defl:#8A6D2F;
+    --c-context:#54678C;
+    /* relations */
+    --r-supports:#2E7D5B;
+    --r-contradicts:#B3402E;
+    --r-complicates:#C28E2D;
+    --r-grounds:#3A6EA5;
+    --r-paired:#7A5C9E;
+    --serif: "Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+    --mono: ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:var(--serif);
+    background:var(--paper);
+    color:var(--ink);
+    display:flex;flex-direction:column;
+    overflow:hidden;
+  }
+  /* ---------- header ---------- */
+  header{
+    padding:14px 20px 10px;
+    border-bottom:1.5px solid var(--ink);
+    background:var(--paper);
+    flex:0 0 auto;
+  }
+  .masthead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .masthead h1{font-size:21px;font-weight:600;letter-spacing:.01em}
+  .masthead .count{font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:.06em}
+  .masthead .search-wrap{margin-left:auto;display:flex;align-items:center;gap:8px}
+  #search{
+    font-family:var(--serif);font-size:14px;
+    border:1px solid var(--ink);border-radius:0;
+    background:var(--card);color:var(--ink);
+    padding:6px 10px;width:280px;outline:none;
+  }
+  #search:focus{box-shadow:0 0 0 2px rgba(28,38,48,.18)}
+  #clearBtn{
+    font-family:var(--mono);font-size:11px;background:none;border:1px solid var(--rule);
+    color:var(--ink-soft);padding:5px 8px;cursor:pointer;
+  }
+  #clearBtn:hover{border-color:var(--ink);color:var(--ink)}
+  .filters{display:flex;gap:18px;margin-top:10px;flex-wrap:wrap;align-items:center}
+  .fgroup{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .flabel{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink-soft);text-transform:uppercase;margin-right:2px}
+  .chip{
+    font-family:var(--mono);font-size:11px;letter-spacing:.02em;
+    border:1px solid var(--rule);background:transparent;color:var(--ink-soft);
+    padding:3px 9px;cursor:pointer;border-radius:11px;
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .chip .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+  .chip.active{border-color:var(--ink);color:var(--ink);background:var(--card)}
+  .chip:focus-visible,#search:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+  select#sectionSel{
+    font-family:var(--mono);font-size:11px;border:1px solid var(--rule);
+    background:transparent;color:var(--ink);padding:3px 6px;max-width:280px;
+  }
+  .edge-toggle{cursor:pointer}
+  .edge-toggle .swatch{width:16px;height:3px;display:inline-block;border-radius:2px}
+  .edge-toggle.off{opacity:.35;text-decoration:line-through}
+  /* ---------- main split ---------- */
+  main{flex:1 1 auto;display:flex;min-height:0}
+  #graphPane{flex:1 1 62%;position:relative;min-width:0}
+  #graph{width:100%;height:100%;display:block;cursor:grab}
+  #graph:active{cursor:grabbing}
+  .hint{
+    position:absolute;left:14px;bottom:10px;
+    font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:.04em;
+    pointer-events:none;
+  }
+  #tooltip{
+    position:absolute;pointer-events:none;display:none;
+    background:var(--ink);color:var(--card);
+    font-family:var(--mono);font-size:11px;line-height:1.45;
+    padding:6px 9px;max-width:300px;z-index:30;
+  }
+  /* ---------- right panel ---------- */
+  #panel{
+    flex:0 0 38%;max-width:520px;min-width:330px;
+    border-left:1.5px solid var(--ink);
+    background:var(--paper);
+    display:flex;flex-direction:column;min-height:0;
+  }
+  #panelScroll{flex:1 1 auto;overflow-y:auto;padding:16px 18px 28px}
+  /* list view */
+  .list-row{
+    display:flex;align-items:baseline;gap:9px;
+    padding:7px 4px;border-bottom:1px solid var(--rule);cursor:pointer;
+  }
+  .list-row:hover{background:rgba(250,249,245,.7)}
+  .list-row .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;position:relative;top:0}
+  .list-row .lr-name{font-size:14.5px}
+  .list-row .lr-meta{font-family:var(--mono);font-size:10px;color:var(--ink-soft);margin-left:auto;text-align:right;letter-spacing:.03em;flex:0 0 auto}
+  .list-head{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin:4px 0 8px}
+  .empty{font-style:italic;color:var(--ink-soft);padding:18px 4px;font-size:14px}
+  /* catalog card */
+  .card{
+    background:var(--card);
+    border:1px solid var(--ink);
+    box-shadow:3px 3px 0 rgba(28,38,48,.16);
+    padding:0 0 26px;position:relative;
+  }
+  .card::after{ /* the punch hole */
+    content:"";position:absolute;left:50%;bottom:9px;transform:translateX(-50%);
+    width:13px;height:13px;border-radius:50%;
+    background:var(--paper);border:1px solid var(--ink);
+  }
+  .card-top{
+    display:flex;justify-content:space-between;align-items:center;
+    font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-soft);
+    padding:8px 14px;border-bottom:1px solid var(--rule-card);
+  }
+  .card-top .camp-tag{display:flex;align-items:center;gap:6px;color:var(--ink)}
+  .card-top .dot{width:8px;height:8px;border-radius:50%}
+  .card-body{padding:13px 16px 6px}
+  .card-body h2{font-size:18px;font-weight:600;line-height:1.3;margin-bottom:2px}
+  .card-body .byline{font-style:italic;color:var(--ink-soft);font-size:13.5px;margin-bottom:10px}
+  .card-body .typeline{
+    font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);
+    border-top:1px solid var(--rule-card);border-bottom:1px solid var(--rule-card);
+    padding:6px 0;margin-bottom:11px;letter-spacing:.02em;line-height:1.5;
+  }
+  .card-body .claim{font-size:14.5px;line-height:1.62}
+  .themes{margin-top:11px;display:flex;flex-wrap:wrap;gap:5px}
+  .theme{
+    font-family:var(--mono);font-size:10px;color:var(--ink-soft);
+    border:1px solid var(--rule-card);padding:2px 7px;border-radius:9px;cursor:pointer;
+  }
+  .theme:hover{color:var(--ink);border-color:var(--ink)}
+  .rel-section{padding:4px 16px 0;margin-top:10px}
+  .rel-head{
+    font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+    display:flex;align-items:center;gap:8px;margin:12px 0 5px;
+  }
+  .rel-head .swatch{width:18px;height:3px;border-radius:2px}
+  .rel-item{
+    display:block;width:100%;text-align:left;background:none;border:none;cursor:pointer;
+    font-family:var(--serif);font-size:13.5px;color:var(--ink);
+    padding:5px 2px;border-bottom:1px dotted var(--rule-card);line-height:1.45;
+  }
+  .rel-item:hover .rel-target{text-decoration:underline}
+  .rel-item .rel-arrow{font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-right:4px}
+  .rel-item .rel-target{font-weight:600}
+  .rel-item .rel-note{display:block;font-style:italic;color:var(--ink-soft);font-size:12.5px;margin-top:1px}
+  .backlink{
+    font-family:var(--mono);font-size:11px;background:none;border:none;color:var(--ink-soft);
+    cursor:pointer;padding:0 0 10px;letter-spacing:.05em;
+  }
+  .backlink:hover{color:var(--ink)}
+  /* graph elements */
+  .node-label{
+    font-family:var(--mono);font-size:9.5px;fill:var(--ink);
+    pointer-events:none;text-anchor:middle;letter-spacing:.02em;
+  }
+  /* mobile */
+  @media (max-width: 880px){
+    main{flex-direction:column}
+    #graphPane{flex:1 1 52%}
+    #panel{flex:1 1 48%;max-width:none;min-width:0;border-left:none;border-top:1.5px solid var(--ink)}
+    .masthead .search-wrap{margin-left:0;width:100%}
+    #search{flex:1}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;animation:none !important}
+  }
+</style>
+</head>
+<body>
+
+<script>
+/* ============================================================
+   THE CORPUS DATA — EDIT HERE
+   ------------------------------------------------------------
+   To add source 43:
+     1. Add an object to CORPUS.nodes (copy any entry as a template).
+        - id: short unique slug, no spaces
+        - label: surname(s) shown on the graph node
+        - camp: "Critical" | "Pro / optimist" | "Deflationary / conditional" | "Context"
+        - evidence: "High (causal)" | "Medium" | "Low" | "Argument" | "Context"
+        - section: 1–7
+     2. Add edges to CORPUS.edges: [sourceId, relation, targetId, "note"]
+        Relations (read as: SOURCE —relation→ TARGET):
+        - "supports"     A reinforces B's claim with evidence or argument
+        - "contradicts"  A's findings or position collide with B's
+        - "complicates"  A qualifies, checks, or calibrates B without refuting it
+        - "grounds"      A supplies the mechanism, theory, or primary source beneath B
+        - "paired-with"  A and B are a matched pair: same question, mirrored answers
+   ============================================================ */
+window.CORPUS = {
+  sections: {
+    1:"The critical case: structure, power, and labor",
+    2:"The critical case: the moral-caution spine and friction/cognition",
+    3:"The critical case: hype skeptics and the deflation of transformation",
+    4:"The case for AI: optimist arguments and supporting evidence",
+    5:"Theory and the political economy of diffusion",
+    6:"The deflationary middle and the conditional cases",
+    7:"Context and ground-level data"
+  },
+  nodes: [
+    {id:"crawford-k", label:"K. Crawford", authors:"Crawford, Kate", title:"The Atlas of AI", year:2021, section:1, camp:"Critical", evidence:"Argument", type:"Critical theory and reportage",
+     claim:"AI is an extractive industry and a registry of power: built from minerals, energy, data, and hidden human labor, inheriting an old factory drive toward standardization and conformity.",
+     themes:["power","labor","extraction","homogenization","standardization","concentration"]},
+    {id:"hao", label:"Hao", authors:"Hao, Karen", title:"Empire of AI", year:2025, section:1, camp:"Critical", evidence:"Argument", type:"Investigative reporting",
+     claim:"OpenAI as the lens for AI as a new empire: concentrated power justified by AGI ideology and scale-at-all-costs, built partly on Global-South data labor.",
+     themes:["power","concentration","labor","hype","AGI","scale"]},
+    {id:"murgia", label:"Murgia", authors:"Murgia, Madhumita", title:"Code Dependent", year:2024, section:1, camp:"Critical", evidence:"Argument", type:"Ethnographic reporting",
+     claim:"AI runs on invisible ghost workers in the Global South; deliberately ambivalent, showing the work both exploiting people and lifting some out of precarity.",
+     themes:["labor","ghost work","Global South","precarity"]},
+    {id:"mcquillan", label:"McQuillan", authors:"McQuillan, Dan", title:"Resisting AI", year:2022, section:1, camp:"Critical", evidence:"Argument", type:"Political-theoretical manifesto",
+     claim:"AI is a political technology tending toward the authoritarian; the response should be collective political resistance, not better ethics.",
+     themes:["politics","resistance","austerity","inevitability","thoughtlessness"]},
+    {id:"eubanks", label:"Eubanks", authors:"Eubanks, Virginia", title:"Automating Inequality", year:2018, section:1, camp:"Critical", evidence:"Argument", type:"Reported case studies",
+     claim:"The digital poorhouse: automated decision-making in welfare, housing, and child services profiles, polices, and punishes the poor and forecloses appeal.",
+     themes:["algorithmic harm","welfare","space of reasons","poverty","appeal"]},
+    {id:"alvero", label:"Alvero et al.", authors:"Alvero, Lee, Regla-Vargas, Kizilcec, Joachims & Antonio", title:"LLMs, Social Demography, and Hegemony", year:2024, section:1, camp:"Critical", evidence:"Medium", type:"Computational text analysis, large-corpus comparison",
+     claim:"LLM-generated admissions essays are internally homogeneous and most resemble the writing of socioeconomically advantaged students: a default hegemonic voice, before any student touches the tool.",
+     themes:["homogenization","voice","class","admissions","hegemony"]},
+    {id:"lee-dd", label:"Lee (Digital Divide)", authors:"Lee, Borchers, Alvero, Joachims & Kizilcec", title:"The Digital Divide in Generative AI", year:2026, section:1, camp:"Critical", evidence:"Medium", type:"Longitudinal observational, N = 81,663; preprint; detector-estimated LLM use",
+     claim:"Post-2023 convergence in admissions-essay language, largest among fee-waiver applicants: the students with least access to human writing support lose the most distinctiveness of voice.",
+     themes:["homogenization","class","admissions","digital divide","stratification","voice"]},
+    {id:"vallor", label:"Vallor", authors:"Vallor, Shannon", title:"The AI Mirror", year:2024, section:2, camp:"Critical", evidence:"Argument", type:"Philosophy (virtue ethics); the spine of the moral-caution frame",
+     claim:"AI is a backward-facing mirror; its danger is the quiet erosion of moral capacity. Practical wisdom cannot form without the friction of reasoning through consequences oneself.",
+     themes:["friction","moral deskilling","space of reasons","virtue ethics","mirror","phronesis"]},
+    {id:"crawford-m", label:"M. Crawford", authors:"Crawford, Matthew B.", title:"The World Beyond Your Head", year:2015, section:2, camp:"Critical", evidence:"Argument", type:"Philosophy of attention (not Kate Crawford)",
+     claim:"The self is formed through skilled, effortful engagement with a reality that resists us; frictionlessness is a loss rather than a convenience.",
+     themes:["attention","friction","skill","selfhood"]},
+    {id:"wolf", label:"Wolf", authors:"Wolf, Maryanne", title:"Reader, Come Home", year:2018, section:2, camp:"Critical", evidence:"Argument", type:"Cognitive neuroscience, popular",
+     claim:"Constant digital engagement erodes deep reading, sustained attention, and cognitive patience; the careful, pre-AI version of the cognition-erosion worry.",
+     themes:["reading","attention","cognition","erosion"]},
+    {id:"carr", label:"Carr", authors:"Carr, Nicholas", title:"The Glass Cage", year:2014, section:2, camp:"Critical", evidence:"Argument", type:"Synthesis and argument",
+     claim:"Over-reliance on automation degrades skill, memory, and situational awareness; the smoother the tool, the more it hollows out the competence it was meant to support.",
+     themes:["deskilling","automation","skill","attention"]},
+    {id:"kosmyna", label:"Kosmyna", authors:"Kosmyna, N., et al.", title:"Your Brain on ChatGPT", year:2025, section:2, camp:"Critical", evidence:"Low", type:"EEG + NLP + interviews; small-n preprint, not peer reviewed",
+     claim:"LLM-assisted essay writing produced the weakest brain connectivity of three conditions, framed as cognitive debt, with poor recall and homogenized text. The authors themselves call it preliminary.",
+     themes:["cognition","EEG","cognitive debt","homogenization","offloading"]},
+    {id:"gerlich", label:"Gerlich", authors:"Gerlich, M.", title:"AI Tools in Society", year:2025, section:2, camp:"Critical", evidence:"Low", type:"Cross-sectional, correlational",
+     claim:"Frequent AI use correlates negatively with critical-thinking scores, mediated by cognitive offloading. Correlational: causation may run the other way.",
+     themes:["critical thinking","offloading","correlation"]},
+    {id:"lee-chi", label:"Lee (CHI)", authors:"Lee, H.-P., Sarkar, Tankelevitch, et al.", title:"The Impact of Generative AI on Critical Thinking", year:2025, section:2, camp:"Critical", evidence:"Medium", type:"Survey of 319 knowledge workers, 936 task examples",
+     claim:"Higher confidence in the AI predicts less critical thinking; confidence in one's own expertise predicts more. Effort shifts from generating to verifying rather than disappearing.",
+     themes:["critical thinking","confidence","verification","knowledge work","offloading"]},
+    {id:"bender-hanna", label:"Bender & Hanna", authors:"Bender, Emily M., and Alex Hanna", title:"The AI Con", year:2025, section:3, camp:"Critical", evidence:"Argument", type:"Linguistic and rhetorical critique",
+     claim:"AI is largely hype: much of it does not work, none of it is inevitable, and it functions mainly to centralize power and profit. The most absolutist anti-AI position in the set.",
+     themes:["hype","power","refusal","inevitability"]},
+    {id:"stochastic-parrots", label:"Stochastic Parrots", authors:"Bender, Gebru, McMillan-Major & Mitchell", title:"On the Dangers of Stochastic Parrots", year:2021, section:3, camp:"Critical", evidence:"Argument", type:"Conference paper (FAccT)",
+     claim:"LLMs reproduce linguistic form without understanding; scaling carries environmental cost, embedded bias, and the danger of mistaking fluency for thought.",
+     themes:["understanding","language","bias","environment","fluency"]},
+    {id:"narayanan", label:"Narayanan & Kapoor", authors:"Narayanan, Arvind, and Sayash Kapoor", title:"AI Snake Oil", year:2024, section:3, camp:"Deflationary / conditional", evidence:"Argument", type:"Empirical and analytical; anti-hype, not anti-AI",
+     claim:"Predictive AI is mostly broken snake oil in high-stakes domains; generative AI is genuinely useful. Names criti-hype: criticism that inflates capability while attacking it.",
+     themes:["hype","predictive AI","snake oil","criti-hype","automation bias"]},
+    {id:"reich", label:"Reich", authors:"Reich, Justin", title:"Failure to Disrupt", year:2020, section:3, camp:"Deflationary / conditional", evidence:"Argument", type:"History and synthesis of edtech; pre-dates LLMs",
+     claim:"Technology consistently fails to transform schooling because institutions absorb and blunt it. Investor storytime; the EdTech Matthew Effect: tools help already-advantaged learners most.",
+     themes:["edtech","institutions","hype","Matthew Effect","disruption","domestication"]},
+    {id:"mollick", label:"Mollick", authors:"Mollick, Ethan", title:"Co-Intelligence", year:2024, section:4, camp:"Pro / optimist", evidence:"Argument", type:"Pragmatic-optimist argument",
+     claim:"AI as collaborator rather than replacement: centaur and cyborg models, always invite AI to the table, be the human in the loop.",
+     themes:["co-intelligence","centaur","human in the loop","productivity","augmentation"]},
+    {id:"khan", label:"Khan", authors:"Khan, Salman", title:"Brave New Words", year:2024, section:4, camp:"Pro / optimist", evidence:"Argument", type:"Optimist vision; author has a direct commercial stake",
+     claim:"Generative AI can finally deliver personalized one-to-one-style tutoring at scale, realizing the two-sigma dream. An argument from an interested party.",
+     themes:["tutoring","personalization","Khanmigo","two sigma"]},
+    {id:"kestin", label:"Kestin", authors:"Kestin, G., et al.", title:"AI Tutoring Outperforms Active Learning", year:2025, section:4, camp:"Pro / optimist", evidence:"High (causal)", type:"Randomized controlled trial, N = 194",
+     claim:"Students learned more from a well-designed AI tutor than from in-class active learning, in less time, with higher engagement. Single course, deliberate pedagogy.",
+     themes:["tutoring","RCT","physics","guardrails","design"]},
+    {id:"wu", label:"Wu", authors:"Wu, Xinning, et al.", title:"ChatGPT's Impact on Student Learning Outcomes", year:2026, section:4, camp:"Pro / optimist", evidence:"Medium", type:"Random-effects meta-analysis, 35 experimental studies; high heterogeneity",
+     claim:"Significant positive effects of ChatGPT across cognitive and non-cognitive outcomes, including large effects for critical thinking. The sharpest contradiction of the corpus's central worry.",
+     themes:["meta-analysis","learning outcomes","critical thinking"]},
+    {id:"desimone", label:"De Simone", authors:"De Simone, M., et al.", title:"From Chalkboards to Chatbots", year:2025, section:4, camp:"Pro / optimist", evidence:"High (causal)", type:"Randomized controlled trial, Nigeria (World Bank)",
+     claim:"Teacher-supervised GPT-4 use raised English scores 0.23 SD at ~$48 per student. It worked because teachers facilitated, prompts promoted reasoning, and use was monitored.",
+     themes:["tutoring","Nigeria","RCT","facilitation","design","Global South"]},
+    {id:"wang", label:"Wang", authors:"Wang, R. E., et al.", title:"Tutor CoPilot", year:2024, section:4, camp:"Pro / optimist", evidence:"High (causal)", type:"Field experiment; real-time AI guidance to human tutors",
+     claim:"Live expert suggestions to novice tutors improved outcomes, with the largest gains for students paired with the lowest-rated tutors. A leveling, human-in-the-loop result.",
+     themes:["tutoring","human in the loop","leveling","novice"]},
+    {id:"bloom", label:"Bloom", authors:"Bloom, Benjamin S.", title:"The 2 Sigma Problem", year:1984, section:4, camp:"Pro / optimist", evidence:"Medium", type:"Foundational research synthesis",
+     claim:"One-to-one mastery tutoring moves the average student about two standard deviations above classroom instruction. In this corpus, the aspiration the AI-tutoring evidence chases.",
+     themes:["tutoring","mastery","two sigma"]},
+    {id:"brynjolfsson", label:"Brynjolfsson", authors:"Brynjolfsson, Li & Raymond", title:"Generative AI at Work", year:2023, section:4, camp:"Pro / optimist", evidence:"High (causal)", type:"Field study, ~5,000 support agents",
+     claim:"An AI assistant raised productivity 14% on average and 34% for novices by diffusing tacit knowledge: upskilling, not deskilling. Single firm, medium run.",
+     themes:["productivity","leveling","novice","tacit knowledge"]},
+    {id:"noy-zhang", label:"Noy & Zhang", authors:"Noy, S., & Zhang, W.", title:"Productivity Effects of Generative AI", year:2023, section:4, camp:"Pro / optimist", evidence:"High (causal)", type:"Preregistered RCT, 453 professionals",
+     claim:"ChatGPT cut writing time ~40% and raised quality ~18%, compressing inequality. The authors' own caveat: it mostly substitutes for worker effort rather than complementing skill.",
+     themes:["productivity","writing","leveling","effort substitution"]},
+    {id:"dellacqua", label:"Dell'Acqua", authors:"Dell'Acqua, F., et al.", title:"Navigating the Jagged Technological Frontier", year:2023, section:4, camp:"Deflationary / conditional", evidence:"High (causal)", type:"Preregistered field experiment, 758 consultants",
+     claim:"Inside the frontier, GPT-4 users were faster and better, with below-average performers gaining most; outside it, 19% less likely to be correct. Wrong output that still looks good.",
+     themes:["jagged frontier","productivity","deceptive failure","frontier"]},
+    {id:"clark-chalmers", label:"Clark & Chalmers", authors:"Clark, A., & Chalmers, D.", title:"The Extended Mind", year:1998, section:5, camp:"Pro / optimist", evidence:"Argument", type:"Philosophy of mind; the canonical statement",
+     claim:"Cognition extends beyond the brain into tools and environment as functional parts of the mind. If offloading is constitutive of mind, cognitive debt may be a category error.",
+     themes:["extended mind","offloading","philosophy of mind"]},
+    {id:"clark-2025", label:"Clark 2025", authors:"Clark, Andy", title:"Extending Minds with Generative AI", year:2025, section:5, camp:"Pro / optimist", evidence:"Argument", type:"Perspective (Nature Communications); open access",
+     claim:"Human-AI collaboration is the latest expression of our basic nature to build hybrid thinking systems. The steelman the friction thesis must answer, by the person best positioned to make it.",
+     themes:["extended mind","hybrid thinking","augmentation"]},
+    {id:"martens", label:"Martens", authors:"Martens, Bertin", title:"How DeepSeek Has Changed AI and What It Means for Europe", year:2025, section:5, camp:"Deflationary / conditional", evidence:"Argument", type:"Policy analysis (Bruegel Policy Brief 12/2025)",
+     claim:"DeepSeek shows frontier AI need not be controlled by a few firms, but markets over-read it: compute and capital remain concentrated. Open weights are not open data.",
+     themes:["open models","competition","DeepSeek","diffusion","concentration"]},
+    {id:"acemoglu-macro", label:"Acemoglu (macro)", authors:"Acemoglu, Daron", title:"The Simple Macroeconomics of AI", year:2024, section:6, camp:"Deflationary / conditional", evidence:"Medium", type:"Economic modeling",
+     claim:"AI's total-factor-productivity gain is at most ~0.66% over a decade, and even when AI helps lower-skill workers it may widen inequality. Deflates both poles at once.",
+     themes:["productivity","inequality","macroeconomics"]},
+    {id:"acemoglu-johnson", label:"Acemoglu & Johnson", authors:"Acemoglu, Daron, and Simon Johnson", title:"Power and Progress", year:2023, section:6, camp:"Deflationary / conditional", evidence:"Argument", type:"Economic history",
+     claim:"Technological gains are never automatically shared; they are distributed by political and institutional choices. The direction of AI is a societal choice.",
+     themes:["history","institutions","choice","inequality","inevitability"]},
+    {id:"doshi-hauser", label:"Doshi & Hauser", authors:"Doshi, A., & Hauser, O.", title:"Generative AI and the Diversity of Novel Content", year:2024, section:6, camp:"Deflationary / conditional", evidence:"High (causal)", type:"Experiment (Science Advances)",
+     claim:"AI raised individual creativity but reduced collective diversity, making writers' work measurably more similar. Better for the individual, flatter across the population.",
+     themes:["creativity","diversity","homogenization"]},
+    {id:"orben", label:"Orben", authors:"Orben, Amy", title:"The Sisyphean Cycle of Technology Panics", year:2020, section:6, camp:"Deflationary / conditional", evidence:"Medium", type:"Peer-reviewed synthesis",
+     claim:"Societies cycle through near-identical, evidence-thin panics about new media. The claim is demand better evidence, not no harm exists.",
+     themes:["panic cycle","evidence standards","media","moral panic"]},
+    {id:"otis", label:"Otis", authors:"Otis, N., et al.", title:"The Uneven Impact of Generative AI", year:2024, section:6, camp:"Deflationary / conditional", evidence:"High (causal)", type:"Field RCT, 640 Kenyan entrepreneurs",
+     claim:"A GPT-4 mentor showed no average effect: high performers gained 15-20% while low performers did 8-10% worse. Same kind of tool, opposite distributional outcome from the leveling studies.",
+     themes:["stratification","entrepreneurs","Kenya","user skill"]},
+    {id:"bastani", label:"Bastani", authors:"Bastani, H., et al.", title:"Generative AI Can Harm Learning", year:2024, section:6, camp:"Deflationary / conditional", evidence:"High (causal)", type:"Field experiment, high-school math",
+     claim:"Unguarded GPT-4 boosted practice but harmed learning once removed (~17% worse); a guardrailed tutor giving hints prevented the harm. The cleanest causal demonstration that design decides.",
+     themes:["guardrails","learning harm","design dependence","crutch","offloading"]},
+    {id:"bjork-2011", label:"Bjork 2011", authors:"Bjork, E. L., & Bjork, R. A.", title:"Making Things Hard on Yourself, but in a Good Way", year:2011, section:6, camp:"Deflationary / conditional", evidence:"Medium", type:"Cognitive psychology, chapter",
+     claim:"Desirable difficulties improve long-term retention, while ease produces fluent performance that masks shallow learning: the illusion of competence. The mechanism beneath the friction throughline.",
+     themes:["desirable difficulties","retention","illusion of competence","friction"]},
+    {id:"bjork-2020", label:"Bjork 2020", authors:"Bjork, R. A., & Bjork, E. L.", title:"Desirable Difficulties in Theory and Practice", year:2020, section:6, camp:"Deflationary / conditional", evidence:"Medium", type:"Cognitive psychology (JARMAC)",
+     claim:"A difficulty is desirable only if the learner has the background to meet it; below that threshold it simply impairs. The caveat that keeps friction-is-good from becoming a blanket claim.",
+     themes:["readiness","undesirable difficulty","friction","threshold"]},
+    {id:"rand", label:"RAND", authors:"Schwartz, H., & Diliberti, M. (RAND)", title:"More Students Use AI for Homework...", year:2026, section:7, camp:"Context", evidence:"Context", type:"Repeated representative survey",
+     claim:"Student AI use rose 48% to 62% even as 67% came to believe it harms critical thinking; school policy is widely absent. Recommends preserving cognitive friction.",
+     themes:["students","survey","policy","offloading","friction"]},
+    {id:"npr-ipsos", label:"NPR/Ipsos", authors:"NPR/Ipsos", title:"Education AI Topline 2026", year:2026, section:7, camp:"Context", evidence:"Context", type:"K-12 teacher opinion survey",
+     claim:"54% of teachers say AI makes critical thinking harder to teach; 74% see a bigger change than the internet; most report no school guidance. The social-fact layer beneath the cognition debate.",
+     themes:["teachers","survey","policy vacuum","trust"]},
+    {id:"brookings", label:"Brookings", authors:"Luther, Venetis & Karim (Brookings)", title:"A New Direction for Students in an AI World", year:2026, section:7, camp:"Context", evidence:"Context", type:"Policy synthesis",
+     claim:"A balanced report emphasizing holistic development, the global digital divide, and hybrid vigor, while warning that personalization can become sophisticated tracking.",
+     themes:["policy","hybrid vigor","tracking","digital divide"]}
+  ],
+  edges: [
+    ["alvero","paired-with","lee-dd","Default voice vs adoption effects: same team, two halves of one finding"],
+    ["alvero","supports","crawford-k","Data-level demonstration of the standardization thesis"],
+    ["alvero","supports","vallor","The mirror reflects the dominant voice, demographically measured"],
+    ["alvero","supports","doshi-hauser","Homogenization measured at corpus scale"],
+    ["lee-dd","supports","doshi-hauser","Convergence in real high-stakes writing"],
+    ["lee-dd","supports","otis","Stratified outcome: lower-SES applicants lose the most voice"],
+    ["lee-dd","supports","reich","The EdTech Matthew Effect, observed in admissions essays"],
+    ["kosmyna","supports","vallor","Connectivity scales with effort: friction made visible"],
+    ["kosmyna","supports","doshi-hauser","Essay convergence in the LLM condition"],
+    ["kosmyna","contradicts","wu","Same outcomes, opposite sign"],
+    ["gerlich","supports","vallor","Names the offloading mechanism the friction thesis predicts"],
+    ["gerlich","contradicts","wu","Negative correlation vs large positive effects"],
+    ["gerlich","contradicts","kestin","Offloading harm vs tutoring gains"],
+    ["lee-chi","supports","gerlich","Better-sourced cousin; adds confidence as the designable variable"],
+    ["lee-chi","supports","bastani","Effort shifts rather than vanishes: a design-dependence reading"],
+    ["orben","complicates","kosmyna","Raises the burden of proof on the alarm reading"],
+    ["orben","complicates","gerlich","Correlational alarm fits the panic-cycle pattern"],
+    ["orben","complicates","carr","Named foil: deskilling alarm as recurring panic"],
+    ["orben","complicates","wolf","Pre-AI erosion worry; the same panic-cycle discipline applies"],
+    ["wolf","grounds","kosmyna","Reading science beneath the cognition-erosion claim"],
+    ["wolf","supports","carr","Attention and deep skill eroded by smooth tools"],
+    ["carr","supports","vallor","The pre-AI, book-length deskilling thesis"],
+    ["crawford-m","supports","vallor","Why friction matters at the level of attention and selfhood"],
+    ["bjork-2011","grounds","vallor","Desirable difficulties: the mechanism beneath the friction throughline"],
+    ["bjork-2011","grounds","bastani","Why removing difficulty produces fluent but shallow performance"],
+    ["bjork-2020","complicates","bjork-2011","Difficulty is desirable only above a readiness threshold"],
+    ["bjork-2020","grounds","otis","The user-skill split: friction sinks the underprepared"],
+    ["bjork-2020","grounds","wang","The tutor-skill split: support lifts the less expert most"],
+    ["vallor","contradicts","clark-chalmers","If offloading is constitutive of mind, cognitive debt is a category error"],
+    ["clark-2025","contradicts","vallor","The steelman the friction thesis must answer"],
+    ["clark-chalmers","grounds","clark-2025","Cite 1998 for the thesis, 2025 for the application"],
+    ["clark-2025","supports","mollick","Theoretical ally of co-intelligence"],
+    ["clark-chalmers","contradicts","stochastic-parrots","Whether fluency can amount to thought"],
+    ["stochastic-parrots","grounds","bender-hanna","The primary source behind the book"],
+    ["narayanan","contradicts","bender-hanna","Pragmatist pole vs absolutism: both anti-hype, opposite verdicts on generative AI"],
+    ["narayanan","supports","mollick","Generative AI is genuinely useful"],
+    ["hao","paired-with","narayanan","Anti-doom by different routes: political vs empirical"],
+    ["hao","supports","crawford-k","Concentration and hidden labor, reported from inside one empire"],
+    ["murgia","complicates","crawford-k","Ambivalence checks the cleaner moral lines"],
+    ["murgia","complicates","hao","Ghost work both exploits and lifts out of precarity"],
+    ["desimone","complicates","murgia","A Global-South deployment that helped, by design"],
+    ["eubanks","supports","vallor","The digital poorhouse makes the foreclosed space of reasons concrete"],
+    ["eubanks","supports","bender-hanna","Ground truth for the social-services critique"],
+    ["mcquillan","contradicts","vallor","Political resistance vs prudence as the remedy"],
+    ["mcquillan","contradicts","narayanan","Revolution vs calibration"],
+    ["mcquillan","contradicts","reich","Resistance vs the shrug of institutional absorption"],
+    ["acemoglu-johnson","supports","mcquillan","'This is a choice,' with economic credibility"],
+    ["acemoglu-johnson","grounds","acemoglu-macro","The thousand-year pattern under the decade estimate"],
+    ["acemoglu-macro","complicates","brynjolfsson","Punctures the leveling story at macro scale"],
+    ["acemoglu-macro","complicates","khan","Deflates transformation claims with a 0.66% estimate"],
+    ["acemoglu-macro","paired-with","orben","The other 'evidence is thinner than the noise' voice"],
+    ["otis","supports","acemoglu-macro","Stratified gains align with the inequality argument"],
+    ["otis","contradicts","noy-zhang","Stratifies vs levels"],
+    ["otis","contradicts","brynjolfsson","Low performers did worse, not better"],
+    ["otis","contradicts","wang","Opposite distributional result"],
+    ["otis","paired-with","desimone","Same kind of tool, opposite distributional outcome"],
+    ["reich","contradicts","khan","The cleanest education pro/con book opposition"],
+    ["reich","supports","bender-hanna","Investor storytime: hype as engine"],
+    ["reich","supports","otis","The Matthew Effect predicts the stratifies pole"],
+    ["npr-ipsos","supports","reich","The policy vacuum is institutional absorption in real time"],
+    ["rand","paired-with","npr-ipsos","Student and teacher halves of the same ground picture"],
+    ["rand","supports","bastani","Policy vocabulary for offloading vs augmentation"],
+    ["kestin","supports","bastani","Guardrailed design produced gains, as the design split predicts"],
+    ["desimone","supports","bastani","Facilitated, reasoning-promoting use prevented harm"],
+    ["wang","supports","bastani","Human-in-the-loop design as guardrail"],
+    ["mollick","supports","bastani","'Human in the loop' is itself a design-dependence claim"],
+    ["dellacqua","grounds","mollick","The empirical basis for the book"],
+    ["dellacqua","supports","vallor","Deceptive failure: wrong output that still looks good"],
+    ["dellacqua","supports","narayanan","The jagged frontier feeds the automation-bias worry"],
+    ["noy-zhang","supports","brynjolfsson","Leveling pole: weaker performers gain most"],
+    ["wang","supports","brynjolfsson","AI diffuses expertise to the less expert"],
+    ["noy-zhang","supports","vallor","Its own caveat, substitutes for effort, confirms the friction mechanism from inside the optimist camp"],
+    ["bloom","grounds","khan","The two-sigma dream the book chases"],
+    ["bloom","grounds","kestin","The aspiration the RCT tests"],
+    ["bloom","grounds","brookings","Carried as the tutoring lodestar"],
+    ["desimone","supports","brookings","Evidence base for the report"],
+    ["wang","supports","brookings","The hybrid vigor exemplar"],
+    ["martens","contradicts","crawford-k","Diffusion pole vs the concentration thesis"],
+    ["martens","contradicts","hao","Open weights complicate the empire thesis"],
+    ["wu","supports","kestin","Meta-analytic breadth behind the tutoring result"],
+    ["bender-hanna","contradicts","dellacqua","'It doesn't work' vs measured gains"]
+  ]
+};
+</script>
+
+<header>
+  <div class="masthead">
+    <h1>The Working Corpus</h1>
+    <span class="count" id="countLabel">42 SOURCES &middot; 82 RELATIONS</span>
+    <div class="search-wrap">
+      <input id="search" type="search" placeholder="Search a term: friction, homogenization, tutoring&hellip;" aria-label="Search the corpus">
+      <button id="clearBtn" title="Clear search and filters">RESET</button>
+    </div>
+  </div>
+  <div class="filters">
+    <div class="fgroup" id="campChips"><span class="flabel">Camp</span></div>
+    <div class="fgroup" id="evChips"><span class="flabel">Evidence</span></div>
+    <div class="fgroup">
+      <span class="flabel">Section</span>
+      <select id="sectionSel" aria-label="Filter by section"><option value="">All sections</option></select>
+    </div>
+    <div class="fgroup" id="edgeToggles"><span class="flabel">Relations</span></div>
+  </div>
+</header>
+
+<main>
+  <div id="graphPane">
+    <svg id="graph" role="img" aria-label="Corpus relation network"></svg>
+    <div class="hint">drag nodes &middot; scroll to zoom &middot; click a node for its card &middot; hover a line for its note</div>
+    <div id="tooltip"></div>
+  </div>
+  <aside id="panel">
+    <div id="panelScroll"></div>
+  </aside>
+</main>
+
+<script>
+(function(){
+  const C = window.CORPUS;
+  const campColor = {
+    "Critical":"#A14334",
+    "Pro / optimist":"#2F6B4F",
+    "Deflationary / conditional":"#8A6D2F",
+    "Context":"#54678C"
+  };
+  const relColor = {
+    "supports":"#2E7D5B",
+    "contradicts":"#B3402E",
+    "complicates":"#C28E2D",
+    "grounds":"#3A6EA5",
+    "paired-with":"#7A5C9E"
+  };
+  const relOrder = ["supports","contradicts","complicates","grounds","paired-with"];
+  const evOrder = ["High (causal)","Medium","Low","Argument","Context"];
+  const evAbbr = {"High (causal)":"HIGH","Medium":"MED","Low":"LOW","Argument":"ARG","Context":"CTX"};
+
+  const nodes = C.nodes.map(d => ({...d}));
+  const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
+  const links = C.edges.map((e,i) => ({i, source:e[0], target:e[1]===undefined?null:e[0], rel:e[1], note:e[3]}));
+  // fix mapping: edges are [src, rel, dst, note]
+  links.forEach((l,i)=>{ const e=C.edges[i]; l.source=e[0]; l.rel=e[1]; l.target=e[2]; l.note=e[3]; });
+
+  document.getElementById("countLabel").textContent =
+    nodes.length + " SOURCES \u00B7 " + links.length + " RELATIONS";
+
+  // ---------- state ----------
+  const state = { q:"", camps:new Set(), evs:new Set(), section:"", rels:new Set(relOrder), selected:null };
+
+  // ---------- header controls ----------
+  const campWrap = document.getElementById("campChips");
+  Object.keys(campColor).forEach(camp=>{
+    const b=document.createElement("button");
+    b.className="chip"; b.dataset.camp=camp;
+    b.innerHTML='<span class="dot" style="background:'+campColor[camp]+'"></span>'+camp;
+    b.onclick=()=>{ state.camps.has(camp)?state.camps.delete(camp):state.camps.add(camp); b.classList.toggle("active"); refresh(); };
+    campWrap.appendChild(b);
+  });
+  const evWrap = document.getElementById("evChips");
+  evOrder.forEach(ev=>{
+    const b=document.createElement("button");
+    b.className="chip"; b.textContent=evAbbr[ev];
+    b.title=ev;
+    b.onclick=()=>{ state.evs.has(ev)?state.evs.delete(ev):state.evs.add(ev); b.classList.toggle("active"); refresh(); };
+    evWrap.appendChild(b);
+  });
+  const secSel = document.getElementById("sectionSel");
+  Object.entries(C.sections).forEach(([k,v])=>{
+    const o=document.createElement("option"); o.value=k; o.textContent=k+". "+v; secSel.appendChild(o);
+  });
+  secSel.onchange=()=>{ state.section=secSel.value; refresh(); };
+  const edgeWrap=document.getElementById("edgeToggles");
+  relOrder.forEach(rel=>{
+    const b=document.createElement("button");
+    b.className="chip edge-toggle";
+    b.innerHTML='<span class="swatch" style="background:'+relColor[rel]+'"></span>'+rel;
+    b.onclick=()=>{ state.rels.has(rel)?state.rels.delete(rel):state.rels.add(rel); b.classList.toggle("off"); refresh(); };
+    edgeWrap.appendChild(b);
+  });
+  const searchEl=document.getElementById("search");
+  searchEl.addEventListener("input",()=>{ state.q=searchEl.value.trim().toLowerCase(); refresh(); });
+  document.getElementById("clearBtn").onclick=()=>{
+    state.q=""; searchEl.value=""; state.camps.clear(); state.evs.clear(); state.section=""; secSel.value="";
+    state.rels=new Set(relOrder); state.selected=null;
+    document.querySelectorAll(".chip.active").forEach(c=>c.classList.remove("active"));
+    document.querySelectorAll(".edge-toggle.off").forEach(c=>c.classList.remove("off"));
+    refresh();
+  };
+
+  // ---------- matching ----------
+  function matches(n){
+    if(state.camps.size && !state.camps.has(n.camp)) return false;
+    if(state.evs.size && !state.evs.has(n.evidence)) return false;
+    if(state.section && String(n.section)!==state.section) return false;
+    if(state.q){
+      const hay=(n.label+" "+n.authors+" "+n.title+" "+n.claim+" "+n.type+" "+n.themes.join(" ")).toLowerCase();
+      if(!hay.includes(state.q)) return false;
+    }
+    return true;
+  }
+
+  // ---------- graph ----------
+  const svg=d3.select("#graph");
+  const pane=document.getElementById("graphPane");
+  let W=pane.clientWidth,H=pane.clientHeight;
+  const g=svg.append("g");
+  svg.call(d3.zoom().scaleExtent([0.35,2.5]).on("zoom",ev=>g.attr("transform",ev.transform)));
+
+  const linkSel=g.append("g").selectAll("line").data(links).join("line")
+    .attr("stroke",d=>relColor[d.rel]).attr("stroke-width",1.5)
+    .attr("stroke-dasharray",d=>d.rel==="paired-with"?"4 3":null)
+    .attr("stroke-opacity",.55).style("cursor","pointer");
+  const tooltip=document.getElementById("tooltip");
+  linkSel.on("mousemove",(ev,d)=>{
+    tooltip.style.display="block";
+    tooltip.innerHTML="<b>"+byId[d.source.id||d.source].label+"</b> \u2014"+d.rel+"\u2192 <b>"+byId[d.target.id||d.target].label+"</b><br>"+d.note;
+    const r=pane.getBoundingClientRect();
+    tooltip.style.left=Math.min(ev.clientX-r.left+14,r.width-310)+"px";
+    tooltip.style.top=(ev.clientY-r.top+10)+"px";
+  }).on("mouseleave",()=>tooltip.style.display="none");
+
+  const nodeSel=g.append("g").selectAll("g").data(nodes).join("g")
+    .style("cursor","pointer")
+    .call(d3.drag()
+      .on("start",(ev,d)=>{ if(!ev.active) sim.alphaTarget(.25).restart(); d.fx=d.x; d.fy=d.y; })
+      .on("drag",(ev,d)=>{ d.fx=ev.x; d.fy=ev.y; })
+      .on("end",(ev,d)=>{ if(!ev.active) sim.alphaTarget(0); d.fx=null; d.fy=null; }));
+  nodeSel.append("circle")
+    .attr("r",d=>d.evidence==="High (causal)"?11:9)
+    .attr("fill",d=>campColor[d.camp])
+    .attr("stroke",d=>d.evidence==="High (causal)"?"#1C2630":"#FAF9F5")
+    .attr("stroke-width",d=>d.evidence==="High (causal)"?2.5:1.5);
+  nodeSel.append("text").attr("class","node-label").attr("dy",d=>(d.evidence==="High (causal)"?24:21))
+    .text(d=>d.label);
+  nodeSel.on("click",(ev,d)=>{ state.selected=d.id; refresh(); ev.stopPropagation(); });
+  svg.on("click",()=>{ state.selected=null; refresh(); });
+
+  const sim=d3.forceSimulation(nodes)
+    .force("link",d3.forceLink(links).id(d=>d.id).distance(95).strength(.5))
+    .force("charge",d3.forceManyBody().strength(-300))
+    .force("center",d3.forceCenter(W/2,H/2))
+    .force("collide",d3.forceCollide(30))
+    .on("tick",()=>{
+      linkSel.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
+             .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+      nodeSel.attr("transform",d=>"translate("+d.x+","+d.y+")");
+    });
+  window.addEventListener("resize",()=>{
+    W=pane.clientWidth;H=pane.clientHeight;
+    sim.force("center",d3.forceCenter(W/2,H/2)).alpha(.3).restart();
+  });
+
+  // ---------- panel rendering ----------
+  const panel=document.getElementById("panelScroll");
+  function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+
+  function renderList(matched){
+    let h='<div class="list-head">'+(state.q||state.camps.size||state.evs.size||state.section
+      ? matched.length+" matching source"+(matched.length===1?"":"s")
+      : "All sources — click one, or click a node")+'</div>';
+    if(!matched.length){ panel.innerHTML=h+'<div class="empty">Nothing matches. Loosen a filter or try a broader term.</div>'; return; }
+    const sorted=[...matched].sort((a,b)=>a.section-b.section || a.label.localeCompare(b.label));
+    h+=sorted.map(n=>
+      '<div class="list-row" data-id="'+n.id+'" role="button" tabindex="0">'+
+      '<span class="dot" style="background:'+campColor[n.camp]+'"></span>'+
+      '<span class="lr-name">'+esc(n.label)+', <i>'+esc(n.title)+'</i></span>'+
+      '<span class="lr-meta">S'+n.section+' \u00B7 '+evAbbr[n.evidence]+' \u00B7 '+n.year+'</span></div>'
+    ).join("");
+    panel.innerHTML=h;
+    panel.querySelectorAll(".list-row").forEach(r=>{
+      const go=()=>{ state.selected=r.dataset.id; refresh(); };
+      r.onclick=go; r.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){e.preventDefault();go();} };
+    });
+  }
+
+  function renderCard(n){
+    const out=links.filter(l=>(l.source.id||l.source)===n.id);
+    const inn=links.filter(l=>(l.target.id||l.target)===n.id);
+    let relHtml="";
+    relOrder.forEach(rel=>{
+      const o=out.filter(l=>l.rel===rel), i=inn.filter(l=>l.rel===rel);
+      if(!o.length && !i.length) return;
+      relHtml+='<div class="rel-head"><span class="swatch" style="background:'+relColor[rel]+'"></span>'+rel+'</div>';
+      o.forEach(l=>{
+        const t=byId[l.target.id||l.target];
+        relHtml+='<button class="rel-item" data-id="'+t.id+'"><span class="rel-arrow">\u2192</span><span class="rel-target">'+esc(t.label)+'</span><span class="rel-note">'+esc(l.note)+'</span></button>';
+      });
+      i.forEach(l=>{
+        const s=byId[l.source.id||l.source];
+        relHtml+='<button class="rel-item" data-id="'+s.id+'"><span class="rel-arrow">\u2190</span><span class="rel-target">'+esc(s.label)+'</span><span class="rel-note">'+esc(l.note)+'</span></button>';
+      });
+    });
+    panel.innerHTML=
+      '<button class="backlink" id="backBtn">\u2190 ALL SOURCES</button>'+
+      '<div class="card">'+
+        '<div class="card-top"><span>S'+n.section+' \u00B7 '+esc(evAbbr[n.evidence])+' \u00B7 '+n.year+'</span>'+
+        '<span class="camp-tag"><span class="dot" style="background:'+campColor[n.camp]+'"></span>'+esc(n.camp)+'</span></div>'+
+        '<div class="card-body">'+
+          '<h2>'+esc(n.title)+'</h2>'+
+          '<div class="byline">'+esc(n.authors)+'</div>'+
+          '<div class="typeline">'+esc(n.type)+' \u00B7 Section '+n.section+': '+esc(C.sections[n.section])+'</div>'+
+          '<div class="claim">'+esc(n.claim)+'</div>'+
+          '<div class="themes">'+n.themes.map(t=>'<button class="theme" data-t="'+esc(t)+'">'+esc(t)+'</button>').join("")+'</div>'+
+        '</div>'+
+        (relHtml?'<div class="rel-section">'+relHtml+'</div>':'')+
+      '</div>';
+    document.getElementById("backBtn").onclick=()=>{ state.selected=null; refresh(); };
+    panel.querySelectorAll(".rel-item").forEach(b=>b.onclick=()=>{ state.selected=b.dataset.id; refresh(); });
+    panel.querySelectorAll(".theme").forEach(b=>b.onclick=()=>{
+      state.selected=null; state.q=b.dataset.t.toLowerCase(); searchEl.value=b.dataset.t; refresh();
+    });
+  }
+
+  // ---------- refresh ----------
+  function refresh(){
+    const active=new Set(nodes.filter(matches).map(n=>n.id));
+    const filtering=!!(state.q||state.camps.size||state.evs.size||state.section);
+    nodeSel.transition().duration(150)
+      .style("opacity",d=>{
+        if(state.selected){
+          if(d.id===state.selected) return 1;
+          const neighbor=links.some(l=>state.rels.has(l.rel)&&(((l.source.id||l.source)===state.selected&&(l.target.id||l.target)===d.id)||((l.target.id||l.target)===state.selected&&(l.source.id||l.source)===d.id)));
+          return neighbor?0.95:0.12;
+        }
+        return (!filtering||active.has(d.id))?1:0.12;
+      });
+    linkSel.transition().duration(150)
+      .style("opacity",d=>{
+        if(!state.rels.has(d.rel)) return 0;
+        const s=d.source.id||d.source, t=d.target.id||d.target;
+        if(state.selected) return (s===state.selected||t===state.selected)?0.9:0.05;
+        if(filtering) return (active.has(s)&&active.has(t))?0.7:0.05;
+        return 0.55;
+      })
+      .attr("stroke-width",d=>{
+        const s=d.source.id||d.source, t=d.target.id||d.target;
+        return state.selected&&(s===state.selected||t===state.selected)?2.5:1.5;
+      });
+    if(state.selected&&byId[state.selected]) renderCard(byId[state.selected]);
+    else renderList(nodes.filter(matches));
+  }
+  refresh();
+})();
+</script>
+</body>
+</html>
