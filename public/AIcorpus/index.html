@@ -2,8 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
+<!-- Add-to-Home-Screen (PWA). Assets live beside this page at /AIcorpus/. -->
+<link rel="manifest" href="/AIcorpus/manifest.webmanifest">
+<meta name="theme-color" content="#1C2630">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Working Corpus">
+<link rel="apple-touch-icon" href="/AIcorpus/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/AIcorpus/icon-192.png">
 <title>The Working Corpus — Explorer</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <style>
@@ -144,6 +152,15 @@
     padding:6px 0;margin-bottom:11px;letter-spacing:.02em;line-height:1.5;
   }
   .card-body .claim{font-size:14.5px;line-height:1.62}
+  .read-link{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    margin-top:13px;padding:9px 12px;text-decoration:none;
+    font-family:var(--mono);font-size:12px;letter-spacing:.02em;
+    color:var(--ink);background:var(--card);border:1px solid var(--ink);border-radius:6px;
+  }
+  .read-link:hover{background:var(--ink);color:var(--paper)}
+  .read-link .lt{font-size:10px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.08em}
+  .read-link:hover .lt{color:var(--paper)}
   .themes{margin-top:11px;display:flex;flex-wrap:wrap;gap:5px}
   .theme{
     font-family:var(--mono);font-size:10px;color:var(--ink-soft);
@@ -182,6 +199,18 @@
     #panel{flex:1 1 48%;max-width:none;min-width:0;border-left:none;border-top:1.5px solid var(--ink)}
     .masthead .search-wrap{margin-left:0;width:100%}
     #search{flex:1}
+  }
+  @media (max-width: 560px){
+    /* phone: lead with the searchable list; keep the graph as a compact header */
+    #graphPane{flex:1 1 40vh;min-height:230px}
+    #panel{flex:1 1 60vh}
+    header{padding:11px 14px 9px}
+    .masthead h1{font-size:18px}
+    #panelScroll{padding:14px 15px 30px}
+    .card-body .claim{font-size:15.5px;line-height:1.66}
+    .chip{padding:5px 11px;font-size:11.5px}
+    .theme{padding:4px 10px;font-size:11px}
+    .read-link{padding:12px 14px;font-size:13px}
   }
   @media (prefers-reduced-motion: reduce){
     *{transition:none !important;animation:none !important}
@@ -238,7 +267,9 @@ window.CORPUS = {
         "homogenization",
         "standardization",
         "concentration"
-      ]
+      ],
+      "url": "https://doi.org/10.12987/9780300252392",
+      "link_type": "doi"
     },
     {
       "id": "hao",
@@ -258,7 +289,9 @@ window.CORPUS = {
         "hype",
         "AGI",
         "scale"
-      ]
+      ],
+      "url": "https://www.penguinrandomhouse.com/books/743569/empire-of-ai-by-karen-hao/",
+      "link_type": "book"
     },
     {
       "id": "murgia",
@@ -276,7 +309,9 @@ window.CORPUS = {
         "ghost work",
         "Global South",
         "precarity"
-      ]
+      ],
+      "url": "https://www.panmacmillan.com/authors/madhumita-murgia/code-dependent/9781529097306",
+      "link_type": "book"
     },
     {
       "id": "mcquillan",
@@ -295,7 +330,9 @@ window.CORPUS = {
         "austerity",
         "inevitability",
         "thoughtlessness"
-      ]
+      ],
+      "url": "https://doi.org/10.1332/policypress/9781529213492.001.0001",
+      "link_type": "doi"
     },
     {
       "id": "eubanks",
@@ -314,7 +351,9 @@ window.CORPUS = {
         "space of reasons",
         "poverty",
         "appeal"
-      ]
+      ],
+      "url": "https://us.macmillan.com/books/9781250074317/automatinginequality/",
+      "link_type": "book"
     },
     {
       "id": "alvero",
@@ -333,7 +372,9 @@ window.CORPUS = {
         "class",
         "admissions",
         "hegemony"
-      ]
+      ],
+      "url": "https://link.springer.com/content/pdf/10.1186/s40537-024-00986-7.pdf",
+      "link_type": "pdf"
     },
     {
       "id": "lee-dd",
@@ -353,7 +394,9 @@ window.CORPUS = {
         "digital divide",
         "stratification",
         "voice"
-      ]
+      ],
+      "url": "https://arxiv.org/abs/2602.17791",
+      "link_type": "arxiv"
     },
     {
       "id": "vallor",
@@ -373,7 +416,9 @@ window.CORPUS = {
         "virtue ethics",
         "mirror",
         "phronesis"
-      ]
+      ],
+      "url": "https://doi.org/10.1093/oso/9780197759066.001.0001",
+      "link_type": "doi"
     },
     {
       "id": "crawford-m",
@@ -391,7 +436,9 @@ window.CORPUS = {
         "friction",
         "skill",
         "selfhood"
-      ]
+      ],
+      "url": "https://us.macmillan.com/books/9780374535919/theworldbeyondyourhead/",
+      "link_type": "book"
     },
     {
       "id": "wolf",
@@ -409,7 +456,9 @@ window.CORPUS = {
         "attention",
         "cognition",
         "erosion"
-      ]
+      ],
+      "url": "https://www.harpercollins.com/products/reader-come-home-maryanne-wolf",
+      "link_type": "book"
     },
     {
       "id": "carr",
@@ -427,7 +476,9 @@ window.CORPUS = {
         "automation",
         "skill",
         "attention"
-      ]
+      ],
+      "url": "https://wwnorton.com/books/9780393351637",
+      "link_type": "book"
     },
     {
       "id": "kosmyna",
@@ -446,7 +497,9 @@ window.CORPUS = {
         "cognitive debt",
         "homogenization",
         "offloading"
-      ]
+      ],
+      "url": "https://arxiv.org/pdf/2506.08872",
+      "link_type": "arxiv"
     },
     {
       "id": "gerlich",
@@ -463,7 +516,9 @@ window.CORPUS = {
         "critical thinking",
         "offloading",
         "correlation"
-      ]
+      ],
+      "url": "https://www.mdpi.com/2075-4698/15/1/6/pdf?version=1735907439",
+      "link_type": "open"
     },
     {
       "id": "lee-chi",
@@ -482,7 +537,9 @@ window.CORPUS = {
         "verification",
         "knowledge work",
         "offloading"
-      ]
+      ],
+      "url": "https://dl.acm.org/doi/pdf/10.1145/3706598.3713778",
+      "link_type": "open"
     },
     {
       "id": "bender-hanna",
@@ -500,7 +557,9 @@ window.CORPUS = {
         "power",
         "refusal",
         "inevitability"
-      ]
+      ],
+      "url": "https://books.google.com/books/about/The_AI_Con.html?id=HqEZEQAAQBAJ",
+      "link_type": "book"
     },
     {
       "id": "stochastic-parrots",
@@ -519,7 +578,9 @@ window.CORPUS = {
         "bias",
         "environment",
         "fluency"
-      ]
+      ],
+      "url": "https://doi.org/10.1145/3442188.3445922",
+      "link_type": "doi"
     },
     {
       "id": "narayanan",
@@ -538,7 +599,9 @@ window.CORPUS = {
         "snake oil",
         "criti-hype",
         "automation bias"
-      ]
+      ],
+      "url": "https://doi.org/10.1515/9780691249643",
+      "link_type": "doi"
     },
     {
       "id": "reich",
@@ -558,7 +621,9 @@ window.CORPUS = {
         "Matthew Effect",
         "disruption",
         "domestication"
-      ]
+      ],
+      "url": "https://www.degruyter.com/document/doi/10.4159/9780674249684-fm/pdf",
+      "link_type": "open"
     },
     {
       "id": "mollick",
@@ -577,7 +642,9 @@ window.CORPUS = {
         "human in the loop",
         "productivity",
         "augmentation"
-      ]
+      ],
+      "url": "https://www.penguinrandomhouse.com/books/741805/co-intelligence-by-ethan-mollick/",
+      "link_type": "book"
     },
     {
       "id": "khan",
@@ -595,7 +662,9 @@ window.CORPUS = {
         "personalization",
         "Khanmigo",
         "two sigma"
-      ]
+      ],
+      "url": "https://www.penguinrandomhouse.com/books/740806/brave-new-words-by-salman-khan/",
+      "link_type": "book"
     },
     {
       "id": "kestin",
@@ -614,7 +683,9 @@ window.CORPUS = {
         "physics",
         "guardrails",
         "design"
-      ]
+      ],
+      "url": "https://www.researchsquare.com/article/rs-4243877/latest.pdf",
+      "link_type": "pdf"
     },
     {
       "id": "wu",
@@ -631,7 +702,9 @@ window.CORPUS = {
         "meta-analysis",
         "learning outcomes",
         "critical thinking"
-      ]
+      ],
+      "url": "https://www.nature.com/articles/s41599-026-07019-z",
+      "link_type": "open"
     },
     {
       "id": "desimone",
@@ -651,7 +724,9 @@ window.CORPUS = {
         "facilitation",
         "design",
         "Global South"
-      ]
+      ],
+      "url": "http://documents.worldbank.org/curated/en/099548105192529324",
+      "link_type": "open"
     },
     {
       "id": "wang",
@@ -669,7 +744,9 @@ window.CORPUS = {
         "human in the loop",
         "leveling",
         "novice"
-      ]
+      ],
+      "url": "https://www.researchsquare.com/article/rs-5363154/latest.pdf",
+      "link_type": "pdf"
     },
     {
       "id": "bloom",
@@ -686,7 +763,9 @@ window.CORPUS = {
         "tutoring",
         "mastery",
         "two sigma"
-      ]
+      ],
+      "url": "https://doi.org/10.3102/0013189x013006004",
+      "link_type": "doi"
     },
     {
       "id": "brynjolfsson",
@@ -704,7 +783,9 @@ window.CORPUS = {
         "leveling",
         "novice",
         "tacit knowledge"
-      ]
+      ],
+      "url": "https://doi.org/10.3386/w31161",
+      "link_type": "doi"
     },
     {
       "id": "noy-zhang",
@@ -722,7 +803,9 @@ window.CORPUS = {
         "writing",
         "leveling",
         "effort substitution"
-      ]
+      ],
+      "url": "https://mit-genai.pubpub.org/pub/v5iixksv/download/pdf",
+      "link_type": "open"
     },
     {
       "id": "dellacqua",
@@ -740,7 +823,9 @@ window.CORPUS = {
         "productivity",
         "deceptive failure",
         "frontier"
-      ]
+      ],
+      "url": "https://doi.org/10.2139/ssrn.4573321",
+      "link_type": "doi"
     },
     {
       "id": "clark-chalmers",
@@ -757,7 +842,9 @@ window.CORPUS = {
         "extended mind",
         "offloading",
         "philosophy of mind"
-      ]
+      ],
+      "url": "https://doi.org/10.1093/analys/58.1.7",
+      "link_type": "doi"
     },
     {
       "id": "clark-2025",
@@ -774,7 +861,9 @@ window.CORPUS = {
         "extended mind",
         "hybrid thinking",
         "augmentation"
-      ]
+      ],
+      "url": "https://www.nature.com/articles/s41467-025-59906-9.pdf",
+      "link_type": "pdf"
     },
     {
       "id": "martens",
@@ -793,7 +882,9 @@ window.CORPUS = {
         "DeepSeek",
         "diffusion",
         "concentration"
-      ]
+      ],
+      "url": "https://www.bruegel.org/policy-brief/how-deepseek-has-changed-artificial-intelligence-and-what-it-means-europe",
+      "link_type": "report"
     },
     {
       "id": "acemoglu-macro",
@@ -810,7 +901,9 @@ window.CORPUS = {
         "productivity",
         "inequality",
         "macroeconomics"
-      ]
+      ],
+      "url": "https://doi.org/10.1093/epolic/eiae042",
+      "link_type": "doi"
     },
     {
       "id": "acemoglu-johnson",
@@ -829,7 +922,9 @@ window.CORPUS = {
         "choice",
         "inequality",
         "inevitability"
-      ]
+      ],
+      "url": "https://doi.org/10.1093/ia/iiad251",
+      "link_type": "doi"
     },
     {
       "id": "doshi-hauser",
@@ -846,7 +941,9 @@ window.CORPUS = {
         "creativity",
         "diversity",
         "homogenization"
-      ]
+      ],
+      "url": "https://www.science.org/doi/pdf/10.1126/sciadv.adn5290?download=true",
+      "link_type": "open"
     },
     {
       "id": "orben",
@@ -864,7 +961,9 @@ window.CORPUS = {
         "evidence standards",
         "media",
         "moral panic"
-      ]
+      ],
+      "url": "https://journals.sagepub.com/doi/pdf/10.1177/1745691620919372",
+      "link_type": "open"
     },
     {
       "id": "otis",
@@ -882,7 +981,9 @@ window.CORPUS = {
         "entrepreneurs",
         "Kenya",
         "user skill"
-      ]
+      ],
+      "url": "https://osf.io/hdjpk/download",
+      "link_type": "open"
     },
     {
       "id": "bastani",
@@ -901,7 +1002,9 @@ window.CORPUS = {
         "design dependence",
         "crutch",
         "offloading"
-      ]
+      ],
+      "url": "https://doi.org/10.2139/ssrn.4895486",
+      "link_type": "doi"
     },
     {
       "id": "bjork-2011",
@@ -919,7 +1022,9 @@ window.CORPUS = {
         "retention",
         "illusion of competence",
         "friction"
-      ]
+      ],
+      "url": "https://bibliotecadigital.mineduc.cl/handle/20.500.12365/17342",
+      "link_type": "publisher"
     },
     {
       "id": "bjork-2020",
@@ -937,7 +1042,9 @@ window.CORPUS = {
         "undesirable difficulty",
         "friction",
         "threshold"
-      ]
+      ],
+      "url": "https://doi.org/10.1016/j.jarmac.2020.09.003",
+      "link_type": "doi"
     },
     {
       "id": "rand",
@@ -956,7 +1063,9 @@ window.CORPUS = {
         "policy",
         "offloading",
         "friction"
-      ]
+      ],
+      "url": "https://doi.org/10.7249/rra4742-1",
+      "link_type": "doi"
     },
     {
       "id": "npr-ipsos",
@@ -974,7 +1083,9 @@ window.CORPUS = {
         "survey",
         "policy vacuum",
         "trust"
-      ]
+      ],
+      "url": "https://www.ipsos.com/en-us/teachers-concerned-about-impact-ai-students-critical-thinking",
+      "link_type": "report"
     },
     {
       "id": "brookings",
@@ -992,7 +1103,9 @@ window.CORPUS = {
         "hybrid vigor",
         "tracking",
         "digital divide"
-      ]
+      ],
+      "url": "https://www.brookings.edu/articles/a-new-direction-for-students-in-an-ai-world-prosper-prepare-protect/",
+      "link_type": "report"
     },
     {
       "id": "selwyn",
@@ -1011,7 +1124,9 @@ window.CORPUS = {
         "relational",
         "automation",
         "political economy"
-      ]
+      ],
+      "url": "https://books.google.com/books/about/Should_Robots_Replace_Teachers.html?id=EQXywQEACAAJ",
+      "link_type": "book"
     },
     {
       "id": "watters",
@@ -1030,7 +1145,9 @@ window.CORPUS = {
         "personalization",
         "hype",
         "domestication"
-      ]
+      ],
+      "url": "https://www.penguinrandomhouse.com/books/675858/teaching-machines-by-audrey-watters/",
+      "link_type": "book"
     },
     {
       "id": "messeri",
@@ -1049,7 +1166,9 @@ window.CORPUS = {
         "monoculture",
         "homogenization",
         "illusion"
-      ]
+      ],
+      "url": "https://doi.org/10.1038/s41586-024-07146-0",
+      "link_type": "doi"
     },
     {
       "id": "oakley",
@@ -1068,7 +1187,9 @@ window.CORPUS = {
         "offloading",
         "knowledge",
         "Flynn effect"
-      ]
+      ],
+      "url": "https://arxiv.org/abs/2506.11015",
+      "link_type": "arxiv"
     },
     {
       "id": "andreas",
@@ -1088,7 +1209,9 @@ window.CORPUS = {
         "skip the queue",
         "two-tier",
         "deskilling"
-      ]
+      ],
+      "url": "https://doi.org/10.1080/23299460.2026.2676316",
+      "link_type": "doi"
     },
     {
       "id": "kreijkes",
@@ -1108,7 +1231,9 @@ window.CORPUS = {
         "K-12",
         "illusion of competence",
         "design"
-      ]
+      ],
+      "url": "https://doi.org/10.2139/ssrn.5095149",
+      "link_type": "doi"
     },
     {
       "id": "risko",
@@ -1126,7 +1251,9 @@ window.CORPUS = {
         "metacognition",
         "mechanism",
         "adaptive"
-      ]
+      ],
+      "url": "https://doi.org/10.1016/j.tics.2016.07.002",
+      "link_type": "doi"
     },
     {
       "id": "varone",
@@ -1145,7 +1272,9 @@ window.CORPUS = {
         "doing without learning",
         "design",
         "intermediate"
-      ]
+      ],
+      "url": "https://waim.network/sites/default/files/2026-06/varone_et_al.pdf",
+      "link_type": "pdf"
     },
     {
       "id": "yang",
@@ -1164,7 +1293,9 @@ window.CORPUS = {
         "verification",
         "knowledge work",
         "scope expansion"
-      ]
+      ],
+      "url": "https://doi.org/10.48550/arxiv.2606.07489",
+      "link_type": "doi"
     },
     {
       "id": "weber-wulff",
@@ -1183,7 +1314,9 @@ window.CORPUS = {
         "false positives",
         "policy",
         "reliability"
-      ]
+      ],
+      "url": "https://edintegrity.biomedcentral.com/counter/pdf/10.1007/s40979-023-00146-z",
+      "link_type": "open"
     },
     {
       "id": "liang",
@@ -1202,7 +1335,9 @@ window.CORPUS = {
         "equity",
         "non-native",
         "Matthew Effect"
-      ]
+      ],
+      "url": "http://www.cell.com/article/S2666389923001307/pdf",
+      "link_type": "open"
     },
     {
       "id": "robb-mann",
@@ -1221,7 +1356,9 @@ window.CORPUS = {
         "trust",
         "relationships",
         "survey"
-      ]
+      ],
+      "url": "https://www.commonsensemedia.org/research/talk-trust-and-trade-offs-how-and-why-teens-use-ai-companions",
+      "link_type": "report"
     },
     {
       "id": "sparrow",
@@ -1239,7 +1376,9 @@ window.CORPUS = {
         "memory",
         "Google effect",
         "replication"
-      ]
+      ],
+      "url": "https://doi.org/10.1126/science.1207745",
+      "link_type": "doi"
     },
     {
       "id": "camerer",
@@ -1257,7 +1396,9 @@ window.CORPUS = {
         "offloading",
         "evidence standards",
         "Google effect"
-      ]
+      ],
+      "url": "https://pure.eur.nl/ws/files/37359856/Camerer_et_al._2018_Evaluating_the_replicability_of_social_science_experiments_in_Nature_and_Science_between_2010_and_2015.pdf",
+      "link_type": "pdf"
     }
   ],
   "edges": [
@@ -2053,6 +2194,8 @@ window.CORPUS = {
   const relOrder = ["supports","contradicts","complicates","grounds","paired-with"];
   const evOrder = ["High (causal)","Medium","Low","Argument","Context"];
   const evAbbr = {"High (causal)":"HIGH","Medium":"MED","Low":"LOW","Argument":"ARG","Context":"CTX"};
+  const linkLabel = lt => ({arxiv:"arXiv",doi:"via DOI",pdf:"PDF",open:"open access",
+    publisher:"publisher",book:"publisher page",report:"report"}[lt] || "link");
 
   const nodes = C.nodes.map(d => ({...d}));
   const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
@@ -2219,6 +2362,7 @@ window.CORPUS = {
           '<div class="byline">'+esc(n.authors)+'</div>'+
           '<div class="typeline">'+esc(n.type)+' \u00B7 Section '+n.section+': '+esc(C.sections[n.section])+'</div>'+
           '<div class="claim">'+esc(n.claim)+'</div>'+
+          (n.url?'<a class="read-link" href="'+esc(n.url)+'" target="_blank" rel="noopener noreferrer">Read the source ↗<span class="lt">'+esc(linkLabel(n.link_type))+'</span></a>':'')+
           '<div class="themes">'+n.themes.map(t=>'<button class="theme" data-t="'+esc(t)+'">'+esc(t)+'</button>').join("")+'</div>'+
         '</div>'+
         (relHtml?'<div class="rel-section">'+relHtml+'</div>':'')+
