@@ -767,6 +767,60 @@
     "hasCover": true
   },
   {
+    "id": 1718798,
+    "artist": "Mahavishnu Orchestra, John McLaughlin",
+    "title": "The Inner Mounting Flame",
+    "labels": [
+      {
+        "name": "Speakers Corner Records",
+        "catno": "PC 31067"
+      },
+      {
+        "name": "Speakers Corner Records",
+        "catno": "31067"
+      },
+      {
+        "name": "Columbia",
+        "catno": "PC 31067"
+      },
+      {
+        "name": "Columbia",
+        "catno": "31067"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180 Gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2008,
+    "masterId": 72307,
+    "originalYear": 1971,
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Fusion",
+      "Jazz-Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-06-13T13:38:33-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 1875311,
     "artist": "Florence And The Machine",
     "title": "Lungs",
@@ -2858,6 +2912,44 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 10310993,
+    "artist": "Elliott Smith",
+    "title": "XO",
+    "labels": [
+      {
+        "name": "Geffen Records",
+        "catno": "00602557283518"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2017,
+    "masterId": 6159,
+    "originalYear": 1998,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-06-13T13:38:33-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
     "notes": "",
     "hasCover": true
   },
@@ -6000,6 +6092,7 @@
         "descriptions": [
           "LP",
           "Album",
+          "Limited Edition",
           "Reissue",
           "Stereo"
         ]
@@ -7498,6 +7591,51 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 31431203,
+    "artist": "First Aid Kit",
+    "title": "Stay Gold",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "19802808071"
+      },
+      {
+        "name": "Columbia",
+        "catno": "19802808071S1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2024,
+    "masterId": 696188,
+    "originalYear": 2014,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Indie Rock",
+      "Folk Rock"
+    ],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-06-13T13:38:33-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
     "notes": "",
     "hasCover": true
   },
