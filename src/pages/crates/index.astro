@@ -42,6 +42,15 @@ const updated = AGGREGATES.notable.recentAddition?.dateAdded?.slice(0, 10) || ''
             letter-spacing: 0.02em; color: rgba(255,255,255,0.7);
           ">the <span style="color: #2dd4bf;">crates</span></span>
         <button
+          class="update-btn"
+          style="
+            background: none; border: 1px solid rgba(45,212,191,0.25);
+            border-radius: 3px; padding: 5px 12px; cursor: pointer;
+            font-family: var(--mono); font-size: 10px; font-weight: 400;
+            letter-spacing: 0.06em; text-transform: uppercase;
+            color: rgba(45,212,191,0.7); transition: all 0.2s ease;
+          ">Update</button>
+        <button
           class="share-btn"
           data-title="The Crates"
           data-text="A walkthrough of a vinyl record collection"
@@ -137,6 +146,37 @@ const updated = AGGREGATES.notable.recentAddition?.dateAdded?.slice(0, 10) || ''
           await navigator.clipboard.writeText(data.url);
           btn.textContent = 'Copied';
           setTimeout(() => { btn.textContent = 'Share'; }, 1500);
+        }
+      });
+    });
+
+    // Manual "update now": kick off the Discogs sync GitHub Action via the
+    // serverless function. The function holds the GitHub token; we just send
+    // the passphrase. A successful sync commits + redeploys on its own.
+    document.querySelectorAll('.update-btn').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const passphrase = window.prompt('Passphrase to update the collection:');
+        if (!passphrase) return;
+        const reset = () => { btn.textContent = 'Update'; btn.disabled = false; };
+        btn.disabled = true;
+        btn.textContent = 'Updating…';
+        try {
+          const res = await fetch('/api/sync-crates', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ passphrase }),
+          });
+          const data = await res.json().catch(() => ({}));
+          if (res.ok) {
+            btn.textContent = 'Started ✓';
+            setTimeout(reset, 4000);
+          } else {
+            window.alert(data.error || `Update failed (${res.status}).`);
+            reset();
+          }
+        } catch (err) {
+          window.alert('Update failed: ' + (err && err.message));
+          reset();
         }
       });
     });
