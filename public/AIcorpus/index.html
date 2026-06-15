@@ -15,38 +15,41 @@
 <title>The Working Corpus — Catalog</title>
 <script>try{if(localStorage.getItem('wc_welcomed'))document.documentElement.className+=' wc-seen';}catch(e){}</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#DFE4E8;        /* endpaper blue-gray */
-    --card:#FAF9F5;         /* card stock */
-    --ink:#1C2630;          /* reading ink */
-    --ink-soft:#5A6573;
-    --rule:#C4CBD2;
-    --rule-card:#D8D2C4;
-    --accent:#1C2630;
-    /* camps */
-    --c-critical:#A14334;
-    --c-pro:#2F6B4F;
-    --c-defl:#8A6D2F;
-    --c-context:#54678C;
-    /* relations */
-    --r-supports:#2E7D5B;
-    --r-contradicts:#B3402E;
-    --r-complicates:#C28E2D;
-    --r-grounds:#3A6EA5;
-    --r-paired:#7A5C9E;
-    --serif: "Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
-    --mono: ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+    --paper:#F6F8F8; --card:#FFFFFF; --ink:#16242E; --ink-soft:#5B6A75;
+    --rule:#E3E8EB; --rule-card:#EAEEF0; --accent:#0F766E; --accent-soft:#E6F2F0;
+    --panel:#FFFFFF; --line:#EAEEF0; --line2:#E3E8EB; --shadow:0 8px 28px rgba(18,42,55,.10);
+    --c-critical:#BC3B2C; --c-pro:#0E7C5A; --c-defl:#B07A1E; --c-context:#3B6FB0;
+    --r-supports:#2E7D5B; --r-contradicts:#B3402E; --r-complicates:#C28E2D; --r-grounds:#3A6EA5; --r-paired:#7A5C9E;
+    --serif:"Newsreader",Georgia,"Times New Roman",serif;
+    --sans:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
-  body{
-    font-family:var(--serif);
-    background:var(--paper);
-    color:var(--ink);
-    display:flex;flex-direction:column;
-    overflow:hidden;
-  }
+  body{font-family:var(--sans);background:var(--paper);color:var(--ink);display:flex;flex-direction:column;overflow:hidden;-webkit-font-smoothing:antialiased}
+  /* ===== modern research / think-tank restyle ===== */
+  h1,h2,h3,.home-h,.brief-bl,.rtitle,.card-body h2,.wcard h1,.wlede{font-family:var(--serif);font-weight:600;letter-spacing:-.012em}
+  .masthead h1,.sec-div .sec-title,.res-title{font-family:var(--serif);font-weight:600;letter-spacing:-.01em}
+  .card,.tile,.brief{border:1px solid var(--rule)!important;box-shadow:var(--shadow)!important;border-radius:14px}
+  .card::after{display:none}
+  .tile:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(18,42,55,.15)!important}
+  a,.cite,.linkbtn{color:var(--accent)}
+  .hbtn{border-radius:8px;border-color:var(--rule)}
+  .hbtn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+  .hbtn.ghost:hover{color:var(--accent);border-color:var(--accent);background:none}
+  .sec-no{background:var(--accent)!important}
+  .rec.sel,.facet-row.active{box-shadow:inset 3px 0 0 var(--accent)!important}
+  .rail-title{border-bottom-color:var(--accent)}
+  header,#facets{border-color:var(--rule)!important}
+  .fg-label,.rcount,.brief-h,.srcs-h,.wlabel,.sortwrap label,.rail-title,.fg-arrow{font-family:var(--sans);font-weight:600}
+  .rec .rby,.byline,.card-body .byline{font-family:var(--sans)}
+  .home-sub{font-family:var(--sans)}
+  #detail{z-index:560!important;border-left:1px solid var(--rule)!important}  /* sit ABOVE the map overlay (500) so a node click shows the source */
+  body.mapOpen #detail.open{box-shadow:-18px 0 50px rgba(18,42,55,.28)}
   /* ---------- header ---------- */
   header{
     padding:13px 20px 11px;
@@ -106,7 +109,8 @@
   .facet-row.active .fcount{color:var(--ink)}
   #clearAll{margin-top:2px}
   /* ---------- catalog ---------- */
-  #catalog{flex:1 1 auto;overflow-y:auto;padding:14px 20px 60px;position:relative}
+  #catalog{flex:1 1 auto;overflow-y:auto;padding:18px 28px 96px;position:relative}
+  .cat-inner{max-width:840px;margin:0 auto;width:100%}
   .results-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:2px 0 4px}
   .rcount{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ink-soft);white-space:nowrap}
   .crumbs{display:flex;gap:6px;flex-wrap:wrap;flex:1 1 auto}
@@ -117,44 +121,50 @@
   .sortwrap{display:flex;align-items:center;gap:6px}
   .sortwrap label{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
   .sortwrap select{font-family:var(--mono);font-size:11px;border:1px solid var(--rule);background:var(--card);color:var(--ink);padding:3px 6px;outline:none}
-  .sec-div{display:flex;align-items:baseline;gap:9px;margin:24px 0 0;padding:0 2px 6px;border-bottom:1.5px solid var(--ink)}
-  .sec-div:first-of-type{margin-top:8px}
-  .sec-div .sec-no{font-family:var(--mono);font-size:11px;color:var(--card);background:var(--ink);padding:2px 7px;letter-spacing:.04em;flex:0 0 auto}
+  .sec-div{display:flex;align-items:baseline;gap:10px;margin:34px 0 0;padding:0 2px 8px;border-bottom:1px solid var(--rule)}
+  .sec-div:first-of-type{margin-top:10px}
+  .sec-div .sec-no{font-family:var(--mono);font-size:11px;color:#fff;background:var(--ink);padding:2px 7px;border-radius:5px;letter-spacing:.04em;flex:0 0 auto}
   .sec-div .sec-title{font-size:15px;font-weight:600;letter-spacing:.01em;flex:1 1 auto}
   .sec-div .sec-count{font-family:var(--mono);font-size:11px;color:var(--ink-soft);flex:0 0 auto}
-  .rec{display:flex;gap:13px;padding:14px 4px;border-bottom:1px solid var(--rule);cursor:pointer}
-  .rec:hover{background:rgba(250,249,245,.6)}
-  .rec.sel{background:var(--card);box-shadow:inset 3px 0 0 var(--ink)}
+  .rec{display:flex;gap:15px;padding:20px 4px;border-bottom:1px solid var(--rule);cursor:pointer;transition:background .12s}
+  .rec:hover{background:var(--accent-soft)}
+  .rec.sel{background:var(--card)}
   .rec .rtab{width:4px;border-radius:2px;flex:0 0 auto}
   .rec .rbody{flex:1 1 auto;min-width:0}
   .rec .rtl{display:flex;align-items:baseline;gap:10px}
-  .rec .rtitle{font-size:16px;font-weight:600;line-height:1.28}
+  .rec .rtitle{font-size:16.5px;font-weight:600;line-height:1.3}
   .rec .rtype{margin-left:auto;font-family:var(--mono);font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);border:1px solid var(--rule-card);padding:1px 7px;border-radius:8px;white-space:nowrap;flex:0 0 auto}
-  .rec .rby{font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-top:3px}
-  .rec .rannot{font-size:13px;line-height:1.5;color:var(--ink);margin-top:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-  .rec .rsubs{margin-top:8px;display:flex;flex-wrap:wrap;gap:3px 11px}
+  .rec .rby{font-family:var(--sans);font-size:12px;color:var(--ink-soft);margin-top:4px}
+  .rec .rannot{font-size:14px;line-height:1.58;color:var(--ink);margin-top:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .rec .rsubs{margin-top:10px;display:flex;flex-wrap:wrap;gap:4px 12px}
   .rec .rsub{font-family:var(--mono);font-size:10px;color:var(--ink-soft);cursor:pointer}
-  .rec .rsub:hover{color:var(--ink);text-decoration:underline}
+  .rec .rsub:hover{color:var(--accent);text-decoration:underline}
   .empty{font-style:italic;color:var(--ink-soft);padding:24px 4px;font-size:14px}
   /* ---------- home: topic tiles ---------- */
   #home{flex:1 1 auto;overflow-y:auto;display:none}
   body.view-home #home{display:block}
   body.view-home main{display:none}
-  .home-inner{max-width:940px;margin:0 auto;padding:46px 24px 64px}
-  .home-h{font-size:30px;font-weight:600;letter-spacing:.01em;line-height:1.2}
-  .home-sub{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);margin-top:9px;letter-spacing:.02em}
-  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
-  .tile{text-align:left;background:var(--card);border:1px solid var(--ink);box-shadow:3px 3px 0 rgba(28,38,48,.14);padding:20px 20px 18px;cursor:pointer;display:flex;flex-direction:column;gap:7px;min-height:148px;font-family:var(--serif);transition:transform .12s,box-shadow .12s}
-  .tile:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 rgba(28,38,48,.2)}
-  .tile .ti{font-size:25px;line-height:1}
-  .tile .tt{font-size:17px;font-weight:600;line-height:1.25}
-  .tile .ts{font-size:13px;color:var(--ink-soft);line-height:1.42;flex:1 1 auto}
-  .tile .tc{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);letter-spacing:.04em}
-  .home-foot{margin-top:28px;text-align:center}
-  .linkbtn{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:none;border:none;border-bottom:1px solid var(--ink);cursor:pointer;padding:2px 0}
-  .linkbtn:hover{color:var(--ink-soft);border-color:var(--ink-soft)}
-  @media (max-width:760px){ .tiles{grid-template-columns:1fr 1fr} }
-  @media (max-width:520px){ .tiles{grid-template-columns:1fr} .home-h{font-size:24px} .home-inner{padding:30px 16px 50px} }
+  .home-inner{max-width:1060px;margin:0 auto;padding:60px 24px 80px}
+  .home-eyebrow{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+  .home-h{font-family:var(--serif);font-size:clamp(34px,5vw,52px);font-weight:600;letter-spacing:-.022em;line-height:1.04;max-width:16ch}
+  .home-sub{font-family:var(--sans);font-size:16px;color:var(--ink-soft);margin-top:16px;max-width:54ch;line-height:1.5}
+  .tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:42px}
+  .tile{position:relative;text-align:left;background:var(--card);cursor:pointer;display:flex;flex-direction:column;min-height:230px;padding:26px 28px 24px;border-radius:18px;overflow:hidden;transition:transform .16s ease,box-shadow .16s ease}
+  .tile::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--tcol,var(--accent))}
+  .tile:hover{transform:translateY(-4px)}
+  .tile:hover .tt{color:var(--tcol,var(--accent))}
+  .tile .tile-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px}
+  .tile .ti{font-size:32px;line-height:1}
+  .tile .tc{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap;margin-top:6px}
+  .tile .tt{font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.16;letter-spacing:-.014em;transition:color .16s}
+  .tile .tteaser{font-family:var(--sans);font-size:14px;line-height:1.55;color:var(--ink-soft);margin-top:12px;flex:1 1 auto;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .tile .tile-foot{display:flex;align-items:center;gap:10px;margin-top:18px}
+  .tile .tgo{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--tcol,var(--accent));margin-left:auto;opacity:0;transform:translateX(-6px);transition:opacity .16s,transform .16s}
+  .tile:hover .tgo{opacity:1;transform:none}
+  .home-foot{margin-top:40px;text-align:center}
+  .linkbtn{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--accent);background:none;border:none;cursor:pointer;padding:6px 2px;border-bottom:2px solid transparent}
+  .linkbtn:hover{border-color:var(--accent)}
+  @media (max-width:720px){ .tiles{grid-template-columns:1fr} .home-inner{padding:40px 18px 56px} }
   .res-head{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin:0 0 10px;padding-bottom:10px;border-bottom:1.5px solid var(--ink)}
   .back-topics{font-family:var(--mono);font-size:11.5px;color:var(--ink);background:none;border:1px solid var(--rule);padding:5px 11px;cursor:pointer}
   .back-topics:hover{border-color:var(--ink);background:var(--card)}
@@ -165,23 +175,26 @@
   .filters-toggle.on,.filters-toggle:hover{border-color:var(--ink);color:var(--ink)}
   body:not(.filters-on) #facets{display:none}
   /* ---------- practice brief ---------- */
-  .brief{background:var(--card);border:1px solid var(--ink);box-shadow:3px 3px 0 rgba(28,38,48,.12);padding:18px 20px 14px;margin:0 0 18px;position:relative}
-  .brief-top{display:flex;justify-content:flex-end;margin-bottom:2px}
-  .conf{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:2px 9px;border-radius:11px;border:1px solid}
-  .conf.c-high{color:#2F6B4F;border-color:#2F6B4F;background:#eef4ef}
-  .conf.c-med{color:#8A6D2F;border-color:#cdab63;background:#f7f0e2}
-  .conf.c-low{color:#9a5a2a;border-color:#caa07a;background:#f6ece2}
-  .brief-bl{font-size:17px;line-height:1.46;font-weight:600;margin:0 0 6px}
-  .brief-sec{margin-top:11px}
-  .brief-h{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:4px}
-  .brief-sec p{font-size:13.5px;line-height:1.56;color:var(--ink)}
-  .brief-cols{display:flex;gap:26px;flex-wrap:wrap}
-  .brief-cols .brief-sec{flex:1 1 250px}
-  .brief-sec ul{margin:0;padding-left:17px}
-  .brief-sec li{font-size:13px;line-height:1.5;margin-bottom:5px}
-  .brief-sec ul.warn li::marker{color:#B3402E}
-  .brief-foot{font-family:var(--mono);font-size:10px;color:var(--ink-soft);margin-top:14px;border-top:1px solid var(--rule-card);padding-top:8px;letter-spacing:.02em}
-  .srcs-h{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin:2px 0}
+  .brief{background:var(--card);padding:34px 38px 28px;margin:6px 0 8px;position:relative}
+  .brief-top{display:flex;justify-content:flex-end;margin-bottom:6px}
+  .conf{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 11px;border-radius:11px;border:1px solid}
+  .conf.c-high{color:#0E7C5A;border-color:#A6DBC6;background:#EAF6F1}
+  .conf.c-med{color:#9A6A12;border-color:#E7CB91;background:#FBF4E3}
+  .conf.c-low{color:#B23A2E;border-color:#E7ADA3;background:#FBECE9}
+  .brief-bl{font-size:23px;line-height:1.34;font-weight:600;margin:0;max-width:30ch}
+  .brief-sec{margin-top:24px}
+  .brief-sec.evidence{max-width:64ch}
+  .brief-h{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:9px}
+  .brief-sec p{font-size:15px;line-height:1.7;color:var(--ink)}
+  .brief-cols{display:flex;gap:44px;flex-wrap:wrap;margin-top:26px;padding-top:24px;border-top:1px solid var(--rule)}
+  .brief-cols .brief-sec{flex:1 1 260px;margin-top:0}
+  .brief-sec ul{margin:0;padding-left:18px}
+  .brief-sec li{font-size:14px;line-height:1.62;margin-bottom:11px;padding-left:3px}
+  .brief-sec ul.warn li::marker{color:var(--c-critical)}
+  .brief-foot{font-family:var(--sans);font-size:11px;color:var(--ink-soft);margin-top:26px;border-top:1px solid var(--rule);padding-top:12px;letter-spacing:.01em}
+  .srcs-h{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin:36px 0 2px}
+  .cite{color:var(--ink);cursor:pointer;font-style:normal;white-space:nowrap;border-bottom:1px solid var(--line2);padding-bottom:.5px;transition:color .12s,border-color .12s}
+  .cite:hover{color:var(--accent);border-color:var(--accent)}
   /* ---------- detail drawer ---------- */
   #detail{
     position:fixed;top:0;right:0;height:100vh;width:min(470px,96vw);z-index:60;
@@ -3771,8 +3784,9 @@ window.CORPUS = {
 
 <section id="home">
   <div class="home-inner">
+    <div class="home-eyebrow">AI in Education · What the evidence says</div>
     <h2 class="home-h">How is AI changing learning?</h2>
-    <p class="home-sub">Start with a topic — or search the collection, or browse everything.</p>
+    <p class="home-sub">Six questions practitioners are asking — each answered by an evidence-based brief drawn from the research below. Or search the collection and browse all the sources.</p>
     <div class="tiles" id="tiles"></div>
     <div class="home-foot"><button class="linkbtn" id="browseAll">Browse all the sources →</button></div>
   </div>
@@ -3844,7 +3858,7 @@ window.CORPUS = {
 
   // ---------- state ----------
   const state = { q:"", view:"home", topic:null, camps:new Set(), evs:new Set(), sections:new Set(),
-                  themes:new Set(), years:new Set(), rels:new Set(relOrder), sort:"section", selected:null };
+                  themes:new Set(), years:new Set(), rels:new Set(relOrder), sort:"evidence", selected:null };
   const QUESTIONS = C.questions || [];
   function tileHay(n){ return (n.label+" "+n.authors+" "+n.title+" "+n.claim+" "+n.type+" "+(n.themes||[]).join(" ")).toLowerCase(); }
   function tileMatch(n,t){ const h=tileHay(n); return t.kw.some(k=>h.includes(k)); }
@@ -3942,26 +3956,47 @@ window.CORPUS = {
   // ---------- home / topics / browse navigation ----------
   function goHome(){ state.topic=null; state.q=""; searchEl.value=""; state.selected=null;
     document.body.classList.remove("filters-on"); setView("home"); }
-  function openTopic(t){ state.topic=t; state.q=""; searchEl.value=""; state.selected=null;
+  function openTopic(t){ state.topic=t; state.q=""; searchEl.value=""; state.selected=null; state.sort="evidence";
     [state.camps,state.evs,state.sections,state.themes,state.years].forEach(s=>s.clear());
     document.body.classList.remove("filters-on"); setView("results"); refresh(); }
   function browseAll(){ state.topic=null; state.q=""; searchEl.value="";
     document.body.classList.add("filters-on"); setView("results"); refresh(); }
+  const TILE_COLORS=["#0F766E","#3B6FB0","#B07A1E","#BC3B2C","#0E7C5A","#6D5BB0","#1F7A8C","#9A4A6B"];
   function buildTiles(){
     const el=document.getElementById("tiles");
-    el.innerHTML=QUESTIONS.map((t,i)=>{ const c=nodes.filter(n=>tileMatch(n,t)).length;
-      return '<button class="tile" data-i="'+i+'"><span class="ti">'+esc(t.icon)+'</span>'+
-        '<span class="tt">'+esc(t.label)+'</span><span class="ts">'+esc(t.question)+'</span>'+
-        '<span class="tc">'+c+' source'+(c===1?'':'s')+'</span></button>'; }).join("");
+    el.innerHTML=QUESTIONS.map((t,i)=>{
+      const c=nodes.filter(n=>tileMatch(n,t)).length;
+      const col=TILE_COLORS[i%TILE_COLORS.length];
+      const b=(C.briefs||{})[t.id]||{};
+      const conf=b.confidence||"", cls=/high/i.test(conf)?"c-high":/low|emerg/i.test(conf)?"c-low":"c-med";
+      const teaser=b.bottom_line?'<p class="tteaser">'+esc(b.bottom_line)+'</p>'
+        :'<p class="tteaser">'+esc(t.question)+'</p>';
+      const foot=conf?'<span class="conf '+cls+'">'+esc(conf)+' confidence</span>':'';
+      return '<button class="tile" data-i="'+i+'" style="--tcol:'+col+'">'+
+        '<div class="tile-head"><span class="ti">'+esc(t.icon)+'</span>'+
+          '<span class="tc">'+c+' source'+(c===1?'':'s')+'</span></div>'+
+        '<div class="tt">'+esc(t.label)+'</div>'+teaser+
+        '<div class="tile-foot">'+foot+'<span class="tgo">Read the brief →</span></div>'+
+      '</button>';
+    }).join("");
     el.querySelectorAll(".tile").forEach(b=>b.onclick=()=>openTopic(QUESTIONS[+b.dataset.i]));
+  }
+  function citeify(s){
+    // Render inline citations — [id] or (id, id) where EVERY token is a real source
+    // id — as the proper author label, clickable. Leaves ordinary parentheticals alone.
+    return esc(s||"").replace(/[\[(]([a-z0-9 ,;\-]+)[\])]/gi,(m,inner)=>{
+      const parts=inner.split(/[;,]/).map(x=>x.trim()).filter(Boolean);
+      if(!parts.length || !parts.every(p=>byId[p])) return m;
+      return '('+parts.map(p=>'<span class="cite" data-id="'+esc(p)+'">'+esc(byId[p].label)+'</span>').join('; ')+')';
+    });
   }
   function briefHtml(q){
     const b=(C.briefs||{})[q.id]; if(!b||!b.bottom_line) return "";
     const conf=b.confidence||"", cls=/high/i.test(conf)?"c-high":/low|emerg/i.test(conf)?"c-low":"c-med";
-    const ul=(arr,c)=>'<ul'+(c?' class="'+c+'"':'')+'>'+arr.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ul>';
+    const ul=(arr,c)=>'<ul'+(c?' class="'+c+'"':'')+'>'+arr.map(x=>'<li>'+citeify(x)+'</li>').join("")+'</ul>';
     let h='<div class="brief"><div class="brief-top"><span class="conf '+cls+'" title="'+esc(b.confidence_reason||"")+'">'+esc(conf||"—")+' confidence</span></div>';
-    h+='<p class="brief-bl">'+esc(b.bottom_line)+'</p>';
-    if(b.evidence) h+='<div class="brief-sec"><span class="brief-h">What the evidence says</span><p>'+esc(b.evidence)+'</p></div>';
+    h+='<p class="brief-bl">'+citeify(b.bottom_line)+'</p>';
+    if(b.evidence) h+='<div class="brief-sec evidence"><span class="brief-h">What the evidence says</span><p>'+citeify(b.evidence)+'</p></div>';
     h+='<div class="brief-cols">';
     if(b.do&&b.do.length) h+='<div class="brief-sec"><span class="brief-h">What to do</span>'+ul(b.do)+'</div>';
     if(b.watch&&b.watch.length) h+='<div class="brief-sec"><span class="brief-h">Watch out for</span>'+ul(b.watch,"warn")+'</div>';
@@ -3981,15 +4016,17 @@ window.CORPUS = {
   });
   document.getElementById("clearBtn").onclick=()=>{
     [state.camps,state.evs,state.sections,state.themes,state.years].forEach(s=>s.clear());
-    state.rels=new Set(relOrder); state.sort="section"; goHome();
+    state.rels=new Set(relOrder); state.sort="evidence"; goHome();
   };
   const mFacetsBtn=document.getElementById("mFacets");
   if(mFacetsBtn) mFacetsBtn.onclick=()=>document.body.classList.toggle("facetsOpen");
 
   // ---------- catalog (section-grouped list) ----------
   const catalogEl=document.getElementById("catalog");
-  const SORTS=[["section","Section"],["author","Author A–Z"],["title","Title A–Z"],["year-desc","Year (newest)"],["year-asc","Year (oldest)"]];
+  const SORTS=[["evidence","Strongest evidence"],["author","Author A–Z"],["title","Title A–Z"],["year-desc","Year (newest)"],["year-asc","Year (oldest)"],["section","Section spine"]];
+  const evRank=n=>{ const i=evOrder.indexOf(n.evidence); return i<0?evOrder.length:i; };
   function sorter(key){
+    if(key==="evidence") return (a,b)=>evRank(a)-evRank(b)||(b.year||0)-(a.year||0)||(a.authors||a.label).localeCompare(b.authors||b.label);
     if(key==="author") return (a,b)=>(a.authors||a.label).localeCompare(b.authors||b.label);
     if(key==="title")  return (a,b)=>(a.title||"").localeCompare(b.title||"");
     if(key==="year-desc") return (a,b)=>(b.year||0)-(a.year||0)||(a.authors||a.label).localeCompare(b.authors||b.label);
@@ -4040,7 +4077,7 @@ window.CORPUS = {
     if(cr) h+='<div class="results-bar"><span class="crumbs">'+cr+'</span></div>';
     if(state.topic){ const bh=briefHtml(state.topic);
       if(bh) h+=bh+'<div class="srcs-h">The sources behind this · '+matched.length+'</div>'; }
-    if(!matched.length){ catalogEl.innerHTML=h+'<div class="empty">No sources match — try another topic, or '+(state.topic?'broaden':'loosen')+' your search.</div>'; wireBar(); return; }
+    if(!matched.length){ catalogEl.innerHTML='<div class="cat-inner">'+h+'<div class="empty">No sources match — try another topic, or '+(state.topic?'broaden':'loosen')+' your search.</div></div>'; wireBar(); return; }
     if(state.sort==="section"){
       const bySec={}; matched.forEach(n=>{ (bySec[n.section]=bySec[n.section]||[]).push(n); });
       Object.keys(bySec).sort((a,b)=>(+a)-(+b)).forEach(sk=>{
@@ -4051,13 +4088,14 @@ window.CORPUS = {
     } else {
       h+=[...matched].sort(sorter(state.sort)).map(recHtml).join("");
     }
-    catalogEl.innerHTML=h;
+    catalogEl.innerHTML='<div class="cat-inner">'+h+'</div>';
     catalogEl.querySelectorAll(".rec").forEach(r=>{
       r.onclick=e=>{ if(e.target.classList.contains("rsub")) return; state.selected=r.dataset.id; refresh(); };
       r.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){e.preventDefault();state.selected=r.dataset.id;refresh();} };
     });
     catalogEl.querySelectorAll(".rsub").forEach(s=>s.onclick=e=>{ e.stopPropagation();
       state.selected=null; state.themes.add(s.dataset.t); refresh(); });
+    catalogEl.querySelectorAll(".cite").forEach(c=>c.onclick=e=>{ e.stopPropagation(); if(c.dataset.id){ state.selected=c.dataset.id; refresh(); } });
     wireBar();
   }
   function wireBar(){

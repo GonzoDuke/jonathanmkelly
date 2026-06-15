@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "/aicorpus", "destination": "/AIcorpus", "permanent": false },
+    { "source": "/Aicorpus", "destination": "/AIcorpus", "permanent": false },
+    { "source": "/AICorpus", "destination": "/AIcorpus", "permanent": false },
+    { "source": "/AICORPUS", "destination": "/AIcorpus", "permanent": false },
+    { "source": "/aiCorpus", "destination": "/AIcorpus", "permanent": false },
+    { "source": "/aicorpus/:path*", "destination": "/AIcorpus/:path*", "permanent": false }
+  ]
+}
