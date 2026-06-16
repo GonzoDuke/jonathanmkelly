@@ -187,7 +187,7 @@
   body.view-home .search-toggle{color:#E7E2D9}
   body.view-home #search{background:rgba(255,255,255,.09);color:#F7F4ED;border-color:rgba(255,255,255,.32)}
   .cover{position:relative;min-height:calc(100vh - 66px);max-width:1200px;margin:0 auto;padding:clamp(26px,4.5vh,60px) 40px 54px;
-    display:grid;grid-template-columns:1.4fr .85fr;grid-template-rows:1fr auto;gap:34px 56px}
+    display:grid;grid-template-columns:1.4fr .85fr;grid-template-rows:1fr auto auto;gap:30px 56px}
   .cover-bg{position:absolute;inset:0;z-index:0;pointer-events:none;
     background:radial-gradient(130% 95% at 8% 2%,rgba(15,118,110,.26),transparent 55%),radial-gradient(90% 80% at 100% 100%,rgba(59,111,176,.18),transparent 50%)}
   .cover>*{position:relative;z-index:1}
@@ -204,7 +204,7 @@
   .cf-quote{font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.9vw,24px);line-height:1.42;color:#EAE6DD}
   .cf-by{font-family:var(--sans);font-size:13px;color:#9DB0B8;margin-top:13px}
   .cf-by b{color:#CFEAE3;font-weight:600}
-  .cover-index{grid-column:2;grid-row:1 / span 2;display:flex;flex-direction:column;justify-content:center;border-left:1px solid rgba(255,255,255,.1);padding-left:34px}
+  .cover-index{grid-column:2;grid-row:1;display:flex;flex-direction:column;justify-content:center;border-left:1px solid rgba(255,255,255,.1);padding-left:34px}
   .ci-item{display:flex;align-items:baseline;gap:16px;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid rgba(255,255,255,.09);padding:15px 0;cursor:pointer;color:#D9D3C8;transition:padding-left .2s ease,color .18s}
   .ci-item:last-child{border-bottom:0}
   .ci-item:hover{padding-left:9px}
@@ -212,19 +212,27 @@
   .ci-q{font-family:var(--serif);font-size:clamp(16px,1.4vw,20px);font-weight:500;line-height:1.2;letter-spacing:-.01em;flex:1}
   .ci-item:hover .ci-q{color:#fff}
   .ci-meta{font-family:var(--sans);font-size:10.5px;letter-spacing:.04em;color:#788790;white-space:nowrap;align-self:center}
-  .cover-browse{grid-column:1;grid-row:2;justify-self:start;align-self:end;font-family:var(--sans);font-size:14px;font-weight:600;color:#C5EAE1;background:none;border:0;border-bottom:2px solid transparent;cursor:pointer;padding:6px 0}
+  .cover-domains{grid-column:1 / -1;grid-row:2;margin-top:4px;border-top:1px solid rgba(255,255,255,.1);padding-top:22px}
+  .cd-label{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A99A1;margin-bottom:14px}
+  .cd-chips{display:flex;flex-wrap:wrap;gap:10px}
+  .cd-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.13);color:#D9D3C8;font-family:var(--sans);font-size:13px;font-weight:500;padding:8px 14px;border-radius:22px;cursor:pointer;transition:background .15s,border-color .15s,color .15s,transform .15s}
+  .cd-chip:hover{background:color-mix(in srgb,var(--cc) 16%,transparent);border-color:color-mix(in srgb,var(--cc) 55%,transparent);color:#fff;transform:translateY(-1px)}
+  .cd-dot{width:9px;height:9px;border-radius:50%;background:var(--cc);flex:0 0 auto}
+  .cd-count{color:#7d8c94;font-size:11px;font-family:var(--mono)}
+  .cover-browse{grid-column:1 / -1;grid-row:3;justify-self:start;font-family:var(--sans);font-size:14px;font-weight:600;color:#C5EAE1;background:none;border:0;border-bottom:2px solid transparent;cursor:pointer;padding:6px 0}
   .cover-browse:hover{border-color:#73D6C4}
-  .cover-eyebrow,.cover-h span,.ci-item,.cover-browse{opacity:0;animation:coverin .7s cubic-bezier(.2,.7,.3,1) both}
+  .cover-eyebrow,.cover-h span,.ci-item,.cover-domains,.cover-browse{opacity:0;animation:coverin .7s cubic-bezier(.2,.7,.3,1) both}
   .cover-eyebrow{animation-delay:.04s}
   .cover-h span:nth-child(1){animation-delay:.12s}
   .cover-h span:nth-child(2){animation-delay:.2s}
   .cover-h span:nth-child(3){animation-delay:.28s}
   .ci-item{animation-delay:calc(.42s + var(--i,0)*.07s)}
-  .cover-browse{animation-delay:.95s}
+  .cover-domains{animation-delay:.9s}
+  .cover-browse{animation-delay:1.04s}
   @keyframes coverin{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
   @media (max-width:880px){
-    .cover{grid-template-columns:1fr;grid-template-rows:auto auto auto;min-height:auto;padding:30px 22px 44px;gap:24px}
-    .cover-lead{grid-column:1;grid-row:1} .cover-index{grid-column:1;grid-row:2;border-left:0;padding-left:0;border-top:1px solid rgba(255,255,255,.12);padding-top:8px} .cover-browse{grid-column:1;grid-row:3}
+    .cover{grid-template-columns:1fr;grid-template-rows:repeat(4,auto);min-height:auto;padding:30px 22px 44px;gap:22px}
+    .cover-lead{grid-column:1;grid-row:1} .cover-index{grid-column:1;grid-row:2;border-left:0;padding-left:0;border-top:1px solid rgba(255,255,255,.12);padding-top:8px} .cover-domains{grid-row:3} .cover-browse{grid-column:1;grid-row:4}
   }
   .res-head{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin:0 0 10px;padding-bottom:10px;border-bottom:1.5px solid var(--ink)}
   .back-topics{font-family:var(--mono);font-size:11.5px;color:var(--ink);background:none;border:1px solid var(--rule);padding:5px 11px;cursor:pointer}
@@ -397,7 +405,7 @@
   }
   @media (prefers-reduced-motion: reduce){
     *{transition:none !important;animation:none !important}
-    .tile,.cover-eyebrow,.cover-h span,.ci-item,.cover-browse,.cover-finding{opacity:1 !important;transform:none !important}
+    .tile,.cover-eyebrow,.cover-h span,.ci-item,.cover-domains,.cover-browse,.cover-finding{opacity:1 !important;transform:none !important}
   }
   /* ===== dark-mode fixups: hardcoded light values that don't cascade from :root ===== */
   .sec-div .sec-no{color:#0E1A22}
@@ -4814,6 +4822,7 @@ window.CORPUS = {
       <div class="cover-finding" id="coverFinding" role="button" tabindex="0" title="Read this brief"></div>
     </div>
     <nav class="cover-index" id="coverIndex" aria-label="The six questions"></nav>
+    <div class="cover-domains" id="coverDomains"></div>
     <button class="cover-browse" id="browseAll">Browse all the sources ↓</button>
   </div>
 </section>
@@ -5075,6 +5084,13 @@ window.CORPUS = {
       '</button>';
     }).join("");
     idx.querySelectorAll(".ci-item").forEach(b=>b.onclick=()=>openTopic(QUESTIONS[+b.dataset.i]));
+    const cd=document.getElementById("coverDomains");
+    if(cd){
+      cd.innerHTML='<div class="cd-label">Or jump to a domain</div><div class="cd-chips">'+
+        DOMAIN_ORDER.map(d=>{ const c=nodes.filter(n=>n.domain===d).length;
+          return '<button class="cd-chip" data-domain="'+esc(d)+'" style="--cc:'+domainColor[d]+'"><span class="cd-dot"></span>'+esc(domainShort[d]||d)+' <span class="cd-count">'+c+'</span></button>'; }).join("")+'</div>';
+      cd.querySelectorAll(".cd-chip").forEach(b=>b.onclick=()=>goDomain(b.dataset.domain));
+    }
     initFinding();
   }
   function initFinding(){
