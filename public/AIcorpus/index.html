@@ -52,22 +52,21 @@
   body.mapOpen #detail.open{box-shadow:-18px 0 50px rgba(18,42,55,.28)}
   /* ---------- header ---------- */
   header{
-    padding:13px 20px 11px;
-    border-bottom:1.5px solid var(--ink);
+    padding:19px 26px 17px;
+    border-bottom:1px solid var(--rule);
     background:var(--paper);
     flex:0 0 auto;
   }
-  .masthead{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap}
-  .masthead h1{font-size:21px;font-weight:600;letter-spacing:.01em}
+  .masthead{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .masthead h1{font-size:25px;font-weight:600;letter-spacing:-.01em}
   .masthead .count{font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:.05em}
   .masthead .tools{margin-left:auto;display:flex;align-items:center;gap:8px}
-  #search{
-    font-family:var(--serif);font-size:14px;
-    border:1px solid var(--ink);border-radius:0;
-    background:var(--card);color:var(--ink);
-    padding:6px 11px;width:300px;max-width:60vw;outline:none;
-  }
-  #search:focus{box-shadow:0 0 0 2px rgba(28,38,48,.18)}
+  .searchwrap{display:inline-flex;align-items:center}
+  .search-toggle{display:inline-flex;align-items:center;justify-content:center;padding:7px 9px;line-height:0}
+  .search-toggle svg{display:block}
+  #search{font-family:var(--serif);font-size:14px;border:1px solid var(--ink);background:var(--card);color:var(--ink);outline:none;width:0;padding:7px 0;border-width:0;opacity:0;overflow:hidden;transition:width .24s cubic-bezier(.2,.7,.3,1),opacity .18s ease,padding .24s ease}
+  .searchwrap.open #search{width:min(300px,46vw);padding:7px 11px;border-width:1px;margin-left:-1px}
+  #search:focus{box-shadow:0 0 0 2px rgba(15,118,110,.22)}
   .hbtn{
     font-family:var(--mono);font-size:11px;letter-spacing:.02em;white-space:nowrap;
     background:var(--card);border:1px solid var(--ink);color:var(--ink);
@@ -148,23 +147,34 @@
   .home-eyebrow{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
   .home-h{font-family:var(--serif);font-size:clamp(34px,5vw,52px);font-weight:600;letter-spacing:-.022em;line-height:1.04;max-width:16ch}
   .home-sub{font-family:var(--sans);font-size:16px;color:var(--ink-soft);margin-top:16px;max-width:54ch;line-height:1.5}
-  .tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:42px}
-  .tile{position:relative;text-align:left;background:var(--card);cursor:pointer;display:flex;flex-direction:column;min-height:230px;padding:26px 28px 24px;border-radius:18px;overflow:hidden;transition:transform .16s ease,box-shadow .16s ease}
-  .tile::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--tcol,var(--accent))}
-  .tile:hover{transform:translateY(-4px)}
+  .tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;grid-auto-flow:dense;gap:18px;margin-top:46px}
+  .tile{position:relative;text-align:left;cursor:pointer;display:flex;flex-direction:column;min-height:208px;padding:22px 24px 20px;border-radius:16px;overflow:hidden;
+    background:#fff;background:color-mix(in srgb,var(--tcol,var(--accent)) 6%,#fff);
+    border:1px solid var(--rule);border:1px solid color-mix(in srgb,var(--tcol,var(--accent)) 20%,#fff);
+    box-shadow:0 1px 2px rgba(18,42,55,.04),0 12px 26px rgba(18,42,55,.07);
+    opacity:0;animation:tilein .55s cubic-bezier(.2,.7,.3,1) both;animation-delay:calc(var(--i,0)*70ms);
+    transition:transform .18s ease,box-shadow .18s ease}
+  .tile::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--tcol,var(--accent))}
+  .tile:hover{transform:translateY(-5px);box-shadow:0 6px 12px rgba(18,42,55,.07),0 24px 48px rgba(18,42,55,.17)}
   .tile:hover .tt{color:var(--tcol,var(--accent))}
-  .tile .tile-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px}
-  .tile .ti{font-size:32px;line-height:1}
-  .tile .tc{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap;margin-top:6px}
-  .tile .tt{font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.16;letter-spacing:-.014em;transition:color .16s}
-  .tile .tteaser{font-family:var(--sans);font-size:14px;line-height:1.55;color:var(--ink-soft);margin-top:12px;flex:1 1 auto;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-  .tile .tile-foot{display:flex;align-items:center;gap:10px;margin-top:18px}
+  .tile.featured{grid-column:span 2;grid-row:span 2;padding:30px 34px 28px}
+  .tile-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:8px}
+  .tile .tnum{font-family:var(--serif);font-size:32px;font-weight:600;line-height:.9;letter-spacing:-.02em;color:var(--tcol,var(--accent))}
+  .tile .tc{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap;margin-top:8px}
+  .tile .tt{font-family:var(--serif);font-size:21px;font-weight:600;line-height:1.16;letter-spacing:-.014em;transition:color .16s}
+  .tile .tteaser{font-family:var(--sans);font-size:13.5px;line-height:1.55;color:var(--ink-soft);margin-top:10px;flex:1 1 auto;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .tile .tile-foot{display:flex;align-items:center;gap:10px;margin-top:16px}
   .tile .tgo{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--tcol,var(--accent));margin-left:auto;opacity:0;transform:translateX(-6px);transition:opacity .16s,transform .16s}
   .tile:hover .tgo{opacity:1;transform:none}
-  .home-foot{margin-top:40px;text-align:center}
+  .tile.featured .tnum{font-size:52px}
+  .tile.featured .tt{font-size:30px;line-height:1.1;margin-top:2px;max-width:18ch}
+  .tile.featured .tteaser{font-size:15px;line-height:1.6;-webkit-line-clamp:5;margin-top:14px;max-width:46ch}
+  @keyframes tilein{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .home-foot{margin-top:44px;text-align:center}
   .linkbtn{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--accent);background:none;border:none;cursor:pointer;padding:6px 2px;border-bottom:2px solid transparent}
   .linkbtn:hover{border-color:var(--accent)}
-  @media (max-width:720px){ .tiles{grid-template-columns:1fr} .home-inner{padding:40px 18px 56px} }
+  @media (max-width:900px){ .tiles{grid-template-columns:repeat(2,minmax(0,1fr))} .tile.featured{grid-row:span 1} }
+  @media (max-width:600px){ .tiles{grid-template-columns:1fr} .tile.featured{grid-column:span 1} .home-inner{padding:40px 18px 56px} }
   .res-head{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin:0 0 10px;padding-bottom:10px;border-bottom:1.5px solid var(--ink)}
   .back-topics{font-family:var(--mono);font-size:11.5px;color:var(--ink);background:none;border:1px solid var(--rule);padding:5px 11px;cursor:pointer}
   .back-topics:hover{border-color:var(--ink);background:var(--card)}
@@ -328,13 +338,15 @@
     }
     body.facetsOpen #facets{transform:none}
     .masthead h1{font-size:18px}
-    #search{width:100%;max-width:none;flex:1}
+    .searchwrap.open{flex:1 1 100%}
+    .searchwrap.open #search{width:auto;max-width:none;flex:1}
     .masthead .tools{margin-left:0;width:100%;order:3;flex-wrap:wrap}
     #catalog{padding:12px 14px 60px}
     .cat-row .cthemes{display:none}
   }
   @media (prefers-reduced-motion: reduce){
     *{transition:none !important;animation:none !important}
+    .tile{opacity:1 !important}
   }
 </style>
 </head>
@@ -3743,7 +3755,10 @@ window.CORPUS = {
     <span class="count" id="countLabel">42 SOURCES &middot; 82 RELATIONS</span>
     <div class="tools">
       <span class="m-controls"><button id="mFacets" class="hbtn ghost">Filters</button></span>
-      <input id="search" type="search" placeholder="Search the collection — author, title, subject, annotation&hellip;" aria-label="Search the collection">
+      <span class="searchwrap" id="searchwrap">
+        <button class="search-toggle hbtn ghost" id="searchToggle" aria-label="Search the collection" title="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M20 20l-4.3-4.3"></path></svg></button>
+        <input id="search" type="search" placeholder="Search &mdash; author, title, subject&hellip;" aria-label="Search the collection" autocomplete="off">
+      </span>
       <button id="aboutBtn" class="hbtn ghost" title="What is this collection?">&#9432; About</button>
       <button id="mapBtn" class="hbtn ghost" title="Open the relation graph">&#9678; Relation map</button>
       <button id="clearBtn" class="hbtn ghost" title="Clear search and all filters">RESET</button>
@@ -3969,11 +3984,11 @@ window.CORPUS = {
       const col=TILE_COLORS[i%TILE_COLORS.length];
       const b=(C.briefs||{})[t.id]||{};
       const conf=b.confidence||"", cls=/high/i.test(conf)?"c-high":/low|emerg/i.test(conf)?"c-low":"c-med";
-      const teaser=b.bottom_line?'<p class="tteaser">'+esc(b.bottom_line)+'</p>'
-        :'<p class="tteaser">'+esc(t.question)+'</p>';
+      const num=String(i+1).padStart(2,"0");
+      const teaser='<p class="tteaser">'+esc(b.bottom_line||t.question)+'</p>';
       const foot=conf?'<span class="conf '+cls+'">'+esc(conf)+' confidence</span>':'';
-      return '<button class="tile" data-i="'+i+'" style="--tcol:'+col+'">'+
-        '<div class="tile-head"><span class="ti">'+esc(t.icon)+'</span>'+
+      return '<button class="tile'+(i===0?' featured':'')+'" data-i="'+i+'" style="--tcol:'+col+';--i:'+i+'">'+
+        '<div class="tile-head"><span class="tnum">'+num+'</span>'+
           '<span class="tc">'+c+' source'+(c===1?'':'s')+'</span></div>'+
         '<div class="tt">'+esc(t.label)+'</div>'+teaser+
         '<div class="tile-foot">'+foot+'<span class="tgo">Read the brief →</span></div>'+
@@ -4001,7 +4016,7 @@ window.CORPUS = {
     if(b.do&&b.do.length) h+='<div class="brief-sec"><span class="brief-h">What to do</span>'+ul(b.do)+'</div>';
     if(b.watch&&b.watch.length) h+='<div class="brief-sec"><span class="brief-h">Watch out for</span>'+ul(b.watch,"warn")+'</div>';
     h+='</div>';
-    h+='<div class="brief-foot">A synthesis of the sources below'+(b.updated?' · '+esc(b.updated):'')+' · review before acting</div></div>';
+    h+='<div class="brief-foot">A synthesis of the sources below'+(b.updated?' · '+esc(b.updated):'')+'</div></div>';
     return h;
   }
   document.getElementById("browseAll").onclick=browseAll;
@@ -4014,6 +4029,13 @@ window.CORPUS = {
     if(state.q){ state.topic=null; if(state.view!=="results") setView("results"); }
     refresh();
   });
+  // expanding search: tucked behind a ⌕ icon until clicked
+  const searchWrap=document.getElementById("searchwrap"), searchToggle=document.getElementById("searchToggle");
+  function openSearch(){ searchWrap.classList.add("open"); searchEl.focus(); }
+  function closeSearch(){ if(!searchEl.value.trim()) searchWrap.classList.remove("open"); }
+  if(searchToggle) searchToggle.onclick=()=>{ searchWrap.classList.contains("open")?(searchEl.value.trim()?searchEl.focus():closeSearch()):openSearch(); };
+  searchEl.addEventListener("blur",()=>setTimeout(closeSearch,140));
+  searchEl.addEventListener("keydown",e=>{ if(e.key==="Escape"){ searchEl.value=""; state.q=""; searchWrap.classList.remove("open"); refresh(); } });
   document.getElementById("clearBtn").onclick=()=>{
     [state.camps,state.evs,state.sections,state.themes,state.years].forEach(s=>s.clear());
     state.rels=new Set(relOrder); state.sort="evidence"; goHome();
