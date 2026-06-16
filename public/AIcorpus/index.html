@@ -402,6 +402,37 @@
   /* ===== dark-mode fixups: hardcoded light values that don't cascade from :root ===== */
   .sec-div .sec-no{color:#0E1A22}
   .wcard{box-shadow:0 30px 80px rgba(0,0,0,.6)}
+  /* ===== domain × stance UI ===== */
+  .rec .rbadges{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:9px}
+  .dbadge{font-family:var(--sans);font-size:10.5px;font-weight:600;color:var(--dc,#888);border:1px solid color-mix(in srgb,var(--dc,#888) 45%,transparent);background:color-mix(in srgb,var(--dc,#888) 13%,transparent);padding:2px 8px;border-radius:20px;white-space:nowrap}
+  .dbadge.xt{opacity:.8;border-style:dashed}
+  .sbadge{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:20px;white-space:nowrap}
+  .sbadge.s-critical{color:#EE8576;background:rgba(238,133,118,.14)}
+  .sbadge.s-conditional{color:#E6BC68;background:rgba(230,188,104,.14)}
+  .sbadge.s-pro{color:#62CF97;background:rgba(98,207,151,.14)}
+  .ipflag{font-family:var(--sans);font-size:10px;font-weight:600;color:#E6BC68;letter-spacing:.02em;white-space:nowrap}
+  .dom-div{display:flex;align-items:center;gap:10px;margin:32px 0 2px;padding:0 2px 9px;border-bottom:1px solid var(--rule)}
+  .dom-div:first-child{margin-top:6px}
+  .dom-div .dom-dot{width:10px;height:10px;border-radius:50%;background:var(--dc,#888);flex:0 0 auto}
+  .dom-div .dom-name{font-family:var(--serif);font-size:16px;font-weight:600;letter-spacing:-.01em;color:var(--ink);flex:1 1 auto}
+  .dom-div .dom-count{font-family:var(--mono);font-size:11px;color:var(--ink-soft)}
+  .xtag-toggle{display:flex;align-items:center;gap:7px;width:100%;text-align:left;background:none;border:0;color:var(--ink-soft);font-family:var(--sans);font-size:11.5px;font-weight:600;padding:7px 6px;margin:-4px 0 6px;cursor:pointer;border-radius:5px}
+  .xtag-toggle:hover{color:var(--ink);background:rgba(255,255,255,.03)}
+  .xtag-toggle.on{color:var(--accent)}
+  .xtag-toggle .xtbox{font-size:13px;line-height:1}
+  .map-legend{position:absolute;top:14px;right:14px;z-index:6;background:rgba(15,27,36,.9);border:1px solid var(--rule);border-radius:10px;padding:12px 14px;max-width:232px}
+  .map-legend .lg-h{font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 6px}
+  .map-legend .lg-domains{display:flex;flex-direction:column;gap:3px;margin-bottom:11px}
+  .map-legend .lg-d{display:flex;align-items:center;gap:7px;font-family:var(--sans);font-size:11px;color:var(--ink)}
+  .map-legend .lg-dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .map-legend .lg-stances{display:flex;flex-direction:column;gap:4px}
+  .map-legend .lg-s{display:flex;align-items:center;gap:7px;font-family:var(--sans);font-size:11px;color:var(--ink)}
+  .map-legend .lg-ring{width:13px;height:13px;border-radius:50%;flex:0 0 auto;box-sizing:border-box}
+  .map-legend .lg-ring.r-critical{border:2px solid #ECE7DD}
+  .map-legend .lg-ring.r-conditional{border:2px dashed #ECE7DD}
+  .map-legend .lg-ring.r-pro{border:2px dotted #ECE7DD}
+  .map-legend .lg-ring.r-none{border:1px solid rgba(255,255,255,.18)}
+  @media (max-width:760px){ .map-legend{display:none} }
 </style>
 </head>
 <body class="view-home">
@@ -704,8 +735,9 @@ window.CORPUS = {
       "authors": "Crawford, Kate",
       "title": "The Atlas of AI",
       "year": 2021,
-      "section": 1,
-      "camp": "Critical",
+      "domain": "Labor & Political Economy",
+      "stance": "critical",
+      "legacy_section": 1,
       "evidence": "Argument",
       "type": "Critical theory and reportage",
       "claim": "AI is an extractive industry and a registry of power: built from minerals, energy, data, and hidden human labor, inheriting an old factory drive toward standardization and conformity.",
@@ -726,8 +758,9 @@ window.CORPUS = {
       "authors": "Hao, Karen",
       "title": "Empire of AI",
       "year": 2025,
-      "section": 1,
-      "camp": "Critical",
+      "domain": "Labor & Political Economy",
+      "stance": "critical",
+      "legacy_section": 1,
       "evidence": "Argument",
       "type": "Investigative reporting",
       "claim": "OpenAI as the lens for AI as a new empire: concentrated power justified by AGI ideology and scale-at-all-costs, built partly on Global-South data labor.",
@@ -748,8 +781,9 @@ window.CORPUS = {
       "authors": "Murgia, Madhumita",
       "title": "Code Dependent",
       "year": 2024,
-      "section": 1,
-      "camp": "Critical",
+      "domain": "Labor & Political Economy",
+      "stance": "critical",
+      "legacy_section": 1,
       "evidence": "Argument",
       "type": "Ethnographic reporting",
       "claim": "AI runs on invisible ghost workers in the Global South; deliberately ambivalent, showing the work both exploiting people and lifting some out of precarity.",
@@ -768,8 +802,9 @@ window.CORPUS = {
       "authors": "McQuillan, Dan",
       "title": "Resisting AI",
       "year": 2022,
-      "section": 1,
-      "camp": "Critical",
+      "domain": "Labor & Political Economy",
+      "stance": "critical",
+      "legacy_section": 1,
       "evidence": "Argument",
       "type": "Political-theoretical manifesto",
       "claim": "AI is a political technology tending toward the authoritarian; the response should be collective political resistance, not better ethics.",
@@ -789,8 +824,9 @@ window.CORPUS = {
       "authors": "Eubanks, Virginia",
       "title": "Automating Inequality",
       "year": 2018,
-      "section": 1,
-      "camp": "Critical",
+      "domain": "Equity & Bias",
+      "stance": "critical",
+      "legacy_section": 1,
       "evidence": "Argument",
       "type": "Reported case studies",
       "claim": "The digital poorhouse: automated decision-making in welfare, housing, and child services profiles, polices, and punishes the poor and forecloses appeal.",
@@ -810,8 +846,9 @@ window.CORPUS = {
       "authors": "Alvero, Lee, Regla-Vargas, Kizilcec, Joachims & Antonio",
       "title": "LLMs, Social Demography, and Hegemony",
       "year": 2024,
-      "section": 1,
-      "camp": "Critical",
+      "domain": "Equity & Bias",
+      "stance": "critical",
+      "legacy_section": 1,
       "evidence": "Medium",
       "type": "Computational text analysis, large-corpus comparison",
       "claim": "LLM-generated admissions essays are internally homogeneous and most resemble the writing of socioeconomically advantaged students: a default hegemonic voice, before any student touches the tool.",
@@ -831,8 +868,9 @@ window.CORPUS = {
       "authors": "Lee, Borchers, Alvero, Joachims & Kizilcec",
       "title": "The Digital Divide in Generative AI",
       "year": 2026,
-      "section": 1,
-      "camp": "Critical",
+      "domain": "Equity & Bias",
+      "stance": "critical",
+      "legacy_section": 1,
       "evidence": "Medium",
       "type": "Longitudinal observational, N = 81,663; preprint; detector-estimated LLM use",
       "claim": "Post-2023 convergence in admissions-essay language, largest among fee-waiver applicants: the students with least access to human writing support lose the most distinctiveness of voice.",
@@ -853,8 +891,9 @@ window.CORPUS = {
       "authors": "Vallor, Shannon",
       "title": "The AI Mirror",
       "year": 2024,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Argument",
       "type": "Philosophy (virtue ethics); the spine of the moral-caution frame",
       "claim": "AI is a backward-facing mirror; its danger is the quiet erosion of moral capacity. Practical wisdom cannot form without the friction of reasoning through consequences oneself.",
@@ -875,8 +914,9 @@ window.CORPUS = {
       "authors": "Crawford, Matthew B.",
       "title": "The World Beyond Your Head",
       "year": 2015,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Argument",
       "type": "Philosophy of attention (not Kate Crawford)",
       "claim": "The self is formed through skilled, effortful engagement with a reality that resists us; frictionlessness is a loss rather than a convenience.",
@@ -895,8 +935,9 @@ window.CORPUS = {
       "authors": "Wolf, Maryanne",
       "title": "Reader, Come Home",
       "year": 2018,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Argument",
       "type": "Cognitive neuroscience, popular",
       "claim": "Constant digital engagement erodes deep reading, sustained attention, and cognitive patience; the careful, pre-AI version of the cognition-erosion worry.",
@@ -915,8 +956,9 @@ window.CORPUS = {
       "authors": "Carr, Nicholas",
       "title": "The Glass Cage",
       "year": 2014,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Argument",
       "type": "Synthesis and argument",
       "claim": "Over-reliance on automation degrades skill, memory, and situational awareness; the smoother the tool, the more it hollows out the competence it was meant to support.",
@@ -935,8 +977,9 @@ window.CORPUS = {
       "authors": "Kosmyna, N., et al.",
       "title": "Your Brain on ChatGPT",
       "year": 2025,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Low",
       "type": "EEG + NLP + interviews; small-n preprint, not peer reviewed",
       "claim": "LLM-assisted essay writing produced the weakest brain connectivity of three conditions, framed as cognitive debt, with poor recall and homogenized text. The authors themselves call it preliminary.",
@@ -956,8 +999,9 @@ window.CORPUS = {
       "authors": "Gerlich, M.",
       "title": "AI Tools in Society",
       "year": 2025,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Low",
       "type": "Cross-sectional, correlational",
       "claim": "Frequent AI use correlates negatively with critical-thinking scores, mediated by cognitive offloading. Correlational: causation may run the other way.",
@@ -975,8 +1019,9 @@ window.CORPUS = {
       "authors": "Lee, H.-P., Sarkar, Tankelevitch, et al.",
       "title": "The Impact of Generative AI on Critical Thinking",
       "year": 2025,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Medium",
       "type": "Survey of 319 knowledge workers, 936 task examples",
       "claim": "Higher confidence in the AI predicts less critical thinking; confidence in one's own expertise predicts more. Effort shifts from generating to verifying rather than disappearing.",
@@ -996,8 +1041,9 @@ window.CORPUS = {
       "authors": "Bender, Emily M., and Alex Hanna",
       "title": "The AI Con",
       "year": 2025,
-      "section": 3,
-      "camp": "Critical",
+      "domain": "Labor & Political Economy",
+      "stance": "critical",
+      "legacy_section": 3,
       "evidence": "Argument",
       "type": "Linguistic and rhetorical critique",
       "claim": "AI is largely hype: much of it does not work, none of it is inevitable, and it functions mainly to centralize power and profit. The most absolutist anti-AI position in the set.",
@@ -1016,8 +1062,13 @@ window.CORPUS = {
       "authors": "Bender, Gebru, McMillan-Major & Mitchell",
       "title": "On the Dangers of Stochastic Parrots",
       "year": 2021,
-      "section": 3,
-      "camp": "Critical",
+      "domain": "Labor & Political Economy",
+      "stance": "critical",
+      "cross_domain": [
+        "Equity & Bias",
+        "Material & Infrastructural Risks"
+      ],
+      "legacy_section": 3,
       "evidence": "Argument",
       "type": "Conference paper (FAccT)",
       "claim": "LLMs reproduce linguistic form without understanding; scaling carries environmental cost, embedded bias, and the danger of mistaking fluency for thought.",
@@ -1037,8 +1088,9 @@ window.CORPUS = {
       "authors": "Narayanan, Arvind, and Sayash Kapoor",
       "title": "AI Snake Oil",
       "year": 2024,
-      "section": 3,
-      "camp": "Deflationary / conditional",
+      "domain": "Evidence & Methodology",
+      "stance": "conditional",
+      "legacy_section": 3,
       "evidence": "Argument",
       "type": "Empirical and analytical; anti-hype, not anti-AI",
       "claim": "Predictive AI is mostly broken snake oil in high-stakes domains; generative AI is genuinely useful. Names criti-hype: criticism that inflates capability while attacking it.",
@@ -1058,8 +1110,9 @@ window.CORPUS = {
       "authors": "Reich, Justin",
       "title": "Failure to Disrupt",
       "year": 2020,
-      "section": 3,
-      "camp": "Deflationary / conditional",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "legacy_section": 3,
       "evidence": "Argument",
       "type": "History and synthesis of edtech; pre-dates LLMs",
       "claim": "Technology consistently fails to transform schooling because institutions absorb and blunt it. Investor storytime; the EdTech Matthew Effect: tools help already-advantaged learners most.",
@@ -1080,8 +1133,9 @@ window.CORPUS = {
       "authors": "Mollick, Ethan",
       "title": "Co-Intelligence",
       "year": 2024,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Learning & Cognition",
+      "stance": "pro",
+      "legacy_section": 4,
       "evidence": "Argument",
       "type": "Pragmatic-optimist argument",
       "claim": "AI as collaborator rather than replacement: centaur and cyborg models, always invite AI to the table, be the human in the loop.",
@@ -1101,8 +1155,10 @@ window.CORPUS = {
       "authors": "Khan, Salman",
       "title": "Brave New Words",
       "year": 2024,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Learning & Cognition",
+      "stance": "pro",
+      "interested_party": true,
+      "legacy_section": 4,
       "evidence": "Argument",
       "type": "Optimist vision; author has a direct commercial stake",
       "claim": "Generative AI can finally deliver personalized one-to-one-style tutoring at scale, realizing the two-sigma dream. An argument from an interested party.",
@@ -1121,8 +1177,9 @@ window.CORPUS = {
       "authors": "Kestin, G., et al.",
       "title": "AI Tutoring Outperforms Active Learning",
       "year": 2025,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Learning & Cognition",
+      "stance": "pro",
+      "legacy_section": 4,
       "evidence": "High (causal)",
       "type": "Randomized controlled trial, N = 194",
       "claim": "Students learned more from a well-designed AI tutor than from in-class active learning, in less time, with higher engagement. Single course, deliberate pedagogy.",
@@ -1142,8 +1199,9 @@ window.CORPUS = {
       "authors": "Wu, Xinning, et al.",
       "title": "ChatGPT's Impact on Student Learning Outcomes",
       "year": 2026,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Learning & Cognition",
+      "stance": "pro",
+      "legacy_section": 4,
       "evidence": "Medium",
       "type": "Random-effects meta-analysis, 35 experimental studies; high heterogeneity",
       "claim": "Significant positive effects of ChatGPT across cognitive and non-cognitive outcomes, including large effects for critical thinking. The sharpest contradiction of the corpus's central worry.",
@@ -1161,8 +1219,9 @@ window.CORPUS = {
       "authors": "De Simone, M., et al.",
       "title": "From Chalkboards to Chatbots",
       "year": 2025,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Learning & Cognition",
+      "stance": "pro",
+      "legacy_section": 4,
       "evidence": "High (causal)",
       "type": "Randomized controlled trial, Nigeria (World Bank)",
       "claim": "Teacher-supervised GPT-4 use raised English scores 0.23 SD at ~$48 per student. It worked because teachers facilitated, prompts promoted reasoning, and use was monitored.",
@@ -1183,8 +1242,9 @@ window.CORPUS = {
       "authors": "Wang, R. E., et al.",
       "title": "Tutor CoPilot",
       "year": 2024,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Learning & Cognition",
+      "stance": "pro",
+      "legacy_section": 4,
       "evidence": "High (causal)",
       "type": "Field experiment; real-time AI guidance to human tutors",
       "claim": "Live expert suggestions to novice tutors improved outcomes, with the largest gains for students paired with the lowest-rated tutors. A leveling, human-in-the-loop result.",
@@ -1203,8 +1263,9 @@ window.CORPUS = {
       "authors": "Bloom, Benjamin S.",
       "title": "The 2 Sigma Problem",
       "year": 1984,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Learning & Cognition",
+      "stance": "pro",
+      "legacy_section": 4,
       "evidence": "Medium",
       "type": "Foundational research synthesis",
       "claim": "One-to-one mastery tutoring moves the average student about two standard deviations above classroom instruction. In this corpus, the aspiration the AI-tutoring evidence chases.",
@@ -1222,8 +1283,9 @@ window.CORPUS = {
       "authors": "Brynjolfsson, Li & Raymond",
       "title": "Generative AI at Work",
       "year": 2023,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Labor & Political Economy",
+      "stance": "pro",
+      "legacy_section": 4,
       "evidence": "High (causal)",
       "type": "Field study, ~5,000 support agents",
       "claim": "An AI assistant raised productivity 14% on average and 34% for novices by diffusing tacit knowledge: upskilling, not deskilling. Single firm, medium run.",
@@ -1242,8 +1304,9 @@ window.CORPUS = {
       "authors": "Noy, S., & Zhang, W.",
       "title": "Productivity Effects of Generative AI",
       "year": 2023,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Labor & Political Economy",
+      "stance": "pro",
+      "legacy_section": 4,
       "evidence": "High (causal)",
       "type": "Preregistered RCT, 453 professionals",
       "claim": "ChatGPT cut writing time ~40% and raised quality ~18%, compressing inequality. The authors' own caveat: it mostly substitutes for worker effort rather than complementing skill.",
@@ -1262,8 +1325,9 @@ window.CORPUS = {
       "authors": "Dell'Acqua, F., et al.",
       "title": "Navigating the Jagged Technological Frontier",
       "year": 2023,
-      "section": 4,
-      "camp": "Deflationary / conditional",
+      "domain": "Labor & Political Economy",
+      "stance": "conditional",
+      "legacy_section": 4,
       "evidence": "High (causal)",
       "type": "Preregistered field experiment, 758 consultants",
       "claim": "Inside the frontier, GPT-4 users were faster and better, with below-average performers gaining most; outside it, 19% less likely to be correct. Wrong output that still looks good.",
@@ -1282,8 +1346,9 @@ window.CORPUS = {
       "authors": "Clark, A., & Chalmers, D.",
       "title": "The Extended Mind",
       "year": 1998,
-      "section": 5,
-      "camp": "Pro / optimist",
+      "domain": "Learning & Cognition",
+      "stance": "pro",
+      "legacy_section": 5,
       "evidence": "Argument",
       "type": "Philosophy of mind; the canonical statement",
       "claim": "Cognition extends beyond the brain into tools and environment as functional parts of the mind. If offloading is constitutive of mind, cognitive debt may be a category error.",
@@ -1301,8 +1366,9 @@ window.CORPUS = {
       "authors": "Clark, Andy",
       "title": "Extending Minds with Generative AI",
       "year": 2025,
-      "section": 5,
-      "camp": "Pro / optimist",
+      "domain": "Learning & Cognition",
+      "stance": "pro",
+      "legacy_section": 5,
       "evidence": "Argument",
       "type": "Perspective (Nature Communications); open access",
       "claim": "Human-AI collaboration is the latest expression of our basic nature to build hybrid thinking systems. The steelman the friction thesis must answer, by the person best positioned to make it.",
@@ -1320,8 +1386,9 @@ window.CORPUS = {
       "authors": "Acemoglu, Daron",
       "title": "The Simple Macroeconomics of AI",
       "year": 2024,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Labor & Political Economy",
+      "stance": "conditional",
+      "legacy_section": 6,
       "evidence": "Medium",
       "type": "Economic modeling",
       "claim": "AI's total-factor-productivity gain is at most ~0.66% over a decade, and even when AI helps lower-skill workers it may widen inequality. Deflates both poles at once.",
@@ -1339,8 +1406,9 @@ window.CORPUS = {
       "authors": "Acemoglu, Daron, and Simon Johnson",
       "title": "Power and Progress",
       "year": 2023,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Labor & Political Economy",
+      "stance": "conditional",
+      "legacy_section": 6,
       "evidence": "Argument",
       "type": "Economic history",
       "claim": "Technological gains are never automatically shared; they are distributed by political and institutional choices. The direction of AI is a societal choice.",
@@ -1360,8 +1428,9 @@ window.CORPUS = {
       "authors": "Doshi, A., & Hauser, O.",
       "title": "Generative AI and the Diversity of Novel Content",
       "year": 2024,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Equity & Bias",
+      "stance": "conditional",
+      "legacy_section": 6,
       "evidence": "High (causal)",
       "type": "Experiment (Science Advances)",
       "claim": "AI raised individual creativity but reduced collective diversity, making writers' work measurably more similar. Better for the individual, flatter across the population.",
@@ -1379,8 +1448,12 @@ window.CORPUS = {
       "authors": "Orben, Amy",
       "title": "The Sisyphean Cycle of Technology Panics",
       "year": 2020,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Evidence & Methodology",
+      "stance": "conditional",
+      "cross_domain": [
+        "Mental Health & Wellbeing"
+      ],
+      "legacy_section": 6,
       "evidence": "Medium",
       "type": "Peer-reviewed synthesis",
       "claim": "Societies cycle through near-identical, evidence-thin panics about new media. The claim is demand better evidence, not no harm exists.",
@@ -1399,8 +1472,9 @@ window.CORPUS = {
       "authors": "Otis, N., et al.",
       "title": "The Uneven Impact of Generative AI",
       "year": 2024,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Labor & Political Economy",
+      "stance": "conditional",
+      "legacy_section": 6,
       "evidence": "High (causal)",
       "type": "Field RCT, 640 Kenyan entrepreneurs",
       "claim": "A GPT-4 mentor showed no average effect: high performers gained 15-20% while low performers did 8-10% worse. Same kind of tool, opposite distributional outcome from the leveling studies.",
@@ -1419,8 +1493,9 @@ window.CORPUS = {
       "authors": "Bastani, H., et al.",
       "title": "Generative AI Can Harm Learning",
       "year": 2024,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "legacy_section": 6,
       "evidence": "High (causal)",
       "type": "Field experiment, high-school math",
       "claim": "Unguarded GPT-4 boosted practice but harmed learning once removed (~17% worse); a guardrailed tutor giving hints prevented the harm. The cleanest causal demonstration that design decides.",
@@ -1440,8 +1515,9 @@ window.CORPUS = {
       "authors": "Bjork, E. L., & Bjork, R. A.",
       "title": "Making Things Hard on Yourself, but in a Good Way",
       "year": 2011,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "legacy_section": 6,
       "evidence": "Medium",
       "type": "Cognitive psychology, chapter",
       "claim": "Desirable difficulties improve long-term retention, while ease produces fluent performance that masks shallow learning: the illusion of competence. The mechanism beneath the friction throughline.",
@@ -1460,8 +1536,9 @@ window.CORPUS = {
       "authors": "Bjork, R. A., & Bjork, E. L.",
       "title": "Desirable Difficulties in Theory and Practice",
       "year": 2020,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "legacy_section": 6,
       "evidence": "Medium",
       "type": "Cognitive psychology (JARMAC)",
       "claim": "A difficulty is desirable only if the learner has the background to meet it; below that threshold it simply impairs. The caveat that keeps friction-is-good from becoming a blanket claim.",
@@ -1480,8 +1557,9 @@ window.CORPUS = {
       "authors": "Schwartz, H., & Diliberti, M. (RAND)",
       "title": "More Students Use AI for Homework...",
       "year": 2026,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Adoption & Attitudes",
+      "stance": "none",
+      "legacy_section": 7,
       "evidence": "Context",
       "type": "Repeated representative survey",
       "claim": "Student AI use rose 48% to 62% even as 67% came to believe it harms critical thinking; school policy is widely absent. Recommends preserving cognitive friction.",
@@ -1501,8 +1579,9 @@ window.CORPUS = {
       "authors": "NPR/Ipsos",
       "title": "Education AI Topline 2026",
       "year": 2026,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Adoption & Attitudes",
+      "stance": "none",
+      "legacy_section": 7,
       "evidence": "Context",
       "type": "K-12 teacher opinion survey",
       "claim": "54% of teachers say AI makes critical thinking harder to teach; 74% see a bigger change than the internet; most report no school guidance. The social-fact layer beneath the cognition debate.",
@@ -1521,8 +1600,9 @@ window.CORPUS = {
       "authors": "Luther, Venetis & Karim (Brookings)",
       "title": "A New Direction for Students in an AI World",
       "year": 2026,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Governance & Professional Response",
+      "stance": "critical",
+      "legacy_section": 7,
       "evidence": "Context",
       "type": "Policy synthesis",
       "claim": "A balanced report emphasizing holistic development, the global digital divide, and hybrid vigor, while warning that personalization can become sophisticated tracking.",
@@ -1541,8 +1621,9 @@ window.CORPUS = {
       "authors": "Selwyn, Neil",
       "title": "Should Robots Replace Teachers?",
       "year": 2019,
-      "section": 1,
-      "camp": "Critical",
+      "domain": "Labor & Political Economy",
+      "stance": "critical",
+      "legacy_section": 1,
       "evidence": "Argument",
       "type": "Critical sociology of education; pre-dates LLMs",
       "claim": "Teaching is relational, embodied, improvisational labor that automation can displace but not replicate; the replacement question is finally political and economic, not technical.",
@@ -1562,8 +1643,9 @@ window.CORPUS = {
       "authors": "Watters, Audrey",
       "title": "Teaching Machines",
       "year": 2021,
-      "section": 3,
-      "camp": "Deflationary / conditional",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "legacy_section": 3,
       "evidence": "Argument",
       "type": "Archival history of edtech",
       "claim": "A documented century of mechanized 'personalized learning,' from 1920s testing machines onward: each generation sold on individualized pacing and teacher liberation, each absorbed or domesticated.",
@@ -1583,8 +1665,9 @@ window.CORPUS = {
       "authors": "Messeri, Lisa, & Crockett, M. J.",
       "title": "AI and Illusions of Understanding in Scientific Research",
       "year": 2024,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Argument",
       "type": "Peer-reviewed Perspective (Nature); anthropology + cognitive science",
       "claim": "AI tools can exploit human limitations, producing 'illusions of understanding' and 'monocultures of knowing': producing more while understanding less.",
@@ -1604,8 +1687,9 @@ window.CORPUS = {
       "authors": "Oakley, Johnston, Chen, Jung & Sejnowski",
       "title": "The Memory Paradox",
       "year": 2026,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Argument",
       "type": "Argued neuroscience synthesis (book chapter); weigh like the books",
       "claim": "Internalized knowledge remains the substrate of thought; offloading underuses the memory systems that build the schemata that make evaluating AI output possible. (The Flynn-effect linkage outruns its evidence.)",
@@ -1625,8 +1709,9 @@ window.CORPUS = {
       "authors": "Andreas, P., & Sideri, K.",
       "title": "Will AI Impoverish Creativity?",
       "year": 2026,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Argument",
       "type": "Peer-reviewed comment; virtue ethics (cites a retracted statistic - never relay it)",
       "claim": "Automating repetition lets agents 'skip the queue' into decision roles without accumulating the experience those roles require; the endpoint is a two-tier profession.",
@@ -1647,8 +1732,9 @@ window.CORPUS = {
       "authors": "Kreijkes, Kewenig, Kuvalja, et al.",
       "title": "Effects of LLM Use and Note-Taking on Reading Comprehension and Memory",
       "year": 2026,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "High (causal)",
       "type": "Pre-registered randomized experiment in secondary schools, N = 344",
       "claim": "Note-taking (alone or with the LLM) beat the LLM alone on retention and comprehension, yet most students preferred the LLM: the illusion of competence measured in an actual classroom.",
@@ -1669,8 +1755,9 @@ window.CORPUS = {
       "authors": "Risko, E. F., & Gilbert, S. J.",
       "title": "Cognitive Offloading",
       "year": 2016,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Learning & Cognition",
+      "stance": "none",
+      "legacy_section": 6,
       "evidence": "Argument",
       "type": "Peer-reviewed review; cognitive psychology. Pre-AI, neutral",
       "claim": "Cognitive offloading - using action to reduce cognitive demand - is ubiquitous and often adaptive, triggered by metacognitive judgments that can be systematically wrong.",
@@ -1689,8 +1776,9 @@ window.CORPUS = {
       "authors": "Varone, Bolici & Crowston",
       "title": "From Learning-by-Doing to Doing-Without-Learning",
       "year": 2026,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "legacy_section": 6,
       "evidence": "Argument",
       "type": "Conceptual model; preliminary interviews (N = 16). Framing, not evidence",
       "claim": "A four-phase orchestration cycle (framing, prompting, interpreting, verifying); the bottleneck is verification - identical AI use yields skill growth or decay depending on whether output is interrogated.",
@@ -1710,8 +1798,10 @@ window.CORPUS = {
       "authors": "Yang, Zyskowski, Yonack & Ma",
       "title": "How AI Agents Reshape Knowledge Work",
       "year": 2026,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Labor & Political Economy",
+      "stance": "pro",
+      "interested_party": true,
+      "legacy_section": 4,
       "evidence": "Medium",
       "type": "Production-data analysis; preprint; Perplexity authors (interested party)",
       "claim": "Agents perform autonomous work (26 min/session vs 33s for search), shifting users from directing execution to verifying and extending: AI's unit of delivery moves from answers to executed work.",
@@ -1731,8 +1821,9 @@ window.CORPUS = {
       "authors": "Weber-Wulff, D., et al.",
       "title": "Testing of Detection Tools for AI-Generated Text",
       "year": 2023,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Evidence & Methodology",
+      "stance": "none",
+      "legacy_section": 7,
       "evidence": "Context",
       "type": "Systematic tool evaluation",
       "claim": "Public and commercial AI-text detectors are neither accurate nor reliable - easily evaded by paraphrase, with error patterns that make false accusation a live institutional risk.",
@@ -1752,8 +1843,9 @@ window.CORPUS = {
       "authors": "Liang, Yuksekgonul, Mao, Wu & Zou",
       "title": "GPT Detectors Are Biased Against Non-Native English Writers",
       "year": 2023,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Equity & Bias",
+      "stance": "critical",
+      "legacy_section": 7,
       "evidence": "Context",
       "type": "Tool evaluation; bias audit",
       "claim": "GPT detectors disproportionately flag non-native English writers as machine-generated; false positives concentrate on the writers with least power to contest them.",
@@ -1773,8 +1865,12 @@ window.CORPUS = {
       "authors": "Robb, M. B., & Mann, S.",
       "title": "Talk, Trust, and Trade-Offs: How and Why Teens Use AI Companions",
       "year": 2025,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Mental Health & Wellbeing",
+      "stance": "none",
+      "cross_domain": [
+        "Adoption & Attitudes"
+      ],
+      "legacy_section": 7,
       "evidence": "Context",
       "type": "Nationally representative survey, N = 1,060 teens (Common Sense Media)",
       "claim": "72% of teens have used AI companions; a third take serious matters to a companion instead of a person; yet half distrust the advice and 80% prioritize real friendships.",
@@ -1794,8 +1890,9 @@ window.CORPUS = {
       "authors": "Sparrow, Liu & Wegner",
       "title": "Google Effects on Memory",
       "year": 2011,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "legacy_section": 6,
       "evidence": "Low",
       "type": "Lab experiment (2011); FAILED replication - cite only with Camerer",
       "claim": "Ready access to search changes memory - people remember where to find information rather than the information itself - the most-cited offloading result in the popular imagination.",
@@ -1814,8 +1911,9 @@ window.CORPUS = {
       "authors": "Camerer, C. F., et al.",
       "title": "Evaluating the Replicability of Social Science Experiments",
       "year": 2018,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Evidence & Methodology",
+      "stance": "none",
+      "legacy_section": 6,
       "evidence": "Medium",
       "type": "Multi-lab replication project (Nature Human Behaviour)",
       "claim": "The systematic replication project in which the Google-effect finding was among those that did not hold up - the public record of a famous offloading result's collapse.",
@@ -1834,8 +1932,10 @@ window.CORPUS = {
       "authors": "Anthropic",
       "title": "Anthropic education report_ How educators use Claude _ Anthropic",
       "year": 2026,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Adoption & Attitudes",
+      "stance": "none",
+      "interested_party": true,
+      "legacy_section": 7,
       "evidence": "Context",
       "type": "Industry survey/report",
       "claim": "Anthropic's own data on how educators actually use Claude reveals real-world adoption patterns, use cases, and pedagogical applications of a major commercial LLM in educational settings.",
@@ -1855,8 +1955,10 @@ window.CORPUS = {
       "authors": "Anthropic",
       "title": "Anthropic Education Report_ How University Students Use Claude _ Anthropic",
       "year": 2026,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Adoption & Attitudes",
+      "stance": "none",
+      "interested_party": true,
+      "legacy_section": 7,
       "evidence": "Context",
       "type": "Industry/platform usage report",
       "claim": "University students primarily use Claude for homework help, writing assistance, and concept explanation, with usage patterns varying by discipline and task type.",
@@ -1877,8 +1979,9 @@ window.CORPUS = {
       "authors": "Sil Hamilton, David Mimno",
       "title": "Elias in the Lighthouse, Again? Diagnosing Low Diversity in LLM Stories",
       "year": 2026,
-      "section": 3,
-      "camp": "Critical",
+      "domain": "Equity & Bias",
+      "stance": "critical",
+      "legacy_section": 3,
       "evidence": "Medium",
       "type": "Computational corpus study",
       "claim": "LLM-generated stories are remarkably homogeneous across model families, with 11 words appearing in 88.3% of outputs, traced to disproportionate influence of small preference-alignment datasets rather than pre-training data.",
@@ -1899,8 +2002,9 @@ window.CORPUS = {
       "authors": "Cindy E. Hmelo-Silver, Ravit Golan Duncan, Clark A. Chinn",
       "title": "Scaffolding and Achievement in Problem-Based and Inquiry Learning: A Response to Kirschner, Sweller, and Clark (2006)",
       "year": 2007,
-      "section": 6,
-      "camp": "Pro / optimist",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "legacy_section": 6,
       "evidence": "Argument",
       "type": "Critical essay / literature review",
       "claim": "Problem-based and inquiry learning are not minimally guided discovery but are heavily scaffolded approaches that reduce cognitive load while fostering content knowledge, epistemic practices, and collaborative skills.",
@@ -1921,8 +2025,9 @@ window.CORPUS = {
       "authors": "Paul A. Kirschner, John Sweller, Richard E. Clark",
       "title": "Why Minimal Guidance During Instruction Does Not Work: An Analysis of the Failure of Constructivist, Discovery, Problem-Based, Experiential, and Inquiry-Based Teaching",
       "year": 2006,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "legacy_section": 2,
       "evidence": "Argument",
       "type": "Critical review / theoretical essay",
       "claim": "Minimally guided instructional approaches fail because they ignore how human cognitive architecture requires explicit instruction to build the schemas needed for expert performance; working-memory overload prevents novices from learning through unguided discovery.",
@@ -1943,8 +2048,9 @@ window.CORPUS = {
       "authors": "Matthew A. Kraft",
       "title": "Interpreting Effect Sizes of Education Interventions",
       "year": 2019,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Evidence & Methodology",
+      "stance": "none",
+      "legacy_section": 7,
       "evidence": "Context",
       "type": "Methodological framework / working paper",
       "claim": "Cohen's conventional effect-size benchmarks are poorly suited to education research; new empirical benchmarks calibrated to field-based intervention studies, accounting for cost and scalability, are needed to judge the policy importance of causal findings.",
@@ -1965,8 +2071,9 @@ window.CORPUS = {
       "authors": "Candice L. Odgers",
       "title": "Odgers  Rewiring",
       "year": 2024,
-      "section": 3,
-      "camp": "Critical",
+      "domain": "Mental Health & Wellbeing",
+      "stance": "conditional",
+      "legacy_section": 3,
       "evidence": "Low",
       "type": "Critical book review",
       "claim": "Haidt's claim that social media is rewiring children's brains and causing a mental-health epidemic is not supported by scientific evidence, and the causal narrative risks distracting from real causes of youth mental-health problems.",
@@ -1987,8 +2094,9 @@ window.CORPUS = {
       "authors": "UNESCO (Miao & Holmes)",
       "title": "Guidance for generative AI in education and research",
       "year": 2023,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Governance & Professional Response",
+      "stance": "none",
+      "legacy_section": 7,
       "evidence": "Context",
       "type": "Policy guidance document",
       "claim": "UNESCO offers institutional guidance on integrating generative AI into education and research, emphasizing governance, equity, and the protection of human agency in learning.",
@@ -2009,8 +2117,9 @@ window.CORPUS = {
       "authors": "Kurt VanLehn",
       "title": "The Relative Effectiveness of Human Tutoring, Intelligent Tutoring Systems, and Other Tutoring Systems",
       "year": 2011,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "legacy_section": 4,
       "evidence": "Medium",
       "type": "Meta-analysis / narrative review",
       "claim": "Intelligent tutoring systems produce learning gains approaching those of human tutors (roughly 0.76 SD vs. ~0.79 SD over classroom instruction), supporting the feasibility of automated one-to-one tutoring at scale.",
@@ -2031,8 +2140,9 @@ window.CORPUS = {
       "authors": "Victor R. Lee, Denise Clark Pope, Sarah Miles, R. Zarate",
       "title": "Cheating in the age of generative AI: A high school survey study of cheating behaviors before and after the release of ChatGPT",
       "year": 2024,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Adoption & Attitudes",
+      "stance": "none",
+      "legacy_section": 7,
       "evidence": "Medium",
       "type": "Pre/post survey study",
       "claim": "Self-reported cheating behaviors among high school students remained largely stable after ChatGPT's public release, though students held mixed views on the acceptability of AI assistance for academic tasks.",
@@ -2053,8 +2163,9 @@ window.CORPUS = {
       "authors": "Ben Williamson, Alex Molnar, Faith Boninger",
       "title": "Time for a Pause: Without Effective Public Oversight, AI in Schools Will Do More Harm Than Good",
       "year": 2024,
-      "section": 1,
-      "camp": "Critical",
+      "domain": "Governance & Professional Response",
+      "stance": "critical",
+      "legacy_section": 1,
       "evidence": "Argument",
       "type": "Policy report / critical essay",
       "claim": "Without effective public oversight, AI deployment in schools will concentrate power in commercial hands, exacerbate inequities, and harm students more than it helps them.",
@@ -2075,8 +2186,9 @@ window.CORPUS = {
       "authors": "Shravika Mittal, Su Lin Blodgett, Q. Vera Liao",
       "title": "Learning by Chatting? Investigating the Impact of Generative AI on Information Seeking and Learning",
       "year": 2026,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "High (causal)",
       "type": "Between-subjects field experiment",
       "claim": "Participants using ChatGPT for informal information seeking experienced diminished agency, greater metacognitive load, biased and solution-oriented outputs, reduced exploration of the knowledge space, and worse learning outcomes—especially on higher-order critical learning—compared to those using Google Search.",
@@ -2097,8 +2209,9 @@ window.CORPUS = {
       "authors": "Lily Fesler, JP Martinez Claeys, Chris Agnew, Susanna Loeb",
       "title": "The Evidence Base on AI in K-12: A 2026 Review",
       "year": 2026,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Evidence & Methodology",
+      "stance": "none",
+      "legacy_section": 7,
       "evidence": "Medium",
       "type": "Systematic review / evidence synthesis",
       "claim": "The causal evidence base on AI in K-12 is very thin—only 20 papers provide strong causal evidence and none are high-quality U.S. K-12 student studies—but existing research suggests AI improves performance with access while transfer is uncertain, cognitive burden may be reduced at the expense of deeper thinking, and pedagogically guardrailed tools outperform general-purpose ones.",
@@ -2119,8 +2232,9 @@ window.CORPUS = {
       "authors": "Conrad Borchers, Olga Viberg, René F. Kizilcec",
       "title": "Who Decides in AI-Mediated Learning? The Agency Allocation Framework",
       "year": 2026,
-      "section": 5,
-      "camp": "Context",
+      "domain": "Literacy & Pedagogy",
+      "stance": "conditional",
+      "legacy_section": 5,
       "evidence": "Argument",
       "type": "Theoretical framework paper",
       "claim": "The Agency Allocation Framework reframes learner agency as the explicit distribution of decision authority across learners, educators, institutions, and AI systems, providing analytic tools to distinguish when AI scaffolds learner capacity from when it substitutes for it.",
@@ -2141,8 +2255,9 @@ window.CORPUS = {
       "authors": "Cecilia Ka Yuk Chan",
       "title": "Who Is Doing the Thinking? AI as a Dynamic Cognitive Partner: A Learner-Informed Framework",
       "year": 2026,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "legacy_section": 4,
       "evidence": "Medium",
       "type": "Qualitative framework study",
       "claim": "Secondary students conceptualise AI as a dynamic cognitive partner across nine distinct dimensions, and they demonstrate situational awareness distinguishing productive AI support that extends understanding from unproductive reliance that replaces cognitive effort.",
@@ -2163,8 +2278,9 @@ window.CORPUS = {
       "authors": "Ying Dong",
       "title": "Generative AI technologies and educational outcomes: a comprehensive meta-analysis comparing traditional and AI-driven approaches",
       "year": 2026,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Learning & Cognition",
+      "stance": "pro",
+      "legacy_section": 4,
       "evidence": "Medium",
       "type": "PRISMA meta-analysis",
       "claim": "A PRISMA-based meta-analysis finds that generative AI technologies generally outperform traditional and non-GenAI educational approaches in improving academic achievement, higher-order thinking, writing skills, and feedback quality.",
@@ -2185,8 +2301,9 @@ window.CORPUS = {
       "authors": "Maria Marina, Alexander Panchenko, Vasily Konovalov",
       "title": "Beyond Detection: Rethinking Education in the Age of AI-writing",
       "year": 2026,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Literacy & Pedagogy",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Argument",
       "type": "Critical essay / literature synthesis",
       "claim": "Writing is a cognitive process, not merely an output; outsourcing it to AI strips away the effortful thinking through which deep human learning occurs, making AI-text detection literacy and smarter pedagogy essential responses.",
@@ -2207,8 +2324,9 @@ window.CORPUS = {
       "authors": "Sri Yash Tadimalla, Justin Cary, Gordon Hull, Jordan Register, Daniel Maxwell, David Pugalee, Tina Heafner",
       "title": "Comprehensive AI Literacy: The Case for Centering Human Agency",
       "year": 2025,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Literacy & Pedagogy",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Argument",
       "type": "Position paper",
       "claim": "Current AI literacy frameworks dangerously overemphasize functional tool use while neglecting critical, ethical reasoning and human agency, requiring a systemic shift that centers students' and teachers' empowered capacity for intentional, responsible choice.",
@@ -2229,8 +2347,9 @@ window.CORPUS = {
       "authors": "Oxford University Press",
       "title": "Teaching the AI-Native Generation: Empowering Schools in the Age of AI",
       "year": 2025,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Adoption & Attitudes",
+      "stance": "none",
+      "legacy_section": 7,
       "evidence": "Context",
       "type": "Survey report",
       "claim": "Eight in ten UK teenagers aged 13–18 use AI tools in their schoolwork, yet fewer than half feel confident they can identify whether AI-generated information is true, and students want teacher support to develop AI literacy.",
@@ -2251,8 +2370,9 @@ window.CORPUS = {
       "authors": "Mahir Akgün, Şacip Toker",
       "title": "Short-Term Gains, Long-Term Gaps: The Impact of GenAI and Search Technologies on Retention",
       "year": 2025,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Medium",
       "type": "Experimental / quasi-experimental study",
       "claim": "Generative AI and search technologies produce short-term performance gains but undermine long-term retention, suggesting that the ease they provide comes at a cost to durable learning.",
@@ -2273,8 +2393,9 @@ window.CORPUS = {
       "authors": "André Barcaui",
       "title": "ChatGPT as a cognitive crutch: Evidence from a randomized controlled trial on knowledge retention",
       "year": 2025,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Learning & Cognition",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "High (causal)",
       "type": "Pre-registered RCT",
       "claim": "Undergraduates randomly assigned to use ChatGPT as a study aid retained significantly less knowledge 45 days later (57.5% vs 68.5%, d = 0.68) than those using traditional methods, consistent with cognitive offloading reducing the effortful processing needed for durable memory.",
@@ -2295,8 +2416,9 @@ window.CORPUS = {
       "authors": "Marcos Florencio, Francielle Prieto",
       "title": "Vibe Learning: Education in the age of AI",
       "year": 2025,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Literacy & Pedagogy",
+      "stance": "conditional",
+      "legacy_section": 6,
       "evidence": "Argument",
       "type": "Position paper / theoretical essay",
       "claim": "LLMs have fundamental, irresolvable limitations rooted in their architecture, and education must respond by pursuing constructivist strategies that cultivate distinctly human cognitive capacities that AI cannot replicate.",
@@ -2317,8 +2439,9 @@ window.CORPUS = {
       "authors": "Tingwei Zhang, Harold Triedman, Vitaly Shmatikov",
       "title": "Deep-Research Agents Can Be Poisoned via User-Generated Content",
       "year": 2026,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Material & Infrastructural Risks",
+      "stance": "none",
+      "legacy_section": 2,
       "evidence": "Medium",
       "type": "Empirical security study",
       "claim": "Deep-research agents that repeatedly retrieve user-generated content create a concentrated attack surface exploitable by adversarial text injections, exposing a fundamental vulnerability in how these systems retrieve and integrate web content.",
@@ -2339,8 +2462,9 @@ window.CORPUS = {
       "authors": "Cristina Dumitru, Ghaida Muttashar Abdulsahib, Osamah Ibrahim Khalaf, Akram Bennour",
       "title": "Integrating artificial intelligence in supporting students with disabilities in higher education: An integrative review",
       "year": 2025,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Accessibility & Assistive Use",
+      "stance": "pro",
+      "legacy_section": 4,
       "evidence": "Medium",
       "type": "Integrative review / thematic synthesis",
       "claim": "AI-driven assistive technologies can meaningfully enhance accessibility, personalized learning, and academic performance for students with disabilities in higher education, though adoption challenges, institutional barriers, and gaps in research on underrepresented disabilities remain.",
@@ -2361,8 +2485,9 @@ window.CORPUS = {
       "authors": "Tim Fütterer, Lisa Bardach, Jochen Kuhn, Stefan Daniel Keller, Peter Gerjets",
       "title": "Enhancing School Students' Self-Regulated Learning through Generative AI Support: A Randomized Controlled Trial",
       "year": 2026,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "legacy_section": 6,
       "evidence": "High (causal)",
       "type": "Pre-registered RCT",
       "claim": "GenAI-based interventions targeting motivational or strategic self-regulation showed no statistically significant advantages over a standard ChatGPT control on effort, domain knowledge, or elaboration strategy use, though more meaningful engagement with the AI tended to sustain student interest.",
@@ -2383,8 +2508,9 @@ window.CORPUS = {
       "authors": "Angélique Létourneau, Marion Deslandes Martineau, Patrick Charland, Alexander-John Karran, Jared Boasen, Pierre‐Majorique Léger",
       "title": "A systematic review of AI-driven intelligent tutoring systems (ITS) in K-12 education",
       "year": 2025,
-      "section": 6,
-      "camp": "Deflationary / conditional",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "legacy_section": 6,
       "evidence": "Medium",
       "type": "Systematic review",
       "claim": "Intelligent tutoring systems generally produce positive learning effects in K-12 education, but gains are mitigated when compared directly to non-intelligent tutoring systems, and the evidence base requires longer interventions, larger and more diverse samples, and ethical scrutiny.",
@@ -2405,8 +2531,12 @@ window.CORPUS = {
       "authors": "Miloš Stanković, Ella Hirche, Sarah Kollatzsch, Julia Nadine Doetsch",
       "title": "Commentary on Kosmyna, N., Hauptmann, E., Yuan, Y. T., Situ, J., Liao, X. H., Beresnitzky, A. V., ... & Maes, P. (2025). Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task.",
       "year": 2025,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Evidence & Methodology",
+      "stance": "conditional",
+      "cross_domain": [
+        "Learning & Cognition"
+      ],
+      "legacy_section": 2,
       "evidence": "Low",
       "type": "Critical commentary / methodological critique",
       "claim": "The Kosmyna et al. 'cognitive debt' study has serious methodological limitations—small sample size, reproducibility concerns, and interpretive overreach—that require more conservative conclusions before peer-reviewed publication.",
@@ -2427,8 +2557,9 @@ window.CORPUS = {
       "authors": "Joshua Weidlich",
       "title": "ChatGPT in education: An effect in search of a cause",
       "year": 2025,
-      "section": 3,
-      "camp": "Critical",
+      "domain": "Evidence & Methodology",
+      "stance": "conditional",
+      "legacy_section": 3,
       "evidence": "Argument",
       "type": "Critical methodological essay",
       "claim": "Emerging research on ChatGPT in education suffers from the same media-comparison confounds that plagued earlier educational technology research, rendering most reported effects uninterpretable without clear specification of treatment, control activity, and outcome validity.",
@@ -2449,8 +2580,9 @@ window.CORPUS = {
       "authors": "ACRL Framework Task Force",
       "title": "Framework for Information Literacy for Higher Education",
       "year": 2014,
-      "section": 2,
-      "camp": "Context",
+      "domain": "Literacy & Pedagogy",
+      "stance": "none",
+      "legacy_section": 2,
       "evidence": "Argument",
       "type": "Professional framework / policy document",
       "claim": "Information literacy requires not just access to information but the ability to critically evaluate authority, construction, and purpose of information—framing these as metacognitive and ethical dispositions, not merely technical skills.",
@@ -2471,8 +2603,9 @@ window.CORPUS = {
       "authors": "American Psychological Association",
       "title": "Artificial Intelligence and Adolescent Well-being: An APA Health Advisory",
       "year": 2025,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Mental Health & Wellbeing",
+      "stance": "critical",
+      "legacy_section": 7,
       "evidence": "Context",
       "type": "Professional health advisory",
       "claim": "AI's expanding integration into adolescents' daily life—through generative, interactive, and automated decision-making tools—requires coordinated action from stakeholders to ensure safety and well-being for youth aged 10–25.",
@@ -2493,8 +2626,12 @@ window.CORPUS = {
       "authors": "Elizabeth Laird, Maddy Dwyer, Hannah Quay-de la Vallee",
       "title": "Hand in Hand: Schools' Embrace of AI Connected to Increased Risks to Students",
       "year": 2025,
-      "section": 7,
-      "camp": "Critical",
+      "domain": "Mental Health & Wellbeing",
+      "stance": "critical",
+      "cross_domain": [
+        "Material & Infrastructural Risks"
+      ],
+      "legacy_section": 7,
       "evidence": "Context",
       "type": "Policy/advocacy report",
       "claim": "As schools rapidly adopt AI tools, students face heightened privacy, civil-rights, and equity risks, with adoption outpacing protective governance.",
@@ -2515,8 +2652,9 @@ window.CORPUS = {
       "authors": "Common Sense Media",
       "title": "Common Sense Media AI Risk Assessment: AI Chatbots for Mental Health Support",
       "year": 2025,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Mental Health & Wellbeing",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Context",
       "type": "Risk assessment / use-case review",
       "claim": "AI chatbots are fundamentally unsafe for the full spectrum of teen mental health needs—while suicide-response handling has improved, chatbots consistently fail to recognize warning signs, provide appropriate guidance, or escalate care for common conditions such as anxiety, depression, OCD, and eating disorders.",
@@ -2537,8 +2675,9 @@ window.CORPUS = {
       "authors": "Srijita Chakraburty, Teresa M. Ober, Lei Liu",
       "title": "Preparing K–12 Students With AI Literacy: Proposed Framework, Progression, and Task Design Principles",
       "year": 2025,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Literacy & Pedagogy",
+      "stance": "none",
+      "legacy_section": 7,
       "evidence": "Context",
       "type": "Framework proposal / research report",
       "claim": "A structured K–12 AI literacy framework with developmental progressions and task design principles is needed to prepare students for an AI-permeated world, moving beyond tool use to include critical and ethical reasoning.",
@@ -2559,8 +2698,9 @@ window.CORPUS = {
       "authors": "Donghan Jin, Raffaella Ocone, Kui Jiao, Jin Xuan",
       "title": "Energy and AI",
       "year": 2020,
-      "section": 1,
-      "camp": "Context",
+      "domain": "Material & Infrastructural Risks",
+      "stance": "none",
+      "legacy_section": 1,
       "evidence": "Context",
       "type": "Review article / commentary",
       "claim": "AI systems are large consumers of energy, and the energy demands of AI infrastructure pose significant environmental and resource challenges that must be addressed alongside AI development.",
@@ -2580,8 +2720,12 @@ window.CORPUS = {
       "authors": "Johan Klarin, Eva Hoff, Adam Larsson, Daiva Daukantaité",
       "title": "Adolescents’ use and perceived usefulness of generative AI for schoolwork: exploring their relationships with executive functioning and academic achievement",
       "year": 2024,
-      "section": 7,
-      "camp": "Context",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "cross_domain": [
+        "Adoption & Attitudes"
+      ],
+      "legacy_section": 7,
       "evidence": "Medium",
       "type": "Cross-sectional survey study (two samples)",
       "claim": "Adolescents with greater executive functioning challenges perceive generative AI as more useful for schoolwork, while AI usage rates vary substantially by age group, and academic achievement shows no significant association with AI use or perceived usefulness.",
@@ -2602,8 +2746,9 @@ window.CORPUS = {
       "authors": "Guido Makransky, Ban M. Shiwalia, Tue Herlau, Steven P. Blurton",
       "title": "Beyond the “Wow” Factor: Using Generative AI for Increasing Generative Sense-Making",
       "year": 2025,
-      "section": 4,
-      "camp": "Pro / optimist",
+      "domain": "Learning & Cognition",
+      "stance": "conditional",
+      "legacy_section": 4,
       "evidence": "High (causal)",
       "type": "Pre-registered RCT (two experiments)",
       "claim": "A theory-informed GenAI chatbot (ChatTutor) built on generative learning principles outperformed both a generic ChatGPT system and control conditions on conceptual knowledge, trust, and enjoyment across two experiments with university and high school students.",
@@ -2624,8 +2769,9 @@ window.CORPUS = {
       "authors": "Stephanie Ng",
       "title": "Navigating Adolescent Mental Health in the Age of Artificial Intelligence",
       "year": 2025,
-      "section": 2,
-      "camp": "Critical",
+      "domain": "Mental Health & Wellbeing",
+      "stance": "critical",
+      "legacy_section": 2,
       "evidence": "Argument",
       "type": "Clinical commentary / review essay",
       "claim": "AI's evolution—from social-media algorithms reinforcing pathology to generative AI fostering emotional attachments and proactive agentic systems—poses escalating risks to adolescent mental health that demand clinical and policy responses.",
@@ -2646,8 +2792,13 @@ window.CORPUS = {
       "authors": "Pennsylvania Advisory Committee to the U.S. Commission on Civil Rights",
       "title": "The Rising use of Artificial Intelligence in K-12 Education",
       "year": 2024,
-      "section": 1,
-      "camp": "Critical",
+      "domain": "Governance & Professional Response",
+      "stance": "critical",
+      "cross_domain": [
+        "Equity & Bias",
+        "Material & Infrastructural Risks"
+      ],
+      "legacy_section": 1,
       "evidence": "Context",
       "type": "Government advisory report",
       "claim": "The rising use of AI in K-12 education raises significant civil rights concerns, including risks of discrimination, inequity, and harm to students from marginalized communities, requiring oversight and policy intervention.",
@@ -4616,19 +4767,17 @@ window.CORPUS = {
     <button class="wc-close" id="wcClose" aria-label="Close">✕</button>
     <h1>The Working Corpus</h1>
     <p class="wlede">How is AI changing learning — and is that good or bad?</p>
-    <p class="wsub">A curated collection of ~78 annotated sources, arranged as an argument — from critical warnings, through optimistic evidence and hype-skeptics, to theory and ground-level data. Every source carries a one-sentence claim, an evidence rating, and links to how it relates to the others.</p>
+    <p class="wsub">A curated collection of 93 annotated sources on AI in education. Each source is filed by the <b>question it speaks to</b> and <b>which way it cuts</b>. Every one carries a one-sentence claim, an evidence rating, and links to how it relates to the others.</p>
     <div class="whow">
-      <div><b>Browse</b> the records, grouped by topic.</div>
-      <div><b>Filter</b> by stance, evidence, or subject.</div>
-      <div><b>Read</b> the annotation, then the source.</div>
+      <div><b>Start</b> with one of six practitioner briefs.</div>
+      <div><b>Browse</b> all sources, grouped by domain.</div>
+      <div><b>Filter</b> by domain, stance, evidence, or subject.</div>
       <div><b>Follow</b> how sources support or contradict each other.</div>
     </div>
     <div class="wstance">
-      <span class="wlabel">The four stances</span>
-      <div class="srow"><span class="dot" style="background:#A14334"></span><span class="sname">Critical</span><span class="sdesc">— warns AI threatens learning, labor, or society</span></div>
-      <div class="srow"><span class="dot" style="background:#2F6B4F"></span><span class="sname">Pro / optimist</span><span class="sdesc">— argues AI can help, often with evidence</span></div>
-      <div class="srow"><span class="dot" style="background:#8A6D2F"></span><span class="sname">Deflationary</span><span class="sdesc">— skeptical of the hype; effects are modest, or it depends</span></div>
-      <div class="srow"><span class="dot" style="background:#54678C"></span><span class="sname">Context</span><span class="sdesc">— background and ground-level data; not taking a side</span></div>
+      <span class="wlabel">Two ways to read a source</span>
+      <div class="srow"><span class="sname">Domain</span><span class="sdesc">— the question it speaks to: 10 areas, from <i>Learning &amp; Cognition</i> to <i>Evidence &amp; Methodology</i>.</span></div>
+      <div class="srow"><span class="sname">Stance</span><span class="sdesc">— which way it cuts: <b>critical</b>, <b>conditional</b> (it depends on design), <b>pro</b>, or <b>no stance</b> for surveys, methodology, and policy.</span></div>
     </div>
     <div class="wtopics">
       <span class="wlabel">New here? Start with a topic</span>
@@ -4672,18 +4821,19 @@ window.CORPUS = {
   <button id="mapClose" class="map-close">&larr; Catalog</button>
   <svg id="graph" role="img" aria-label="Corpus relation network"></svg>
   <div class="hint">drag nodes &middot; scroll to zoom &middot; click a node for its card &middot; hover a line for its note</div>
+  <div class="map-legend" id="mapLegend"></div>
   <div id="tooltip"></div>
 </div>
 
 <script>
 (function(){
   const C = window.CORPUS;
-  const campColor = {
-    "Critical":"#A14334",
-    "Pro / optimist":"#2F6B4F",
-    "Deflationary / conditional":"#8A6D2F",
-    "Context":"#54678C"
-  };
+  const DOMAIN_ORDER = ["Learning & Cognition","Labor & Political Economy","Mental Health & Wellbeing","Equity & Bias","Literacy & Pedagogy","Governance & Professional Response","Material & Infrastructural Risks","Accessibility & Assistive Use","Adoption & Attitudes","Evidence & Methodology"];
+  const domainColor = {"Learning & Cognition":"#5FC9B6","Labor & Political Economy":"#E8975A","Mental Health & Wellbeing":"#BE86DE","Equity & Bias":"#E86F92","Literacy & Pedagogy":"#6FB0E8","Governance & Professional Response":"#C9A86A","Material & Infrastructural Risks":"#E0C94F","Accessibility & Assistive Use":"#74CF8E","Adoption & Attitudes":"#8E92E6","Evidence & Methodology":"#AAB6C0"};
+  const domainShort = {"Learning & Cognition":"Learning & Cognition","Labor & Political Economy":"Labor & Pol. Economy","Mental Health & Wellbeing":"Mental Health","Equity & Bias":"Equity & Bias","Literacy & Pedagogy":"Literacy & Pedagogy","Governance & Professional Response":"Governance","Material & Infrastructural Risks":"Material & Infra. Risks","Accessibility & Assistive Use":"Accessibility","Adoption & Attitudes":"Adoption & Attitudes","Evidence & Methodology":"Evidence & Method."};
+  const STANCE_ORDER = ["critical","conditional","pro","none"];
+  const stanceLabel = {critical:"Critical",conditional:"Conditional",pro:"Pro",none:"No stance"};
+  const stanceColor = {critical:"#EE8576",conditional:"#E6BC68",pro:"#62CF97",none:"#94A3AC"};
   const relColor = {
     "supports":"#2E7D5B",
     "contradicts":"#B3402E",
@@ -4696,10 +4846,21 @@ window.CORPUS = {
   const evAbbr = {"High (causal)":"HIGH","Medium":"MED","Low":"LOW","Argument":"ARG","Context":"CTX"};
   const evShort = {"High (causal)":"High","Medium":"Medium","Low":"Low","Argument":"Argument","Context":"Context"};
   const STANCE_GLOSS = {
-    "Critical":"Warns that AI threatens learning, labor, or society.",
-    "Pro / optimist":"Argues AI can help learning — often with evidence.",
-    "Deflationary / conditional":"Skeptical of the hype — effects are modest, or it depends.",
-    "Context":"Background, surveys, and ground-level data — not taking a side."};
+    critical:"Argues AI is harmful here, or counsels caution.",
+    conditional:"Argues the effect depends on design or conditions — or that the transformation is overstated.",
+    pro:"Argues AI is beneficial here.",
+    none:"No directional claim — surveys, methodology, frameworks, regulation."};
+  const DOMAIN_GLOSS = {
+    "Learning & Cognition":"Effects on learning, thinking, memory, skill — and the theory behind the debate.",
+    "Labor & Political Economy":"Power, hidden labor, extraction, the macroeconomics and diffusion of AI.",
+    "Mental Health & Wellbeing":"Companions, emotional reliance, adolescent development.",
+    "Equity & Bias":"Differential impact, the digital divide, detector bias, voice homogenization.",
+    "Literacy & Pedagogy":"Frameworks for teaching about/with AI; information literacy; agency.",
+    "Governance & Professional Response":"Oversight, the right to refuse, policy and professional positions.",
+    "Material & Infrastructural Risks":"Energy/water/carbon cost, student data, surveillance, security.",
+    "Accessibility & Assistive Use":"AI for students with disabilities.",
+    "Adoption & Attitudes":"Who uses AI, how much, and what people think.",
+    "Evidence & Methodology":"How to read the evidence — effect sizes, replication, evidence-base reviews."};
   const EV_GLOSS = {
     "High (causal)":"Experiments (RCTs) — the strongest causal evidence.",
     "Medium":"Observational studies or meta-analyses.",
@@ -4723,17 +4884,18 @@ window.CORPUS = {
   const yearList = [...new Set(nodes.map(n=>n.year))].sort((a,b)=>b-a);
 
   // ---------- state ----------
-  const state = { q:"", view:"home", topic:null, camps:new Set(), evs:new Set(), sections:new Set(),
-                  themes:new Set(), years:new Set(), rels:new Set(relOrder), sort:"evidence", selected:null };
+  const state = { q:"", view:"home", topic:null, domains:new Set(), stances:new Set(), evs:new Set(),
+                  themes:new Set(), years:new Set(), rels:new Set(relOrder), crossTag:false, sort:"evidence", selected:null };
   const QUESTIONS = C.questions || [];
   function tileHay(n){ return (n.label+" "+n.authors+" "+n.title+" "+n.claim+" "+n.type+" "+(n.themes||[]).join(" ")).toLowerCase(); }
   function tileMatch(n,t){ const h=tileHay(n); return t.kw.some(k=>h.includes(k)); }
   function setView(v){ state.view=v; document.body.classList.toggle("view-home", v==="home"); document.body.classList.toggle("view-results", v==="results"); }
 
   // ---------- matching ----------
-  function passCamp(n){ return !state.camps.size || state.camps.has(n.camp); }
+  function inDomain(n,d){ return n.domain===d || (state.crossTag && (n.cross_domain||[]).includes(d)); }
+  function passDomain(n){ if(!state.domains.size) return true; for(const d of state.domains) if(inDomain(n,d)) return true; return false; }
+  function passStance(n){ return !state.stances.size || state.stances.has(n.stance); }
   function passEv(n){ return !state.evs.size || state.evs.has(n.evidence); }
-  function passSec(n){ return !state.sections.size || state.sections.has(String(n.section)); }
   function passTheme(n){ return !state.themes.size || (n.themes||[]).some(t=>state.themes.has(t)); }
   function passYear(n){ return !state.years.size || state.years.has(String(n.year)); }
   function passTopic(n){ return !state.topic || tileMatch(n, state.topic); }
@@ -4742,22 +4904,22 @@ window.CORPUS = {
     const hay=(n.label+" "+n.authors+" "+n.title+" "+n.claim+" "+n.type+" "+(n.themes||[]).join(" ")).toLowerCase();
     return hay.includes(state.q);
   }
-  function matches(n){ return passTopic(n)&&passCamp(n)&&passEv(n)&&passSec(n)&&passTheme(n)&&passYear(n)&&passQ(n); }
-  function filtering(){ return !!(state.q||state.camps.size||state.evs.size||state.sections.size||state.themes.size||state.years.size); }
+  function matches(n){ return passTopic(n)&&passDomain(n)&&passStance(n)&&passEv(n)&&passTheme(n)&&passYear(n)&&passQ(n); }
+  function filtering(){ return !!(state.q||state.domains.size||state.stances.size||state.evs.size||state.themes.size||state.years.size); }
 
   // faceted count: nodes matching every group EXCEPT this one, intersected with this value
   function countFor(group, val){
     let c=0;
     for(const n of nodes){
-      if(group!=="camp" && !passCamp(n)) continue;
+      if(group!=="domain" && !passDomain(n)) continue;
+      if(group!=="stance" && !passStance(n)) continue;
       if(group!=="ev" && !passEv(n)) continue;
-      if(group!=="sec" && !passSec(n)) continue;
       if(group!=="theme" && !passTheme(n)) continue;
       if(group!=="year" && !passYear(n)) continue;
       if(!passQ(n)) continue;
-      if(group==="camp"){ if(n.camp===val) c++; }
+      if(group==="domain"){ if(inDomain(n,val)) c++; }
+      else if(group==="stance"){ if(n.stance===val) c++; }
       else if(group==="ev"){ if(n.evidence===val) c++; }
-      else if(group==="sec"){ if(String(n.section)===val) c++; }
       else if(group==="theme"){ if((n.themes||[]).includes(val)) c++; }
       else if(group==="year"){ if(String(n.year)===val) c++; }
     }
@@ -4766,10 +4928,10 @@ window.CORPUS = {
 
   // ---------- facet rail ----------
   const FGROUPS = [
-    {key:"sec",   label:"Section",  set:state.sections,
-      values:Object.keys(C.sections).map(k=>({val:k, name:k+". "+C.sections[k]}))},
-    {key:"camp",  label:"Stance",   set:state.camps,
-      values:Object.keys(campColor).map(c=>({val:c, name:c, dot:campColor[c]}))},
+    {key:"domain", label:"Domain",  set:state.domains,
+      values:DOMAIN_ORDER.map(d=>({val:d, name:d, dot:domainColor[d]}))},
+    {key:"stance", label:"Stance",  set:state.stances,
+      values:STANCE_ORDER.map(s=>({val:s, name:stanceLabel[s], dot:stanceColor[s]}))},
     {key:"ev",    label:"Evidence", set:state.evs,
       values:evOrder.map(e=>({val:e, name:e}))},
     {key:"theme", label:"Themes",   set:state.themes, scroll:true,
@@ -4797,7 +4959,7 @@ window.CORPUS = {
           ? '<span class="fdot" style="background:'+v.dot+'"></span>'
           : '<span class="ftab" style="background:var(--rule)"></span>';
         b.innerHTML=tab+'<span class="fname">'+esc(v.name)+'</span><span class="fcount"></span>';
-        b.title = g.key==="camp" ? (STANCE_GLOSS[v.val]||"") : g.key==="ev" ? (EV_GLOSS[v.val]||"") : "";
+        b.title = g.key==="domain" ? (DOMAIN_GLOSS[v.val]||"") : g.key==="stance" ? (STANCE_GLOSS[v.val]||"") : g.key==="ev" ? (EV_GLOSS[v.val]||"") : "";
         const countEl=b.querySelector(".fcount");
         b.onclick=()=>{ g.set.has(v.val)?g.set.delete(v.val):g.set.add(v.val); state.selected=null; refresh(); };
         rows.appendChild(b);
@@ -4805,6 +4967,13 @@ window.CORPUS = {
       });
       grp.appendChild(rows);
       root.appendChild(grp);
+      if(g.key==="domain"){
+        const xt=document.createElement("button"); xt.className="xtag-toggle"+(state.crossTag?" on":"");
+        xt.innerHTML='<span class="xtbox">'+(state.crossTag?'☑':'☐')+'</span> Include cross-tagged';
+        xt.title="Off: a Domain shows its primary members only. On: also surface sources cross-tagged to it (counts then overlap).";
+        xt.onclick=()=>{ state.crossTag=!state.crossTag; xt.classList.toggle("on",state.crossTag); xt.querySelector(".xtbox").textContent=state.crossTag?'☑':'☐'; state.selected=null; refresh(); };
+        root.appendChild(xt);
+      }
     });
     const clr=document.createElement("button"); clr.id="clearAll"; clr.className="hbtn ghost"; clr.textContent="Clear all filters";
     clr.onclick=()=>document.getElementById("clearBtn").click();
@@ -4841,12 +5010,23 @@ window.CORPUS = {
       else if(kind==="library") on = !state.topic && state.view==="results";
       b.classList.toggle("active", !!on); });
   }
+  function buildLegend(){
+    const el=document.getElementById("mapLegend"); if(!el) return;
+    let h='<div class="lg-h">Domain</div><div class="lg-domains">';
+    DOMAIN_ORDER.forEach(d=>{ h+='<span class="lg-d"><span class="lg-dot" style="background:'+domainColor[d]+'"></span>'+esc(domainShort[d]||d)+'</span>'; });
+    h+='</div><div class="lg-h">Stance (node border)</div><div class="lg-stances">'+
+       '<span class="lg-s"><span class="lg-ring r-critical"></span>critical</span>'+
+       '<span class="lg-s"><span class="lg-ring r-conditional"></span>conditional</span>'+
+       '<span class="lg-s"><span class="lg-ring r-pro"></span>pro</span>'+
+       '<span class="lg-s"><span class="lg-ring r-none"></span>no stance</span></div>';
+    el.innerHTML=h;
+  }
 
   // ---------- home / topics / browse navigation ----------
   function goHome(){ state.topic=null; state.q=""; searchEl.value=""; state.selected=null;
     document.body.classList.remove("view-brief","view-library"); setView("home"); }
   function openTopic(t){ state.topic=t; state.q=""; searchEl.value=""; state.selected=null; state.sort="evidence";
-    [state.camps,state.evs,state.sections,state.themes,state.years].forEach(s=>s.clear());
+    [state.domains,state.stances,state.evs,state.themes,state.years].forEach(s=>s.clear());
     document.body.classList.add("view-brief"); document.body.classList.remove("view-library"); setView("results"); refresh(); }
   function browseAll(){ state.topic=null; state.q=""; searchEl.value="";
     document.body.classList.add("view-library"); document.body.classList.remove("view-brief"); setView("results"); refresh(); }
@@ -4928,7 +5108,7 @@ window.CORPUS = {
   searchEl.addEventListener("blur",()=>setTimeout(closeSearch,140));
   searchEl.addEventListener("keydown",e=>{ if(e.key==="Escape"){ searchEl.value=""; state.q=""; searchWrap.classList.remove("open"); refresh(); } });
   document.getElementById("clearBtn").onclick=()=>{
-    [state.camps,state.evs,state.sections,state.themes,state.years].forEach(s=>s.clear());
+    [state.domains,state.stances,state.evs,state.themes,state.years].forEach(s=>s.clear());
     state.rels=new Set(relOrder); state.sort="evidence"; goHome();
   };
   const mFacetsBtn=document.getElementById("mFacets");
@@ -4936,7 +5116,7 @@ window.CORPUS = {
 
   // ---------- catalog (section-grouped list) ----------
   const catalogEl=document.getElementById("catalog");
-  const SORTS=[["evidence","Strongest evidence"],["author","Author A–Z"],["title","Title A–Z"],["year-desc","Year (newest)"],["year-asc","Year (oldest)"],["section","Section spine"]];
+  const SORTS=[["evidence","Strongest evidence"],["author","Author A–Z"],["title","Title A–Z"],["year-desc","Year (newest)"],["year-asc","Year (oldest)"]];
   const evRank=n=>{ const i=evOrder.indexOf(n.evidence); return i<0?evOrder.length:i; };
   function sorter(key){
     if(key==="evidence") return (a,b)=>evRank(a)-evRank(b)||(b.year||0)-(a.year||0)||(a.authors||a.label).localeCompare(b.authors||b.label);
@@ -4946,15 +5126,23 @@ window.CORPUS = {
     if(key==="year-asc")  return (a,b)=>(a.year||0)-(b.year||0)||(a.authors||a.label).localeCompare(b.authors||b.label);
     return (a,b)=>(a.authors||a.label).localeCompare(b.authors||b.label);
   }
+  function badgesHtml(n){
+    let b='<span class="dbadge" style="--dc:'+(domainColor[n.domain]||'#888')+'">'+esc(domainShort[n.domain]||n.domain||"")+'</span>';
+    if(n.stance && n.stance!=="none") b+='<span class="sbadge s-'+n.stance+'">'+esc(stanceLabel[n.stance])+'</span>';
+    (n.cross_domain||[]).forEach(d=>{ b+='<span class="dbadge xt" style="--dc:'+(domainColor[d]||'#888')+'" title="cross-tagged">'+esc(domainShort[d]||d)+'</span>'; });
+    if(n.interested_party) b+='<span class="ipflag" title="Author or source has a commercial stake">⚑ interested party</span>';
+    return b;
+  }
   function recHtml(n){
     const by=[esc(n.authors||n.label), n.year||"", esc(n.type||"")].filter(Boolean).join(" · ");
     const subs=(n.themes||[]).map(t=>'<span class="rsub" data-t="'+esc(t)+'">'+esc(t)+'</span>').join("");
     return '<div class="rec'+(n.id===state.selected?' sel':'')+'" data-id="'+esc(n.id)+'" role="button" tabindex="0">'+
-      '<span class="rtab" style="background:'+campColor[n.camp]+'"></span>'+
+      '<span class="rtab" style="background:'+(domainColor[n.domain]||'#888')+'"></span>'+
       '<div class="rbody">'+
         '<div class="rtl"><span class="rtitle">'+esc(n.title)+'</span>'+
           '<span class="rtype">'+esc(evShort[n.evidence]||n.evidence||"")+'</span></div>'+
         '<div class="rby">'+by+'</div>'+
+        '<div class="rbadges">'+badgesHtml(n)+'</div>'+
         (n.claim?'<div class="rannot">'+esc(n.claim)+'</div>':'')+
         (subs?'<div class="rsubs">'+subs+'</div>':'')+
       '</div></div>';
@@ -4964,8 +5152,8 @@ window.CORPUS = {
   }
   function crumbHtml(){
     const c=[];
-    state.sections.forEach(v=>c.push(crumb("sec","Section",v,(C.sections[v]?v+". "+C.sections[v]:v))));
-    state.camps.forEach(v=>c.push(crumb("camp","Stance",v,v)));
+    state.domains.forEach(v=>c.push(crumb("domain","Domain",v,domainShort[v]||v)));
+    state.stances.forEach(v=>c.push(crumb("stance","Stance",v,stanceLabel[v]||v)));
     state.evs.forEach(v=>c.push(crumb("ev","Evidence",v,evShort[v]||v)));
     state.themes.forEach(v=>c.push(crumb("theme","Subject",v,v)));
     state.years.forEach(v=>c.push(crumb("year","Year",v,v)));
@@ -4981,17 +5169,17 @@ window.CORPUS = {
       state.themes.add(s.dataset.t); state.selected=null; browseAll(); });   // theme pill → library filtered by that subject
     catalogEl.querySelectorAll(".cite").forEach(c=>c.onclick=e=>{ e.stopPropagation(); if(c.dataset.id){ state.selected=c.dataset.id; refresh(); } });
   }
-  function recordsHtml(matched){
-    if(state.sort==="section"){
-      let h=""; const bySec={}; matched.forEach(n=>{ (bySec[n.section]=bySec[n.section]||[]).push(n); });
-      Object.keys(bySec).sort((a,b)=>(+a)-(+b)).forEach(sk=>{
-        const rows=bySec[sk].sort((a,b)=>(a.authors||a.label).localeCompare(b.authors||b.label));
-        h+='<div class="sec-div"><span class="sec-no">'+sk+'</span><span class="sec-title">'+esc(C.sections[sk]||"")+'</span><span class="sec-count">'+rows.length+'</span></div>';
-        h+=rows.map(recHtml).join("");
-      });
-      return h;
-    }
-    return [...matched].sort(sorter(state.sort)).map(recHtml).join("");
+  function recordsHtml(matched){   // library view: grouped by Domain (the primary axis)
+    const srt=sorter(state.sort); let h="";
+    DOMAIN_ORDER.forEach(dom=>{
+      const rows=matched.filter(n=>n.domain===dom || (state.crossTag && (n.cross_domain||[]).includes(dom)));
+      if(!rows.length) return;
+      rows.sort(srt);
+      h+='<div class="dom-div" style="--dc:'+(domainColor[dom]||'#888')+'"><span class="dom-dot"></span><span class="dom-name">'+esc(dom)+'</span>'+
+         '<span class="dom-count">'+rows.length+'</span></div>';
+      h+=rows.map(recHtml).join("");
+    });
+    return h;
   }
   function renderBrief(matched){
     const t=state.topic, i=QUESTIONS.indexOf(t), num=String(i+1).padStart(2,"0");
@@ -5029,7 +5217,7 @@ window.CORPUS = {
     if(ss) ss.onchange=()=>{ state.sort=ss.value; refresh(); };
     catalogEl.querySelectorAll(".crumb").forEach(c=>c.onclick=()=>{
       if(c.dataset.clear==="q"){ state.q=""; searchEl.value=""; }
-      else { ({sec:state.sections,camp:state.camps,ev:state.evs,theme:state.themes,year:state.years}[c.dataset.g]||new Set()).delete(c.dataset.v); }
+      else { ({domain:state.domains,stance:state.stances,ev:state.evs,theme:state.themes,year:state.years}[c.dataset.g]||new Set()).delete(c.dataset.v); }
       state.selected=null; refresh();
     });
     const bt=document.getElementById("backTopics"); if(bt) bt.onclick=goHome;
@@ -5064,9 +5252,10 @@ window.CORPUS = {
       .on("end",(ev,d)=>{ if(!ev.active) sim.alphaTarget(0); d.fx=null; d.fy=null; }));
   nodeSel.append("circle")
     .attr("r",d=>d.evidence==="High (causal)"?11:9)
-    .attr("fill",d=>campColor[d.camp])
-    .attr("stroke",d=>d.evidence==="High (causal)"?"#ECE7DD":"rgba(255,255,255,.22)")
-    .attr("stroke-width",d=>d.evidence==="High (causal)"?2.5:1.5);
+    .attr("fill",d=>domainColor[d.domain]||"#888")
+    .attr("stroke",d=>d.stance==="none"?"none":"#ECE7DD")
+    .attr("stroke-width",d=>d.stance==="none"?0:2)
+    .attr("stroke-dasharray",d=>d.stance==="conditional"?"4 3":d.stance==="pro"?"1.5 2.6":null);
   nodeSel.append("text").attr("class","node-label").attr("dy",d=>(d.evidence==="High (causal)"?24:21))
     .text(d=>d.label);
   nodeSel.on("click",(ev,d)=>{ state.selected=d.id; refresh(); ev.stopPropagation(); });
@@ -5115,12 +5304,12 @@ window.CORPUS = {
     panel.innerHTML=
       '<button class="backlink" id="backBtn">← ALL SOURCES</button>'+
       '<div class="card">'+
-        '<div class="card-top"><span>S'+n.section+' · '+esc(evAbbr[n.evidence])+' · '+n.year+'</span>'+
-        '<span class="camp-tag"><span class="dot" style="background:'+campColor[n.camp]+'"></span>'+esc(n.camp)+'</span></div>'+
+        '<div class="card-top"><span>'+esc(evAbbr[n.evidence]||"")+' · '+n.year+'</span>'+
+        '<span class="camp-tag"><span class="dot" style="background:'+(domainColor[n.domain]||'#888')+'"></span>'+esc(n.domain||"")+(n.stance&&n.stance!=="none"?' · '+esc(stanceLabel[n.stance]):'')+'</span></div>'+
         '<div class="card-body">'+
           '<h2>'+esc(n.title)+'</h2>'+
           '<div class="byline">'+esc(n.authors)+'</div>'+
-          '<div class="typeline">'+esc(n.type)+' · Section '+n.section+': '+esc(C.sections[n.section])+'</div>'+
+          '<div class="typeline">'+esc(n.type)+' · '+esc(n.domain||"")+(n.interested_party?' · ⚑ interested party':'')+'</div>'+
           '<div class="claim">'+esc(n.claim)+'</div>'+
           (n.url?'<a class="read-link" href="'+esc(n.url)+'" target="_blank" rel="noopener noreferrer">Read the source ↗<span class="lt">'+esc(linkLabel(n.link_type))+'</span></a>':'')+
           '<div class="themes">'+(n.themes||[]).map(t=>'<button class="theme" data-t="'+esc(t)+'">'+esc(t)+'</button>').join("")+'</div>'+
@@ -5188,6 +5377,7 @@ window.CORPUS = {
 
   buildTiles();
   buildNav();
+  buildLegend();
   buildFacets();
   setView("home");
   refresh();
