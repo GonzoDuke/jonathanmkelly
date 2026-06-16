@@ -96,7 +96,16 @@
   #filterrail{display:none;margin-top:16px;border-top:1px solid var(--rule);padding-top:8px}
   body.view-library #filterrail{display:block}
   /* unified brief page */
-  .brief-inner{max-width:760px}
+  .cat-inner.brief-inner{max-width:1180px}
+  .bp-head{margin-bottom:28px}
+  .bp-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:clamp(30px,4vw,54px);align-items:start}
+  .bp-synth{min-width:0}
+  .bp-evidence{min-width:0}
+  .bp-evidence .ev-div{margin-top:0}
+  .bp-synth .brief-cols{display:block;margin-top:24px;padding-top:22px}
+  .bp-synth .brief-cols .brief-sec{margin:0 0 22px}
+  .bp-synth .brief-cols .brief-sec:last-child{margin-bottom:0}
+  @media (max-width:980px){ .bp-grid{grid-template-columns:1fr;gap:4px} .bp-evidence{margin-top:26px} .bp-evidence .ev-div{margin-top:8px} }
   .bp-eyebrow{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
   .bp-title{font-family:var(--serif);font-size:clamp(26px,3.4vw,40px);font-weight:600;line-height:1.1;letter-spacing:-.02em;margin:0 0 18px;max-width:20ch}
   .brief-page .brief{border:0!important;box-shadow:none!important;background:none;padding:0;margin:0}
@@ -2323,6 +2332,335 @@ window.CORPUS = {
       ],
       "url": "arXiv:2605.24245v1",
       "link_type": "open"
+    },
+    {
+      "id": "dumitru",
+      "label": "Dumitru et al.",
+      "authors": "Cristina Dumitru, Ghaida Muttashar Abdulsahib, Osamah Ibrahim Khalaf, Akram Bennour",
+      "title": "Integrating artificial intelligence in supporting students with disabilities in higher education: An integrative review",
+      "year": 2025,
+      "section": 4,
+      "camp": "Pro / optimist",
+      "evidence": "Medium",
+      "type": "Integrative review / thematic synthesis",
+      "claim": "AI-driven assistive technologies can meaningfully enhance accessibility, personalized learning, and academic performance for students with disabilities in higher education, though adoption challenges, institutional barriers, and gaps in research on underrepresented disabilities remain.",
+      "themes": [
+        "assistive technology",
+        "disability inclusion",
+        "higher education accessibility",
+        "personalized learning",
+        "institutional barriers",
+        "AI ethics"
+      ],
+      "url": "https://doi.org/10.1177/10554181251355428",
+      "link_type": "doi"
+    },
+    {
+      "id": "futterer",
+      "label": "Fütterer et al.",
+      "authors": "Tim Fütterer, Lisa Bardach, Jochen Kuhn, Stefan Daniel Keller, Peter Gerjets",
+      "title": "Enhancing School Students' Self-Regulated Learning through Generative AI Support: A Randomized Controlled Trial",
+      "year": 2026,
+      "section": 6,
+      "camp": "Deflationary / conditional",
+      "evidence": "High (causal)",
+      "type": "Pre-registered RCT",
+      "claim": "GenAI-based interventions targeting motivational or strategic self-regulation showed no statistically significant advantages over a standard ChatGPT control on effort, domain knowledge, or elaboration strategy use, though more meaningful engagement with the AI tended to sustain student interest.",
+      "themes": [
+        "self-regulated learning",
+        "randomized controlled trial",
+        "generative AI tutoring",
+        "motivation and strategy",
+        "secondary school",
+        "null results"
+      ],
+      "url": "https://doi.org/10.1007/s10648-026-10133-8",
+      "link_type": "open"
+    },
+    {
+      "id": "letourneau",
+      "label": "Létourneau et al.",
+      "authors": "Angélique Létourneau, Marion Deslandes Martineau, Patrick Charland, Alexander-John Karran, Jared Boasen, Pierre‐Majorique Léger",
+      "title": "A systematic review of AI-driven intelligent tutoring systems (ITS) in K-12 education",
+      "year": 2025,
+      "section": 6,
+      "camp": "Deflationary / conditional",
+      "evidence": "Medium",
+      "type": "Systematic review",
+      "claim": "Intelligent tutoring systems generally produce positive learning effects in K-12 education, but gains are mitigated when compared directly to non-intelligent tutoring systems, and the evidence base requires longer interventions, larger and more diverse samples, and ethical scrutiny.",
+      "themes": [
+        "intelligent tutoring systems",
+        "K-12 education",
+        "AI in education",
+        "learning outcomes",
+        "quasi-experimental evidence",
+        "personalized learning"
+      ],
+      "url": "https://www.nature.com/articles/s41539-025-00320-7.pdf",
+      "link_type": "pdf"
+    },
+    {
+      "id": "stankovic",
+      "label": "Stanković et al.",
+      "authors": "Miloš Stanković, Ella Hirche, Sarah Kollatzsch, Julia Nadine Doetsch",
+      "title": "Commentary on Kosmyna, N., Hauptmann, E., Yuan, Y. T., Situ, J., Liao, X. H., Beresnitzky, A. V., ... & Maes, P. (2025). Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task.",
+      "year": 2025,
+      "section": 2,
+      "camp": "Critical",
+      "evidence": "Low",
+      "type": "Critical commentary / methodological critique",
+      "claim": "The Kosmyna et al. 'cognitive debt' study has serious methodological limitations—small sample size, reproducibility concerns, and interpretive overreach—that require more conservative conclusions before peer-reviewed publication.",
+      "themes": [
+        "cognitive debt",
+        "methodological critique",
+        "AI and writing",
+        "EEG brain connectivity",
+        "peer review",
+        "replication standards"
+      ],
+      "url": "arXiv:2506.08872",
+      "link_type": "open"
+    },
+    {
+      "id": "weidlich",
+      "label": "Weidlich",
+      "authors": "Joshua Weidlich",
+      "title": "ChatGPT in education: An effect in search of a cause",
+      "year": 2025,
+      "section": 3,
+      "camp": "Critical",
+      "evidence": "Argument",
+      "type": "Critical methodological essay",
+      "claim": "Emerging research on ChatGPT in education suffers from the same media-comparison confounds that plagued earlier educational technology research, rendering most reported effects uninterpretable without clear specification of treatment, control activity, and outcome validity.",
+      "themes": [
+        "media comparison problem",
+        "methodological rigor",
+        "AI in education research",
+        "fast science",
+        "intelligent tutoring systems",
+        "confounding"
+      ],
+      "url": "https://osf.io/t6uzy_v2/download",
+      "link_type": "open"
+    },
+    {
+      "id": "acrl",
+      "label": "ACRL",
+      "authors": "ACRL Framework Task Force",
+      "title": "Framework for Information Literacy for Higher Education",
+      "year": 2014,
+      "section": 2,
+      "camp": "Context",
+      "evidence": "Argument",
+      "type": "Professional framework / policy document",
+      "claim": "Information literacy requires not just access to information but the ability to critically evaluate authority, construction, and purpose of information—framing these as metacognitive and ethical dispositions, not merely technical skills.",
+      "themes": [
+        "information literacy",
+        "critical evaluation",
+        "metacognition",
+        "authority and credibility",
+        "higher education standards",
+        "epistemic agency"
+      ],
+      "url": "http://acrl.ala.org/ilstandards/?page_id=201",
+      "link_type": "publisher"
+    },
+    {
+      "id": "apa-health",
+      "label": "APA",
+      "authors": "American Psychological Association",
+      "title": "Artificial Intelligence and Adolescent Well-being: An APA Health Advisory",
+      "year": 2025,
+      "section": 7,
+      "camp": "Context",
+      "evidence": "Context",
+      "type": "Professional health advisory",
+      "claim": "AI's expanding integration into adolescents' daily life—through generative, interactive, and automated decision-making tools—requires coordinated action from stakeholders to ensure safety and well-being for youth aged 10–25.",
+      "themes": [
+        "adolescent well-being",
+        "AI safety",
+        "generative AI",
+        "interactive AI",
+        "automated decision-making",
+        "youth development"
+      ],
+      "url": "https://www.apa.org",
+      "link_type": "open"
+    },
+    {
+      "id": "cdt-hand-in-hand",
+      "label": "Laird et al.",
+      "authors": "Elizabeth Laird, Maddy Dwyer, Hannah Quay-de la Vallee",
+      "title": "Hand in Hand: Schools' Embrace of AI Connected to Increased Risks to Students",
+      "year": 2025,
+      "section": 7,
+      "camp": "Critical",
+      "evidence": "Context",
+      "type": "Policy/advocacy report",
+      "claim": "As schools rapidly adopt AI tools, students face heightened privacy, civil-rights, and equity risks, with adoption outpacing protective governance.",
+      "themes": [
+        "student privacy",
+        "civil rights",
+        "AI adoption in schools",
+        "equity",
+        "governance gaps",
+        "edtech risk"
+      ],
+      "url": "https://cdt.org/insights/report-off-task-edtech-threats-to-student-privacy-and-equity-in-the-age-of-ai/",
+      "link_type": "open"
+    },
+    {
+      "id": "common-sense",
+      "label": "CS Media",
+      "authors": "Common Sense Media",
+      "title": "Common Sense Media AI Risk Assessment: AI Chatbots for Mental Health Support",
+      "year": 2025,
+      "section": 2,
+      "camp": "Critical",
+      "evidence": "Context",
+      "type": "Risk assessment / use-case review",
+      "claim": "AI chatbots are fundamentally unsafe for the full spectrum of teen mental health needs—while suicide-response handling has improved, chatbots consistently fail to recognize warning signs, provide appropriate guidance, or escalate care for common conditions such as anxiety, depression, OCD, and eating disorders.",
+      "themes": [
+        "AI mental health support",
+        "teen safety",
+        "chatbot limitations",
+        "risk assessment",
+        "youth wellbeing",
+        "AI harm"
+      ],
+      "url": "https://www.commonsensemedia.org/sites/default/files/research/report/2024-the-dawn-of-the-ai-era_final-release-for-web.pdf",
+      "link_type": "open"
+    },
+    {
+      "id": "ets-research",
+      "label": "ETS K-12",
+      "authors": "Srijita Chakraburty, Teresa M. Ober, Lei Liu",
+      "title": "Preparing K–12 Students With AI Literacy: Proposed Framework, Progression, and Task Design Principles",
+      "year": 2025,
+      "section": 7,
+      "camp": "Context",
+      "evidence": "Context",
+      "type": "Framework proposal / research report",
+      "claim": "A structured K–12 AI literacy framework with developmental progressions and task design principles is needed to prepare students for an AI-permeated world, moving beyond tool use to include critical and ethical reasoning.",
+      "themes": [
+        "AI literacy",
+        "K-12 education",
+        "curriculum framework",
+        "task design",
+        "developmental progression",
+        "ethical reasoning"
+      ],
+      "url": "https://rr.ets.org/index.php/etsrr/article/download/31/22/40",
+      "link_type": "open"
+    },
+    {
+      "id": "jin",
+      "label": "Jin et al.",
+      "authors": "Donghan Jin, Raffaella Ocone, Kui Jiao, Jin Xuan",
+      "title": "Energy and AI",
+      "year": 2020,
+      "section": 1,
+      "camp": "Context",
+      "evidence": "Context",
+      "type": "Review article / commentary",
+      "claim": "AI systems are large consumers of energy, and the energy demands of AI infrastructure pose significant environmental and resource challenges that must be addressed alongside AI development.",
+      "themes": [
+        "energy consumption",
+        "AI infrastructure",
+        "environmental cost",
+        "resource extraction",
+        "sustainability"
+      ],
+      "url": "https://doi.org/10.1016/j.egyai.2020.100002",
+      "link_type": "doi"
+    },
+    {
+      "id": "klarin",
+      "label": "Klarin et al.",
+      "authors": "Johan Klarin, Eva Hoff, Adam Larsson, Daiva Daukantaité",
+      "title": "Adolescents’ use and perceived usefulness of generative AI for schoolwork: exploring their relationships with executive functioning and academic achievement",
+      "year": 2024,
+      "section": 7,
+      "camp": "Context",
+      "evidence": "Medium",
+      "type": "Cross-sectional survey study (two samples)",
+      "claim": "Adolescents with greater executive functioning challenges perceive generative AI as more useful for schoolwork, while AI usage rates vary substantially by age group, and academic achievement shows no significant association with AI use or perceived usefulness.",
+      "themes": [
+        "executive functioning",
+        "adolescent AI use",
+        "perceived usefulness",
+        "academic achievement",
+        "cognitive differences",
+        "adoption rates"
+      ],
+      "url": "https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2024.1415782/pdf",
+      "link_type": "open"
+    },
+    {
+      "id": "makransky",
+      "label": "Makransky et al.",
+      "authors": "Guido Makransky, Ban M. Shiwalia, Tue Herlau, Steven P. Blurton",
+      "title": "Beyond the “Wow” Factor: Using Generative AI for Increasing Generative Sense-Making",
+      "year": 2025,
+      "section": 4,
+      "camp": "Pro / optimist",
+      "evidence": "High (causal)",
+      "type": "Pre-registered RCT (two experiments)",
+      "claim": "A theory-informed GenAI chatbot (ChatTutor) built on generative learning principles outperformed both a generic ChatGPT system and control conditions on conceptual knowledge, trust, and enjoyment across two experiments with university and high school students.",
+      "themes": [
+        "generative learning theory",
+        "AI tutoring design",
+        "conceptual knowledge",
+        "trust and enjoyment",
+        "theory-informed scaffolding",
+        "pre-registered experiment"
+      ],
+      "url": "https://link.springer.com/content/pdf/10.1007/s10648-025-10039-x.pdf",
+      "link_type": "pdf"
+    },
+    {
+      "id": "stephanie",
+      "label": "Ng",
+      "authors": "Stephanie Ng",
+      "title": "Navigating Adolescent Mental Health in the Age of Artificial Intelligence",
+      "year": 2025,
+      "section": 2,
+      "camp": "Critical",
+      "evidence": "Argument",
+      "type": "Clinical commentary / review essay",
+      "claim": "AI's evolution—from social-media algorithms reinforcing pathology to generative AI fostering emotional attachments and proactive agentic systems—poses escalating risks to adolescent mental health that demand clinical and policy responses.",
+      "themes": [
+        "adolescent mental health",
+        "social media algorithms",
+        "generative AI emotional attachment",
+        "agentic AI",
+        "clinical implications",
+        "public policy"
+      ],
+      "url": "https://jaacapconnect.org/article/150329.pdf",
+      "link_type": "pdf"
+    },
+    {
+      "id": "u-s-commission-on",
+      "label": "US Civil Rights",
+      "authors": "Pennsylvania Advisory Committee to the U.S. Commission on Civil Rights",
+      "title": "The Rising use of Artificial Intelligence in K-12 Education",
+      "year": 2024,
+      "section": 1,
+      "camp": "Critical",
+      "evidence": "Context",
+      "type": "Government advisory report",
+      "claim": "The rising use of AI in K-12 education raises significant civil rights concerns, including risks of discrimination, inequity, and harm to students from marginalized communities, requiring oversight and policy intervention.",
+      "themes": [
+        "civil rights",
+        "K-12 education",
+        "equity and digital divide",
+        "AI governance",
+        "algorithmic discrimination",
+        "policy oversight"
+      ],
+      "url": "https://www.usccr.gov/files/2024-12/2024-ai-in-education.pdf",
+      "link_type": "open"
     }
   ],
   "edges": [
@@ -3789,6 +4127,468 @@ window.CORPUS = {
       "supports",
       "bender-hanna",
       "Bender & Hanna argue AI systems centralize risk and do not work as claimed; adversarial poisoning of deep-research agents illustrates a concrete failure mode supporting that critique."
+    ],
+    [
+      "dumitru",
+      "complicates",
+      "brookings",
+      "Both emphasize accessibility and equity benefits of AI while warning about the digital divide and institutional barriers that can limit those gains."
+    ],
+    [
+      "dumitru",
+      "complicates",
+      "williamson-pause",
+      "Dumitru et al. highlight institutional barriers and ethical concerns that echo Williamson et al.'s warning about inequitable AI deployment in educational settings."
+    ],
+    [
+      "dumitru",
+      "complicates",
+      "eubanks",
+      "Where Eubanks shows automated systems can harm vulnerable populations, Dumitru et al. present AI as potentially beneficial for a vulnerable group, highlighting the tension between assistive and discriminatory uses."
+    ],
+    [
+      "dumitru",
+      "supports",
+      "khan",
+      "Both argue AI can deliver personalized, scalable educational support; Dumitru et al. extend this claim specifically to students with disabilities."
+    ],
+    [
+      "dumitru",
+      "complicates",
+      "the-evidence-base",
+      "Stanford SCALE's finding of a thin causal evidence base in K-12 AI research applies here: Dumitru et al.'s synthesis covers 27 papers with no high-quality causal studies, underscoring the same evidential gap."
+    ],
+    [
+      "futterer",
+      "complicates",
+      "the-evidence-base",
+      "Stanford SCALE flags the thinness of causal K-12 AI evidence; this RCT adds a rare high-quality data point but finds largely null effects, reinforcing caution about strong claims."
+    ],
+    [
+      "futterer",
+      "supports",
+      "bastani",
+      "Both studies find that the nature of AI engagement (guardrailed vs. unguided; meaningful vs. passive) moderates outcomes more than tool presence alone."
+    ],
+    [
+      "futterer",
+      "supports",
+      "otis",
+      "Both RCTs find no average benefit and instead reveal differential or null effects depending on how students interact with the AI, tempering optimistic claims."
+    ],
+    [
+      "futterer",
+      "contradicts",
+      "kestin",
+      "Kestin found significantly better learning from an AI tutor than active classroom instruction; this RCT finds no advantage of structured GenAI interventions over a standard ChatGPT control."
+    ],
+    [
+      "futterer",
+      "complicates",
+      "dong-meta-analysis",
+      "Dong's meta-analysis reports generally positive GenAI effects in education; this null-result RCT qualifies that picture, especially for SRL-specific outcomes in secondary school."
+    ],
+    [
+      "futterer",
+      "contradicts",
+      "wu",
+      "Wu reports significant positive effects of ChatGPT on cognitive and non-cognitive outcomes; this trial finds no significant advantage over a ChatGPT control on most outcomes."
+    ],
+    [
+      "letourneau",
+      "complicates",
+      "van-lehn",
+      "VanLehn finds ITS gains approaching human tutoring (~0.76 SD); this systematic review qualifies that optimism by showing gains are mitigated relative to non-intelligent tutoring systems and that evidence quality is limited."
+    ],
+    [
+      "letourneau",
+      "complicates",
+      "khan",
+      "Khan argues AI can finally deliver two-sigma tutoring at scale; this review's finding that ITS effects are dampened against non-intelligent comparators tempers that optimism."
+    ],
+    [
+      "letourneau",
+      "supports",
+      "the-evidence-base",
+      "Both sources identify a thin, methodologically weak causal evidence base for AI in K-12 education and call for stronger, more diverse research designs."
+    ],
+    [
+      "letourneau",
+      "paired-with",
+      "bastani",
+      "Bastani similarly finds that unguarded AI assistance can undermine durable learning, resonating with this review's cautious, conditional reading of ITS effectiveness."
+    ],
+    [
+      "letourneau",
+      "supports",
+      "reich",
+      "Reich's argument that technology consistently fails to transform schooling is consistent with this review's finding that ITS effects are positive but modest and methodologically limited."
+    ],
+    [
+      "letourneau",
+      "contradicts",
+      "dong-meta-analysis",
+      "Dong's meta-analysis finds generative AI generally outperforms traditional approaches in educational settings, a more optimistic conclusion than this review's mitigated picture of ITS effectiveness."
+    ],
+    [
+      "stankovic",
+      "complicates",
+      "kosmyna",
+      "Directly critiques the Kosmyna et al. study, arguing its findings on cognitive debt and weak brain connectivity are overstated given small sample size, reproducibility issues, and methodological shortcomings."
+    ],
+    [
+      "stankovic",
+      "supports",
+      "orben",
+      "Both call for higher evidentiary standards before drawing strong causal conclusions about AI's cognitive harms; Orben makes the same point about moral-panic-driven weak evidence."
+    ],
+    [
+      "stankovic",
+      "complicates",
+      "gerlich",
+      "Gerlich's correlational negative findings on critical thinking share the same interpretive caution problem flagged by this commentary—causation may not follow from the data presented."
+    ],
+    [
+      "stankovic",
+      "supports",
+      "the-evidence-base",
+      "The Stanford SCALE report similarly documents a thin and methodologically weak causal evidence base for AI's cognitive effects in education, reinforcing the need for caution flagged here."
+    ],
+    [
+      "stankovic",
+      "paired-with",
+      "barcaui-cognitive",
+      "Barcaui et al. provide a better-controlled retention study reaching similar conclusions about AI harming long-term learning, illustrating the methodological bar this commentary argues Kosmyna et al. fail to meet."
+    ],
+    [
+      "weidlich",
+      "contradicts",
+      "wu",
+      "Weidlich's methodological critique directly challenges the interpretability of positive meta-analytic findings like Wu's, arguing effect sizes are uninterpretable without controlled comparison conditions."
+    ],
+    [
+      "weidlich",
+      "contradicts",
+      "dong-meta-analysis",
+      "Weidlich uses Deng et al. (2025) as his central example of a meta-analysis subject to media-comparison confounds, applying to similar aggregative work like Dong's."
+    ],
+    [
+      "weidlich",
+      "grounds",
+      "van-lehn",
+      "Weidlich contrasts the methodologically rigorous ITS literature (exemplified by VanLehn) with the nascent ChatGPT research to illustrate the standard that should be met."
+    ],
+    [
+      "weidlich",
+      "supports",
+      "orben",
+      "Both Orben and Weidlich call for higher evidential standards and warn against evidence-thin claims driven by enthusiasm for new technology."
+    ],
+    [
+      "weidlich",
+      "supports",
+      "the-evidence-base",
+      "Stanford SCALE's finding that the causal evidence base on AI in K-12 is very thin corroborates Weidlich's methodological critique of the emerging literature."
+    ],
+    [
+      "weidlich",
+      "paired-with",
+      "reich",
+      "Both argue that enthusiasm for educational technology outruns rigorous evidence, though Reich focuses on institutional absorption while Weidlich focuses on research design flaws."
+    ],
+    [
+      "acrl",
+      "grounds",
+      "tadimalla-literacy",
+      "The ACRL Framework supplies the pre-AI information-literacy standard against which Tadimalla et al. argue current AI literacy frameworks fall short on critical and ethical reasoning."
+    ],
+    [
+      "acrl",
+      "grounds",
+      "messeri",
+      "The ACRL emphasis on epistemic agency and evaluating authority provides the normative baseline that Messeri & Crockett's 'illusions of understanding' concept threatens."
+    ],
+    [
+      "acrl",
+      "grounds",
+      "mittal-info",
+      "The ACRL Framework's conception of active, agentive information seeking is the implicit standard against which Mittal et al. document diminished agency and biased search when using ChatGPT."
+    ],
+    [
+      "acrl",
+      "supports",
+      "wolf",
+      "Both emphasize deep, reflective engagement with information as foundational to learning, and both warn against surface-level consumption."
+    ],
+    [
+      "acrl",
+      "complicates",
+      "zhang-reddit-search",
+      "The ACRL Framework assumes learners can critically evaluate source authority; Zhang et al.'s findings about adversarial manipulation of AI retrieval pipelines challenge whether that assumption holds in AI-mediated search."
+    ],
+    [
+      "apa-health",
+      "complicates",
+      "orben",
+      "Orben urges demanding better evidence before concluding harm; APA issues a precautionary advisory despite acknowledging the evidence base is still developing."
+    ],
+    [
+      "apa-health",
+      "supports",
+      "robb-mann",
+      "Common Sense data on teen AI-companion use (72%) and mixed trust patterns ground the advisory's concern about AI-mediated relationships and adolescent development."
+    ],
+    [
+      "apa-health",
+      "paired-with",
+      "brookings",
+      "Both emphasize holistic adolescent development, digital equity, and the need for multi-stakeholder governance of AI in youth contexts."
+    ],
+    [
+      "apa-health",
+      "grounds",
+      "eubanks",
+      "Eubanks documents concrete harms of automated decision-making on vulnerable populations; the APA advisory flags the same risk (school admissions, medical diagnosis, automated grading) for youth."
+    ],
+    [
+      "apa-health",
+      "supports",
+      "rand",
+      "RAND survey data showing widespread student AI use alongside absent school policy corroborates the advisory's call for coordinated stakeholder action."
+    ],
+    [
+      "cdt-hand-in-hand",
+      "supports",
+      "williamson-pause",
+      "Both warn that rapid AI deployment in schools without adequate oversight concentrates commercial power and harms students, particularly the most vulnerable."
+    ],
+    [
+      "cdt-hand-in-hand",
+      "paired-with",
+      "rand",
+      "Both are context/survey reports documenting the accelerating pace of school AI adoption alongside lagging policy frameworks."
+    ],
+    [
+      "cdt-hand-in-hand",
+      "grounds",
+      "eubanks",
+      "Eubanks documents the civil-rights harms of automated decision-making on marginalized populations, providing the theoretical underpinning for CDT's equity concerns in schools."
+    ],
+    [
+      "cdt-hand-in-hand",
+      "complicates",
+      "brookings",
+      "Brookings emphasizes balanced benefits and risks including the digital divide, while CDT's report foregrounds risk and harm as the primary framing of AI adoption."
+    ],
+    [
+      "cdt-hand-in-hand",
+      "supports",
+      "npr-ipsos",
+      "Both reports find widespread AI adoption in schools occurring in the absence of adequate institutional guidance or policy safeguards."
+    ],
+    [
+      "common-sense",
+      "supports",
+      "robb-mann",
+      "Both documents focus on teen AI companion use; Robb & Mann show 72% of teens have used AI companions and a third take serious matters to them, grounding the scale of the risk Common Sense Media identifies."
+    ],
+    [
+      "common-sense",
+      "complicates",
+      "odgers-rewiring",
+      "Odgers argues moral panics about digital technology often outrun the evidence; this risk assessment offers specific empirical testing of chatbot behaviour rather than a generalised alarm, partially answering that caution."
+    ],
+    [
+      "common-sense",
+      "complicates",
+      "orben",
+      "Orben calls for better evidence before accepting technology-harm claims; Common Sense Media's hands-on testing of named systems across specific mental-health conditions is the kind of concrete evidence Orben's argument demands."
+    ],
+    [
+      "common-sense",
+      "supports",
+      "messeri",
+      "Messeri & Crockett's 'illusions of understanding' thesis maps onto the risk that teens believe they are receiving adequate mental health support when chatbots are structurally unable to provide it."
+    ],
+    [
+      "common-sense",
+      "supports",
+      "brookings",
+      "The Brookings report warns that AI personalization can veer into manipulation for vulnerable users; this assessment concretely documents how that plays out in the mental health domain for teens."
+    ],
+    [
+      "ets-research",
+      "paired-with",
+      "tadimalla-literacy",
+      "Both address AI literacy frameworks for students; Tadimalla critiques existing frameworks for overemphasizing functional use while neglecting critical reasoning, a gap this report's framework explicitly tries to address."
+    ],
+    [
+      "ets-research",
+      "complicates",
+      "the-evidence-base",
+      "Stanford SCALE finds the causal evidence base for AI in K-12 is very thin, contextualizing the largely theoretical/framework nature of this report."
+    ],
+    [
+      "ets-research",
+      "supports",
+      "brookings",
+      "Both emphasize holistic development, equity considerations, and the importance of structured pedagogical approaches to AI in K-12 education."
+    ],
+    [
+      "ets-research",
+      "grounds",
+      "rand",
+      "RAND survey data on rising student AI use and absent school policy provides empirical motivation for the kind of structured framework this report proposes."
+    ],
+    [
+      "ets-research",
+      "supports",
+      "borchers-agency",
+      "Both attempt to provide structured conceptual frameworks for how AI should be integrated into K-12 learning, with attention to learner agency and institutional roles."
+    ],
+    [
+      "jin",
+      "supports",
+      "crawford-k",
+      "Crawford's account of AI as an extractive industry reliant on vast material and energy resources is grounded in the same energy-consumption reality this source documents."
+    ],
+    [
+      "jin",
+      "supports",
+      "stochastic-parrots",
+      "Bender et al. flag the environmental cost of scaling LLMs; this source provides the broader energy-AI context underlying that concern."
+    ],
+    [
+      "jin",
+      "supports",
+      "hao",
+      "Hao's critique of scale-at-all-costs AI development is underpinned by the energy and resource demands this source addresses."
+    ],
+    [
+      "klarin",
+      "paired-with",
+      "rand",
+      "Both provide empirical survey data on student AI adoption rates and attitudes, with Klarin et al. adding individual cognitive-difference variables absent from the RAND report."
+    ],
+    [
+      "klarin",
+      "supports",
+      "dumitru",
+      "Klarin et al.'s finding that students with EF challenges find AI more useful aligns with Dumitru et al.'s argument that AI assistive technologies can support students with learning differences."
+    ],
+    [
+      "klarin",
+      "complicates",
+      "otis",
+      "Otis finds AI benefits high performers more; Klarin et al. find students with EF challenges perceive AI as more useful, suggesting the direction of differential benefit may vary by outcome and population."
+    ],
+    [
+      "klarin",
+      "complicates",
+      "bastani",
+      "Bastani's finding that unguarded AI harms learning gains additional weight given Klarin et al.'s finding that cognitively challenged students are most drawn to AI assistance."
+    ],
+    [
+      "klarin",
+      "complicates",
+      "gerlich",
+      "Gerlich finds frequent AI use correlates with lower critical thinking; Klarin et al. find it is students with EF challenges who use AI most, raising questions about direction of causality in both studies."
+    ],
+    [
+      "makransky",
+      "supports",
+      "kestin",
+      "Both provide causal evidence that well-designed AI tutoring systems produce learning gains superior to standard instruction or generic AI use."
+    ],
+    [
+      "makransky",
+      "complicates",
+      "bastani",
+      "Bastani found unguarded GPT-4 harmed learning, while guardrailed design helped; Makransky et al. similarly show that pedagogical design (not mere AI access) is the critical variable."
+    ],
+    [
+      "makransky",
+      "grounds",
+      "van-lehn",
+      "VanLehn's meta-analysis of ITS effectiveness supplies the theoretical benchmark that pedagogically scaffolded AI tutors can approach human-tutor gains."
+    ],
+    [
+      "makransky",
+      "supports",
+      "khan",
+      "Both argue that well-designed GenAI can deliver scalable individualized learning aligned with the two-sigma aspiration."
+    ],
+    [
+      "makransky",
+      "complicates",
+      "otis",
+      "Otis found heterogeneous effects with a generic GPT-4 mentor; Makransky et al. suggest that theory-informed design may mitigate such differential outcomes."
+    ],
+    [
+      "makransky",
+      "supports",
+      "dong-meta-analysis",
+      "Dong's meta-analysis finding that GenAI outperforms traditional approaches is reinforced by this RCT evidence for a theory-driven chatbot."
+    ],
+    [
+      "stephanie",
+      "supports",
+      "robb-mann",
+      "Both document risks of adolescents forming emotional attachments to AI companions and the implications for mental health and relational development."
+    ],
+    [
+      "stephanie",
+      "complicates",
+      "odgers-rewiring",
+      "Odgers urges caution about evidence-thin moral panics over new media and adolescent harm; Ng's clinical framing attributes more concrete developmental risk to AI interactions."
+    ],
+    [
+      "stephanie",
+      "complicates",
+      "orben",
+      "Orben similarly warns against recurring evidence-thin media panics; Ng's piece asserts more direct clinical concern rather than calling for better evidence first."
+    ],
+    [
+      "stephanie",
+      "supports",
+      "messeri",
+      "Both highlight how AI can exploit human psychological vulnerabilities—illusions of understanding in Messeri; emotional attachment and dependency in Ng."
+    ],
+    [
+      "stephanie",
+      "grounds",
+      "yang",
+      "Yang et al.'s description of agentic AI acting autonomously underpins Ng's concern about proactive agentic systems pursuing vulnerable adolescent users."
+    ],
+    [
+      "u-s-commission-on",
+      "supports",
+      "williamson-pause",
+      "Both warn that without effective public oversight, AI in schools will exacerbate inequities and harm students; the PA advisory report grounds the concern in civil rights law."
+    ],
+    [
+      "u-s-commission-on",
+      "grounds",
+      "eubanks",
+      "Eubanks documents how automated systems punish marginalized populations, supplying the theoretical mechanism behind the advisory report's civil rights framing."
+    ],
+    [
+      "u-s-commission-on",
+      "paired-with",
+      "brookings",
+      "Both are institutional reports addressing AI in education with attention to equity and the global/domestic digital divide."
+    ],
+    [
+      "u-s-commission-on",
+      "complicates",
+      "the-evidence-base",
+      "The Stanford SCALE review notes the causal evidence base for AI in K-12 is very thin, which qualifies the advisory report's policy recommendations by highlighting how little is empirically established."
+    ],
+    [
+      "u-s-commission-on",
+      "supports",
+      "rand",
+      "RAND's survey data on rapid AI adoption paired with absent school policy corroborates the advisory report's finding that governance has not kept pace with deployment."
     ]
   ]
 };
@@ -4107,7 +4907,7 @@ window.CORPUS = {
     if(b.do&&b.do.length) h+='<div class="brief-sec"><span class="brief-h">What to do</span>'+ul(b.do)+'</div>';
     if(b.watch&&b.watch.length) h+='<div class="brief-sec"><span class="brief-h">Watch out for</span>'+ul(b.watch,"warn")+'</div>';
     h+='</div>';
-    h+='<div class="brief-foot">A synthesis of the sources below'+(b.updated?' · '+esc(b.updated):'')+'</div></div>';
+    h+='</div>';
     return h;
   }
   document.getElementById("browseAll").onclick=browseAll;
@@ -4197,11 +4997,11 @@ window.CORPUS = {
     const t=state.topic, i=QUESTIONS.indexOf(t), num=String(i+1).padStart(2,"0");
     const ev=[...matched].sort(sorter("evidence"));
     let h='<div class="brief-page">';
-    h+='<div class="bp-eyebrow">Brief '+num+'</div>';
-    h+='<h1 class="bp-title">'+esc(t.question||t.label)+'</h1>';
-    const bh=briefHtml(t); if(bh) h+=bh;
-    h+='<div class="ev-div"><span class="evh">The evidence</span><span class="ev-n">'+ev.length+' source'+(ev.length===1?'':'s')+' · strongest first</span></div>';
-    h+=ev.map(recHtml).join("");
+    h+='<div class="bp-head"><div class="bp-eyebrow">Brief '+num+'</div><h1 class="bp-title">'+esc(t.question||t.label)+'</h1></div>';
+    const bh=briefHtml(t);
+    h+='<div class="bp-grid"><div class="bp-synth">'+(bh||'')+'</div>'+
+       '<div class="bp-evidence"><div class="ev-div"><span class="evh">The evidence</span><span class="ev-n">'+ev.length+' source'+(ev.length===1?'':'s')+' · strongest first</span></div>'+
+       ev.map(recHtml).join("")+'</div></div>';
     const prev=(i-1+QUESTIONS.length)%QUESTIONS.length, next=(i+1)%QUESTIONS.length;
     h+='<div class="bp-nav"><button class="bp-prev" data-i="'+prev+'">‹ '+esc(QUESTIONS[prev].label)+'</button><button class="bp-next" data-i="'+next+'">'+esc(QUESTIONS[next].label)+' ›</button></div>';
     h+='</div>';
