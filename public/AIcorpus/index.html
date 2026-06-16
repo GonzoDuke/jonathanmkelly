@@ -433,6 +433,20 @@
   .map-legend .lg-ring.r-pro{border:2px dotted #ECE7DD}
   .map-legend .lg-ring.r-none{border:1px solid rgba(255,255,255,.18)}
   @media (max-width:760px){ .map-legend{display:none} }
+  /* domains in the nav + click-to-filter affordances */
+  .nav-dom{display:flex;align-items:center;gap:9px;width:100%;text-align:left;background:none;border:0;border-left:2px solid transparent;color:var(--ink-soft);font-family:var(--sans);font-size:12.5px;padding:6px 10px 6px 9px;cursor:pointer;border-radius:0 6px 6px 0;transition:color .15s,background .15s,border-color .15s}
+  .nav-dom:hover{color:var(--ink);background:rgba(255,255,255,.035)}
+  .nav-dom.active{color:#fff;background:var(--accent-soft);border-left-color:var(--tcol,var(--accent))}
+  .nav-ddot{width:8px;height:8px;border-radius:50%;background:var(--tcol);flex:0 0 auto}
+  .nav-dname{flex:1 1 auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .nav-dcount{font-family:var(--mono);font-size:10px;color:var(--ink-soft);flex:0 0 auto}
+  .dbadge[data-domain]{cursor:pointer}
+  .dbadge[data-domain]:hover{background:color-mix(in srgb,var(--dc,#888) 28%,transparent)}
+  .dom-div[data-domain]{cursor:pointer}
+  .dom-div[data-domain]:hover .dom-name{color:var(--dc)}
+  .card-top .camp-tag{background:none;border:0;padding:0;font:inherit}
+  .card-top .camp-tag[data-domain]{cursor:pointer}
+  .card-top .camp-tag[data-domain]:hover{filter:brightness(1.18)}
 </style>
 </head>
 <body class="view-home">
@@ -4997,17 +5011,23 @@ window.CORPUS = {
     h+=QUESTIONS.map((t,i)=>'<button class="nav-item" data-kind="brief" data-i="'+i+'" style="--tcol:'+COVER_COLORS[i%COVER_COLORS.length]+'"><span class="nav-num">'+String(i+1).padStart(2,"0")+'</span><span>'+esc(t.label)+'</span></button>').join("");
     h+='<div class="nav-sep"></div>';
     h+='<button class="nav-fixed" data-kind="library"><span class="ni">▦</span> All sources</button>';
+    h+='<div class="nav-label">By domain</div>';
+    h+=DOMAIN_ORDER.map(d=>{ const c=nodes.filter(n=>n.domain===d).length;
+      return '<button class="nav-dom" data-kind="domain" data-domain="'+esc(d)+'" style="--tcol:'+domainColor[d]+'"><span class="nav-ddot"></span><span class="nav-dname">'+esc(domainShort[d]||d)+'</span><span class="nav-dcount">'+c+'</span></button>'; }).join("");
+    h+='<div class="nav-sep"></div>';
     h+='<button class="nav-fixed" data-kind="map"><span class="ni">◉</span> Relation map</button>';
     nav.innerHTML=h;
     nav.querySelector("#navBack").onclick=goHome;
-    navItems=[...nav.querySelectorAll(".nav-item,.nav-fixed")];
+    navItems=[...nav.querySelectorAll(".nav-item,.nav-fixed,.nav-dom")];
     navItems.forEach(b=>{ const kind=b.dataset.kind;
-      b.onclick=()=> kind==="brief"?openTopic(QUESTIONS[+b.dataset.i]) : kind==="library"?browseAll() : openMap(); });
+      b.onclick=()=> kind==="brief"?openTopic(QUESTIONS[+b.dataset.i]) : kind==="library"?browseAll() : kind==="domain"?goDomain(b.dataset.domain) : openMap(); });
   }
   function updateNav(){
+    const oneDom = !state.topic && state.domains.size===1 ? [...state.domains][0] : null;
     navItems.forEach(b=>{ const kind=b.dataset.kind; let on=false;
       if(kind==="brief") on = state.topic===QUESTIONS[+b.dataset.i];
-      else if(kind==="library") on = !state.topic && state.view==="results";
+      else if(kind==="library") on = !state.topic && state.view==="results" && !oneDom;
+      else if(kind==="domain") on = oneDom===b.dataset.domain;
       b.classList.toggle("active", !!on); });
   }
   function buildLegend(){
@@ -5030,6 +5050,16 @@ window.CORPUS = {
     document.body.classList.add("view-brief"); document.body.classList.remove("view-library"); setView("results"); refresh(); }
   function browseAll(){ state.topic=null; state.q=""; searchEl.value="";
     document.body.classList.add("view-library"); document.body.classList.remove("view-brief"); setView("results"); refresh(); }
+  function goDomain(d, opts){   // focus the library on a single domain (click-to-filter)
+    opts=opts||{};
+    state.topic=null; state.q=""; if(searchEl) searchEl.value="";
+    [state.stances,state.evs,state.themes,state.years].forEach(s=>s.clear());
+    state.domains=new Set([d]);
+    if(opts.cross) state.crossTag=true;
+    state.selected=null;
+    document.body.classList.add("view-library"); document.body.classList.remove("view-brief");
+    setView("results"); refresh();
+  }
   // brightened topic colors that read on the dark cover
   const COVER_COLORS=["#5FCBB8","#7CB0EA","#E6BC68","#EE8576","#62CF97","#B3A6EA","#5FC8D8","#E08FAE"];
   let coverTimer=null;
@@ -5127,9 +5157,9 @@ window.CORPUS = {
     return (a,b)=>(a.authors||a.label).localeCompare(b.authors||b.label);
   }
   function badgesHtml(n){
-    let b='<span class="dbadge" style="--dc:'+(domainColor[n.domain]||'#888')+'">'+esc(domainShort[n.domain]||n.domain||"")+'</span>';
+    let b='<span class="dbadge" data-domain="'+esc(n.domain||"")+'" style="--dc:'+(domainColor[n.domain]||'#888')+'" title="Filter to '+esc(n.domain||"")+'">'+esc(domainShort[n.domain]||n.domain||"")+'</span>';
     if(n.stance && n.stance!=="none") b+='<span class="sbadge s-'+n.stance+'">'+esc(stanceLabel[n.stance])+'</span>';
-    (n.cross_domain||[]).forEach(d=>{ b+='<span class="dbadge xt" style="--dc:'+(domainColor[d]||'#888')+'" title="cross-tagged">'+esc(domainShort[d]||d)+'</span>'; });
+    (n.cross_domain||[]).forEach(d=>{ b+='<span class="dbadge xt" data-domain="'+esc(d)+'" data-cross="1" style="--dc:'+(domainColor[d]||'#888')+'" title="Filter to '+esc(d)+' (cross-tagged)">'+esc(domainShort[d]||d)+'</span>'; });
     if(n.interested_party) b+='<span class="ipflag" title="Author or source has a commercial stake">⚑ interested party</span>';
     return b;
   }
@@ -5162,11 +5192,14 @@ window.CORPUS = {
   }
   function wireRecords(){
     catalogEl.querySelectorAll(".rec").forEach(r=>{
-      r.onclick=e=>{ if(e.target.classList.contains("rsub")) return; state.selected=r.dataset.id; refresh(); };
+      r.onclick=e=>{ if(e.target.closest(".rsub,.dbadge")) return; state.selected=r.dataset.id; refresh(); };
       r.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){e.preventDefault();state.selected=r.dataset.id;refresh();} };
     });
     catalogEl.querySelectorAll(".rsub").forEach(s=>s.onclick=e=>{ e.stopPropagation();
       state.themes.add(s.dataset.t); state.selected=null; browseAll(); });   // theme pill → library filtered by that subject
+    catalogEl.querySelectorAll(".dbadge[data-domain]").forEach(x=>x.onclick=e=>{ e.stopPropagation();
+      goDomain(x.dataset.domain, {cross:x.dataset.cross==="1"}); });          // domain badge → filter to that domain
+    catalogEl.querySelectorAll(".dom-div[data-domain]").forEach(h=>h.onclick=()=>goDomain(h.dataset.domain)); // group header → focus that domain
     catalogEl.querySelectorAll(".cite").forEach(c=>c.onclick=e=>{ e.stopPropagation(); if(c.dataset.id){ state.selected=c.dataset.id; refresh(); } });
   }
   function recordsHtml(matched){   // library view: grouped by Domain (the primary axis)
@@ -5175,7 +5208,7 @@ window.CORPUS = {
       const rows=matched.filter(n=>n.domain===dom || (state.crossTag && (n.cross_domain||[]).includes(dom)));
       if(!rows.length) return;
       rows.sort(srt);
-      h+='<div class="dom-div" style="--dc:'+(domainColor[dom]||'#888')+'"><span class="dom-dot"></span><span class="dom-name">'+esc(dom)+'</span>'+
+      h+='<div class="dom-div" data-domain="'+esc(dom)+'" title="Show only '+esc(dom)+'" style="--dc:'+(domainColor[dom]||'#888')+'"><span class="dom-dot"></span><span class="dom-name">'+esc(dom)+'</span>'+
          '<span class="dom-count">'+rows.length+'</span></div>';
       h+=rows.map(recHtml).join("");
     });
@@ -5305,7 +5338,7 @@ window.CORPUS = {
       '<button class="backlink" id="backBtn">← ALL SOURCES</button>'+
       '<div class="card">'+
         '<div class="card-top"><span>'+esc(evAbbr[n.evidence]||"")+' · '+n.year+'</span>'+
-        '<span class="camp-tag"><span class="dot" style="background:'+(domainColor[n.domain]||'#888')+'"></span>'+esc(n.domain||"")+(n.stance&&n.stance!=="none"?' · '+esc(stanceLabel[n.stance]):'')+'</span></div>'+
+        '<button class="camp-tag" id="cardDomain" data-domain="'+esc(n.domain||"")+'" title="Filter to '+esc(n.domain||"")+'"><span class="dot" style="background:'+(domainColor[n.domain]||'#888')+'"></span>'+esc(n.domain||"")+(n.stance&&n.stance!=="none"?' · '+esc(stanceLabel[n.stance]):'')+'</button></div>'+
         '<div class="card-body">'+
           '<h2>'+esc(n.title)+'</h2>'+
           '<div class="byline">'+esc(n.authors)+'</div>'+
@@ -5317,6 +5350,7 @@ window.CORPUS = {
         (relHtml?'<div class="rel-section">'+relHtml+'</div>':'')+
       '</div>';
     document.getElementById("backBtn").onclick=()=>{ state.selected=null; refresh(); };
+    { const cd=document.getElementById("cardDomain"); if(cd&&cd.dataset.domain) cd.onclick=()=>goDomain(cd.dataset.domain); }
     panel.querySelectorAll(".rel-item").forEach(b=>b.onclick=()=>{ state.selected=b.dataset.id; refresh(); });
     panel.querySelectorAll(".theme").forEach(b=>b.onclick=()=>{
       state.selected=null; state.q=b.dataset.t.toLowerCase(); searchEl.value=b.dataset.t; refresh();
