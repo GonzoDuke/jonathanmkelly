@@ -139,42 +139,58 @@
   .rec .rsub{font-family:var(--mono);font-size:10px;color:var(--ink-soft);cursor:pointer}
   .rec .rsub:hover{color:var(--accent);text-decoration:underline}
   .empty{font-style:italic;color:var(--ink-soft);padding:24px 4px;font-size:14px}
-  /* ---------- home: topic tiles ---------- */
-  #home{flex:1 1 auto;overflow-y:auto;display:none}
+  /* ---------- home: the Briefing (editorial cover) ---------- */
+  #home{flex:1 1 auto;overflow-y:auto;display:none;background:#13212C;color:#EDEAE2}
   body.view-home #home{display:block}
   body.view-home main{display:none}
-  .home-inner{max-width:1060px;margin:0 auto;padding:60px 24px 80px}
-  .home-eyebrow{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
-  .home-h{font-family:var(--serif);font-size:clamp(34px,5vw,52px);font-weight:600;letter-spacing:-.022em;line-height:1.04;max-width:16ch}
-  .home-sub{font-family:var(--sans);font-size:16px;color:var(--ink-soft);margin-top:16px;max-width:54ch;line-height:1.5}
-  .tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;grid-auto-flow:dense;gap:18px;margin-top:46px}
-  .tile{position:relative;text-align:left;cursor:pointer;display:flex;flex-direction:column;min-height:208px;padding:22px 24px 20px;border-radius:16px;overflow:hidden;
-    background:#fff;background:color-mix(in srgb,var(--tcol,var(--accent)) 6%,#fff);
-    border:1px solid var(--rule);border:1px solid color-mix(in srgb,var(--tcol,var(--accent)) 20%,#fff);
-    box-shadow:0 1px 2px rgba(18,42,55,.04),0 12px 26px rgba(18,42,55,.07);
-    opacity:0;animation:tilein .55s cubic-bezier(.2,.7,.3,1) both;animation-delay:calc(var(--i,0)*70ms);
-    transition:transform .18s ease,box-shadow .18s ease}
-  .tile::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--tcol,var(--accent))}
-  .tile:hover{transform:translateY(-5px);box-shadow:0 6px 12px rgba(18,42,55,.07),0 24px 48px rgba(18,42,55,.17)}
-  .tile:hover .tt{color:var(--tcol,var(--accent))}
-  .tile.featured{grid-column:span 2;grid-row:span 2;padding:30px 34px 28px}
-  .tile-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:8px}
-  .tile .tnum{font-family:var(--serif);font-size:32px;font-weight:600;line-height:.9;letter-spacing:-.02em;color:var(--tcol,var(--accent))}
-  .tile .tc{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap;margin-top:8px}
-  .tile .tt{font-family:var(--serif);font-size:21px;font-weight:600;line-height:1.16;letter-spacing:-.014em;transition:color .16s}
-  .tile .tteaser{font-family:var(--sans);font-size:13.5px;line-height:1.55;color:var(--ink-soft);margin-top:10px;flex:1 1 auto;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-  .tile .tile-foot{display:flex;align-items:center;gap:10px;margin-top:16px}
-  .tile .tgo{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--tcol,var(--accent));margin-left:auto;opacity:0;transform:translateX(-6px);transition:opacity .16s,transform .16s}
-  .tile:hover .tgo{opacity:1;transform:none}
-  .tile.featured .tnum{font-size:52px}
-  .tile.featured .tt{font-size:30px;line-height:1.1;margin-top:2px;max-width:18ch}
-  .tile.featured .tteaser{font-size:15px;line-height:1.6;-webkit-line-clamp:5;margin-top:14px;max-width:46ch}
-  @keyframes tilein{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-  .home-foot{margin-top:44px;text-align:center}
-  .linkbtn{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--accent);background:none;border:none;cursor:pointer;padding:6px 2px;border-bottom:2px solid transparent}
-  .linkbtn:hover{border-color:var(--accent)}
-  @media (max-width:900px){ .tiles{grid-template-columns:repeat(2,minmax(0,1fr))} .tile.featured{grid-row:span 1} }
-  @media (max-width:600px){ .tiles{grid-template-columns:1fr} .tile.featured{grid-column:span 1} .home-inner{padding:40px 18px 56px} }
+  /* the header sits on the dark cover on the home view */
+  body.view-home header{background:#13212C;border-bottom-color:rgba(255,255,255,.08)}
+  body.view-home .masthead h1{color:#F7F4ED}
+  body.view-home .masthead .count{color:#93A2AB}
+  body.view-home .hbtn,body.view-home .hbtn.ghost{background:rgba(255,255,255,.07);color:#E7E2D9;border-color:rgba(255,255,255,.3)}
+  body.view-home .hbtn:hover,body.view-home .hbtn.ghost:hover{background:#EFEBE2;color:#15222C;border-color:#EFEBE2}
+  body.view-home .search-toggle{color:#E7E2D9}
+  body.view-home #search{background:rgba(255,255,255,.09);color:#F7F4ED;border-color:rgba(255,255,255,.32)}
+  .cover{position:relative;min-height:calc(100vh - 66px);max-width:1200px;margin:0 auto;padding:clamp(26px,4.5vh,60px) 40px 54px;
+    display:grid;grid-template-columns:1.4fr .85fr;grid-template-rows:1fr auto;gap:34px 56px}
+  .cover-bg{position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(130% 95% at 8% 2%,rgba(15,118,110,.26),transparent 55%),radial-gradient(90% 80% at 100% 100%,rgba(59,111,176,.18),transparent 50%)}
+  .cover>*{position:relative;z-index:1}
+  .cover-lead{grid-column:1;grid-row:1;display:flex;flex-direction:column;justify-content:center}
+  .cover-eyebrow{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#5FCBB8;margin-bottom:24px}
+  .cover-h{font-family:var(--serif);font-weight:500;font-size:clamp(38px,6vw,80px);line-height:1.0;letter-spacing:-.026em;color:#F7F4ED}
+  .cover-h span{display:block}
+  .cover-h .em{font-style:italic;color:#73D6C4;margin-top:.16em}
+  .cover-finding{margin-top:clamp(24px,4vh,44px);max-width:48ch;cursor:pointer;border-left:2px solid rgba(115,214,196,.45);padding:2px 0 2px 22px;
+    opacity:0;transform:translateY(8px);transition:opacity .45s ease,transform .45s ease,border-color .2s}
+  .cover-finding.show{opacity:1;transform:none}
+  .cover-finding:hover{border-color:#73D6C4}
+  .cf-label{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A99A1;display:flex;align-items:center;gap:12px;margin-bottom:12px}
+  .cf-quote{font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.9vw,24px);line-height:1.42;color:#EAE6DD}
+  .cf-by{font-family:var(--sans);font-size:13px;color:#9DB0B8;margin-top:13px}
+  .cf-by b{color:#CFEAE3;font-weight:600}
+  .cover-index{grid-column:2;grid-row:1 / span 2;display:flex;flex-direction:column;justify-content:center;border-left:1px solid rgba(255,255,255,.1);padding-left:34px}
+  .ci-item{display:flex;align-items:baseline;gap:16px;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid rgba(255,255,255,.09);padding:15px 0;cursor:pointer;color:#D9D3C8;transition:padding-left .2s ease,color .18s}
+  .ci-item:last-child{border-bottom:0}
+  .ci-item:hover{padding-left:9px}
+  .ci-num{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--tcol);min-width:26px}
+  .ci-q{font-family:var(--serif);font-size:clamp(16px,1.4vw,20px);font-weight:500;line-height:1.2;letter-spacing:-.01em;flex:1}
+  .ci-item:hover .ci-q{color:#fff}
+  .ci-meta{font-family:var(--sans);font-size:10.5px;letter-spacing:.04em;color:#788790;white-space:nowrap;align-self:center}
+  .cover-browse{grid-column:1;grid-row:2;justify-self:start;align-self:end;font-family:var(--sans);font-size:14px;font-weight:600;color:#C5EAE1;background:none;border:0;border-bottom:2px solid transparent;cursor:pointer;padding:6px 0}
+  .cover-browse:hover{border-color:#73D6C4}
+  .cover-eyebrow,.cover-h span,.ci-item,.cover-browse{opacity:0;animation:coverin .7s cubic-bezier(.2,.7,.3,1) both}
+  .cover-eyebrow{animation-delay:.04s}
+  .cover-h span:nth-child(1){animation-delay:.12s}
+  .cover-h span:nth-child(2){animation-delay:.2s}
+  .cover-h span:nth-child(3){animation-delay:.28s}
+  .ci-item{animation-delay:calc(.42s + var(--i,0)*.07s)}
+  .cover-browse{animation-delay:.95s}
+  @keyframes coverin{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  @media (max-width:880px){
+    .cover{grid-template-columns:1fr;grid-template-rows:auto auto auto;min-height:auto;padding:30px 22px 44px;gap:24px}
+    .cover-lead{grid-column:1;grid-row:1} .cover-index{grid-column:1;grid-row:2;border-left:0;padding-left:0;border-top:1px solid rgba(255,255,255,.12);padding-top:8px} .cover-browse{grid-column:1;grid-row:3}
+  }
   .res-head{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin:0 0 10px;padding-bottom:10px;border-bottom:1.5px solid var(--ink)}
   .back-topics{font-family:var(--mono);font-size:11.5px;color:var(--ink);background:none;border:1px solid var(--rule);padding:5px 11px;cursor:pointer}
   .back-topics:hover{border-color:var(--ink);background:var(--card)}
@@ -346,7 +362,7 @@
   }
   @media (prefers-reduced-motion: reduce){
     *{transition:none !important;animation:none !important}
-    .tile{opacity:1 !important}
+    .tile,.cover-eyebrow,.cover-h span,.ci-item,.cover-browse,.cover-finding{opacity:1 !important;transform:none !important}
   }
 </style>
 </head>
@@ -3798,12 +3814,15 @@ window.CORPUS = {
 </div>
 
 <section id="home">
-  <div class="home-inner">
-    <div class="home-eyebrow">AI in Education · What the evidence says</div>
-    <h2 class="home-h">How is AI changing learning?</h2>
-    <p class="home-sub">Six questions practitioners are asking — each answered by an evidence-based brief drawn from the research below. Or search the collection and browse all the sources.</p>
-    <div class="tiles" id="tiles"></div>
-    <div class="home-foot"><button class="linkbtn" id="browseAll">Browse all the sources →</button></div>
+  <div class="cover">
+    <div class="cover-bg" aria-hidden="true"></div>
+    <div class="cover-lead">
+      <div class="cover-eyebrow">The Working Corpus — what the evidence says</div>
+      <h1 class="cover-h"><span>AI is changing</span><span>how we learn.</span><span class="em">Here's what actually holds up.</span></h1>
+      <div class="cover-finding" id="coverFinding" role="button" tabindex="0" title="Read this brief"></div>
+    </div>
+    <nav class="cover-index" id="coverIndex" aria-label="The six questions"></nav>
+    <button class="cover-browse" id="browseAll">Browse all the sources ↓</button>
   </div>
 </section>
 
@@ -3976,25 +3995,42 @@ window.CORPUS = {
     document.body.classList.remove("filters-on"); setView("results"); refresh(); }
   function browseAll(){ state.topic=null; state.q=""; searchEl.value="";
     document.body.classList.add("filters-on"); setView("results"); refresh(); }
-  const TILE_COLORS=["#0F766E","#3B6FB0","#B07A1E","#BC3B2C","#0E7C5A","#6D5BB0","#1F7A8C","#9A4A6B"];
-  function buildTiles(){
-    const el=document.getElementById("tiles");
-    el.innerHTML=QUESTIONS.map((t,i)=>{
+  // brightened topic colors that read on the dark cover
+  const COVER_COLORS=["#5FCBB8","#7CB0EA","#E6BC68","#EE8576","#62CF97","#B3A6EA","#5FC8D8","#E08FAE"];
+  let coverTimer=null;
+  function buildTiles(){   // builds the editorial "Briefing" cover
+    const idx=document.getElementById("coverIndex");
+    idx.innerHTML=QUESTIONS.map((t,i)=>{
       const c=nodes.filter(n=>tileMatch(n,t)).length;
-      const col=TILE_COLORS[i%TILE_COLORS.length];
-      const b=(C.briefs||{})[t.id]||{};
-      const conf=b.confidence||"", cls=/high/i.test(conf)?"c-high":/low|emerg/i.test(conf)?"c-low":"c-med";
       const num=String(i+1).padStart(2,"0");
-      const teaser='<p class="tteaser">'+esc(b.bottom_line||t.question)+'</p>';
-      const foot=conf?'<span class="conf '+cls+'">'+esc(conf)+' confidence</span>':'';
-      return '<button class="tile'+(i===0?' featured':'')+'" data-i="'+i+'" style="--tcol:'+col+';--i:'+i+'">'+
-        '<div class="tile-head"><span class="tnum">'+num+'</span>'+
-          '<span class="tc">'+c+' source'+(c===1?'':'s')+'</span></div>'+
-        '<div class="tt">'+esc(t.label)+'</div>'+teaser+
-        '<div class="tile-foot">'+foot+'<span class="tgo">Read the brief →</span></div>'+
+      return '<button class="ci-item" data-i="'+i+'" style="--tcol:'+COVER_COLORS[i%COVER_COLORS.length]+';--i:'+i+'">'+
+        '<span class="ci-num">'+num+'</span>'+
+        '<span class="ci-q">'+esc(t.question||t.label)+'</span>'+
+        '<span class="ci-meta">'+c+'</span>'+
       '</button>';
     }).join("");
-    el.querySelectorAll(".tile").forEach(b=>b.onclick=()=>openTopic(QUESTIONS[+b.dataset.i]));
+    idx.querySelectorAll(".ci-item").forEach(b=>b.onclick=()=>openTopic(QUESTIONS[+b.dataset.i]));
+    initFinding();
+  }
+  function initFinding(){
+    const el=document.getElementById("coverFinding"); if(!el) return;
+    const items=QUESTIONS.map((t,i)=>{ const b=(C.briefs||{})[t.id]||{};
+      return b.bottom_line?{i,label:t.label,quote:b.bottom_line}:null; }).filter(Boolean);
+    if(!items.length){ el.style.display="none"; return; }
+    let k=0;
+    const render=()=>{ const it=items[k]; el.dataset.qi=it.i;
+      el.innerHTML='<div class="cf-label"><span>Finding '+String(it.i+1).padStart(2,"0")+'</span></div>'+
+        '<p class="cf-quote">'+esc(it.quote)+'</p>'+
+        '<div class="cf-by">on <b>'+esc(it.label)+'</b> &middot; read the brief &rarr;</div>'; };
+    render(); requestAnimationFrame(()=>el.classList.add("show"));
+    el.onclick=()=>openTopic(QUESTIONS[+el.dataset.qi]);
+    el.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); openTopic(QUESTIONS[+el.dataset.qi]); } };
+    if(coverTimer) clearInterval(coverTimer);
+    if(items.length>1) coverTimer=setInterval(()=>{
+      if(!document.body.classList.contains("view-home")) return;
+      el.classList.remove("show");
+      setTimeout(()=>{ k=(k+1)%items.length; render(); el.classList.add("show"); },420);
+    },5400);
   }
   function citeify(s){
     // Render inline citations — [id] or (id, id) where EVERY token is a real source
@@ -4009,7 +4045,7 @@ window.CORPUS = {
     const b=(C.briefs||{})[q.id]; if(!b||!b.bottom_line) return "";
     const conf=b.confidence||"", cls=/high/i.test(conf)?"c-high":/low|emerg/i.test(conf)?"c-low":"c-med";
     const ul=(arr,c)=>'<ul'+(c?' class="'+c+'"':'')+'>'+arr.map(x=>'<li>'+citeify(x)+'</li>').join("")+'</ul>';
-    let h='<div class="brief"><div class="brief-top"><span class="conf '+cls+'" title="'+esc(b.confidence_reason||"")+'">'+esc(conf||"—")+' confidence</span></div>';
+    let h='<div class="brief">';
     h+='<p class="brief-bl">'+citeify(b.bottom_line)+'</p>';
     if(b.evidence) h+='<div class="brief-sec evidence"><span class="brief-h">What the evidence says</span><p>'+citeify(b.evidence)+'</p></div>';
     h+='<div class="brief-cols">';
