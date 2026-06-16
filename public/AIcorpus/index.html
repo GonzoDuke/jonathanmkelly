@@ -19,10 +19,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F6F8F8; --card:#FFFFFF; --ink:#16242E; --ink-soft:#5B6A75;
-    --rule:#E3E8EB; --rule-card:#EAEEF0; --accent:#0F766E; --accent-soft:#E6F2F0;
-    --panel:#FFFFFF; --line:#EAEEF0; --line2:#E3E8EB; --shadow:0 8px 28px rgba(18,42,55,.10);
-    --c-critical:#BC3B2C; --c-pro:#0E7C5A; --c-defl:#B07A1E; --c-context:#3B6FB0;
+    --paper:#13212C; --card:#1B2B37; --ink:#ECE7DD; --ink-soft:#94A3AC;
+    --rule:#2C3D49; --rule-card:#243240; --accent:#5FC9B6; --accent-soft:rgba(95,201,182,.14);
+    --panel:#1B2B37; --line:#243240; --line2:#2C3D49; --shadow:0 14px 40px rgba(0,0,0,.45);
+    --c-critical:#EE8576; --c-pro:#62CF97; --c-defl:#E6BC68; --c-context:#7CB0EA;
     --r-supports:#2E7D5B; --r-contradicts:#B3402E; --r-complicates:#C28E2D; --r-grounds:#3A6EA5; --r-paired:#7A5C9E;
     --serif:"Newsreader",Georgia,"Times New Roman",serif;
     --sans:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
@@ -39,7 +39,7 @@
   .tile:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(18,42,55,.15)!important}
   a,.cite,.linkbtn{color:var(--accent)}
   .hbtn{border-radius:8px;border-color:var(--rule)}
-  .hbtn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+  .hbtn:hover{background:var(--accent);border-color:var(--accent);color:#0E1A22}
   .hbtn.ghost:hover{color:var(--accent);border-color:var(--accent);background:none}
   .sec-no{background:var(--accent)!important}
   .rec.sel,.facet-row.active{box-shadow:inset 3px 0 0 var(--accent)!important}
@@ -49,7 +49,7 @@
   .rec .rby,.byline,.card-body .byline{font-family:var(--sans)}
   .home-sub{font-family:var(--sans)}
   #detail{z-index:560!important;border-left:1px solid var(--rule)!important}  /* sit ABOVE the map overlay (500) so a node click shows the source */
-  body.mapOpen #detail.open{box-shadow:-18px 0 50px rgba(18,42,55,.28)}
+  body.mapOpen #detail.open{box-shadow:-18px 0 50px rgba(0,0,0,.55)}
   /* ---------- header ---------- */
   header{
     padding:19px 26px 17px;
@@ -65,7 +65,7 @@
   .search-toggle{display:inline-flex;align-items:center;justify-content:center;padding:7px 9px;line-height:0}
   .search-toggle svg{display:block}
   #search{font-family:var(--serif);font-size:14px;border:1px solid var(--ink);background:var(--card);color:var(--ink);outline:none;width:0;padding:7px 0;border-width:0;opacity:0;overflow:hidden;transition:width .24s cubic-bezier(.2,.7,.3,1),opacity .18s ease,padding .24s ease}
-  .searchwrap.open #search{width:min(300px,46vw);padding:7px 11px;border-width:1px;margin-left:-1px}
+  .searchwrap.open #search{width:min(300px,46vw);padding:7px 11px;border-width:1px;margin-left:-1px;opacity:1}
   #search:focus{box-shadow:0 0 0 2px rgba(15,118,110,.22)}
   .hbtn{
     font-family:var(--mono);font-size:11px;letter-spacing:.02em;white-space:nowrap;
@@ -77,11 +77,37 @@
   .hbtn.ghost:hover{border-color:var(--ink);color:var(--ink);background:none}
   /* ---------- main split: facet rail + catalog ---------- */
   main{flex:1 1 auto;display:flex;min-height:0}
-  #facets{
-    flex:0 0 300px;overflow-y:auto;padding:15px 16px 40px;
-    border-right:1.5px solid var(--ink);background:var(--paper);
-  }
-  .rail-title{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);border-bottom:1.5px solid var(--ink);padding-bottom:7px;margin-bottom:13px}
+  #facets{flex:0 0 290px;overflow-y:auto;padding:18px 14px 40px;border-right:1px solid var(--rule);background:#0F1B24}
+  /* persistent Briefing-Room nav (always present in the interior) */
+  #navrail{display:flex;flex-direction:column}
+  .nav-back{display:flex;align-items:center;gap:7px;width:100%;background:none;border:0;color:var(--ink-soft);font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.02em;padding:6px 8px;cursor:pointer;border-radius:6px}
+  .nav-back:hover{color:var(--accent)}
+  .nav-label{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#6E7E88;margin:18px 8px 6px}
+  .nav-item{display:flex;align-items:baseline;gap:11px;width:100%;text-align:left;background:none;border:0;border-left:2px solid transparent;color:var(--ink-soft);font-family:var(--serif);font-size:14px;line-height:1.24;padding:8px 10px 8px 9px;cursor:pointer;border-radius:0 6px 6px 0;transition:color .15s,background .15s,border-color .15s}
+  .nav-item:hover{color:var(--ink);background:rgba(255,255,255,.035)}
+  .nav-item.active{color:#fff;background:var(--accent-soft);border-left-color:var(--tcol,var(--accent))}
+  .nav-num{font-family:var(--serif);font-size:12px;font-weight:600;color:var(--tcol,var(--accent));min-width:17px;flex:0 0 auto}
+  .nav-sep{height:1px;background:var(--rule);margin:14px 6px 4px}
+  .nav-fixed{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:0;color:var(--ink-soft);font-family:var(--sans);font-size:13.5px;font-weight:600;padding:9px 10px;cursor:pointer;border-radius:6px}
+  .nav-fixed:hover{color:var(--ink);background:rgba(255,255,255,.035)}
+  .nav-fixed.active{color:#fff;background:var(--accent-soft)}
+  .nav-fixed .ni{font-size:14px;opacity:.85}
+  /* filters live in the rail ONLY in the library view */
+  #filterrail{display:none;margin-top:16px;border-top:1px solid var(--rule);padding-top:8px}
+  body.view-library #filterrail{display:block}
+  /* unified brief page */
+  .brief-inner{max-width:760px}
+  .bp-eyebrow{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  .bp-title{font-family:var(--serif);font-size:clamp(26px,3.4vw,40px);font-weight:600;line-height:1.1;letter-spacing:-.02em;margin:0 0 18px;max-width:20ch}
+  .brief-page .brief{border:0!important;box-shadow:none!important;background:none;padding:0;margin:0}
+  .ev-div{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:40px 0 4px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+  .ev-div .evh{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+  .ev-div .ev-n{font-family:var(--sans);font-size:11px;color:var(--ink-soft)}
+  .bp-nav{display:flex;justify-content:space-between;gap:16px;margin-top:44px;padding-top:18px;border-top:1px solid var(--rule)}
+  .bp-nav button{font-family:var(--serif);font-size:15px;font-weight:500;color:var(--ink-soft);background:none;border:0;cursor:pointer;max-width:46%}
+  .bp-nav .bp-next{text-align:right;margin-left:auto}
+  .bp-nav button:hover{color:var(--accent)}
+  .rail-title{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#6E7E88;border-bottom:1px solid var(--rule);padding-bottom:7px;margin-bottom:13px}
   .facet-group{margin-bottom:15px}
   .facet-group > .fg-label{
     font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;
@@ -199,7 +225,7 @@
   .res-title .rn{font-family:var(--mono);font-size:11px;font-weight:400;color:var(--ink-soft);align-self:center}
   .filters-toggle{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--ink-soft);background:none;border:1px solid var(--rule);padding:5px 11px;cursor:pointer}
   .filters-toggle.on,.filters-toggle:hover{border-color:var(--ink);color:var(--ink)}
-  body:not(.filters-on) #facets{display:none}
+  /* the rail (nav + library filters) is always present in the interior */
   /* ---------- practice brief ---------- */
   .brief{background:var(--card);padding:34px 38px 28px;margin:6px 0 8px;position:relative}
   .brief-top{display:flex;justify-content:flex-end;margin-bottom:6px}
@@ -364,6 +390,9 @@
     *{transition:none !important;animation:none !important}
     .tile,.cover-eyebrow,.cover-h span,.ci-item,.cover-browse,.cover-finding{opacity:1 !important;transform:none !important}
   }
+  /* ===== dark-mode fixups: hardcoded light values that don't cascade from :root ===== */
+  .sec-div .sec-no{color:#0E1A22}
+  .wcard{box-shadow:0 30px 80px rgba(0,0,0,.6)}
 </style>
 </head>
 <body class="view-home">
@@ -3827,7 +3856,10 @@ window.CORPUS = {
 </section>
 
 <main>
-  <nav id="facets" aria-label="Filters"></nav>
+  <nav id="facets" aria-label="Navigation and filters">
+    <div id="navrail"></div>
+    <div id="filterrail"></div>
+  </nav>
   <section id="catalog"></section>
 </main>
 
@@ -3947,8 +3979,8 @@ window.CORPUS = {
   ];
   const facetRows = [];   // {group, val, set, btn, countEl}
   function buildFacets(){
-    const root=document.getElementById("facets");
-    root.innerHTML='<div class="rail-title">Filters</div>';
+    const root=document.getElementById("filterrail");
+    root.innerHTML='<div class="rail-title">Refine</div>';
     FGROUPS.forEach(g=>{
       const collapsible = g.key==="theme" || g.key==="year";
       const grp=document.createElement("div");
@@ -3987,14 +4019,37 @@ window.CORPUS = {
     });
   }
 
+  // ---------- persistent Briefing-Room nav ----------
+  let navItems=[];
+  function buildNav(){
+    const nav=document.getElementById("navrail"); if(!nav) return;
+    let h='<button class="nav-back" id="navBack">‹ The Briefing</button>';
+    h+='<div class="nav-label">The briefs</div>';
+    h+=QUESTIONS.map((t,i)=>'<button class="nav-item" data-kind="brief" data-i="'+i+'" style="--tcol:'+COVER_COLORS[i%COVER_COLORS.length]+'"><span class="nav-num">'+String(i+1).padStart(2,"0")+'</span><span>'+esc(t.label)+'</span></button>').join("");
+    h+='<div class="nav-sep"></div>';
+    h+='<button class="nav-fixed" data-kind="library"><span class="ni">▦</span> All sources</button>';
+    h+='<button class="nav-fixed" data-kind="map"><span class="ni">◉</span> Relation map</button>';
+    nav.innerHTML=h;
+    nav.querySelector("#navBack").onclick=goHome;
+    navItems=[...nav.querySelectorAll(".nav-item,.nav-fixed")];
+    navItems.forEach(b=>{ const kind=b.dataset.kind;
+      b.onclick=()=> kind==="brief"?openTopic(QUESTIONS[+b.dataset.i]) : kind==="library"?browseAll() : openMap(); });
+  }
+  function updateNav(){
+    navItems.forEach(b=>{ const kind=b.dataset.kind; let on=false;
+      if(kind==="brief") on = state.topic===QUESTIONS[+b.dataset.i];
+      else if(kind==="library") on = !state.topic && state.view==="results";
+      b.classList.toggle("active", !!on); });
+  }
+
   // ---------- home / topics / browse navigation ----------
   function goHome(){ state.topic=null; state.q=""; searchEl.value=""; state.selected=null;
-    document.body.classList.remove("filters-on"); setView("home"); }
+    document.body.classList.remove("view-brief","view-library"); setView("home"); }
   function openTopic(t){ state.topic=t; state.q=""; searchEl.value=""; state.selected=null; state.sort="evidence";
     [state.camps,state.evs,state.sections,state.themes,state.years].forEach(s=>s.clear());
-    document.body.classList.remove("filters-on"); setView("results"); refresh(); }
+    document.body.classList.add("view-brief"); document.body.classList.remove("view-library"); setView("results"); refresh(); }
   function browseAll(){ state.topic=null; state.q=""; searchEl.value="";
-    document.body.classList.add("filters-on"); setView("results"); refresh(); }
+    document.body.classList.add("view-library"); document.body.classList.remove("view-brief"); setView("results"); refresh(); }
   // brightened topic colors that read on the dark cover
   const COVER_COLORS=["#5FCBB8","#7CB0EA","#E6BC68","#EE8576","#62CF97","#B3A6EA","#5FC8D8","#E08FAE"];
   let coverTimer=null;
@@ -4062,7 +4117,7 @@ window.CORPUS = {
   const searchEl=document.getElementById("search");
   searchEl.addEventListener("input",()=>{
     state.q=searchEl.value.trim().toLowerCase(); state.selected=null;
-    if(state.q){ state.topic=null; if(state.view!=="results") setView("results"); }
+    if(state.q){ state.topic=null; document.body.classList.add("view-library"); document.body.classList.remove("view-brief"); if(state.view!=="results") setView("results"); }
     refresh();
   });
   // expanding search: tucked behind a ⌕ icon until clicked
@@ -4117,44 +4172,57 @@ window.CORPUS = {
     if(state.q) c.push('<button class="crumb" data-clear="q"><span class="cg">Search:</span> “'+esc(state.q)+'”<span class="x">✕</span></button>');
     return c.join("");
   }
-  function renderList(matched){
-    const total=nodes.length, filt=filtering();
-    const sortOpts=SORTS.map(s=>'<option value="'+s[0]+'"'+(s[0]===state.sort?' selected':'')+'>'+s[1]+'</option>').join("");
-    let ctx, icon="";
-    if(state.topic){ icon=state.topic.icon; ctx=esc(state.topic.question||state.topic.label||""); }
-    else if(state.q){ ctx='Results for “'+esc(state.q)+'”'; }
-    else { ctx='All sources'; }
-    const filtersOn=document.body.classList.contains("filters-on");
-    let h='<div class="res-head">'+
-      '<button class="back-topics" id="backTopics">← Topics</button>'+
-      '<span class="res-title">'+(icon?'<span class="ri">'+icon+'</span>':'')+ctx+
-        ' <span class="rn">'+matched.length+(matched.length===1?' source':' sources')+(filt?' of '+total:'')+'</span></span>'+
-      '<button class="filters-toggle'+(filtersOn?' on':'')+'" id="filtToggle" title="Refine with filters">⚙ Filters</button>'+
-      '<span class="sortwrap"><label>Arrange</label><select id="sortSel">'+sortOpts+'</select></span></div>';
-    const cr=crumbHtml();
-    if(cr) h+='<div class="results-bar"><span class="crumbs">'+cr+'</span></div>';
-    if(state.topic){ const bh=briefHtml(state.topic);
-      if(bh) h+=bh+'<div class="srcs-h">The sources behind this · '+matched.length+'</div>'; }
-    if(!matched.length){ catalogEl.innerHTML='<div class="cat-inner">'+h+'<div class="empty">No sources match — try another topic, or '+(state.topic?'broaden':'loosen')+' your search.</div></div>'; wireBar(); return; }
-    if(state.sort==="section"){
-      const bySec={}; matched.forEach(n=>{ (bySec[n.section]=bySec[n.section]||[]).push(n); });
-      Object.keys(bySec).sort((a,b)=>(+a)-(+b)).forEach(sk=>{
-        const rows=bySec[sk].sort((a,b)=>(a.authors||a.label).localeCompare(b.authors||b.label));
-        h+='<div class="sec-div"><span class="sec-no">'+sk+'</span><span class="sec-title">'+esc(C.sections[sk]||"")+'</span><span class="sec-count">'+rows.length+'</span></div>';
-        h+=rows.map(recHtml).join("");
-      });
-    } else {
-      h+=[...matched].sort(sorter(state.sort)).map(recHtml).join("");
-    }
-    catalogEl.innerHTML='<div class="cat-inner">'+h+'</div>';
+  function wireRecords(){
     catalogEl.querySelectorAll(".rec").forEach(r=>{
       r.onclick=e=>{ if(e.target.classList.contains("rsub")) return; state.selected=r.dataset.id; refresh(); };
       r.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){e.preventDefault();state.selected=r.dataset.id;refresh();} };
     });
     catalogEl.querySelectorAll(".rsub").forEach(s=>s.onclick=e=>{ e.stopPropagation();
-      state.selected=null; state.themes.add(s.dataset.t); refresh(); });
+      state.themes.add(s.dataset.t); state.selected=null; browseAll(); });   // theme pill → library filtered by that subject
     catalogEl.querySelectorAll(".cite").forEach(c=>c.onclick=e=>{ e.stopPropagation(); if(c.dataset.id){ state.selected=c.dataset.id; refresh(); } });
-    wireBar();
+  }
+  function recordsHtml(matched){
+    if(state.sort==="section"){
+      let h=""; const bySec={}; matched.forEach(n=>{ (bySec[n.section]=bySec[n.section]||[]).push(n); });
+      Object.keys(bySec).sort((a,b)=>(+a)-(+b)).forEach(sk=>{
+        const rows=bySec[sk].sort((a,b)=>(a.authors||a.label).localeCompare(b.authors||b.label));
+        h+='<div class="sec-div"><span class="sec-no">'+sk+'</span><span class="sec-title">'+esc(C.sections[sk]||"")+'</span><span class="sec-count">'+rows.length+'</span></div>';
+        h+=rows.map(recHtml).join("");
+      });
+      return h;
+    }
+    return [...matched].sort(sorter(state.sort)).map(recHtml).join("");
+  }
+  function renderBrief(matched){
+    const t=state.topic, i=QUESTIONS.indexOf(t), num=String(i+1).padStart(2,"0");
+    const ev=[...matched].sort(sorter("evidence"));
+    let h='<div class="brief-page">';
+    h+='<div class="bp-eyebrow">Brief '+num+'</div>';
+    h+='<h1 class="bp-title">'+esc(t.question||t.label)+'</h1>';
+    const bh=briefHtml(t); if(bh) h+=bh;
+    h+='<div class="ev-div"><span class="evh">The evidence</span><span class="ev-n">'+ev.length+' source'+(ev.length===1?'':'s')+' · strongest first</span></div>';
+    h+=ev.map(recHtml).join("");
+    const prev=(i-1+QUESTIONS.length)%QUESTIONS.length, next=(i+1)%QUESTIONS.length;
+    h+='<div class="bp-nav"><button class="bp-prev" data-i="'+prev+'">‹ '+esc(QUESTIONS[prev].label)+'</button><button class="bp-next" data-i="'+next+'">'+esc(QUESTIONS[next].label)+' ›</button></div>';
+    h+='</div>';
+    catalogEl.innerHTML='<div class="cat-inner brief-inner">'+h+'</div>';
+    wireRecords();
+    catalogEl.querySelectorAll(".bp-prev,.bp-next").forEach(b=>b.onclick=()=>openTopic(QUESTIONS[+b.dataset.i]));
+  }
+  function renderList(matched){
+    if(state.topic){ renderBrief(matched); return; }   // brief view
+    const total=nodes.length, filt=filtering();
+    const sortOpts=SORTS.map(s=>'<option value="'+s[0]+'"'+(s[0]===state.sort?' selected':'')+'>'+s[1]+'</option>').join("");
+    const ctx = state.q ? 'Results for “'+esc(state.q)+'”' : 'All sources';
+    let h='<div class="res-head">'+
+      '<span class="res-title">'+ctx+' <span class="rn">'+matched.length+(matched.length===1?' source':' sources')+(filt?' of '+total:'')+'</span></span>'+
+      '<span class="sortwrap"><label>Sort</label><select id="sortSel">'+sortOpts+'</select></span></div>';
+    const cr=crumbHtml();
+    if(cr) h+='<div class="results-bar"><span class="crumbs">'+cr+'</span></div>';
+    if(!matched.length){ catalogEl.innerHTML='<div class="cat-inner">'+h+'<div class="empty">No sources match — loosen your search or clear a filter.</div></div>'; wireBar(); return; }
+    h+=recordsHtml(matched);
+    catalogEl.innerHTML='<div class="cat-inner">'+h+'</div>';
+    wireRecords(); wireBar();
   }
   function wireBar(){
     const ss=document.getElementById("sortSel");
@@ -4197,7 +4265,7 @@ window.CORPUS = {
   nodeSel.append("circle")
     .attr("r",d=>d.evidence==="High (causal)"?11:9)
     .attr("fill",d=>campColor[d.camp])
-    .attr("stroke",d=>d.evidence==="High (causal)"?"#1C2630":"#FAF9F5")
+    .attr("stroke",d=>d.evidence==="High (causal)"?"#ECE7DD":"rgba(255,255,255,.22)")
     .attr("stroke-width",d=>d.evidence==="High (causal)"?2.5:1.5);
   nodeSel.append("text").attr("class","node-label").attr("dy",d=>(d.evidence==="High (causal)"?24:21))
     .text(d=>d.label);
@@ -4292,7 +4360,7 @@ window.CORPUS = {
         const s=d.source.id||d.source, t=d.target.id||d.target;
         return state.selected&&(s===state.selected||t===state.selected)?2.5:1.5;
       });
-    renderFacets();
+    renderFacets(); updateNav();
     renderList(matched);
     if(state.selected&&byId[state.selected]){ renderCard(byId[state.selected]); detailEl.classList.add("open"); }
     else closeDetail();
@@ -4319,6 +4387,7 @@ window.CORPUS = {
     state.selected=null; setView("results"); refresh(); });
 
   buildTiles();
+  buildNav();
   buildFacets();
   setView("home");
   refresh();
