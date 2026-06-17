@@ -433,12 +433,21 @@
   .map-legend .lg-ring.r-none{border:1px solid rgba(255,255,255,.18)}
   @media (max-width:760px){ .map-legend{display:none} }
   /* domains in the nav + click-to-filter affordances */
-  .nav-dom{display:flex;align-items:center;gap:9px;width:100%;text-align:left;background:none;border:0;border-left:2px solid transparent;color:var(--ink-soft);font-family:var(--sans);font-size:12.5px;padding:6px 10px 6px 9px;cursor:pointer;border-radius:0 6px 6px 0;transition:color .15s,background .15s,border-color .15s}
-  .nav-dom:hover{color:var(--ink);background:rgba(255,255,255,.035)}
-  .nav-dom.active{color:#fff;background:var(--accent-soft);border-left-color:var(--tcol,var(--accent))}
+  .nav-dom,.nav-st{display:flex;align-items:center;gap:9px;width:100%;text-align:left;background:none;border:0;border-left:2px solid transparent;color:var(--ink-soft);font-family:var(--sans);font-size:12.5px;padding:6px 10px 6px 9px;cursor:pointer;border-radius:0 6px 6px 0;transition:color .15s,background .15s,border-color .15s}
+  .nav-dom:hover,.nav-st:hover{color:var(--ink);background:rgba(255,255,255,.035)}
+  .nav-dom.active,.nav-st.active{color:#fff;background:var(--accent-soft);border-left-color:var(--tcol,var(--accent))}
+  .nav-st.zero{opacity:.42}
   .nav-ddot{width:8px;height:8px;border-radius:50%;background:var(--tcol);flex:0 0 auto}
   .nav-dname{flex:1 1 auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .nav-dcount{font-family:var(--mono);font-size:10px;color:var(--ink-soft);flex:0 0 auto}
+  /* collapsible nav groups (briefs, stance) — default closed */
+  .nav-grp{margin:2px 0}
+  .nav-gh{display:flex;align-items:center;justify-content:space-between;width:100%;background:none;border:0;cursor:pointer;font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#6E7E88;padding:10px 8px 8px}
+  .nav-gh:hover{color:var(--ink-soft)}
+  .nav-gh .nav-arrow{font-size:9px;opacity:.8;transition:transform .18s}
+  .nav-grp.open .nav-gh .nav-arrow{transform:rotate(90deg)}
+  .nav-grp-body{display:none;padding-bottom:2px}
+  .nav-grp.open .nav-grp-body{display:block}
   .dbadge[data-domain]{cursor:pointer}
   .dbadge[data-domain]:hover{background:color-mix(in srgb,var(--dc,#888) 28%,transparent)}
   .dom-div[data-domain]{cursor:pointer}
@@ -4820,7 +4829,6 @@ window.CORPUS = {
 <main>
   <nav id="facets" aria-label="Navigation and filters">
     <div id="navrail"></div>
-    <div id="filterrail"></div>
   </nav>
   <section id="catalog"></section>
 </main>
@@ -4939,59 +4947,9 @@ window.CORPUS = {
     return c;
   }
 
-  // ---------- facet rail ----------
-  const FGROUPS = [
-    {key:"domain", label:"Domain",  set:state.domains,
-      values:DOMAIN_ORDER.map(d=>({val:d, name:d, dot:domainColor[d]}))},
-    {key:"stance", label:"Stance",  set:state.stances,
-      values:STANCE_ORDER.map(s=>({val:s, name:stanceLabel[s], dot:stanceColor[s]}))},
-    {key:"ev",    label:"Evidence", set:state.evs,
-      values:evOrder.map(e=>({val:e, name:e}))},
-    {key:"theme", label:"Themes",   set:state.themes, scroll:true,
-      values:themeList.map(t=>({val:t, name:t}))},
-    {key:"year",  label:"Year",     set:state.years,
-      values:yearList.map(y=>({val:String(y), name:String(y)}))},
-  ];
-  const facetRows = [];   // {group, val, set, btn, countEl}
-  function buildFacets(){
-    const root=document.getElementById("filterrail");
-    root.innerHTML='<div class="rail-title">Refine</div>';
-    FGROUPS.forEach(g=>{
-      const collapsible = g.key==="theme" || g.key==="year";
-      const grp=document.createElement("div");
-      grp.className="facet-group"+(g.scroll?" scroll":"")+(collapsible?" collapsible collapsed":"");
-      const lbl=document.createElement("div"); lbl.className="fg-label";
-      lbl.innerHTML='<span>'+g.label+'</span>'+(collapsible?'<span class="fg-arrow">▸</span>':'');
-      if(collapsible) lbl.onclick=()=>{ grp.classList.toggle("collapsed");
-        lbl.querySelector(".fg-arrow").textContent=grp.classList.contains("collapsed")?'▸':'▾'; };
-      grp.appendChild(lbl);
-      const rows=document.createElement("div"); rows.className="fg-rows";
-      g.values.forEach(v=>{
-        const b=document.createElement("button"); b.className="facet-row";
-        const tab = v.dot
-          ? '<span class="fdot" style="background:'+v.dot+'"></span>'
-          : '<span class="ftab" style="background:var(--rule)"></span>';
-        b.innerHTML=tab+'<span class="fname">'+esc(v.name)+'</span><span class="fcount"></span>';
-        b.title = g.key==="domain" ? (DOMAIN_GLOSS[v.val]||"") : g.key==="stance" ? (STANCE_GLOSS[v.val]||"") : g.key==="ev" ? (EV_GLOSS[v.val]||"") : "";
-        const countEl=b.querySelector(".fcount");
-        b.onclick=()=>{ g.set.has(v.val)?g.set.delete(v.val):g.set.add(v.val); state.selected=null; refresh(); };
-        rows.appendChild(b);
-        facetRows.push({group:g.key, val:v.val, set:g.set, btn:b, countEl});
-      });
-      grp.appendChild(rows);
-      root.appendChild(grp);
-      if(g.key==="domain"){
-        const xt=document.createElement("button"); xt.className="xtag-toggle"+(state.crossTag?" on":"");
-        xt.innerHTML='<span class="xtbox">'+(state.crossTag?'☑':'☐')+'</span> Include cross-tagged';
-        xt.title="Off: a Domain shows its primary members only. On: also surface sources cross-tagged to it (counts then overlap).";
-        xt.onclick=()=>{ state.crossTag=!state.crossTag; xt.classList.toggle("on",state.crossTag); xt.querySelector(".xtbox").textContent=state.crossTag?'☑':'☐'; state.selected=null; refresh(); };
-        root.appendChild(xt);
-      }
-    });
-    const clr=document.createElement("button"); clr.id="clearAll"; clr.className="hbtn ghost"; clr.textContent="Clear all filters";
-    clr.onclick=()=>document.getElementById("clearBtn").click();
-    root.appendChild(clr);
-  }
+  // ---------- facet state ----------
+  // Domain + Stance filters live in the persistent nav (buildNav); no separate filter rail.
+  const facetRows = [];   // populated by buildNav (stance rows); kept in sync by renderFacets
   function renderFacets(){
     facetRows.forEach(r=>{
       const c=countFor(r.group, r.val);
@@ -4999,6 +4957,8 @@ window.CORPUS = {
       r.btn.classList.toggle("active", r.set.has(r.val));
       r.btn.classList.toggle("zero", c===0 && !r.set.has(r.val));
     });
+    const xt=document.getElementById("xtagToggle");
+    if(xt){ xt.classList.toggle("on",state.crossTag); xt.querySelector(".xtbox").textContent=state.crossTag?'☑':'☐'; }
   }
 
   // ---------- persistent Briefing-Room nav ----------
@@ -5006,20 +4966,40 @@ window.CORPUS = {
   function buildNav(){
     const nav=document.getElementById("navrail"); if(!nav) return;
     let h='<button class="nav-back" id="navBack">‹ The Briefing</button>';
-    h+='<div class="nav-label">The briefs</div>';
-    h+=QUESTIONS.map((t,i)=>'<button class="nav-item" data-kind="brief" data-i="'+i+'" style="--tcol:'+COVER_COLORS[i%COVER_COLORS.length]+'"><span class="nav-num">'+String(i+1).padStart(2,"0")+'</span><span>'+esc(t.label)+'</span></button>').join("");
+    // The briefs — collapsible, default closed
+    h+='<div class="nav-grp" id="grpBriefs"><button class="nav-gh"><span>The briefs</span><span class="nav-arrow">▸</span></button><div class="nav-grp-body">'+
+      QUESTIONS.map((t,i)=>'<button class="nav-item" data-kind="brief" data-i="'+i+'" style="--tcol:'+COVER_COLORS[i%COVER_COLORS.length]+'"><span class="nav-num">'+String(i+1).padStart(2,"0")+'</span><span>'+esc(t.label)+'</span></button>').join("")+
+      '</div></div>';
     h+='<div class="nav-sep"></div>';
     h+='<button class="nav-fixed" data-kind="library"><span class="ni">▦</span> All sources</button>';
     h+='<div class="nav-label">By domain</div>';
     h+=DOMAIN_ORDER.map(d=>{ const c=nodes.filter(n=>n.domain===d).length;
       return '<button class="nav-dom" data-kind="domain" data-domain="'+esc(d)+'" style="--tcol:'+domainColor[d]+'"><span class="nav-ddot"></span><span class="nav-dname">'+esc(domainShort[d]||d)+'</span><span class="nav-dcount">'+c+'</span></button>'; }).join("");
+    h+='<button class="xtag-toggle'+(state.crossTag?' on':'')+'" id="xtagToggle" title="Off: a domain shows its primary members only. On: also surface sources cross-tagged to it."><span class="xtbox">'+(state.crossTag?'☑':'☐')+'</span> Include cross-tagged</button>';
+    // Stance — collapsible, default closed (faceted counts, multi-select)
+    h+='<div class="nav-grp" id="grpStance"><button class="nav-gh"><span>Stance</span><span class="nav-arrow">▸</span></button><div class="nav-grp-body">'+
+      STANCE_ORDER.map(s=>'<button class="nav-st" data-stance="'+esc(s)+'" style="--tcol:'+stanceColor[s]+'" title="'+esc(STANCE_GLOSS[s]||"")+'"><span class="nav-ddot"></span><span class="nav-dname">'+esc(stanceLabel[s])+'</span><span class="nav-dcount"></span></button>').join("")+
+      '</div></div>';
     h+='<div class="nav-sep"></div>';
     h+='<button class="nav-fixed" data-kind="map"><span class="ni">◉</span> Relation map</button>';
     nav.innerHTML=h;
     nav.querySelector("#navBack").onclick=goHome;
+    nav.querySelectorAll(".nav-gh").forEach(gh=>gh.onclick=()=>gh.closest(".nav-grp").classList.toggle("open"));
+    const xt=nav.querySelector("#xtagToggle");
+    xt.onclick=()=>{ state.crossTag=!state.crossTag; state.selected=null; refresh(); };
     navItems=[...nav.querySelectorAll(".nav-item,.nav-fixed,.nav-dom")];
     navItems.forEach(b=>{ const kind=b.dataset.kind;
       b.onclick=()=> kind==="brief"?openTopic(QUESTIONS[+b.dataset.i]) : kind==="library"?browseAll() : kind==="domain"?goDomain(b.dataset.domain) : openMap(); });
+    nav.querySelectorAll(".nav-st").forEach(b=>{ const s=b.dataset.stance;
+      b.onclick=()=>toggleStance(s);
+      facetRows.push({group:"stance", val:s, set:state.stances, btn:b, countEl:b.querySelector(".nav-dcount")});
+    });
+  }
+  function toggleStance(s){   // stance filter lives in the nav; clicking routes to the filtered library
+    state.topic=null; state.selected=null;
+    state.stances.has(s)?state.stances.delete(s):state.stances.add(s);
+    document.body.classList.add("view-library"); document.body.classList.remove("view-brief");
+    setView("results"); refresh();
   }
   function updateNav(){
     const oneDom = !state.topic && state.domains.size===1 ? [...state.domains][0] : null;
@@ -5028,6 +5008,8 @@ window.CORPUS = {
       else if(kind==="library") on = !state.topic && state.view==="results" && !oneDom;
       else if(kind==="domain") on = oneDom===b.dataset.domain;
       b.classList.toggle("active", !!on); });
+    if(state.topic){ const g=document.getElementById("grpBriefs"); if(g) g.classList.add("open"); }
+    if(state.stances.size){ const g=document.getElementById("grpStance"); if(g) g.classList.add("open"); }
   }
   function buildLegend(){
     const el=document.getElementById("mapLegend"); if(!el) return;
@@ -5118,7 +5100,7 @@ window.CORPUS = {
   searchEl.addEventListener("keydown",e=>{ if(e.key==="Escape"){ searchEl.value=""; state.q=""; searchWrap.classList.remove("open"); refresh(); } });
   document.getElementById("clearBtn").onclick=()=>{
     [state.domains,state.stances,state.evs,state.themes,state.years].forEach(s=>s.clear());
-    state.rels=new Set(relOrder); state.sort="evidence"; goHome();
+    state.crossTag=false; state.rels=new Set(relOrder); state.sort="evidence"; goHome();
   };
   const mFacetsBtn=document.getElementById("mFacets");
   if(mFacetsBtn) mFacetsBtn.onclick=()=>document.body.classList.toggle("facetsOpen");
@@ -5391,7 +5373,6 @@ window.CORPUS = {
   buildTiles();
   buildNav();
   buildLegend();
-  buildFacets();
   setView("home");
   refresh();
 })();
