@@ -4996,7 +4996,7 @@ window.CORPUS = {
     });
   }
   function toggleStance(s){   // stance filter lives in the nav; clicking routes to the filtered library
-    state.topic=null; state.selected=null;
+    state.topic=null; state.selected=null; resetSearch();
     state.stances.has(s)?state.stances.delete(s):state.stances.add(s);
     document.body.classList.add("view-library"); document.body.classList.remove("view-brief");
     setView("results"); refresh();
@@ -5024,16 +5024,21 @@ window.CORPUS = {
   }
 
   // ---------- home / topics / browse navigation ----------
-  function goHome(){ state.topic=null; state.q=""; searchEl.value=""; state.selected=null;
+  function resetSearch(){   // search is a transient lookup — clear the query + collapse the box on any navigation
+    state.q="";
+    const el=document.getElementById("search"); if(el) el.value="";
+    const w=document.getElementById("searchwrap"); if(w) w.classList.remove("open");
+  }
+  function goHome(){ state.topic=null; resetSearch(); state.selected=null;
     document.body.classList.remove("view-brief","view-library"); setView("home"); }
-  function openTopic(t){ state.topic=t; state.q=""; searchEl.value=""; state.selected=null; state.sort="evidence";
+  function openTopic(t){ state.topic=t; resetSearch(); state.selected=null; state.sort="evidence";
     [state.domains,state.stances,state.evs,state.themes,state.years].forEach(s=>s.clear());
     document.body.classList.add("view-brief"); document.body.classList.remove("view-library"); setView("results"); refresh(); }
-  function browseAll(){ state.topic=null; state.q=""; searchEl.value="";
+  function browseAll(){ state.topic=null; resetSearch();
     document.body.classList.add("view-library"); document.body.classList.remove("view-brief"); setView("results"); refresh(); }
   function goDomain(d, opts){   // focus the library on a single domain (click-to-filter)
     opts=opts||{};
-    state.topic=null; state.q=""; if(searchEl) searchEl.value="";
+    state.topic=null; resetSearch();
     [state.stances,state.evs,state.themes,state.years].forEach(s=>s.clear());
     state.domains=new Set([d]);
     if(opts.cross) state.crossTag=true;
