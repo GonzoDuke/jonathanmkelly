@@ -594,160 +594,160 @@ window.CORPUS = {
   ],
   "briefs": {
     "tutoring": {
-      "bottom_line": "Yes, but only with deliberate design and teacher oversight — well-structured AI tutors can meaningfully boost learning, but unguarded access likely harms long-term retention and critical thinking.",
-      "evidence": "The strongest causal evidence supports cautious optimism: Kestin (2025) found a purpose-built AI tutor outperformed active classroom instruction in an RCT, and Bastani (2024) showed a guardrailed hint-based tutor prevented the retention harm caused by an unguarded GPT-4 tutor (~17% worse on post-intervention tests). De Simone (2025) found teacher-supervised GPT-4 raised English scores by 0.23 SD in a large RCT, underlining that facilitation and monitoring were the active ingredients. The Dong meta-analysis broadly favors generative AI, but effect sizes and contexts vary; Khan's sweeping optimism about 'two-sigma' personalization comes from a source with direct commercial stake and rests on argument rather than experiment.",
+      "bottom_line": "Well-designed, guardrailed AI tutors can produce meaningful learning gains, but design and implementation details are decisive — an unguarded AI can actively harm learning, and most positive results come from carefully controlled conditions rather than typical classroom deployment.",
+      "evidence": "The strongest causal evidence shows that a deliberately designed AI tutor outperformed in-class active learning on both speed and outcomes [kestin], a guardrailed hint-based tutor prevented the ~17% learning loss caused by an unguarded GPT-4 [bastani], and teacher-supervised AI use raised English scores 0.23 SD in a real-world field trial [desimone]. A theory-informed chatbot built on generative learning principles also consistently outperformed generic ChatGPT and controls across two pre-registered experiments [makransky]. However, a pre-registered RCT found no significant advantage for GenAI interventions targeting self-regulation over a standard ChatGPT control [futterer], and a methodological critique warns that most reported effects in this literature are uninterpretable due to poorly specified treatments and controls [weidlich]. A supporting meta-analysis finds generally positive effects for GenAI tools [dong-meta-analysis], but gains shrink when AI tutors are compared directly to non-AI tutoring alternatives [letourneau], and survey evidence warns that higher trust in AI predicts less critical thinking in users [lee-chi].",
       "do": [
-        "Use guardrailed AI tutors that give hints and prompt reasoning rather than providing direct answers — Bastani's RCT shows this single design choice is the difference between learning gain and harm.",
-        "Keep a teacher or facilitator in the loop: De Simone's gains depended on teachers monitoring use and guiding prompts; do not deploy AI tutors as unsupervised drop-in tools.",
-        "Select or design AI tutors with explicit pedagogical scaffolding (Socratic prompting, mastery checks) rather than open chat interfaces, consistent with what drove gains in Kestin and VanLehn.",
-        "Assess retention and transfer, not just immediate performance — Bastani shows practice scores can look good while learning outcomes degrade once AI support is removed."
+        "Use guardrailed tutors that give hints and promote reasoning rather than providing direct answers — unguarded access to full AI responses can reduce durable learning [bastani].",
+        "Keep teachers actively involved: supervise AI use, facilitate sessions, and monitor engagement rather than treating AI as a hands-off substitute [desimone, wang].",
+        "Select or build AI tutors grounded in evidence-based learning principles (e.g., retrieval, elaboration, generative processing) rather than deploying generic chatbots [makransky].",
+        "Treat AI tutoring as a supplement within a designed instructional context, not a drop-in replacement, and track whether learning transfers once AI support is removed [bastani, letourneau]."
       ],
       "watch": [
-        "Unguarded access to capable AI (plain GPT-4) can create performance illusions — students do better during practice but worse when tested independently (Bastani).",
-        "Higher AI confidence predicts less critical thinking (Lee CHI); students may stop evaluating AI output carefully, especially as they trust the tool more over time.",
-        "Vendor and advocate claims about 'personalized tutoring at scale' realizing the two-sigma promise (Khan) are aspirational arguments from commercially interested parties, not established experimental findings."
+        "Design is decisive: the same underlying model (GPT-4) produced both the biggest harm and a successful intervention depending solely on guardrails and prompting — 'AI tutor' is not one thing [bastani].",
+        "Optimistic scale-up claims, including the 'two-sigma' framing, come partly from sources with direct commercial interests and remain aspirational rather than demonstrated at scale [khan, bloom].",
+        "Most strong evidence comes from short, single-course experiments with university or controlled samples; longer, more diverse, real-world replications are still needed before confident generalization to K-12 classrooms [letourneau, weidlich]."
       ],
       "confidence": "Medium",
-      "confidence_reason": "Multiple RCTs exist but span narrow contexts; design details are decisive.",
+      "confidence_reason": "Multiple RCTs exist but conditions, designs, and populations vary widely.",
       "source_ids": [
         "bastani",
-        "desimone",
         "kestin",
-        "lee-chi",
-        "van-lehn",
-        "khan"
+        "desimone",
+        "makransky",
+        "letourneau",
+        "weidlich"
       ],
-      "updated": "2026-06-15"
+      "updated": "2026-06-17"
     },
     "cognition": {
-      "bottom_line": "Converging causal evidence shows that unguarded AI use reduces retention, effortful processing, and learning transfer compared to traditional methods; however, pedagogically guardrailed AI tools can prevent most of this harm, making design the decisive variable.",
-      "evidence": "Three pre-registered randomized experiments (kreijkes, barcaui-cognitive, bastani) provide the strongest causal signal: students using unguarded LLMs retained less, showed an illusion of competence, and — in high-school math — scored ~17% worse once the AI was removed; a hint-based guardrailed tutor closed that gap entirely (bastani). A field experiment (mittal-info) adds that AI-assisted information seeking reduces exploration, agency, and higher-order learning versus search. A meta-analysis (wu) reports large positive effects including critical thinking, but its high heterogeneity and inclusion of diverse study types tempers confidence. Critically, Stanford SCALE (the-evidence-base) finds the K-12 causal evidence base extremely thin — only 20 strong causal studies exist globally and none are high-quality U.S. K-12 studies — and the famous 'Google effect' offloading finding failed systematic replication (camerer), counseling caution about overgeneralizing any single result.",
+      "bottom_line": "Converging causal evidence suggests that using AI as a direct answer-source weakens retention, reduces effortful processing, and can impair higher-order thinking — but design matters enormously: guardrailed tools that prompt effort prevent most of this harm.",
+      "evidence": "Four pre-registered randomized experiments form the strongest case for concern: students who outsourced note-taking or study to ChatGPT retained significantly less after a delay [barcaui-cognitive], comprehended less than peers who took their own notes [kreijkes], showed worse critical learning than Google-Search users [mittal-info], and — most tellingly — performed ~17% worse once an unguarded AI tutor was removed, while a hint-based guardrailed tutor eliminated that deficit entirely [bastani]. A meta-analysis of 35 experimental studies does report large positive effects including on critical thinking [wu], but its high heterogeneity and mixed methods make it difficult to weigh against these tighter causal findings. Knowledge workers show effort shifting from generating to verifying rather than disappearing altogether [lee-chi], and an RCT targeting self-regulation found no advantage over a plain ChatGPT control on effort or domain knowledge [futterer] — suggesting that even well-intentioned AI scaffolding does not automatically improve thinking. The broader causal evidence base in K-12 specifically remains very thin [the-evidence-base], so confident generalizations in either direction are premature.",
       "do": [
-        "Default to guardrailed or hint-based AI tools rather than open-ended chatbots — design that requires student effort before AI assistance is provided (bastani, the-evidence-base).",
-        "Pair or sequence AI use with active retrieval, note-taking, or low-stakes testing, since these beat AI-only conditions on retention and comprehension (kreijkes, barcaui-cognitive).",
-        "Explicitly teach students to distinguish productive AI support from effort-replacing reliance, and discuss the illusion of competence — feeling of learning without durable encoding (bjork-2011, kreijkes, chan-cognitive).",
-        "Pilot AI tools with pre/post assessments of delayed retention (not just immediate performance), since short-term gains regularly mask long-term losses (akg-n, barcaui-cognitive)."
+        "Replace or supplement open-ended AI use with designs that require students to first attempt retrieval or drafting themselves, then use AI only for targeted feedback — mirroring the guardrailed-tutor model that prevented learning loss [bastani].",
+        "Build in delayed, no-AI assessments after any AI-assisted work unit so you can detect illusions of competence before they become entrenched [kreijkes, barcaui-cognitive].",
+        "Teach students to distinguish AI as a thinking partner (extending understanding) from AI as an answer dispenser (replacing effort), making that metacognitive distinction an explicit classroom norm [chan-cognitive].",
+        "When choosing tools, prefer platforms that give hints or Socratic prompts over those that generate complete responses, especially for foundational or novel content where students lack the background to evaluate outputs [bjork-2020, bastani]."
       ],
       "watch": [
-        "Meta-analytic 'large positive effects' for AI on critical thinking (wu) come from highly heterogeneous studies; treat optimistic aggregate findings cautiously until replication evidence in your specific context accumulates.",
-        "Students and teachers may perceive AI-assisted work as higher quality or deeper learning when retention and transfer data show the opposite — the illusion of competence is real and self-reported confidence is an unreliable guide (kreijkes, lee-chi).",
-        "Vendor and platform claims about AI 'enhancing' cognition are not yet supported by strong, independent K-12 causal evidence (the-evidence-base); no high-quality U.S. K-12 studies currently exist to validate those claims."
+        "The 'AI boosts critical thinking' claim circulates widely but rests largely on high-heterogeneity meta-analyses and vendor-aligned reports; the tightest causal studies point in the opposite direction for unguarded use [wu vs. kreijkes, mittal-info, barcaui-cognitive].",
+        "Efficiency gains are real and measurable [noy-zhang], but they largely reflect substitution of worker effort rather than skill development — a meaningful distinction when your goal is learning, not output.",
+        "The famous 'Google effect' on memory did not replicate in a large multi-lab project [camerer], so be skeptical of sweeping cognitive-offloading narratives; the actual harm appears to be use-pattern-specific and design-dependent, not inevitable."
       ],
       "confidence": "Medium",
-      "confidence_reason": "Multiple strong RCTs align, but K-12-specific causal base remains very thin.",
+      "confidence_reason": "Multiple RCTs agree on direction but K-12 causal evidence remains thin.",
       "source_ids": [
         "bastani",
-        "barcaui-cognitive",
         "kreijkes",
+        "barcaui-cognitive",
         "mittal-info",
         "the-evidence-base",
-        "bjork-2011"
+        "futterer"
       ],
-      "updated": "2026-06-15"
+      "updated": "2026-06-17"
     },
     "writing": {
-      "bottom_line": "AI measurably speeds up writing and can raise individual output quality, but it simultaneously flattens voice and diversity across writers — a trade-off educators must weigh deliberately before embedding AI into writing instruction.",
-      "evidence": "The strongest causal evidence (Noy & Zhang, preregistered RCT; Doshi & Hauser, experiment) shows AI cuts writing time ~40% and modestly raises rated quality, yet makes individual outputs more similar to one another — better for any one writer, flatter for the group. Corpus studies (Hamilton & Mimno; Alvero) reinforce this: LLM text is strikingly homogeneous, with 11 words appearing in 88.3% of outputs, and the 'default voice' skews toward socioeconomically advantaged English — meaning students who rely on AI most may lose the most distinctive voice. Longitudinal observational data (Lee) suggest this is already visible in real admissions essays, with the largest convergence among fee-waiver applicants. The meta-analytic evidence (Dong) suggests writing-skill gains in educational settings, but that study is a preprint and does not isolate homogenization risks; claims from commercially interested parties (Khan) should be treated as advocacy rather than evidence.",
+      "bottom_line": "AI measurably speeds up writing and can raise individual output quality, but it reliably flattens voice and homogenizes text across writers — a real gain for productivity, a real loss for distinctiveness and possibly for learning itself.",
+      "evidence": "The strongest causal evidence shows AI cut professional writing time ~40% and raised rated quality ~18%, while also compressing skill differences between writers [noy-zhang]; a separate experiment found AI boosted individual creativity scores but made writers' outputs measurably more similar to each other [doshi-hauser]. Corpus and longitudinal studies reinforce the homogenization concern: LLM-generated stories cluster around a narrow lexical signature [hamilton-llm], and post-2023 admissions essays have converged in language — most sharply among fee-waiver applicants who had the least access to human writing support [lee-dd], with LLM defaults resembling socioeconomically advantaged student prose before any student customization [alvero]. A PRISMA meta-analysis reports positive effects on writing skills and feedback quality, but its methods have been flagged as suffering from the same media-comparison confounds that make effect sizes hard to interpret [dong-meta-analysis, weidlich]. Claims about 'cognitive debt' from a small EEG preprint are intriguing but explicitly preliminary and methodologically contested [kosmyna, stankovic], and arguments that outsourcing writing strips away the effortful thinking through which deep learning occurs [marina-writing] are theoretically coherent but not yet experimentally confirmed.",
       "do": [
-        "Use AI as a drafting scaffold or revision aid on low-stakes tasks, not as a first-draft generator for assessments where individual voice and thinking are the learning goal.",
-        "Build explicit 'writing as thinking' instruction (Marina et al.) — require students to annotate, explain, and verbally defend their AI-assisted drafts so cognitive engagement is preserved.",
-        "Monitor equity: give extra support for students who lack human writing mentors and are most likely to wholesale adopt AI voice, losing authentic expression (Lee; Alvero).",
-        "Treat population-level homogenization as an institutional risk — audit writing samples over time for convergence before assuming AI is uniformly beneficial."
+        "Use AI for lower-stakes drafting tasks (outlines, feedback on structure) where speed gains are real, while protecting high-stakes writing assignments as unassisted cognitive work.",
+        "Redesign writing prompts to require personal experience, local context, or iterative revision cycles that resist generic AI defaults and reward distinctive voice.",
+        "Pay extra attention to students who rely most heavily on AI assistance — evidence suggests they may gain efficiency but lose the most in voice distinctiveness and potentially in skill development [lee-dd, noy-zhang].",
+        "Treat AI-assisted writing as a starting point for discussion, not a finished product — ask students to annotate, defend, or revise AI output to keep cognitive engagement active [marina-writing]."
       ],
       "watch": [
-        "Optimistic quality-gain findings (Noy & Zhang) come with the authors' own caveat that AI substitutes for worker effort rather than building skill — efficiency is not the same as learning.",
-        "Commercial stakeholders (e.g., Khan) make sweeping claims about personalization with no experimental evidence behind the specific writing-instruction use case.",
-        "Homogenization harms are worst for already-marginalized students, so equity framing — not just average-effect framing — is essential when evaluating any AI writing tool."
+        "Homogenization at scale: even small individual improvements can produce a population of writing that sounds the same, disadvantaging students whose distinctive voice was an asset [doshi-hauser, alvero].",
+        "The 'cognitive debt' narrative is circulating widely but rests on a small, non-peer-reviewed study with serious methodological critiques — do not cite it as settled science [kosmyna, stankovic].",
+        "Optimistic meta-analytic effect sizes for AI on writing quality are hard to interpret without knowing what the control condition was; be skeptical of headline numbers without checking whether the comparison is meaningful [weidlich, dong-meta-analysis]."
       ],
       "confidence": "Medium",
-      "confidence_reason": "Two strong RCTs exist, but long-run learning effects remain understudied.",
+      "confidence_reason": "Two strong RCTs exist, but most writing-specific evidence is observational or corpus-based.",
       "source_ids": [
-        "doshi-hauser",
         "noy-zhang",
+        "doshi-hauser",
         "lee-dd",
-        "hamilton-llm",
         "alvero",
-        "marina-writing"
+        "hamilton-llm",
+        "weidlich"
       ],
-      "updated": "2026-06-15"
+      "updated": "2026-06-17"
     },
     "equity": {
-      "bottom_line": "AI's effect on equity gaps depends almost entirely on implementation conditions: supervised, pedagogically designed AI narrows gaps in under-resourced settings, but unguided AI use risks homogenizing student voice and deepening cognitive disadvantages for students who already have less access to human support.",
-      "evidence": "The strongest causal evidence comes from desimone, a World Bank RCT in Nigeria showing teacher-supervised GPT-4 raised English scores 0.23 SD (~$48/student) — gains attributed specifically to teacher facilitation, reasoning-focused prompts, and monitored use, not the AI alone. On the risk side, lee-dd (large longitudinal observational study, N=81,663) finds post-2023 convergence in college-essay language is largest among fee-waiver applicants — the students with least access to human writing mentors — and alvero's computational text analysis shows LLM-generated essays default to a voice most resembling socioeconomically advantaged students, meaning the tool itself embeds an inequitable baseline before any student personalizes it. The Stanford SCALE systematic review (the-evidence-base) cautions that only 20 studies provide strong causal evidence, none are high-quality U.S. K-12 studies, and that pedagogically guardrailed tools consistently outperform general-purpose ones — making it premature to generalize any single finding; williamson-pause (policy argument, not empirical) further warns that without public oversight, AI deployment structurally concentrates benefit among those already advantaged.",
+      "bottom_line": "AI's effect on equity is genuinely two-sided and depends heavily on implementation: structured, teacher-supervised AI can narrow achievement gaps in under-resourced settings, but unguided access risks eroding the distinctive voice and deeper thinking of students who already have the least support.",
+      "evidence": "The strongest causal evidence for a narrowing effect comes from a World Bank RCT in Nigeria, where teacher-supervised GPT-4 use raised English scores by 0.23 SD at roughly $48 per student — gains attributed specifically to teacher facilitation and reasoning-focused prompts, not tool access alone [desimone]. On the widening side, large-scale observational work finds that post-2023 college admissions essays converged most sharply in language among fee-waiver applicants — students with the least access to human writing mentors — suggesting AI homogenizes the voices of those who can least afford to lose distinctiveness [lee-dd]; separately, computational analysis shows LLM-generated essays default to language patterns most resembling socioeconomically advantaged students, embedding a hegemonic voice before any individual student makes a choice [alvero]. A systematic review of K-12 AI research cautions that the entire causal evidence base is thin — only 20 strong-causal papers exist globally, none of them high-quality U.S. K-12 student studies — and flags that even where AI improves performance, transfer is uncertain and cognitive load reduction may come at the cost of deeper thinking [the-evidence-base].",
       "do": [
-        "Require teacher facilitation and structured prompts whenever AI tools are used — desimone shows these are the active ingredients, not the AI alone.",
-        "Audit which students are using AI and how: lee-dd and alvero together suggest students with least human support are most at risk of voice homogenization, so target mentoring and revision instruction toward those groups specifically.",
-        "Choose or design guardrailed, subject-specific tools over general-purpose chatbots — the-evidence-base synthesis consistently finds pedagogically constrained tools produce better and more equitable learning outcomes.",
-        "Treat writing tasks as high-alert zones: require process evidence (drafts, revision logs) so AI substitution is visible, particularly for students eligible for fee waivers or other equity indicators."
+        "Pair AI tools with active teacher facilitation and reasoning-focused prompts — the Nigerian RCT gains disappeared without these structural supports.",
+        "Prioritize AI assistive tools for students with disabilities or in under-resourced contexts where one-to-one human support is unavailable, while monitoring for adoption barriers.",
+        "Audit student-facing AI outputs (e.g., essays, summaries) for voice homogenization, especially among students who rely on fee waivers or lack out-of-school writing mentors.",
+        "Choose pedagogically guardrailed, purpose-built tools over general-purpose chatbots — the evidence base consistently shows guardrailed tools outperform open-ended ones on learning outcomes."
       ],
       "watch": [
-        "Optimistic RCT results (desimone, kestin) come from tightly controlled conditions with deliberate pedagogy — do not assume off-the-shelf AI deployment in your school will replicate these gains.",
-        "The 'AI democratizes access' narrative is asserted far more often than it is demonstrated; the-evidence-base confirms the U.S. K-12 causal evidence base is nearly empty, and williamson-pause flags that vendor-led deployment has a commercial stake in that narrative.",
-        "Equity harms from AI may be invisible in test-score data: kreijkes and akg-n show students feel more competent while actually retaining less — disadvantaged students may be disproportionately exposed to this illusion of learning without ever showing it on a grade."
+        "Vendor equity claims: optimistic projections about AI 'leveling the playing field' are often made by commercially interested parties and are not yet supported by high-quality U.S. K-12 causal evidence [the-evidence-base, williamson-pause].",
+        "The illusion-of-competence trap: students — especially those with less metacognitive support — prefer AI-assisted work even when it produces worse retention than lower-tech alternatives [kreijkes, akg-n].",
+        "Structural power concentration: without public oversight, AI procurement decisions concentrate control in commercial vendors, a risk that falls hardest on under-resourced districts with less bargaining power [williamson-pause]."
       ],
       "confidence": "Low / emerging",
-      "confidence_reason": "Only one causal equity-focused study; most evidence is observational or argument.",
+      "confidence_reason": "No high-quality U.S. K-12 causal studies on equity outcomes yet exist.",
       "source_ids": [
         "desimone",
         "lee-dd",
-        "alvero",
         "the-evidence-base",
+        "alvero",
         "kreijkes",
         "williamson-pause"
       ],
-      "updated": "2026-06-15"
+      "updated": "2026-06-17"
     },
     "risks": {
-      "bottom_line": "Real, experimentally demonstrated risks exist alongside genuine hype on both sides; educators should focus on two evidence-backed harms—dependency-driven learning loss and prompt-injection security—while treating the most sweeping claims (pro or con) with skepticism.",
-      "evidence": "The two strongest causal findings are clear: unguarded AI use harmed math learning by roughly 17% once the tool was removed [bastani], and ChatGPT-based information seeking produced worse higher-order critical learning and reduced knowledge exploration compared to Google Search [mittal-info]—both from field experiments. A computational study found LLM outputs are strikingly homogeneous, raising concerns about narrowing student thinking and expression [hamilton-llm], while an empirical security study identified a concrete attack surface in deep-research agents that retrieve user-generated content, making them vulnerable to adversarial text injection [zhang-reddit-search]. Philosophical and argumentative sources warn about erosion of moral reasoning capacity [vallor] and over-emphasis on functional tool use at the expense of critical agency [tadimalla-literacy], but these lack experimental support. Several strongly critical sources (e.g., [bender-hanna]) make absolutist claims not grounded in experimental evidence, and optimistic production-data claims [yang] come from an interested party (Perplexity) and should be read accordingly.",
+      "bottom_line": "The evidence points to several concrete, classroom-level risks from AI use in education — most critically, dependency effects that harm learning and a design-sensitive vulnerability where unguarded AI tools actively undermine the outcomes they are meant to support.",
+      "evidence": "The strongest causal evidence comes from two field experiments: students using unguarded GPT-4 scored roughly 17% worse on assessments once the tool was removed, while a guardrailed hint-based tutor prevented that harm entirely [bastani]; separately, participants using ChatGPT for information seeking showed diminished agency, higher metacognitive load, reduced knowledge exploration, and worse performance on higher-order thinking compared to those using a standard search engine [mittal-info]. A pre-registered RCT found that even well-designed GenAI interventions targeting self-regulation produced no statistically significant gains over a plain ChatGPT control on effort, domain knowledge, or elaboration strategies [futterer]. Beyond learning outcomes, an empirical security study found that AI agents doing autonomous web retrieval are exploitable by adversarial text injections in user-generated content, a structural vulnerability relevant to any school deployment involving deep-research or agentic tools [zhang-reddit-search].",
       "do": [
-        "Design AI tools with guardrails (hints over answers) for any task where transfer and retention matter—unguarded access is the experimentally confirmed harm condition [bastani].",
-        "Reserve AI for lower-stakes or well-defined tasks in information-rich environments; for higher-order critical thinking and open-ended inquiry, build in structured human search and reflection phases [mittal-info].",
-        "Audit any AI tool that autonomously retrieves web content (deep-research agents) for prompt-injection vulnerabilities before deploying it with students [zhang-reddit-search].",
-        "Teach AI literacy that centers critical reasoning and intentional choice, not just functional tool operation [tadimalla-literacy]."
+        "Always use guardrails — configure AI tools to give hints and scaffolding rather than direct answers, since design choice is the single biggest determinant of whether AI helps or harms learning [bastani].",
+        "Treat dependency as a default risk: build in regular AI-free practice and assessment so students consolidate knowledge independently [bastani, mittal-info].",
+        "Audit any agentic or deep-research tools for prompt-injection vulnerabilities before student use, especially tools that pull from open web or user-generated content [zhang-reddit-search].",
+        "Embed critical evaluation skills explicitly — teach students to interrogate AI outputs for bias and gaps rather than accepting solution-oriented responses at face value [mittal-info, tadimalla-literacy]."
       ],
       "watch": [
-        "Dependency and skill atrophy: even modest unguarded AI use can produce measurable learning loss that only shows up after the tool is taken away [bastani]—easy to miss in routine classroom observation.",
-        "Output homogenization: LLM-generated text is statistically narrow; if students submit or internalize it, you may be narrowing, not expanding, their thinking [hamilton-llm].",
-        "Hype in both directions: absolutist anti-AI claims overstate current capabilities while some pro-AI production-data studies come from vendors with commercial interests [narayanan, yang]—neither extreme is a reliable guide for policy."
+        "Cognitive offloading and reduced agency: even motivated students can experience diminished exploration and worse critical thinking when AI handles information retrieval [mittal-info].",
+        "Security vulnerabilities in agentic tools: autonomous AI agents that browse the web expose students and institutions to adversarial content injection, a risk not yet widely acknowledged in school IT policy [zhang-reddit-search].",
+        "Vendor optimism: pro-AI claims about motivation, personalization, and accessibility often come from interested parties or rely on weaker evidence tiers — require causal evidence before scaling any tool [yang, dumitru]."
       ],
       "confidence": "Medium",
-      "confidence_reason": "Two strong causal studies exist but cover narrow contexts.",
+      "confidence_reason": "Strong causal studies exist but are few, context-specific, and short-term.",
       "source_ids": [
         "bastani",
         "mittal-info",
+        "futterer",
         "zhang-reddit-search",
-        "hamilton-llm",
         "tadimalla-literacy",
-        "narayanan"
+        "letourneau"
       ],
-      "updated": "2026-06-15"
+      "updated": "2026-06-17"
     },
     "hype": {
-      "bottom_line": "A small but real causal signal suggests AI study tools can harm durable learning if used passively, while pedagogically guardrailed tools show modest promise — but the K-12 causal evidence base is too thin to justify broad, unguarded adoption right now.",
-      "evidence": "The strongest causal finding comes from a pre-registered RCT [barcaui-cognitive]: undergraduates using ChatGPT as a study aid retained significantly less knowledge at 45 days (57.5% vs 68.5%, d = 0.68) than peers using traditional methods, suggesting passive offloading undermines durable memory. A systematic review [the-evidence-base] confirms this concern while noting that guardrailed, pedagogically structured AI tools outperform general-purpose ones — but also that zero high-quality U.S. K-12 causal studies exist, so any optimism about 'Bloom's two-sigma' gains [bloom] chasing AI tutors remains aspirational rather than demonstrated. Historical patterns [watters, reich] show edtech consistently fails to transform schooling and disproportionately benefits already-advantaged learners, a structural risk that applies here. Commercial providers have obvious incentives to oversell benefits, and absolutist pro- or anti-AI claims [bender-hanna, narayanan] both outrun the current evidence.",
+      "bottom_line": "Some AI tools—particularly structured intelligent tutoring systems—show modest, real learning gains, but strong causal evidence is scarce and unguarded AI use as a study aid may actively harm retention; adopt selectively, with pedagogical guardrails, not wholesale.",
+      "evidence": "The strongest causal signal cuts against undirected AI use: a pre-registered RCT found undergraduates using ChatGPT for study retained meaningfully less knowledge at 45 days than peers using traditional methods (d = 0.68) [barcaui-cognitive]. Intelligent tutoring systems show generally positive effects in K-12, but gains shrink when compared to non-AI tutoring alternatives, and the evidence base lacks long-duration, large-sample, or U.S.-specific studies [letourneau]. A systematic review of the full K-12 AI evidence base found only 20 papers with strong causal designs and zero high-quality U.S. studies, while noting that pedagogically guardrailed tools consistently outperform general-purpose ones [the-evidence-base]. A century of 'personalized learning' edtech waves—each promising teacher liberation and individualized pacing—warns that this cycle has repeated without transformative outcomes [watters], and economic modeling suggests productivity gains from AI broadly will be modest and unevenly distributed [acemoglu-macro].",
       "do": [
-        "Default to guardrailed, subject-specific AI tools over general-purpose chatbots, and require students to explain or reconstruct AI-generated content in their own words before moving on.",
-        "Build in a 'verification step' for any AI-assisted task — ask students to interrogate, fact-check, or critique the output rather than accept it, since skill growth depends on active interrogation [varone].",
-        "Pilot AI tools in a single unit with a comparison group and measure retention at 4–6 weeks, not just immediate performance, before scaling.",
-        "Audit which students benefit: watch for the EdTech Matthew Effect [reich] where higher-resourced, higher-prior-knowledge students gain while others fall further behind."
+        "Choose structured, curriculum-aligned AI tutoring tools over general-purpose chatbots for direct student use—evidence favors guardrailed systems over open-ended ones.",
+        "Design tasks so students must interrogate, verify, and explain AI outputs rather than simply receive them—passive consumption is where the retention harm concentrates.",
+        "Pilot with a small cohort and measure learning outcomes at a delay (4+ weeks), not just immediately after, before scaling any AI tool school-wide.",
+        "Require vendor-provided evidence to be independent and causal, not testimonial or internally funded, before committing budget."
       ],
       "watch": [
-        "Vendor claims of tutoring breakthroughs: the Bloom two-sigma benchmark [bloom] is real, but no AI product has been shown to replicate it in a high-quality K-12 study [the-evidence-base].",
-        "Passive AI use as a study shortcut: the one RCT with a causal design [barcaui-cognitive] found meaningful harm to retention, not benefit.",
-        "Hype cycles dressed as research: a century of edtech promises [watters] and today's scale-at-all-costs AI narratives [hao] follow the same pattern — demand to see the study design, sample, and follow-up interval before adopting."
+        "Vendors citing Bloom's two-sigma tutoring ideal [bloom] as proof AI replicates it—no current AI tool has demonstrated effects near that magnitude in rigorous K-12 studies.",
+        "Cognitive offloading risk is real even if one famous lab result failed to replicate [camerer]: the RCT evidence [barcaui-cognitive] is more directly relevant to classroom AI use than the older lab paradigm.",
+        "OpenAI and similar companies have a direct commercial stake in rapid school adoption—treat their efficacy claims, white papers, and research partnerships with heightened scrutiny [hao, narayanan]."
       ],
       "confidence": "Low / emerging",
-      "confidence_reason": "Only one RCT exists; no high-quality U.S. K-12 causal studies yet.",
+      "confidence_reason": "Only a handful of causal studies exist; none are large U.S. K-12 trials.",
       "source_ids": [
         "barcaui-cognitive",
         "the-evidence-base",
-        "varone",
-        "reich",
+        "letourneau",
         "watters",
-        "bloom"
+        "narayanan",
+        "acemoglu-macro"
       ],
-      "updated": "2026-06-15"
+      "updated": "2026-06-17"
     }
   },
   "nodes": [
@@ -4977,7 +4977,7 @@ window.CORPUS = {
       return '<button class="nav-dom" data-kind="domain" data-domain="'+esc(d)+'" style="--tcol:'+domainColor[d]+'"><span class="nav-ddot"></span><span class="nav-dname">'+esc(domainShort[d]||d)+'</span><span class="nav-dcount">'+c+'</span></button>'; }).join("");
     h+='<button class="xtag-toggle'+(state.crossTag?' on':'')+'" id="xtagToggle" title="Off: a domain shows its primary members only. On: also surface sources cross-tagged to it."><span class="xtbox">'+(state.crossTag?'☑':'☐')+'</span> Include cross-tagged</button>';
     // Stance — collapsible, default closed (faceted counts, multi-select)
-    h+='<div class="nav-grp" id="grpStance"><button class="nav-gh"><span>Stance</span><span class="nav-arrow">▸</span></button><div class="nav-grp-body">'+
+    h+='<div class="nav-grp open" id="grpStance"><button class="nav-gh"><span>Stance</span><span class="nav-arrow">▸</span></button><div class="nav-grp-body">'+
       STANCE_ORDER.map(s=>'<button class="nav-st" data-stance="'+esc(s)+'" style="--tcol:'+stanceColor[s]+'" title="'+esc(STANCE_GLOSS[s]||"")+'"><span class="nav-ddot"></span><span class="nav-dname">'+esc(stanceLabel[s])+'</span><span class="nav-dcount"></span></button>').join("")+
       '</div></div>';
     h+='<div class="nav-sep"></div>';
