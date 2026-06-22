@@ -5876,6 +5876,47 @@
     "hasCover": true
   },
   {
+    "id": 22017481,
+    "artist": "Myele Manzanza",
+    "title": "Crisis & Opportunity (Vol 2) (Peaks)",
+    "labels": [
+      {
+        "name": "DeepMatter",
+        "catno": "DM010"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2022,
+    "masterId": 2494402,
+    "originalYear": 2021,
+    "genres": [
+      "Hip Hop",
+      "Jazz",
+      "Funk / Soul"
+    ],
+    "styles": [
+      "Contemporary Jazz",
+      "Jazz-Funk"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-06-18T04:37:42-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 22776578,
     "artist": "The Beach Boys",
     "title": "Carl And The Passions – So Tough / Pet Sounds",
@@ -7088,6 +7129,43 @@
     "hasCover": true
   },
   {
+    "id": 29105134,
+    "artist": "Myele Manzanza",
+    "title": "Crisis & Opportunity (Vol​.​4) (Meditations )",
+    "labels": [
+      {
+        "name": "DeepMatter",
+        "catno": "DM015"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2023,
+    "masterId": 3522007,
+    "originalYear": 2023,
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Contemporary Jazz"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-06-18T04:38:29-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 29174830,
     "artist": "The Prodigy",
     "title": "The Fat Of The Land",
@@ -7666,7 +7744,7 @@
         ]
       }
     ],
-    "year": 0,
+    "year": 2024,
     "masterId": 5542,
     "originalYear": 1994,
     "genres": [
@@ -9802,7 +9880,10 @@
       "Alt-Pop",
       "Indian Classical",
       "Indie Pop",
-      "Latin Pop"
+      "Latin Pop",
+      "Synth-pop",
+      "Psychedelic",
+      "Hip Hop"
     ],
     "folder": "The Main Collection",
     "dateAdded": "2026-02-28T10:30:58-08:00",
