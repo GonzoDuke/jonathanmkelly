@@ -79,6 +79,44 @@
     "hasCover": true
   },
   {
+    "id": 363127,
+    "artist": "The Pharcyde",
+    "title": "Bizarre Ride II The Pharcyde",
+    "labels": [
+      {
+        "name": "Delicious Vinyl",
+        "catno": "61044-71803-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 1998,
+    "masterId": 56074,
+    "originalYear": 1992,
+    "genres": [
+      "Hip Hop"
+    ],
+    "styles": [
+      "Jazzy Hip-Hop"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-07-11T09:39:33-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 380609,
     "artist": "Pink Floyd",
     "title": "Wish You Were Here",
@@ -2424,6 +2462,81 @@
     ],
     "folder": "The Jeff Collection",
     "dateAdded": "2025-10-05T09:14:53-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 7885209,
+    "artist": "Mahavishnu Orchestra",
+    "title": "Birds Of Fire",
+    "labels": [
+      {
+        "name": "CBS",
+        "catno": "S 65321"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 0,
+    "masterId": 72290,
+    "originalYear": 1973,
+    "genres": [
+      "Jazz"
+    ],
+    "styles": [
+      "Fusion"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-07-11T09:38:13-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 8098857,
+    "artist": "Pink Floyd",
+    "title": "Live",
+    "labels": [
+      {
+        "name": "Dittolino Discs",
+        "catno": "D-2"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Unofficial Release"
+        ]
+      }
+    ],
+    "year": 1971,
+    "masterId": 453165,
+    "originalYear": 1971,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Space Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-07-11T09:34:23-07:00",
     "rating": 0,
     "media": "",
     "sleeve": "",
@@ -5913,6 +6026,63 @@
     "rating": 0,
     "media": "Mint (M)",
     "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 22391941,
+    "artist": "Tame Impala",
+    "title": "The Slow Rush",
+    "labels": [
+      {
+        "name": "Island Records",
+        "catno": "7757956"
+      },
+      {
+        "name": "Interscope Records",
+        "catno": "7757956"
+      },
+      {
+        "name": "Fiction Records",
+        "catno": "7757956"
+      },
+      {
+        "name": "Caroline International",
+        "catno": "7757956"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2020,
+    "masterId": 1681919,
+    "originalYear": 2020,
+    "genres": [
+      "Electronic",
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Indie Pop",
+      "Indie Rock",
+      "Synth-pop",
+      "Psychedelic Rock",
+      "Soft Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-07-11T09:42:46-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
     "notes": "",
     "hasCover": true
   },
@@ -10068,7 +10238,7 @@
       {
         "name": "Vinyl",
         "qty": "1",
-        "text": "First Pressing, 180 Gram",
+        "text": "First Pressing",
         "descriptions": [
           "LP",
           "Album",
