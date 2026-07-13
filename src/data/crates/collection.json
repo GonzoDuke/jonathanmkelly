@@ -2544,6 +2544,42 @@
     "hasCover": true
   },
   {
+    "id": 8182338,
+    "artist": "Darlingside",
+    "title": "Birds Say",
+    "labels": [
+      {
+        "name": "Thirty Tigers",
+        "catno": "none"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2015,
+    "masterId": 968830,
+    "originalYear": 2015,
+    "genres": [
+      "Pop",
+      "Folk, World, & Country"
+    ],
+    "styles": [],
+    "folder": "Uncategorized",
+    "dateAdded": "2026-07-11T11:32:47-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 8428623,
     "artist": "Phronesis",
     "title": "Parallax",
@@ -3504,6 +3540,44 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 11703997,
+    "artist": "Darlingside",
+    "title": "Extralife",
+    "labels": [
+      {
+        "name": "More Doug Records",
+        "catno": "MDR 003 1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2018,
+    "masterId": 1332092,
+    "originalYear": 2018,
+    "genres": [
+      "Rock",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "Alternative Rock"
+    ],
+    "folder": "Uncategorized",
+    "dateAdded": "2026-07-11T11:32:46-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
     "notes": "",
     "hasCover": true
   },
@@ -7651,7 +7725,7 @@
       {
         "name": "Vinyl",
         "qty": "1",
-        "text": "Precision Pressing",
+        "text": "GZ Media Pressing",
         "descriptions": [
           "LP",
           "Album",
@@ -8680,7 +8754,7 @@
       "Leftfield",
       "Ambient"
     ],
-    "folder": "Spud's Pile",
+    "folder": "JK Collection",
     "dateAdded": "2025-10-18T10:02:42-07:00",
     "rating": 0,
     "media": "",
@@ -9635,7 +9709,10 @@
       "House",
       "Dance-pop",
       "Tech House",
-      "Alt-Pop"
+      "Alt-Pop",
+      "Psychedelic",
+      "Electro",
+      "Acid House"
     ],
     "folder": "JK Collection",
     "dateAdded": "2026-02-21T10:37:18-08:00",
