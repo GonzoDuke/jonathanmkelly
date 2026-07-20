@@ -1396,6 +1396,46 @@
     "hasCover": true
   },
   {
+    "id": 4062521,
+    "artist": "Stars",
+    "title": "Set Yourself On Fire",
+    "labels": [
+      {
+        "name": "Arts & Crafts International",
+        "catno": "A&C009"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180g",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Repress"
+        ]
+      }
+    ],
+    "year": 2012,
+    "masterId": 10005,
+    "originalYear": 2004,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Indie Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-07-14T15:50:47-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 4198506,
     "artist": "The Doors",
     "title": "The Doors",
@@ -5475,8 +5515,8 @@
     ],
     "styles": [
       "Art Rock",
-      "Psychedelic Rock",
-      "Experimental"
+      "Experimental",
+      "Avantgarde"
     ],
     "folder": "The Main Collection",
     "dateAdded": "2026-04-03T11:37:01-07:00",
@@ -5745,6 +5785,70 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 18935413,
+    "artist": "Steely Dan",
+    "title": "Two Against Nature",
+    "labels": [
+      {
+        "name": "Giant Records",
+        "catno": "R1 24719"
+      },
+      {
+        "name": "Giant Records",
+        "catno": "603497849093"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP"
+        ]
+      },
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Single Sided",
+          "Etched"
+        ]
+      },
+      {
+        "name": "All Media",
+        "qty": "1",
+        "text": "180 Gram",
+        "descriptions": [
+          "Album",
+          "Record Store Day",
+          "Limited Edition",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2021,
+    "masterId": 17120,
+    "originalYear": 2000,
+    "genres": [
+      "Jazz",
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Fusion"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-07-18T18:27:15-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
     "notes": "",
     "hasCover": true
   },
@@ -9936,10 +10040,8 @@
       {
         "name": "Box Set",
         "qty": "1",
-        "text": "50th Anniversary",
-        "descriptions": [
-          "Album"
-        ]
+        "text": "Album, 50th Anniversary",
+        "descriptions": []
       }
     ],
     "year": 2025,
