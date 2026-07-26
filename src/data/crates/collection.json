@@ -2753,6 +2753,53 @@
     "hasCover": true
   },
   {
+    "id": 8604223,
+    "artist": "Pink Floyd",
+    "title": "Ummagumma",
+    "labels": [
+      {
+        "name": "Pink Floyd Records",
+        "catno": "PFRLP4"
+      },
+      {
+        "name": "Pink Floyd Records",
+        "catno": "0825646493166"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Gatefold, 180 Gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2016,
+    "masterId": 20692,
+    "originalYear": 1969,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock",
+      "Experimental",
+      "Prog Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-07-26T08:40:58-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 8639126,
     "artist": "Wu-Tang Clan",
     "title": "The Essential Wu-Tang Clan",
@@ -6052,10 +6099,6 @@
       {
         "name": "Columbia",
         "catno": "CS 9128"
-      },
-      {
-        "name": "Columbia",
-        "catno": "CL 2328"
       }
     ],
     "formats": [
@@ -6547,6 +6590,92 @@
     "hasCover": true
   },
   {
+    "id": 24071501,
+    "artist": "Tool (2)",
+    "title": "Fear Inoculum",
+    "labels": [
+      {
+        "name": "Tool Dissectional",
+        "catno": "19439-95020-1S1"
+      },
+      {
+        "name": "Tool Dissectional",
+        "catno": "19439950201"
+      },
+      {
+        "name": "Tool Dissectional",
+        "catno": "19439-95020-1"
+      },
+      {
+        "name": "RCA",
+        "catno": "19439-95020-1S1"
+      },
+      {
+        "name": "RCA",
+        "catno": "19439950201"
+      },
+      {
+        "name": "RCA",
+        "catno": "19439-95020-1"
+      },
+      {
+        "name": "Sony Music",
+        "catno": "19439-95020-1S1"
+      },
+      {
+        "name": "Sony Music",
+        "catno": "19439950201"
+      },
+      {
+        "name": "Sony Music",
+        "catno": "19439-95020-1"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP"
+        ]
+      },
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Single Sided",
+          "Etched"
+        ]
+      },
+      {
+        "name": "All Media",
+        "qty": "1",
+        "descriptions": [
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2022,
+    "masterId": 1598307,
+    "originalYear": 2019,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock",
+      "Progressive Metal"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-07-26T08:48:17-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 24798023,
     "artist": "Snarky Puppy",
     "title": "Empire Central",
@@ -6670,6 +6799,49 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 25197124,
+    "artist": "Led Zeppelin",
+    "title": "Untitled",
+    "labels": [
+      {
+        "name": "Atlantic",
+        "catno": "8122-79657-7"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gatefold, 180 gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2021,
+    "masterId": 4300,
+    "originalYear": 1971,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Hard Rock",
+      "Classic Rock",
+      "Blues Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-07-26T08:35:08-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
     "notes": "",
     "hasCover": true
   },
@@ -6801,6 +6973,56 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 25386340,
+    "artist": "Genesis",
+    "title": "The Lamb Lies Down On Broadway",
+    "labels": [
+      {
+        "name": "Charisma",
+        "catno": "R1 516782"
+      },
+      {
+        "name": "Atlantic",
+        "catno": "R1 516782"
+      },
+      {
+        "name": "Rhino Records (2)",
+        "catno": "R1 516782"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Deluxe Edition",
+          "Reissue",
+          "Repress",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2018,
+    "masterId": 29256,
+    "originalYear": 1974,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Prog Rock",
+      "Art Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-07-26T08:41:57-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
     "notes": "",
     "hasCover": true
   },
@@ -7221,6 +7443,48 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 28150669,
+    "artist": "Sigur Rós",
+    "title": "Átta",
+    "labels": [
+      {
+        "name": "Krúnk",
+        "catno": "538919040"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Yellow",
+        "descriptions": [
+          "LP",
+          "45 RPM",
+          "Album",
+          "Limited Edition",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2023,
+    "masterId": 3136311,
+    "originalYear": 2023,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Ethereal",
+      "Post Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-07-26T08:43:30-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
     "notes": "",
     "hasCover": true
   },
@@ -8156,6 +8420,48 @@
     "hasCover": true
   },
   {
+    "id": 31724834,
+    "artist": "Snow Patrol",
+    "title": "The Forest Is The Path",
+    "labels": [
+      {
+        "name": "Polydor",
+        "catno": "5524721"
+      },
+      {
+        "name": "Polydor",
+        "catno": "00602455247216"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Gatefold, Blue Marbled",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Deluxe Edition",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2024,
+    "masterId": 3596633,
+    "originalYear": 2024,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [],
+    "folder": "JK Collection",
+    "dateAdded": "2026-07-26T08:39:24-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 31893958,
     "artist": "Third Eye Blind",
     "title": "Blue",
@@ -8636,6 +8942,50 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 33570615,
+    "artist": "Maroon 5",
+    "title": "Songs About Jane",
+    "labels": [
+      {
+        "name": "UMe",
+        "catno": "B0024783-01"
+      },
+      {
+        "name": "Interscope Records",
+        "catno": "B0024783-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180 Gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 0,
+    "masterId": 136485,
+    "originalYear": 2002,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Alternative Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-07-26T08:36:41-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
     "notes": "",
     "hasCover": true
   },
