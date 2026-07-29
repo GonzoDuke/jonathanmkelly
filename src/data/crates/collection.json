@@ -1262,6 +1262,50 @@
     "hasCover": true
   },
   {
+    "id": 3564656,
+    "artist": "The Smiths",
+    "title": "The Queen Is Dead",
+    "labels": [
+      {
+        "name": "WEA",
+        "catno": "2564665887"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gatefold, 180 Gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2012,
+    "masterId": 20137,
+    "originalYear": 1986,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Jangle Pop",
+      "Post-Punk",
+      "Indie Rock",
+      "Alternative Rock"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2026-07-29T15:04:43-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 3701587,
     "artist": "Van Morrison",
     "title": "Moondance",
@@ -1432,6 +1476,44 @@
     "rating": 0,
     "media": "Mint (M)",
     "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4176934,
+    "artist": "Allen Ginsberg",
+    "title": "Reads Kaddish (A 20th Century American Ecstatic Narrative Poem)",
+    "labels": [
+      {
+        "name": "Atlantic",
+        "catno": "4001"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Gatefold Cover",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1966,
+    "masterId": 915357,
+    "originalYear": 1966,
+    "genres": [
+      "Non-Music"
+    ],
+    "styles": [
+      "Poetry"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-07-29T14:53:22-07:00",
+    "rating": 0,
+    "media": "Very Good Plus (VG+)",
+    "sleeve": "Very Good Plus (VG+)",
     "notes": "",
     "hasCover": true
   },
@@ -2888,6 +2970,52 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 9057753,
+    "artist": "The Verve",
+    "title": "Urban Hymns",
+    "labels": [
+      {
+        "name": "Virgin EMI Records",
+        "catno": "4787014"
+      },
+      {
+        "name": "Universal UMC",
+        "catno": "00602547870148"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Band Side Labels, Rim Text, 180 Gram",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered"
+        ]
+      }
+    ],
+    "year": 2016,
+    "masterId": 20634,
+    "originalYear": 1997,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Alternative Rock",
+      "Britpop"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-07-29T15:01:30-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
     "notes": "",
     "hasCover": true
   },
@@ -8508,6 +8636,49 @@
     "hasCover": true
   },
   {
+    "id": 32039228,
+    "artist": "toe (5)",
+    "title": "The Book About My Idle Plot On A Vague Anxiety",
+    "labels": [
+      {
+        "name": "Topshelf Records (2)",
+        "catno": "TSR084"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "“Deer Glisten” Blue",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2024,
+    "masterId": 462214,
+    "originalYear": 2005,
+    "genres": [
+      "Jazz",
+      "Rock"
+    ],
+    "styles": [
+      "Math Rock",
+      "Alternative Rock",
+      "Post Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-07-29T14:49:28-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 32249100,
     "artist": "MF Doom",
     "title": "MM..Food",
@@ -8775,6 +8946,46 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 33167124,
+    "artist": "The Smiths",
+    "title": "Hatful Of Hollow",
+    "labels": [
+      {
+        "name": "Rhino Records (2)",
+        "catno": "2564665882"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180 Gram",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2023,
+    "masterId": 20048,
+    "originalYear": 1984,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Indie Rock",
+      "Jangle Pop"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2026-07-29T15:10:03-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
     "notes": "",
     "hasCover": true
   },
@@ -10716,6 +10927,48 @@
     "hasCover": true
   },
   {
+    "id": 36769603,
+    "artist": "Tinariwen",
+    "title": "Hoggar",
+    "labels": [
+      {
+        "name": "Wedge",
+        "catno": "WEDGELPC0226"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "White",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Limited Edition",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2026,
+    "masterId": 4173541,
+    "originalYear": 2026,
+    "genres": [
+      "Blues",
+      "Folk, World, & Country"
+    ],
+    "styles": [
+      "African",
+      "Electric Blues"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-07-29T14:50:42-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 36929280,
     "artist": "José González",
     "title": "Against The Dying Of The Light",
@@ -10790,6 +11043,44 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 37025088,
+    "artist": "Squarepusher",
+    "title": "Kammerkonzert",
+    "labels": [
+      {
+        "name": "Warp Records",
+        "catno": "WARPLP417"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2026,
+    "masterId": 4191093,
+    "originalYear": 2026,
+    "genres": [
+      "Electronic",
+      "Jazz"
+    ],
+    "styles": [
+      "Experimental"
+    ],
+    "folder": "Spud's Pile",
+    "dateAdded": "2026-07-29T15:06:35-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
     "notes": "",
     "hasCover": true
   },
