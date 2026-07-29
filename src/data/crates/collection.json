@@ -7470,6 +7470,50 @@
     "hasCover": true
   },
   {
+    "id": 27717531,
+    "artist": "Radiohead",
+    "title": "I Might Be Wrong - Live Recordings",
+    "labels": [
+      {
+        "name": "XL Recordings",
+        "catno": "XLLP784"
+      },
+      {
+        "name": "XL Recordings",
+        "catno": "6 34904 07841 6"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "12\"",
+          "EP",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2023,
+    "masterId": 97251,
+    "originalYear": 2001,
+    "genres": [
+      "Electronic",
+      "Rock"
+    ],
+    "styles": [
+      "Leftfield",
+      "Indie Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-07-29T15:25:45-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 27872193,
     "artist": "Snow Patrol",
     "title": "Final Straw ",
