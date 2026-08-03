@@ -4256,6 +4256,57 @@
     "hasCover": true
   },
   {
+    "id": 12771610,
+    "artist": "The Beatles",
+    "title": "The Beatles",
+    "labels": [
+      {
+        "name": "Apple Records",
+        "catno": "B0028831-01"
+      },
+      {
+        "name": "Capitol Records",
+        "catno": "B0028831-01"
+      },
+      {
+        "name": "UMe",
+        "catno": "B0028831-01"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Remix, ½ Speed Master, 180 Gram, 50th Anniversary Edition, Gatefold",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Reissue",
+          "Remastered",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 2018,
+    "masterId": 46402,
+    "originalYear": 1968,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Pop Rock",
+      "Rock & Roll",
+      "Experimental"
+    ],
+    "folder": "Uncategorized",
+    "dateAdded": "2026-08-01T13:42:27-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 12773291,
     "artist": "Travis Scott (2)",
     "title": "Astroworld",
