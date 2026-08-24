@@ -805,6 +805,43 @@
     "hasCover": true
   },
   {
+    "id": 1614301,
+    "artist": "George Carlin",
+    "title": "Carlin On Campus",
+    "labels": [
+      {
+        "name": "Eardrum Records",
+        "catno": "ED1001"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1984,
+    "masterId": 379061,
+    "originalYear": 1984,
+    "genres": [
+      "Non-Music"
+    ],
+    "styles": [
+      "Comedy"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-08-22T09:52:57-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 1718798,
     "artist": "Mahavishnu Orchestra, John McLaughlin",
     "title": "The Inner Mounting Flame",
@@ -1433,6 +1470,43 @@
     ],
     "folder": "The Jeff Collection",
     "dateAdded": "2025-10-05T09:30:56-07:00",
+    "rating": 0,
+    "media": "",
+    "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 4059760,
+    "artist": "Steely Dan",
+    "title": "Greatest Hits ",
+    "labels": [
+      {
+        "name": "ABC Records",
+        "catno": "AK-1107/2"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "RCA, Gatefold",
+        "descriptions": [
+          "LP",
+          "Compilation",
+          "Club Edition"
+        ]
+      }
+    ],
+    "year": 1978,
+    "masterId": 17006,
+    "originalYear": 1978,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [],
+    "folder": "JK Collection",
+    "dateAdded": "2026-08-22T09:48:37-07:00",
     "rating": 0,
     "media": "",
     "sleeve": "",
@@ -3847,7 +3921,7 @@
       {
         "name": "Vinyl",
         "qty": "1",
-        "text": "GZ pressing",
+        "text": "GZ Pressing",
         "descriptions": [
           "LP",
           "Album",
@@ -4762,6 +4836,7 @@
         "descriptions": [
           "LP",
           "Compilation",
+          "Reissue",
           "Remastered",
           "Stereo"
         ]
@@ -6349,6 +6424,45 @@
     "hasCover": true
   },
   {
+    "id": 21089284,
+    "artist": "Beck",
+    "title": "Roskilde Festival Denmark Broadcast 1997",
+    "labels": [
+      {
+        "name": "Parachute Recording Company",
+        "catno": "PARA213LP"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "text": "Gatefold",
+        "descriptions": [
+          "LP",
+          "Unofficial Release"
+        ]
+      }
+    ],
+    "year": 2019,
+    "masterId": 2456440,
+    "originalYear": 2017,
+    "genres": [
+      "Rock",
+      "Pop"
+    ],
+    "styles": [
+      "Alternative Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-08-22T09:53:49-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 21605908,
     "artist": "Elliott Smith",
     "title": "Either / Or",
@@ -6995,7 +7109,7 @@
       {
         "name": "Vinyl",
         "qty": "1",
-        "text": "Gatefold, 180 gram",
+        "text": "Gatefold, 180g, WMIS",
         "descriptions": [
           "LP",
           "Album",
@@ -7753,6 +7867,51 @@
     "hasCover": true
   },
   {
+    "id": 28539259,
+    "artist": "George Carlin",
+    "title": "FM & AM",
+    "labels": [
+      {
+        "name": "Little David Records",
+        "catno": "LD 7214"
+      },
+      {
+        "name": "Little David Records",
+        "catno": "LD-7214"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "SP / Specialty Pressing",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1972,
+    "masterId": 195691,
+    "originalYear": 1972,
+    "genres": [
+      "Non-Music"
+    ],
+    "styles": [
+      "Comedy",
+      "Spoken Word",
+      "Political"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-08-22T09:45:06-07:00",
+    "rating": 0,
+    "media": "Very Good Plus (VG+)",
+    "sleeve": "Very Good Plus (VG+)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 28714750,
     "artist": "Taylor Swift",
     "title": "1989 (Taylor's Version)",
@@ -8462,6 +8621,52 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 30951949,
+    "artist": "Billy Joel",
+    "title": "The Bridge",
+    "labels": [
+      {
+        "name": "Columbia",
+        "catno": "OC 40402"
+      },
+      {
+        "name": "Columbia",
+        "catno": "C 40402"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1986,
+    "masterId": 72126,
+    "originalYear": 1986,
+    "genres": [
+      "Rock",
+      "Blues",
+      "Pop"
+    ],
+    "styles": [
+      "Piano Blues",
+      "Pop Rock",
+      "Ballad"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-08-22T09:52:07-07:00",
+    "rating": 0,
+    "media": "Very Good Plus (VG+)",
+    "sleeve": "Very Good Plus (VG+)",
     "notes": "",
     "hasCover": true
   },
@@ -9762,6 +9967,56 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 34270798,
+    "artist": "The Grateful Dead",
+    "title": "Gratest Hits",
+    "labels": [
+      {
+        "name": "Grateful Dead Productions",
+        "catno": "R1 727668"
+      },
+      {
+        "name": "Grateful Dead Productions",
+        "catno": "603497813780"
+      },
+      {
+        "name": "Rhino Records (2)",
+        "catno": "RI 727668"
+      },
+      {
+        "name": "Rhino Records (2)",
+        "catno": "603497813780"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Blue [Light Blue]",
+        "descriptions": [
+          "LP",
+          "Compilation"
+        ]
+      }
+    ],
+    "year": 2025,
+    "masterId": 3881041,
+    "originalYear": 2025,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Psychedelic Rock"
+    ],
+    "folder": "The Main Collection",
+    "dateAdded": "2026-08-22T09:42:28-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
     "notes": "",
     "hasCover": true
   },
