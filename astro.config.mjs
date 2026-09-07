@@ -4,6 +4,9 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://www.jonathanmkelly.com',
+  // Astro 7 changed the default to 'jsx', which strips whitespace between
+  // inline elements and ran prose together at every inline link.
+  compressHTML: true,
   integrations: [
     react(),
     // Keep the hidden /crates page out of the sitemap.
