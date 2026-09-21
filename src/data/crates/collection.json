@@ -1224,6 +1224,57 @@
     "hasCover": true
   },
   {
+    "id": 3303979,
+    "artist": "Van Morrison",
+    "title": "Blowin' Your Mind!",
+    "labels": [
+      {
+        "name": "Bang Records",
+        "catno": "BLPS 218"
+      },
+      {
+        "name": "Bang Records",
+        "catno": "BLB 218"
+      },
+      {
+        "name": "Bang Records",
+        "catno": "BANG-218"
+      },
+      {
+        "name": "Bang Records",
+        "catno": "BANG 218"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album",
+          "Stereo"
+        ]
+      }
+    ],
+    "year": 1967,
+    "masterId": 16557,
+    "originalYear": 1967,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Rhythm & Blues",
+      "Pop Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-09-20T09:28:18-07:00",
+    "rating": 0,
+    "media": "Very Good Plus (VG+)",
+    "sleeve": "Very Good (VG)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 3517314,
     "artist": "Various",
     "title": "The Big Chill - Original Motion Picture Soundtrack",
@@ -2407,6 +2458,45 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 6607619,
+    "artist": "The Muppets",
+    "title": "The Great Muppet Caper (An Original Soundtrack Recording)",
+    "labels": [
+      {
+        "name": "Atlantic",
+        "catno": "SD 16047"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "Specialty Pressing",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 1981,
+    "masterId": 262706,
+    "originalYear": 1981,
+    "genres": [
+      "Children's",
+      "Stage & Screen"
+    ],
+    "styles": [
+      "Soundtrack"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-09-20T09:23:45-07:00",
+    "rating": 0,
+    "media": "Very Good Plus (VG+)",
+    "sleeve": "Very Good Plus (VG+)",
     "notes": "",
     "hasCover": true
   },
@@ -10088,7 +10178,7 @@
         ]
       }
     ],
-    "year": 0,
+    "year": 2001,
     "masterId": 149466,
     "originalYear": 2001,
     "genres": [
@@ -11488,7 +11578,6 @@
       {
         "name": "Vinyl",
         "qty": "1",
-        "text": "Black",
         "descriptions": [
           "LP",
           "Album"
@@ -11511,6 +11600,53 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 37985115,
+    "artist": "Dave Matthews Band",
+    "title": "Everyday",
+    "labels": [
+      {
+        "name": "RCA",
+        "catno": "19958432371"
+      },
+      {
+        "name": "Legacy",
+        "catno": "19958432371"
+      },
+      {
+        "name": "Bama Rags Records",
+        "catno": "19958432371"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "2",
+        "descriptions": [
+          "LP",
+          "45 RPM",
+          "Album",
+          "Reissue"
+        ]
+      }
+    ],
+    "year": 2026,
+    "masterId": 149978,
+    "originalYear": 2001,
+    "genres": [
+      "Rock"
+    ],
+    "styles": [
+      "Alternative Rock"
+    ],
+    "folder": "JK Collection",
+    "dateAdded": "2026-09-20T09:30:35-07:00",
+    "rating": 0,
+    "media": "Near Mint (NM or M-)",
+    "sleeve": "Mint (M)",
     "notes": "",
     "hasCover": true
   }
