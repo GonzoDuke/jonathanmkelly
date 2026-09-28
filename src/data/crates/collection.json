@@ -8281,7 +8281,11 @@
     "styles": [
       "Breakbeat",
       "Big Beat",
-      "Breaks"
+      "Breaks",
+      "Electro",
+      "Techno",
+      "Acid",
+      "Synthpunk"
     ],
     "folder": "JK Collection",
     "dateAdded": "2026-04-03T12:58:53-07:00",
@@ -9148,6 +9152,52 @@
     "rating": 0,
     "media": "",
     "sleeve": "",
+    "notes": "",
+    "hasCover": true
+  },
+  {
+    "id": 32553156,
+    "artist": "Jack Kerouac",
+    "title": "Readings By Jack Kerouac On The Beat Generation",
+    "labels": [
+      {
+        "name": "Verve Records",
+        "catno": "MG V-15005"
+      },
+      {
+        "name": "Verve Records",
+        "catno": "602465695120"
+      },
+      {
+        "name": "UMe",
+        "catno": "602465695120"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "text": "180g",
+        "descriptions": [
+          "LP",
+          "Reissue",
+          "Mono"
+        ]
+      }
+    ],
+    "year": 2024,
+    "masterId": 558823,
+    "originalYear": 1960,
+    "genres": [
+      "Jazz",
+      "Non-Music"
+    ],
+    "styles": [],
+    "folder": "JK Collection",
+    "dateAdded": "2026-09-25T11:21:49-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
     "notes": "",
     "hasCover": true
   },
