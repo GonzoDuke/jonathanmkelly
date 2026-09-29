@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Project Shelf List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --ground: #f4f5f8; --surface: #ffffff; --surface-2: #eceef3; --surface-3: #e3e7ef;
+    --ink: #171a21; --ink-2: #3d4453; --muted: #6a7183;
+    --line: #d8dce5; --line-soft: #e6e9f0;
+    --accent: #5b3e8e; --accent-soft: #efe9f8;
+    --fresh: #2f6b4f; --fresh-soft: #e4f0ea;
+    --quiet: #8a5d15; --quiet-soft: #f7eeda;
+    --dormant: #6a7183; --dormant-soft: #eceef3;
+    --alert: #a33a3a; --alert-soft: #f8e6e6;
+    --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --mono: "DM Mono", "SFMono-Regular", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #14161c; --surface: #1b1e26; --surface-2: #232732; --surface-3: #2b3040;
+      --ink: #e9ebf1; --ink-2: #b9bfcd; --muted: #868da0;
+      --line: #333947; --line-soft: #272c37;
+      --accent: #b49ae0; --accent-soft: #2b2440;
+      --fresh: #79c39c; --fresh-soft: #1d2f27;
+      --quiet: #d5a852; --quiet-soft: #322818;
+      --dormant: #868da0; --dormant-soft: #232732;
+      --alert: #e08585; --alert-soft: #351f1f;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #14161c; --surface: #1b1e26; --surface-2: #232732; --surface-3: #2b3040;
+    --ink: #e9ebf1; --ink-2: #b9bfcd; --muted: #868da0;
+    --line: #333947; --line-soft: #272c37;
+    --accent: #b49ae0; --accent-soft: #2b2440;
+    --fresh: #79c39c; --fresh-soft: #1d2f27;
+    --quiet: #d5a852; --quiet-soft: #322818;
+    --dormant: #868da0; --dormant-soft: #232732;
+    --alert: #e08585; --alert-soft: #351f1f;
+  }
+
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  img { max-width: 100%; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--display); font-size: 15px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 40px 28px 80px; }
+
+  .masthead { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px; padding-bottom: 20px; border-bottom: 2px solid var(--ink); }
+  .eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: .13em; text-transform: uppercase; color: var(--accent); margin: 0 0 8px; }
+  h1 { font-size: clamp(30px, 4.4vw, 44px); font-weight: 700; letter-spacing: -.022em; margin: 0; text-wrap: balance; line-height: 1.05; }
+  .sub { margin: 10px 0 0; color: var(--muted); max-width: 64ch; font-size: 14.5px; }
+  .asof { font-family: var(--mono); font-size: 11.5px; color: var(--muted); text-align: right; line-height: 1.7; }
+
+  .tallies { display: flex; flex-wrap: wrap; padding: 14px 0 0; border-bottom: 1px solid var(--line); }
+  .tally { padding: 8px 26px 16px 0; margin-right: 26px; border-right: 1px solid var(--line-soft); }
+  .tally:last-child { border-right: 0; }
+  .tally b { display: block; font-family: var(--mono); font-size: 23px; font-weight: 500; font-variant-numeric: tabular-nums; letter-spacing: -.02em; line-height: 1.2; }
+  .tally span { font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+  .sec { margin: 32px 0 0; }
+  .sec-head { display: flex; align-items: baseline; gap: 12px; margin: 0 0 14px; }
+  .sec-head h2 { font-size: 13px; font-family: var(--mono); font-weight: 500; letter-spacing: .11em; text-transform: uppercase; margin: 0; }
+  .sec-head .rule { flex: 1; height: 1px; background: var(--line); }
+
+  .findings { display: grid; gap: 1px; background: var(--line-soft); border: 1px solid var(--line); }
+  .finding { background: var(--surface); padding: 14px 16px; display: grid; grid-template-columns: 106px 1fr; gap: 16px; align-items: start; }
+  .sev { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; padding: 3px 7px; text-align: center; border: 1px solid currentColor; white-space: nowrap; }
+  .sev.a { color: var(--alert); background: var(--alert-soft); }
+  .sev.b { color: var(--quiet); background: var(--quiet-soft); }
+  .finding p { margin: 0; font-size: 14px; color: var(--ink-2); }
+  .finding p strong { color: var(--ink); font-weight: 600; }
+  code { font-family: var(--mono); font-size: 12.5px; background: var(--surface-2); padding: 1px 5px; color: var(--ink); }
+
+  .tucked { margin: 26px 0 0; border-top: 1px solid var(--line-soft); }
+  .tucked > summary { list-style: none; cursor: pointer; padding: 12px 0; font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 9px; }
+  .tucked > summary::-webkit-details-marker { display: none; }
+  .tucked > summary::after { content: "▸"; color: var(--accent); font-size: 10px; }
+  .tucked[open] > summary::after { content: "▾"; }
+  .tucked > summary:hover { color: var(--ink-2); }
+  .tucked > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tk-n { font-family: var(--mono); font-size: 11px; color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent); padding: 1px 6px; }
+  .tucked .findings { margin-bottom: 20px; }
+
+  .renewals { display: grid; grid-template-columns: repeat(auto-fit, minmax(184px, 1fr)); gap: 1px; background: var(--line-soft); border: 1px solid var(--line); }
+  .ren { background: var(--surface); padding: 13px 15px; }
+  .ren .d { font-family: var(--mono); font-size: 13px; color: var(--ink); font-weight: 500; }
+  .ren .when { font-family: var(--mono); font-size: 11.5px; color: var(--muted); margin-top: 5px; font-variant-numeric: tabular-nums; }
+  .ren .who { font-size: 12px; color: var(--muted); margin-top: 5px; }
+  .bar { height: 3px; background: var(--surface-2); margin-top: 9px; }
+  .bar i { display: block; height: 3px; background: var(--accent); }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 32px 0 0; padding: 12px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--ground); z-index: 5; }
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-family: var(--mono); font-size: 11.5px; letter-spacing: .04em; padding: 5px 11px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); cursor: pointer; }
+  .chip:hover { border-color: var(--muted); }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--ground); border-color: var(--ink); }
+  .chip:focus-visible, .seg button:focus-visible, .note:focus-visible, .exp button:focus-visible, .rowbtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .exp { display: flex; gap: 6px; align-items: center; }
+  .exp button { font-family: var(--mono); font-size: 11.5px; letter-spacing: .04em; padding: 5px 11px; border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent); cursor: pointer; }
+  .exp button:hover { background: var(--accent); color: var(--ground); }
+  .savestate { margin-left: auto; font-family: var(--mono); font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 7px; }
+  .dot { width: 6px; height: 6px; background: var(--muted); border-radius: 50%; flex: none; }
+  .dot.on { background: var(--fresh); }
+  .dot.off { background: var(--quiet); }
+
+  .scroller { overflow-x: auto; border: 1px solid var(--line); border-top: 0; background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; min-width: 1120px; }
+  thead th { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 500; text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); background: var(--surface-2); white-space: nowrap; }
+  tbody td { padding: 13px 14px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+  tbody tr.main:hover td { background: var(--surface-2); }
+  tbody tr.open td { background: var(--surface-2); border-bottom-color: transparent; }
+
+  .rowbtn { display: flex; align-items: baseline; gap: 8px; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; font-family: inherit; color: inherit; }
+  .caret { font-family: var(--mono); font-size: 10px; color: var(--accent); width: 10px; flex: none; }
+  .name { font-weight: 600; font-size: 14.5px; }
+  .kind { color: var(--muted); font-size: 12.5px; margin-top: 3px; max-width: 36ch; }
+  .tag { display: inline-block; font-family: var(--mono); font-size: 9.5px; letter-spacing: .07em; text-transform: uppercase; padding: 1px 5px; border: 1px solid var(--line); color: var(--muted); margin: 4px 4px 0 0; }
+  .tag.warn { color: var(--quiet); border-color: var(--quiet); background: var(--quiet-soft); }
+  .tag.dom { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+  .tag.arc { color: var(--ink-2); border-color: var(--muted); }
+
+  .act { font-family: var(--mono); font-size: 10px; letter-spacing: .07em; text-transform: uppercase; padding: 2px 7px; border: 1px solid currentColor; display: inline-block; }
+  .act.fresh { color: var(--fresh); background: var(--fresh-soft); }
+  .act.quiet { color: var(--quiet); background: var(--quiet-soft); }
+  .act.dormant { color: var(--dormant); background: var(--dormant-soft); }
+
+  .marks { display: flex; gap: 4px; }
+  .mark { font-family: var(--mono); font-size: 9.5px; font-weight: 500; width: 26px; height: 22px; display: grid; place-items: center; border: 1px solid var(--line); color: var(--muted); }
+  .mark.on { background: var(--ink); color: var(--ground); border-color: var(--ink); }
+  .mark.miss { border-style: dashed; }
+  .meta { font-family: var(--mono); font-size: 12px; color: var(--ink-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .meta .dim, .meta.dim { color: var(--muted); }
+  a.url { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; font-family: var(--mono); font-size: 12px; }
+  a.url:hover { border-bottom-color: var(--accent); }
+
+  tr.detail td { padding: 0 14px 20px; background: var(--surface-2); border-bottom: 1px solid var(--line); }
+  .panel { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; border-left: 3px solid var(--accent); padding: 4px 0 0 16px; }
+  .pblock h4 { margin: 0 0 6px; font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+  .pblock p { margin: 0 0 8px; font-size: 13.5px; color: var(--ink-2); line-height: 1.6; }
+  .pblock p:last-child { margin-bottom: 0; }
+  .pblock .said { color: var(--ink); border-left: 2px solid var(--line); padding-left: 10px; font-style: italic; }
+  .facts { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 2px; }
+  .fact { font-family: var(--mono); font-size: 10.5px; padding: 2px 7px; background: var(--surface); border: 1px solid var(--line); color: var(--ink-2); }
+  .unknown { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+  .seg { display: inline-flex; border: 1px solid var(--line); }
+  .seg button { font-family: var(--mono); font-size: 11px; padding: 5px 9px; background: var(--surface); color: var(--ink-2); border: 0; border-right: 1px solid var(--line); cursor: pointer; }
+  .seg button:last-child { border-right: 0; }
+  .seg button:hover { background: var(--surface-3); }
+  .seg button[aria-pressed="true"] { color: #fff; }
+  .seg button.a[aria-pressed="true"] { background: var(--fresh); }
+  .seg button.b[aria-pressed="true"] { background: var(--accent); }
+  .seg button.c[aria-pressed="true"] { background: var(--dormant); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .seg button[aria-pressed="true"] { color: #14161c; }
+  }
+  :root[data-theme="dark"] .seg button[aria-pressed="true"] { color: #14161c; }
+
+  .note { display: block; width: 100%; margin-top: 7px; font-family: var(--display); font-size: 12.5px; padding: 5px 7px; background: var(--ground); border: 1px solid var(--line); color: var(--ink); resize: vertical; min-height: 30px; }
+  .note::placeholder { color: var(--muted); }
+  .banner { margin: 18px 0 0; padding: 11px 14px; border: 1px solid var(--quiet); background: var(--quiet-soft); color: var(--ink-2); font-size: 13.5px; }
+
+  .record { display: grid; gap: 1px; background: var(--line-soft); border: 1px solid var(--line); }
+  .rec { background: var(--surface); padding: 11px 15px; display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; }
+  .rec .w { font-family: var(--mono); font-size: 12.5px; color: var(--ink); min-width: 230px; }
+  .rec .x { font-size: 13px; color: var(--muted); }
+  .strike { text-decoration: line-through; text-decoration-color: var(--alert); }
+
+  .legend { margin: 18px 0 0; font-family: var(--mono); font-size: 11.5px; color: var(--muted); line-height: 1.9; }
+  .legend b { color: var(--ink-2); font-weight: 500; }
+  footer { margin: 40px 0 0; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12.5px; max-width: 76ch; }
+
+  @media (max-width: 760px) {
+    .wrap { padding: 26px 16px 60px; }
+    .asof { text-align: left; }
+    .finding { grid-template-columns: 1fr; gap: 8px; }
+    .sev { justify-self: start; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="masthead">
+    <div>
+      <p class="eyebrow">Accession record</p>
+      <h1>Project Shelf List</h1>
+      <p class="sub">Twelve projects across GitHub, Vercel, Netlify and this machine. Every row opens: what it is, why it exists in your words, and where it stands.</p>
+    </div>
+    <div class="asof">
+      Revised 8 Sep 2026<br>
+      GonzoDuke / gonzodukes-projects<br>
+      12 repos, 11 local, 9 deployed
+    </div>
+  </header>
+
+  <div class="tallies">
+    <div class="tally"><b>12</b><span>Repos</span></div>
+    <div class="tally"><b>9</b><span>Deployed</span></div>
+    <div class="tally"><b>11</b><span>Cloned here</span></div>
+    <div class="tally"><b>1</b><span>Archived</span></div>
+    <div class="tally"><b>5</b><span>Domains</span></div>
+    <div class="tally"><b>$60</b><span>Renewals / yr</span></div>
+    <div class="tally"><b>2</b><span>Netlify sites</span></div>
+  </div>
+
+  <section class="sec">
+    <div class="sec-head"><h2>Renewal calendar</h2><div class="rule"></div></div>
+    <div class="renewals" id="renewals"></div>
+  </section>
+
+  <div class="controls">
+    <div class="filters" id="filters">
+      <button class="chip" data-f="all" aria-pressed="true">All 12</button>
+      <button class="chip" data-f="live" aria-pressed="false">Deployed</button>
+      <button class="chip" data-f="paid" aria-pressed="false">Costs money</button>
+      <button class="chip" data-f="dormant" aria-pressed="false">Dormant</button>
+      <button class="chip" data-f="waiting" aria-pressed="false">Waiting on you</button>
+      <button class="chip" data-f="archived" aria-pressed="false">Archived</button>
+    </div>
+    <div class="exp">
+      <button id="exp-md" title="Markdown checklist of the filtered rows">Export checklist</button>
+      <button id="exp-csv" title="CSV of the filtered rows">CSV</button>
+    </div>
+    <div class="savestate"><span class="dot" id="dot"></span><span id="savemsg">Loading</span></div>
+  </div>
+
+  <div class="scroller">
+    <table>
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Where</th>
+          <th>Live at</th>
+          <th>Activity</th>
+          <th>Size</th>
+          <th>Status and notes</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <p class="legend">
+    <b>GH</b> repo on GitHub &nbsp; <b>VC</b> deployed on Vercel &nbsp; <b>NL</b> live on Netlify &nbsp; <b>PC</b> cloned on this machine &nbsp;&nbsp; dashed means absent.<br>
+    <b>Fresh</b> touched within 14 days &nbsp; <b>Quiet</b> 15 to 60 &nbsp; <b>Dormant</b> over 60. Activity is measured; status is yours to set. Click any project name to open its detail.
+  </p>
+
+  <details class="tucked">
+    <summary><span class="tk-n">2</span> things worth knowing, neither urgent</summary>
+    <div class="findings">
+      <div class="finding">
+        <span class="sev a">Only copy</span>
+        <p><strong>Two Netlify sites hold code that exists nowhere else.</strong> <code>vinyloracle</code> and <code>oracleofmusic</code> have deployed serverless functions (<code>api</code>, <code>discogs</code>, and for the latter <code>itunes</code>) that cannot be downloaded over HTTP. Their front ends are saved in <code>the-music-oracle/legacy/</code>; the functions are not. Keep both sites up until the Music Oracle revival has taken what it needs.</p>
+      </div>
+      <div class="finding">
+        <span class="sev b">Needs setup</span>
+        <p><strong>None of the eleven local clones have dependencies installed.</strong> You can read, edit, commit and push without installing anything. You need <code>npm install</code> only to run a project or verify a change works.</p>
+      </div>
+    </div>
+  </details>
+
+  <section class="sec">
+    <div class="sec-head"><h2>Removed 8 September</h2><div class="rule"></div></div>
+    <div class="record" id="record"></div>
+  </section>
+
+  <footer>
+    Compiled from <code>gh repo list</code>, <code>vercel project ls</code>, <code>netlify sites:list</code>, <code>vercel domains ls</code>, and the git remotes in Desktop/Projects. Every "in your words" passage comes from the project interview on 8 Sep 2026 and is recorded as given rather than paraphrased into status labels. Where an answer was "I don't remember," it says so. Local copy: status and notes are saved in this browser only.
+  </footer>
+</div>
+
+<script>
+/* =====================================================================
+   CONTENT. Edit these three lists to update the page.
+   AS_OF drives the "days left" on renewals and should match the revision date.
+   ===================================================================== */
+const AS_OF = "2026-09-08";
+
+const DOMAINS = [
+  { d: "thebsideofeverything.com", iso: "2027-03-09", who: "b-side-of-everything", price: "$15" },
+  { d: "whoisrowanblack.com", iso: "2027-03-10", who: "rowan-black", price: "$15" },
+  { d: "stayundeclared.com", iso: "2027-04-10", who: "undeclared", price: "$15" },
+  { d: "carnegielib.app", iso: "2027-06-03", who: "carnegieapp", price: "$15" },
+  { d: "jonathanmkelly.com", iso: "", who: "jonathanmkelly", price: "third party" }
+];
+
+const APPS = [
+  {
+    s: "things-i-wanted-to-exist", k: "One-page portfolio, ten projects. PDF and Word from one source.",
+    vc: "", pc: "Desktop/Projects/things-i-wanted-to-exist", url: "", days: 0, size: "1.1 MB",
+    vis: "private", lang: "Static HTML", tags: [["", "pdf + docx"], ["", "local by design"]],
+    what: "A single static HTML document, no build step and no dependencies. print.html is the source; the PDF renders from it with headless Chrome and the Word file converts from it with pandoc, so the two deliverables cannot drift.",
+    yours: "You hand it to people who want to understand what you do with AI and how you have built it into your professional and personal workflows.",
+    state: "Deliberately not deployed. The Working Corpus entry was cut on 8 Sep when that tool was archived, taking it from eleven projects to ten.",
+    facts: ["print.html to PDF", "pandoc to docx", "no deps", "no deploy wanted"]
+  },
+  {
+    s: "jonathanmkelly", k: "Primary portfolio. Astro 7, weekly Discogs sync.",
+    vc: "jmkproj", pc: "Desktop/Projects/JMK", url: "https://jonathanmkelly.com", days: 0, size: "34.3 MB",
+    vis: "public", lang: "Astro", tags: [["dom", "jonathanmkelly.com"]],
+    what: "42 pages across three content streams plus a hidden vinyl page. detourist holds 16 pieces, agency-artifact holds 9, and poetry has its own section. A GitHub Action syncs the Discogs collection weekly and has succeeded on all eight runs.",
+    yours: "detourist and agency-artifact are two different collections with a different focus and register. /crates stays hidden at that URL on purpose: a quiet corner for talking vinyl with people.",
+    state: "Upgraded to Astro 7 on 8 Sep, which needed compressHTML pinned to true because the new default silently removed spaces before inline links. AIcorpus removed the same day.",
+    facts: ["Astro 7.3.1", "42 pages", "Discogs sync 8/8", "0 vulnerabilities"]
+  },
+  {
+    s: "the-music-oracle", k: "An emotional reading in music. Four builds, one revival.",
+    vc: "", nl: 2, pc: "Desktop/Projects/the-music-oracle", url: "", days: 41, size: "2.0 MB",
+    vis: "private", lang: "Next.js", tags: [["warn", "2 netlify orphans"]],
+    what: "Ten questions, then album recommendations. Four distinct builds now live in one repo: src/ has a WebGL shader field but recommends from Spotify's catalog; legacy/MOv2 has the full feature set with Supabase; legacy/vinyloracle drops the catalog entirely and reads only records you own; legacy/oracleofmusic is the step between.",
+    yours: "Nothing identifiably broke. An early project you kept tweaking without ever landing it, built before your current skill level. Worth reviving, connected to /crates.",
+    state: "Unarchived 8 Sep. The visual work and the collection work were never in the same build, so a revival means porting across three versions rather than resuming one. The Discogs functions behind the two Netlify sites are the only copies.",
+    facts: ["4 builds preserved", "WebGL in src/", "Discogs in legacy/", "revive toward /crates"]
+  },
+  {
+    s: "carnegieapp", k: "Library cataloging. Scan, look up, verify, export.",
+    vc: "carnegieapp", pc: "Desktop/Projects/carnegieapp", url: "https://carnegielib.app", days: 9, size: "0.9 MB",
+    vis: "public", lang: "Next.js", paid: 1, tags: [["dom", "carnegielib.app"]],
+    what: "Your largest tool at 148 files, and the only one with both a CHANGELOG and a USAGE doc. Batch capture with barcode scanning, ISBN lookup, Claude vision reading call numbers off spine labels, and CSV and Excel export. Passcode gated.",
+    yours: "It works and you have used it successfully. The primary impetus was cataloging your home library, not the school's. That project has not started yet, but confidence is high. No relation to Emily.",
+    state: "Production matches your last commit to the second. Branch renamed master to main on 8 Sep, the last repo to differ. The intent of that final commit is not remembered, which is fine.",
+    facts: ["148 files", "barcode + vision", "xlsx export", "carnegielib.app $15/yr"]
+  },
+  {
+    s: "weardian", k: "Assignment brief in, pasteable LibGuide boxes out.",
+    vc: "weardian", pc: "Desktop/Projects/weardian", url: "https://weardian.vercel.app", days: 4, size: "0.2 MB",
+    vis: "private", lang: "Next.js", tags: [],
+    what: "Next.js on Neon Postgres with Drizzle, Claude and Playwright tests. The API interviews, plans, revises and renders, so it walks someone through a brief rather than just transforming text. A GitHub Action backs every guide up weekly, because Neon's free tier has none.",
+    yours: "Single user, you. It is shipped and has been piloted, though not yet run at full blast. You are confident it will do what you need.",
+    state: "Your most active project. The weekly backup fires for the first time on 9 Sep; all preconditions verified. You are happy to let it run and check later.",
+    facts: ["Neon + Drizzle", "Playwright e2e", "weekly backup", "single user"]
+  },
+  {
+    s: "k12-research-framework", k: "Four research moves, kindergarten to twelfth grade.",
+    vc: "pingry-k12-research-framework", pc: "Desktop/Projects/k12-research-framework", url: "https://pingry-k12-research-framework.vercel.app", days: 41, size: "0.4 MB",
+    vis: "private", lang: "Astro", tags: [],
+    what: "The only project that generates Word and Excel files as build artifacts, regenerated on every build so the paper handouts can never drift from the site. Pages for overview, benchmarks, seams, team and grounding, with the raw documents behind a passcode.",
+    yours: "Your own model. Seams are the places between certain grades that create naturally combining points. Benchmarks are the standards used to ensure progress through the model. Primarily for you now, but in time you want people to use the site to understand the model you are laying out.",
+    state: "It has not been shown to anyone yet, so it is very much unfinished in that sense. You are working out how to share it with your team.",
+    facts: ["docx + xlsx exports", "regenerated every build", "passcode on sources", "not yet shown"]
+  },
+  {
+    s: "marginalia", k: "Photograph a marked-up page, get back the passages you chose.",
+    vc: "marginalia", pc: "Desktop/Projects/marginalia", url: "https://underline-notes.vercel.app", days: 67, size: "0.1 MB",
+    vis: "private", lang: "Next.js", tags: [["", "ships as underline-notes"]],
+    what: "Your smallest codebase at 26 files and the one with the hardest problems in it: an OpenCV document scanner running in a Web Worker, camera capture with a torch toggle, and PWA install. The real difficulty is separating marks a reader made by hand from italics and bold the publisher set.",
+    yours: "It works. You used it in beta and it worked sufficiently. Not a high-use tool, but it could be useful.",
+    state: "Stopped because attention moved elsewhere, not because anything blocked it. The last commit added page numbers and highlight recognition.",
+    facts: ["26 files", "OpenCV in a worker", "PWA", "beta proven"]
+  },
+  {
+    s: "lectern", k: "A rigorous course on anything you are curious about.",
+    vc: "lectern", pc: "Desktop/Projects/lectern", url: "https://lectern-cyan.vercel.app", days: 75, size: "1.3 MB",
+    vis: "private", lang: "Astro", tags: [],
+    what: "Astro with Pagefind search, docx ingest via mammoth, and an offline PWA shell. Two courses live in it as markdown: The Art of Bad Arguments and Footprint and Legacy. An Ask feature does grounded Q&A across that corpus with every cited source findable by location.",
+    yours: "These are your courses. Some have run completely, others are completely new and built out at different levels of completion. Ask is one of many features, though it is quite good. Yours for now; ideally the concept could be given to other teachers.",
+    state: "Quiet since late June. The last commits built Ask and the PWA shell.",
+    facts: ["Pagefind search", "grounded Q&A", "docx ingest", "installable PWA"]
+  },
+  {
+    s: "rowan-black", k: "The collected works of a writer who never lived.",
+    vc: "rowan-black", pc: "Desktop/Projects/rowan-black", url: "https://whoisrowanblack.com", days: 134, size: "0.3 MB",
+    vis: "public", lang: "Astro", paid: 1, tags: [["dom", "whoisrowanblack.com"]],
+    what: "40 pieces across six colour-coded periods, from Teenage Years through Prophetic and Experimental, plus an Unconfirmed period marked Pending Authentication. 21 poems, 7 found objects, and one-offs including a subverted government form, a redacted email and a handwritten letter. The capstone, no-signal-found, is a seven-part sequence of named vices plus a postscript.",
+    yours: "A revival is planned, but it is a creative enterprise rather than a code one. Working Notes is waiting, though you do not yet know what for; there will be more in time. Unconfirmed stays, since you may add to it during the revival. Rowan and Skinsbury are both your creative writing, but they live on different sides of the universe.",
+    state: "Complete and polished. The last three commits were refinement, not unfinished work. Unconfirmed is wired as a real mechanic: those pieces are excluded from the archive's navigation and timeline, so they sit outside the authenticated body of work until promoted.",
+    facts: ["40 pieces", "6 periods", "Corvids Collective", "whoisrowanblack.com $15/yr"]
+  },
+  {
+    s: "b-side-of-everything", k: "An archive of bands that never were.",
+    vc: "b-side-of-everything", pc: "Desktop/Projects/b-side-of-everything", url: "https://www.thebsideofeverything.com", days: 141, size: "1.1 MB",
+    vis: "public", lang: "Astro", paid: 1, tags: [["dom", "thebsideofeverything.com"]],
+    what: "15 pieces, and no two share a form. YouTube comment section, webzine review, vinyl reissue liner notes, VHS transcript, translated blog post, Substack essay, student journal feature, show preview, Reddit AMA, record guide entry, radio transcript, punk zine review, industry newsletter column, dissertation chapter. Spanning 1972 to 2026. Every piece carries a first-person note from Skinsbury about how he found it.",
+    yours: "That specific volume is done. There may be a second volume if you ever feel like writing them.",
+    state: "Complete and closed as Volume One. Nothing in the code computes from a fixed count, so a second volume is content work rather than engineering: a record, a page, a component and an OG image.",
+    facts: ["15 pieces, 15 forms", "1972 to 2026", "curated by Skinsbury", "Vol. One registered"]
+  },
+  {
+    s: "undeclared", k: "Graduate coursework without the tuition or the pretext.",
+    vc: "undeclared", pc: "Desktop/Projects/undeclared", url: "https://stayundeclared.com", days: 144, size: "1.2 MB",
+    vis: "public", lang: "Next.js", paid: 1, waiting: 1, tags: [["dom", "stayundeclared.com"]],
+    what: "The most ambitious thing here. Supabase, both Claude and Google GenAI, PDF generation and bcrypt auth, running a complete pipeline: intake, course generation, per-unit reflection, assignment submission, office hours, a capstone that generates and gets submitted, a portfolio and a calendar. Four numbered design documents and a roadmap.",
+    yours: "Built to get past the fact that with two master's degrees and a doctorate, there is no legitimate reason left to go back for more grad work. So it would create courses for you to take, without the cost.",
+    state: "It became too clunky to work on and the amount of work to change it felt overwhelming. Not given up on. In your words: it is waiting on something, you do not know what yet, but it is there.",
+    facts: ["full course pipeline", "Supabase", "two AI providers", "roadmap written"]
+  },
+  {
+    s: "working-corpus", k: "Local research tool. Too corpus-specific to generalize.",
+    vc: "", pc: "", url: "", days: 82, size: "1.4 MB",
+    vis: "private", lang: "Python", arc: 1, tags: [["arc", "archived"]],
+    what: "4,200 lines of Python in two layers: a page-level FTS5 index over extracted PDF text with a local reader, and a faceted catalog with a d3 relation graph. Plus a 176 KB annotated bibliography carrying evidence weights, citation rules and retraction tracking.",
+    yours: "Breaking it down to rebuild as a multitool was not going to work, so it was archived rather than deleted.",
+    state: "Archived 8 Sep, read-only but fully recoverable. An extraction plan exists and found that build_explorer.py references the taxonomy zero times, meaning the visual layer was already reusable; the coupling is all in the Python data layer. Whether the bibliography is still live work, and where the PDF corpus lives, are on your work computer and unanswered.",
+    facts: ["4,200 lines Python", "SQLite FTS5", "176 KB bibliography", "PDFs on work machine"],
+    unknown: "Two questions parked for the work computer: is the bibliography still live work, and do the PDFs still exist anywhere."
+  }
+];
+
+const REMOVED = [
+  { w: "cairn-todo", x: "Repo, Vercel project and 1.4 GB local folder. Capacity-aware goal tracker." },
+  { w: "emily", x: "Vercel project and 767 MB local folder. Never had a repo. Pingry circulation app." },
+  { w: "carnegie-v1-archive", x: "Repo and its carnegie deployment. Superseded by carnegieapp." },
+  { w: "libguide-builder", x: "Repo. Superseded by weardian." },
+  { w: "submit-site-to-marginalia-search", x: "Repo. A fork of someone else's project." },
+  { w: "jmk-portfolio", x: "Vercel project only. Stale upload of things-i-wanted-to-exist." },
+  { w: "the-verse-oracle", x: "Repo and Netlify site. The poetry-side oracle; you did not want it." },
+  { w: "themusicoracle (netlify)", x: "Byte-identical to legacy/MOv2 apart from line endings." },
+  { w: "effulgent-pie-4aa844", x: "Netlify site. A 1 KB stub matching legacy/oraclev4." },
+  { w: "/AIcorpus", x: "Removed from jonathanmkelly: the explorer PWA, its docs, the update script and six redirects." }
+];
+
+/* =====================================================================
+   APP CODE. No need to touch anything below to update content.
+   ===================================================================== */
+const NL = String.fromCharCode(10);
+const STORE_KEY = "project-shelf-list:tracking";
+
+const state = { filter: "all", track: {}, open: {}, canSave: false };
+const rowsEl = document.getElementById("rows");
+const dotEl = document.getElementById("dot");
+const msgEl = document.getElementById("savemsg");
+
+function esc(t) { return String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+function activity(d) { return d <= 14 ? "fresh" : d <= 60 ? "quiet" : "dormant"; }
+function ago(d) { return d === 0 ? "today" : d + "d ago"; }
+function daysLeft(iso) { return Math.round((new Date(iso + "T00:00:00Z") - new Date(AS_OF + "T00:00:00Z")) / 86400000); }
+
+document.getElementById("renewals").innerHTML = DOMAINS.map(x => {
+  let when = "no date visible", pct = 0;
+  if (x.iso) {
+    const left = daysLeft(x.iso);
+    when = left + " days, " + new Date(x.iso + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+    pct = Math.max(4, Math.min(100, Math.round((1 - left / 365) * 100)));
+  }
+  return '<div class="ren"><div class="d">' + esc(x.d) + '</div><div class="when">' + esc(when) + '</div>' +
+    '<div class="who">' + esc(x.who) + ", " + esc(x.price) + '</div>' +
+    '<div class="bar"><i style="width:' + pct + '%"></i></div></div>';
+}).join("");
+
+document.getElementById("record").innerHTML = REMOVED.map(r =>
+  '<div class="rec"><span class="w strike">' + esc(r.w) + '</span><span class="x">' + esc(r.x) + "</span></div>"
+).join("");
+
+function detailRow(a) {
+  const blocks = [];
+  blocks.push('<div class="pblock"><h4>What it is</h4><p>' + esc(a.what) + '</p>' +
+    (a.facts ? '<div class="facts">' + a.facts.map(f => '<span class="fact">' + esc(f) + '</span>').join("") + '</div>' : "") + '</div>');
+  blocks.push('<div class="pblock"><h4>In your words</h4><p class="said">' + esc(a.yours) + '</p></div>');
+  blocks.push('<div class="pblock"><h4>Where it stands</h4><p>' + esc(a.state) + '</p>' +
+    (a.unknown ? '<p class="unknown">Unanswered: ' + esc(a.unknown) + '</p>' : "") + '</div>');
+  return '<tr class="detail"><td colspan="6"><div class="panel">' + blocks.join("") + '</div></td></tr>';
+}
+
+function visibleApps() {
+  const f = state.filter;
+  return APPS.filter(a => {
+    const act = activity(a.days);
+    if (f === "live") return !!a.vc;
+    if (f === "paid") return !!a.paid;
+    if (f === "dormant") return act === "dormant";
+    if (f === "archived") return !!a.arc;
+    if (f === "waiting") return !!a.waiting;
+    return true;
+  });
+}
+
+function render() {
+  const out = [];
+  for (const a of visibleApps()) {
+    const t = state.track[a.s] || {};
+    const act = activity(a.days);
+    const isOpen = !!state.open[a.s];
+    const tags = (a.tags || []).map(x => '<span class="tag ' + x[0] + '">' + esc(x[1]) + "</span>").join("");
+    const where = '<div class="marks">' +
+      '<span class="mark on" title="GitHub repo, ' + a.vis + '">GH</span>' +
+      '<span class="mark ' + (a.vc ? "on" : "miss") + '" title="' + (a.vc ? "Vercel: " + a.vc : "Not on Vercel") + '">VC</span>' +
+      '<span class="mark ' + (a.nl ? "on" : "miss") + '" title="' + (a.nl ? a.nl + " Netlify site(s)" : "Not on Netlify") + '">NL</span>' +
+      '<span class="mark ' + (a.pc ? "on" : "miss") + '" title="' + (a.pc ? "Local: " + a.pc : "Not on this machine") + '">PC</span>' +
+      "</div>" +
+      (a.vc && a.vc !== a.s ? '<div class="meta dim" style="margin-top:5px">as ' + esc(a.vc) + "</div>" : "") +
+      (a.pc ? '<div class="meta dim" style="margin-top:5px">' + esc(a.pc.replace("Desktop/Projects/", "…/")) + "</div>" : "");
+
+    out.push('<tr class="main' + (isOpen ? " open" : "") + '">' +
+      '<td><button class="rowbtn" data-open="' + a.s + '" aria-expanded="' + isOpen + '">' +
+      '<span class="caret">' + (isOpen ? "▾" : "▸") + '</span>' +
+      '<span><span class="name">' + esc(a.s) + '</span>' +
+      (a.k ? '<div class="kind">' + esc(a.k) + "</div>" : "") + tags + '</span></button></td>' +
+      "<td>" + where + "</td>" +
+      "<td>" + (a.url ? '<a class="url" href="' + esc(a.url) + '" target="_blank" rel="noopener noreferrer">' + esc(a.url.replace(/^https:\/\//, "")) + "</a>" : '<span class="meta dim">not deployed</span>') + "</td>" +
+      '<td><span class="act ' + act + '">' + act + '</span><div class="meta dim" style="margin-top:5px">' + ago(a.days) + "</div></td>" +
+      '<td class="meta">' + esc(a.size) + '<div class="dim" style="margin-top:5px">' + esc(a.lang) + "</div></td>" +
+      '<td><div class="seg" role="group" aria-label="Status for ' + esc(a.s) + '">' +
+        '<button class="a" data-s="' + a.s + '" data-v="active" aria-pressed="' + (t.status === "active") + '">Active</button>' +
+        '<button class="b" data-s="' + a.s + '" data-v="next" aria-pressed="' + (t.status === "next") + '">Up next</button>' +
+        '<button class="c" data-s="' + a.s + '" data-v="parked" aria-pressed="' + (t.status === "parked") + '">Parked</button>' +
+      "</div>" +
+      '<textarea class="note" data-s="' + a.s + '" rows="1" placeholder="Note">' + esc(t.note || "") + "</textarea></td>" +
+      "</tr>");
+    if (isOpen) out.push(detailRow(a));
+  }
+  rowsEl.innerHTML = out.join("");
+}
+
+/* ---------- local storage ---------- */
+function setStatus(cls, text) { dotEl.className = "dot " + cls; msgEl.textContent = text; }
+
+function load() {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    state.track = raw ? JSON.parse(raw) : {};
+    state.canSave = true;
+    setStatus("on", "Saving in this browser");
+  } catch (e) {
+    state.track = {};
+    state.canSave = false;
+    setStatus("off", "Status will not save here");
+    const b = document.createElement("p");
+    b.className = "banner";
+    b.textContent = "This browser is blocking local storage for files, so status and notes will not be kept after you close the page. The record below is still accurate.";
+    document.querySelector(".controls").after(b);
+  }
+}
+
+function save() {
+  if (!state.canSave) return;
+  try {
+    localStorage.setItem(STORE_KEY, JSON.stringify(state.track));
+    setStatus("on", "Saved " + new Date().toLocaleTimeString());
+  } catch (e) {
+    setStatus("off", "Save failed");
+  }
+}
+
+/* ---------- events ---------- */
+document.getElementById("filters").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  state.filter = b.dataset.f;
+  [...document.querySelectorAll("#filters .chip")].forEach(c => c.setAttribute("aria-pressed", String(c === b)));
+  render();
+});
+
+rowsEl.addEventListener("click", e => {
+  const op = e.target.closest("button[data-open]");
+  if (op) { const s = op.dataset.open; state.open[s] = !state.open[s]; render(); return; }
+  const b = e.target.closest("button[data-s]"); if (!b) return;
+  const slug = b.dataset.s;
+  const cur = (state.track[slug] || {}).status;
+  state.track[slug] = Object.assign({}, state.track[slug], { status: cur === b.dataset.v ? "" : b.dataset.v });
+  render();
+  save();
+});
+
+let noteTimer;
+rowsEl.addEventListener("input", e => {
+  const t = e.target.closest("textarea[data-s]"); if (!t) return;
+  const slug = t.dataset.s;
+  state.track[slug] = Object.assign({}, state.track[slug], { note: t.value });
+  clearTimeout(noteTimer);
+  noteTimer = setTimeout(save, 500);
+});
+
+/* ---------- export ---------- */
+const STATUS_LABEL = { active: "Active", next: "Up next", parked: "Parked" };
+function stamp() { return new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }); }
+
+function buildMarkdown() {
+  const rows = visibleApps();
+  const L = [];
+  L.push("# Project Shelf List");
+  L.push("");
+  L.push("Exported " + stamp() + ".");
+  L.push(rows.length + " projects, " + rows.filter(a => a.vc).length + " deployed, " + rows.filter(a => a.pc).length + " on this machine.");
+  if (state.filter !== "all") L.push("Filtered: " + state.filter + ".");
+  L.push("");
+  for (const [title, list] of [["Active", rows.filter(a => !a.arc)], ["Archived", rows.filter(a => a.arc)]]) {
+    if (!list.length) continue;
+    L.push("## " + title + " (" + list.length + ")");
+    L.push("");
+    for (const a of list) {
+      const t = state.track[a.s] || {};
+      L.push("- [ ] **" + a.s + "**" + (t.status ? ": " + (STATUS_LABEL[t.status] || t.status) : ""));
+      if (a.k) L.push("      " + a.k);
+      const w = ["GitHub (" + a.vis + ")", a.vc ? "Vercel: " + a.vc : "not deployed", a.pc ? "local: " + a.pc : "not cloned here"];
+      if (a.nl) w.push(a.nl + " Netlify site(s)");
+      L.push("      " + w.join(" · "));
+      if (a.url) L.push("      " + a.url);
+      L.push("      " + activity(a.days) + ", " + ago(a.days) + " · " + a.size + " · " + a.lang);
+      L.push("      Why: " + a.yours);
+      L.push("      Stands: " + a.state);
+      if (a.unknown) L.push("      Unanswered: " + a.unknown);
+      if (t.note) L.push("      Note: " + t.note);
+      L.push("");
+    }
+  }
+  if (rows.some(a => a.paid)) {
+    L.push("## Domain renewals");
+    L.push("");
+    for (const d of DOMAINS) {
+      if (!d.iso || !rows.some(a => a.s === d.who)) continue;
+      L.push("- [ ] **" + d.d + "**: " + d.price + ", renews in " + daysLeft(d.iso) + " days (" + d.iso + "), " + d.who);
+    }
+    L.push("");
+  }
+  return L.join(NL);
+}
+
+function buildCsv() {
+  const head = ["project", "visibility", "archived", "deployed", "vercel_project", "netlify_sites", "live_url", "local_path", "activity", "days_since_push", "size", "stack", "paid_domain", "status", "note", "why", "stands"];
+  const q = String.fromCharCode(34);
+  const esc2 = v => {
+    const t = v == null ? "" : String(v);
+    return (t.indexOf(",") >= 0 || t.indexOf(q) >= 0 || t.indexOf(NL) >= 0) ? q + t.split(q).join(q + q) + q : t;
+  };
+  const lines = [head.join(",")];
+  for (const a of visibleApps()) {
+    const t = state.track[a.s] || {};
+    lines.push([a.s, a.vis, a.arc ? "yes" : "no", a.vc ? "yes" : "no", a.vc || "", a.nl || 0, a.url || "",
+      a.pc || "", activity(a.days), a.days, a.size, a.lang, a.paid ? "yes" : "no",
+      t.status || "", t.note || "", a.yours, a.state].map(esc2).join(","));
+  }
+  return lines.join(NL);
+}
+
+function download(filename, text, type) {
+  const blob = new Blob([text], { type: type + ";charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = filename;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+document.getElementById("exp-md").addEventListener("click", () => download("project-shelf-list.md", buildMarkdown(), "text/markdown"));
+document.getElementById("exp-csv").addEventListener("click", () => download("project-shelf-list.csv", buildCsv(), "text/csv"));
+
+load();
+render();
+</script>
+</body>
+</html>
