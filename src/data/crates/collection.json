@@ -7770,6 +7770,41 @@
     "hasCover": true
   },
   {
+    "id": 27802644,
+    "artist": "Darlingside",
+    "title": "Everything Is Alive",
+    "labels": [
+      {
+        "name": "More Doug Records",
+        "catno": "MDR0051"
+      }
+    ],
+    "formats": [
+      {
+        "name": "Vinyl",
+        "qty": "1",
+        "descriptions": [
+          "LP",
+          "Album"
+        ]
+      }
+    ],
+    "year": 2023,
+    "masterId": 3337996,
+    "originalYear": 2023,
+    "genres": [
+      "Folk, World, & Country"
+    ],
+    "styles": [],
+    "folder": "The Lauren Collection",
+    "dateAdded": "2026-09-30T14:15:34-07:00",
+    "rating": 0,
+    "media": "Mint (M)",
+    "sleeve": "Mint (M)",
+    "notes": "",
+    "hasCover": true
+  },
+  {
     "id": 27872193,
     "artist": "Snow Patrol",
     "title": "Final Straw ",
@@ -10175,7 +10210,7 @@
       {
         "name": "Vinyl",
         "qty": "1",
-        "text": "Translucent Black w Splatter",
+        "text": "Translucent Black w Yellow & Blue Splatter",
         "descriptions": [
           "LP",
           "Album",
